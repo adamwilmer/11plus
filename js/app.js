@@ -4,6 +4,7 @@ let currentTest = null;
 let currentQuestionIndex = 0;
 let userAnswers = {};
 let questionDatabase = {};
+let reviewMode = false;
 
 // Data loading configuration
 const dataFiles = {
@@ -114,12 +115,20 @@ function startTest(testKey) {
     currentTest = testKey;
     currentQuestionIndex = 0;
     userAnswers = {};
+    reviewMode = false;
 
-    const questions = questionDatabase[currentExam][currentTest].questions;
+    const testData = questionDatabase[currentExam][currentTest];
+    const questions = testData.questions;
 
     if (questions.length === 0) {
         alert('This test is not yet available.');
         return;
+    }
+
+    // Setup passage if present (visibility will be handled by displayQuestion)
+    if (testData.passage) {
+        document.getElementById('passage-title').textContent = testData.passageTitle || 'Reading Passage';
+        document.getElementById('passage-text').textContent = testData.passage;
     }
 
     showScreen('test-screen');
@@ -127,7 +136,8 @@ function startTest(testKey) {
 }
 
 function displayQuestion() {
-    const questions = questionDatabase[currentExam][currentTest].questions;
+    const testData = questionDatabase[currentExam][currentTest];
+    const questions = testData.questions;
     const question = questions[currentQuestionIndex];
 
     // Update question counter
@@ -138,8 +148,35 @@ function displayQuestion() {
     const progress = ((currentQuestionIndex + 1) / questions.length) * 100;
     document.getElementById('progress-fill').style.width = `${progress}%`;
 
+    // Show/hide passage based on question
+    const passageContainer = document.getElementById('passage-container');
+    let showPassage = false;
+
+    if (testData.passage) {
+        // For English test, show passage for questions 1-28 (reading comprehension)
+        if (currentExam === 'english' && question.id >= 1 && question.id <= 28) {
+            showPassage = true;
+        }
+        // For Verbal Skills test, show passage for questions 1-14 (reading comprehension)
+        else if (currentExam === 'verbal-skills' && question.id >= 1 && question.id <= 14) {
+            showPassage = true;
+        }
+    }
+
+    passageContainer.style.display = showPassage ? 'flex' : 'none';
+
     // Display question
     document.getElementById('question-number').textContent = question.id;
+
+    // Display instruction if present
+    const instructionElement = document.getElementById('question-instruction');
+    if (question.instruction) {
+        instructionElement.textContent = question.instruction;
+        instructionElement.style.display = 'block';
+    } else {
+        instructionElement.style.display = 'none';
+    }
+
     document.getElementById('question-text').textContent = question.question;
 
     // Display options
@@ -150,8 +187,29 @@ function displayQuestion() {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
 
-        if (userAnswers[question.id] === option.letter) {
-            optionDiv.classList.add('selected');
+        const userAnswer = userAnswers[question.id];
+        const isCorrectAnswer = option.letter === question.correctAnswer;
+        const isUserAnswer = userAnswer === option.letter;
+
+        if (reviewMode) {
+            // In review mode, show correct and incorrect answers
+            if (isCorrectAnswer) {
+                optionDiv.classList.add('correct');
+            }
+            if (isUserAnswer && !isCorrectAnswer) {
+                optionDiv.classList.add('incorrect');
+            }
+            if (isUserAnswer) {
+                optionDiv.classList.add('selected');
+            }
+            // Disable clicking in review mode
+            optionDiv.style.cursor = 'default';
+        } else {
+            // Normal mode - just show selection
+            if (isUserAnswer) {
+                optionDiv.classList.add('selected');
+            }
+            optionDiv.onclick = () => selectOption(question.id, option.letter);
         }
 
         optionDiv.innerHTML = `
@@ -159,7 +217,6 @@ function displayQuestion() {
             <div class="option-text">${option.text}</div>
         `;
 
-        optionDiv.onclick = () => selectOption(question.id, option.letter);
         optionsContainer.appendChild(optionDiv);
     });
 
@@ -167,8 +224,16 @@ function displayQuestion() {
     document.getElementById('prev-button').disabled = currentQuestionIndex === 0;
 
     const isLastQuestion = currentQuestionIndex === questions.length - 1;
-    document.getElementById('next-button').style.display = isLastQuestion ? 'none' : 'block';
-    document.getElementById('submit-button').style.display = isLastQuestion ? 'block' : 'none';
+
+    if (reviewMode) {
+        // In review mode, hide submit button, always show next button
+        document.getElementById('next-button').style.display = isLastQuestion ? 'none' : 'block';
+        document.getElementById('submit-button').style.display = 'none';
+    } else {
+        // Normal mode
+        document.getElementById('next-button').style.display = isLastQuestion ? 'none' : 'block';
+        document.getElementById('submit-button').style.display = isLastQuestion ? 'block' : 'none';
+    }
 }
 
 function selectOption(questionId, letter) {
@@ -242,8 +307,9 @@ function calculateResults() {
 }
 
 function reviewAnswers() {
-    // Reset to first question and show test screen
+    // Reset to first question and show test screen in review mode
     currentQuestionIndex = 0;
+    reviewMode = true;
     showScreen('test-screen');
     displayQuestion();
 }
