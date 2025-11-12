@@ -1,0 +1,251 @@
+{
+  "test1": {
+    "title": "Mathematics 1 - Familiarisation",
+    "questions": [
+      {
+        "id": 1,
+        "question": "What is this number in figures?\n\nfive thousand, one hundred and nine.",
+        "options": [
+          { "letter": "A", "text": "5190" },
+          { "letter": "B", "text": "5019" },
+          { "letter": "C", "text": "519" },
+          { "letter": "D", "text": "51009" },
+          { "letter": "E", "text": "5109" }
+        ],
+        "correctAnswer": "E"
+      },
+      {
+        "id": 2,
+        "question": "A ship symbol stands for 12 ships.\n\nLook at the table showing:\n- Dock A: 1 ship symbol\n- Dock B: 1.5 ship symbols\n- Dock C: 0.5 ship symbols\n\nHow many more ships are in dock A than dock C?",
+        "options": [
+          { "letter": "A", "text": "0.5" },
+          { "letter": "B", "text": "1" },
+          { "letter": "C", "text": "3" },
+          { "letter": "D", "text": "4" },
+          { "letter": "E", "text": "6" }
+        ],
+        "correctAnswer": "E"
+      },
+      {
+        "id": 3,
+        "question": "What is the value of the 7 in this number?\n\n7240",
+        "options": [
+          { "letter": "A", "text": "7 thousands" },
+          { "letter": "B", "text": "7 hundreds" },
+          { "letter": "C", "text": "7 tens" },
+          { "letter": "D", "text": "7 ones" },
+          { "letter": "E", "text": "7 thousandths" }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": 4,
+        "question": "The hills are at (3, 4).\n\nLooking at a coordinate grid, the lighthouse is at what coordinates?",
+        "options": [
+          { "letter": "A", "text": "(6, 1)" },
+          { "letter": "B", "text": "(1, 6)" },
+          { "letter": "C", "text": "(5, 6)" },
+          { "letter": "D", "text": "(6, 3)" },
+          { "letter": "E", "text": "(1, 7)" }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": 5,
+        "question": "What is the missing number in this sequence?\n\n393   384   375   ?   357",
+        "options": [
+          { "letter": "A", "text": "367" },
+          { "letter": "B", "text": "368" },
+          { "letter": "C", "text": "365" },
+          { "letter": "D", "text": "369" },
+          { "letter": "E", "text": "366" }
+        ],
+        "correctAnswer": "E"
+      },
+      {
+        "id": 6,
+        "question": "How many of the small triangles will fill the hexagon?",
+        "options": [
+          { "letter": "A", "text": "10" },
+          { "letter": "B", "text": "9" },
+          { "letter": "C", "text": "8" },
+          { "letter": "D", "text": "6" },
+          { "letter": "E", "text": "4" }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": 7,
+        "question": "Iveta was 1.43 metres tall. She grew 2 centimetres more.\n\nHow tall was she then in metres?",
+        "options": [
+          { "letter": "A", "text": "1.45 m" },
+          { "letter": "B", "text": "1.63 m" },
+          { "letter": "C", "text": "1.65 m" },
+          { "letter": "D", "text": "1.405 m" },
+          { "letter": "E", "text": "1.603 m" }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": 8,
+        "question": "Looking at a triangle divided into smaller triangles, what fraction of the whole shape is shaded?",
+        "options": [
+          { "letter": "A", "text": "3/10" },
+          { "letter": "B", "text": "1/3" },
+          { "letter": "C", "text": "3/8" },
+          { "letter": "D", "text": "1/4" },
+          { "letter": "E", "text": "3/11" }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": 9,
+        "question": "Write the correct number in the box:\n\n123 ÷ __ = 123",
+        "options": [
+          { "letter": "A", "text": "123" },
+          { "letter": "B", "text": "0" },
+          { "letter": "C", "text": "0.1" },
+          { "letter": "D", "text": "0.5" },
+          { "letter": "E", "text": "1" }
+        ],
+        "correctAnswer": "E"
+      },
+      {
+        "id": 10,
+        "question": "a - 9 = 10\n\na = ?",
+        "options": [
+          { "letter": "A", "text": "19" },
+          { "letter": "B", "text": "1" },
+          { "letter": "C", "text": "-1" },
+          { "letter": "D", "text": "21" },
+          { "letter": "E", "text": "-19" }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": 11,
+        "question": "A jug holds 1 litre of water. An empty jar holds 700 millilitres. The jar is filled from the jug.\n\nHow much water will be left in the jug?",
+        "options": [
+          { "letter": "A", "text": "0.3 litres" },
+          { "letter": "B", "text": "0.25 litres" },
+          { "letter": "C", "text": "400 millilitres" },
+          { "letter": "D", "text": "0.35 litres" },
+          { "letter": "E", "text": "200 millilitres" }
+        ],
+        "correctAnswer": "A"
+      },
+      {
+        "id": 12,
+        "question": "A chart shows how Kai spent his spare time last week. The activities are: Watching TV (7 hours), Playing football (2.5 hours), Reading (3 hours), Fishing (2 hours), Cycling (3 hours).\n\nHow many hours did he spend out of doors (playing football, fishing and cycling)?",
+        "options": [
+          { "letter": "A", "text": "6.5 hours" },
+          { "letter": "B", "text": "7 hours" },
+          { "letter": "C", "text": "7.5 hours" },
+          { "letter": "D", "text": "8 hours" },
+          { "letter": "E", "text": "8.5 hours" }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": 13,
+        "question": "Wendy saved £2.50 a week.\n\nHow many weeks did it take her to save £20?",
+        "options": [
+          { "letter": "A", "text": "4 weeks" },
+          { "letter": "B", "text": "8 weeks" },
+          { "letter": "C", "text": "9 weeks" },
+          { "letter": "D", "text": "10 weeks" },
+          { "letter": "E", "text": "14 weeks" }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": 14,
+        "question": "A small square is 1cm × 1cm. A large rectangle is 6cm × 3cm.\n\nHow many small squares will fit into the large rectangle?",
+        "options": [
+          { "letter": "A", "text": "12" },
+          { "letter": "B", "text": "15" },
+          { "letter": "C", "text": "18" },
+          { "letter": "D", "text": "21" },
+          { "letter": "E", "text": "24" }
+        ],
+        "correctAnswer": "C"
+      },
+      {
+        "id": 15,
+        "question": "Which of these digital alarm clocks shows that it is quarter past seven in the evening?",
+        "options": [
+          { "letter": "A", "text": "7:15" },
+          { "letter": "B", "text": "7:25" },
+          { "letter": "C", "text": "19:25" },
+          { "letter": "D", "text": "19:15" },
+          { "letter": "E", "text": "21:15" }
+        ],
+        "correctAnswer": "D"
+      },
+      {
+        "id": 16,
+        "question": "Matthew thinks of a number. He multiplies his number by 2. Then he subtracts 4. The answer is 10.\n\nWhat number did Matthew first think of?",
+        "options": [
+          { "letter": "A", "text": "3" },
+          { "letter": "B", "text": "7" },
+          { "letter": "C", "text": "10" },
+          { "letter": "D", "text": "12" },
+          { "letter": "E", "text": "14" }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": 17,
+        "question": "A train left at 10.20 and arrived at 11.15.\n\nHow long did the journey take, in minutes?",
+        "options": [
+          { "letter": "A", "text": "45 mins" },
+          { "letter": "B", "text": "55 mins" },
+          { "letter": "C", "text": "65 mins" },
+          { "letter": "D", "text": "75 mins" },
+          { "letter": "E", "text": "95 mins" }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": 18,
+        "question": "Mrs Ward wants to join Heritage with her three children, aged 10, 12 and 15. The Family one adult membership (1 adult and children under 18) offer price is £46.50.\n\nHow much must she pay?",
+        "options": [
+          { "letter": "A", "text": "£82.00" },
+          { "letter": "B", "text": "£62.63" },
+          { "letter": "C", "text": "£62.00" },
+          { "letter": "D", "text": "£61.50" },
+          { "letter": "E", "text": "£46.50" }
+        ],
+        "correctAnswer": "E"
+      },
+      {
+        "id": 19,
+        "question": "About how much does an ordinary mug hold?",
+        "options": [
+          { "letter": "A", "text": "30 millilitres" },
+          { "letter": "B", "text": "300 millilitres" },
+          { "letter": "C", "text": "3 litres" },
+          { "letter": "D", "text": "30 litres" },
+          { "letter": "E", "text": "300 litres" }
+        ],
+        "correctAnswer": "B"
+      },
+      {
+        "id": 20,
+        "question": "Which of these shapes is NOT a quadrilateral?\n\n(Shapes shown: pentagon, rhombus, square, parallelogram, trapezoid)",
+        "options": [
+          { "letter": "A", "text": "A (pentagon)" },
+          { "letter": "B", "text": "B (rhombus)" },
+          { "letter": "C", "text": "C (square)" },
+          { "letter": "D", "text": "D (parallelogram)" },
+          { "letter": "E", "text": "E (trapezoid)" }
+        ],
+        "correctAnswer": "A"
+      }
+    ]
+  },
+  "test2": {
+    "title": "Mathematics 2",
+    "questions": []
+  }
+}

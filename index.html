@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11+ Practice Tests</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>11+ Practice Tests</h1>
+        </header>
+
+        <div id="exam-selector" class="screen active">
+            <h2>Select Exam Type</h2>
+            <div class="exam-grid">
+                <button class="exam-button" data-exam="maths">
+                    <span class="icon">📐</span>
+                    <span class="label">Maths</span>
+                </button>
+                <button class="exam-button" data-exam="english">
+                    <span class="icon">📚</span>
+                    <span class="label">English</span>
+                </button>
+                <button class="exam-button" data-exam="verbal-reasoning">
+                    <span class="icon">💭</span>
+                    <span class="label">Verbal Reasoning</span>
+                </button>
+                <button class="exam-button" data-exam="non-verbal-reasoning">
+                    <span class="icon">🔷</span>
+                    <span class="label">Non-Verbal Reasoning</span>
+                </button>
+                <button class="exam-button" data-exam="verbal-skills">
+                    <span class="icon">✍️</span>
+                    <span class="label">Verbal Skills</span>
+                </button>
+            </div>
+        </div>
+
+        <div id="test-selector" class="screen">
+            <button class="back-button" onclick="showScreen('exam-selector')">← Back</button>
+            <h2 id="exam-title">Maths Tests</h2>
+            <div id="test-list" class="test-list"></div>
+        </div>
+
+        <div id="test-screen" class="screen">
+            <div class="test-header">
+                <button class="back-button" onclick="showScreen('test-selector')">← Back</button>
+                <div class="progress">
+                    <span id="question-counter">Question 1 of 50</span>
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="question-container" class="question-container">
+                <div class="question-number" id="question-number">1</div>
+                <div class="question-text" id="question-text"></div>
+                <div class="question-image" id="question-image"></div>
+                <div class="options" id="options"></div>
+            </div>
+
+            <div class="navigation">
+                <button id="prev-button" class="nav-button" onclick="previousQuestion()">Previous</button>
+                <button id="next-button" class="nav-button primary" onclick="nextQuestion()">Next</button>
+                <button id="submit-button" class="nav-button primary" onclick="submitTest()" style="display:none;">Submit</button>
+            </div>
+        </div>
+
+        <div id="results-screen" class="screen">
+            <h2>Test Results</h2>
+            <div class="results-summary">
+                <div class="score-circle">
+                    <span id="score-percentage">0%</span>
+                    <span class="score-label">Score</span>
+                </div>
+                <div class="score-details">
+                    <p><strong id="correct-count">0</strong> correct</p>
+                    <p><strong id="incorrect-count">0</strong> incorrect</p>
+                    <p><strong id="unanswered-count">0</strong> unanswered</p>
+                </div>
+            </div>
+            <div class="results-actions">
+                <button class="nav-button" onclick="reviewAnswers()">Review Answers</button>
+                <button class="nav-button primary" onclick="showScreen('exam-selector')">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
