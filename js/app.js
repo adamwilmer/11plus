@@ -7,6 +7,20 @@ let questionDatabase = {};
 let reviewMode = false;
 let debugMode = false;
 let currentQuestions = [];
+let timerEnabled = false;
+let timerInterval = null;
+let timerTargetMs = 0;
+let testStartTime = null;
+let testEndTime = null;
+let currentPassageHtml = '';
+
+const examTimerDefaults = {
+    'maths': 50,
+    'english': 50,
+    'verbal-reasoning': 60,
+    'verbal-skills': 60,
+    'non-verbal-reasoning': 60
+};
 
 function getCurrentQuestions() {
     if (currentQuestions.length) {
@@ -76,6 +90,113 @@ function areAnswersCorrect(question, selections) {
     const sortedSelections = [...selections].sort();
     const sortedCorrect = [...correct].sort();
     return sortedCorrect.every((answer, index) => answer === sortedSelections[index]);
+}
+
+function getBaseTimerMinutes(examType) {
+    return examTimerDefaults[examType] || 0;
+}
+
+function formatDurationFromMs(ms) {
+    if (!ms || ms <= 0) {
+        return '0:00';
+    }
+    const totalSeconds = Math.floor(ms / 1000);
+    const hours = Math.floor(totalSeconds / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+    const pad = (val) => val.toString().padStart(2, '0');
+    if (hours > 0) {
+        return `${hours}:${pad(minutes)}:${pad(seconds)}`;
+    }
+    return `${minutes}:${pad(seconds)}`;
+}
+
+function formatDurationFromMinutes(minutes) {
+    if (!minutes || minutes <= 0) {
+        return '0:00';
+    }
+    return formatDurationFromMs(minutes * 60 * 1000);
+}
+
+function updateTimerPreview(examType, testKey, totalQuestions, selectedValue) {
+    const durationElement = document.getElementById(`timer-duration-${testKey}`);
+    if (!durationElement) return;
+    const baseMinutes = getBaseTimerMinutes(examType);
+    if (!baseMinutes || !totalQuestions) {
+        durationElement.textContent = 'N/A';
+        return;
+    }
+    const selectedCount = selectedValue === 'all'
+        ? totalQuestions
+        : Math.min(parseInt(selectedValue, 10) || totalQuestions, totalQuestions);
+    const ratio = selectedCount / totalQuestions;
+    const computedMinutes = baseMinutes * ratio;
+    durationElement.textContent = formatDurationFromMinutes(computedMinutes);
+}
+
+function clearActiveTimer() {
+    if (timerInterval) {
+        clearInterval(timerInterval);
+        timerInterval = null;
+    }
+}
+
+function showTimerDisplay() {
+    const timerDisplay = document.getElementById('timer-display');
+    const timerValue = document.getElementById('timer-value');
+    const timerLabel = document.getElementById('timer-label');
+    if (timerDisplay && timerValue && timerLabel) {
+        timerDisplay.style.display = 'flex';
+        timerLabel.textContent = 'Time left:';
+        timerValue.textContent = formatDurationFromMs(timerTargetMs);
+        timerDisplay.classList.remove('timer-negative');
+    }
+}
+
+function hideTimerDisplay() {
+    const timerDisplay = document.getElementById('timer-display');
+    const timerValue = document.getElementById('timer-value');
+    const timerLabel = document.getElementById('timer-label');
+    if (timerDisplay && timerValue && timerLabel) {
+        timerDisplay.style.display = 'none';
+        timerLabel.textContent = 'Time left:';
+        timerValue.textContent = '--:--';
+        timerDisplay.classList.remove('timer-negative');
+    }
+}
+
+function updateTimerDisplay() {
+    const timerDisplay = document.getElementById('timer-display');
+    const timerValue = document.getElementById('timer-value');
+    const timerLabel = document.getElementById('timer-label');
+    if (!timerDisplay || !timerValue || !timerLabel || !testStartTime) {
+        return;
+    }
+
+    const elapsed = Date.now() - testStartTime;
+    const remaining = timerTargetMs - elapsed;
+    const isNegative = remaining <= 0;
+    const displayMs = isNegative ? Math.abs(remaining) : remaining;
+
+    timerValue.textContent = `${isNegative ? '-' : ''}${formatDurationFromMs(displayMs)}`;
+    timerLabel.textContent = isNegative ? 'Over time:' : 'Time left:';
+    timerDisplay.classList.toggle('timer-negative', isNegative);
+}
+
+function startTimerCountdown() {
+    if (!timerEnabled || !timerTargetMs) {
+        hideTimerDisplay();
+        return;
+    }
+    showTimerDisplay();
+    updateTimerDisplay();
+    clearActiveTimer();
+    timerInterval = setInterval(updateTimerDisplay, 1000);
+}
+
+function stopTimerCountdown() {
+    clearActiveTimer();
+    hideTimerDisplay();
 }
 
 // Data loading configuration
@@ -152,6 +273,9 @@ function showScreen(screenId) {
         screen.classList.remove('active');
     });
     document.getElementById(screenId).classList.add('active');
+    if (screenId !== 'test-screen') {
+        stopTimerCountdown();
+    }
 }
 
 function selectExam(examType) {
@@ -179,6 +303,7 @@ function selectExam(examType) {
             // Create test card container
             const testCard = document.createElement('div');
             testCard.className = 'test-card';
+            const baseTimerMinutes = getBaseTimerMinutes(examType);
 
             // Test title and question count
             const testInfo = document.createElement('div');
@@ -217,9 +342,41 @@ function selectExam(examType) {
                 }
             });
 
+            select.addEventListener('change', () => {
+                updateTimerPreview(examType, testKey, test.questions.length, select.value);
+            });
+
             selectorContainer.appendChild(selectLabel);
             selectorContainer.appendChild(select);
             testCard.appendChild(selectorContainer);
+
+            const timerControls = document.createElement('div');
+            timerControls.className = 'timer-controls';
+            const timerLabel = document.createElement('label');
+            timerLabel.className = 'timer-toggle';
+
+            const timerCheckbox = document.createElement('input');
+            timerCheckbox.type = 'checkbox';
+            timerCheckbox.id = `timer-toggle-${testKey}`;
+            timerCheckbox.disabled = baseTimerMinutes === 0;
+            timerLabel.appendChild(timerCheckbox);
+
+            const timerText = document.createElement('span');
+            if (baseTimerMinutes > 0) {
+                const durationSpan = document.createElement('span');
+                durationSpan.id = `timer-duration-${testKey}`;
+                durationSpan.className = 'timer-duration-value';
+                durationSpan.textContent = formatDurationFromMinutes(baseTimerMinutes);
+                timerText.appendChild(document.createTextNode('Enable timer ('));
+                timerText.appendChild(durationSpan);
+                timerText.appendChild(document.createTextNode(')'));
+            } else {
+                timerText.textContent = 'Timer unavailable';
+            }
+
+            timerLabel.appendChild(timerText);
+            timerControls.appendChild(timerLabel);
+            testCard.appendChild(timerControls);
 
             // Start test button
             const startButton = document.createElement('button');
@@ -229,6 +386,8 @@ function selectExam(examType) {
             testCard.appendChild(startButton);
 
             testList.appendChild(testCard);
+
+            updateTimerPreview(examType, testKey, test.questions.length, select.value);
         }
     });
 
@@ -243,8 +402,9 @@ function startTest(testKey) {
 
     const testData = questionDatabase[currentExam][currentTest];
     const fullQuestionSet = testData.questions || [];
+    const totalQuestions = fullQuestionSet.length;
 
-    if (fullQuestionSet.length === 0) {
+    if (totalQuestions === 0) {
         alert('This test is not yet available.');
         return;
     }
@@ -253,19 +413,54 @@ function startTest(testKey) {
     const questionCountSelect = document.getElementById(`question-count-${testKey}`);
     const questionCount = questionCountSelect ? questionCountSelect.value : 'all';
 
-    currentQuestions = [...fullQuestionSet];
+    let selectedQuestions = [...fullQuestionSet];
 
     if (questionCount !== 'all') {
         const count = parseInt(questionCount, 10);
         // Randomly select N questions without mutating the source array
         const shuffled = [...fullQuestionSet].sort(() => Math.random() - 0.5);
-        currentQuestions = shuffled.slice(0, Math.min(count, fullQuestionSet.length));
+        selectedQuestions = shuffled.slice(0, Math.min(count, fullQuestionSet.length));
     }
+    currentQuestions = selectedQuestions;
+    const selectedQuestionCount = currentQuestions.length;
 
     // Setup passage if present (visibility will be handled by displayQuestion)
-    if (testData.passage) {
-        document.getElementById('passage-title').textContent = testData.passageTitle || 'Reading Passage';
-        document.getElementById('passage-text').textContent = testData.passage;
+    const passageTitleElement = document.getElementById('passage-title');
+    const passageTextElement = document.getElementById('passage-text');
+    if (testData.passageTitle) {
+        passageTitleElement.textContent = testData.passageTitle;
+    } else {
+        passageTitleElement.textContent = 'Reading Passage';
+    }
+
+    if (testData.passageImage) {
+        const imagePaths = Array.isArray(testData.passageImage) ? testData.passageImage : [testData.passageImage];
+        passageTextElement.innerHTML = imagePaths.map((src, index) =>
+            `<img src="${src}" alt="Reading passage page ${index + 1}" class="passage-image">`
+        ).join('');
+        passageTextElement.classList.add('has-image');
+    } else if (testData.passage) {
+        currentPassageHtml = formatPassageWithLineNumbers(testData.passage);
+        passageTextElement.innerHTML = currentPassageHtml;
+        passageTextElement.classList.remove('has-image');
+    } else {
+        currentPassageHtml = '';
+        passageTextElement.innerHTML = '';
+        passageTextElement.classList.remove('has-image');
+    }
+
+    testStartTime = Date.now();
+    testEndTime = null;
+    clearActiveTimer();
+    timerEnabled = false;
+    timerTargetMs = 0;
+
+    const baseTimerMinutes = getBaseTimerMinutes(currentExam);
+    const timerToggle = document.getElementById(`timer-toggle-${testKey}`);
+    if (timerToggle && timerToggle.checked && baseTimerMinutes > 0 && totalQuestions > 0) {
+        const ratio = selectedQuestionCount / totalQuestions;
+        timerTargetMs = Math.round(baseTimerMinutes * 60 * 1000 * ratio);
+        timerEnabled = timerTargetMs > 0;
     }
 
     showScreen('test-screen');
@@ -275,6 +470,12 @@ function startTest(testKey) {
         showDebugPanel();
     } else {
         hideDebugPanel();
+    }
+
+    if (timerEnabled) {
+        startTimerCountdown();
+    } else {
+        stopTimerCountdown();
     }
 
     displayQuestion();
@@ -517,6 +718,9 @@ function submitTest() {
         if (!confirmSubmit) return;
     }
 
+    testEndTime = Date.now();
+    stopTimerCountdown();
+
     calculateResults();
     showScreen('results-screen');
 }
@@ -546,12 +750,45 @@ function calculateResults() {
     document.getElementById('correct-count').textContent = correct;
     document.getElementById('incorrect-count').textContent = incorrect;
     document.getElementById('unanswered-count').textContent = unanswered;
+
+    const timeSummaryElement = document.getElementById('time-summary');
+    if (timeSummaryElement) {
+        let timeText = 'Time taken: --';
+        if (testStartTime) {
+            const endTime = testEndTime || Date.now();
+            const elapsedMs = Math.max(endTime - testStartTime, 0);
+            const targetText = timerTargetMs ? ` (target ${formatDurationFromMs(timerTargetMs)})` : '';
+            timeText = `Time taken: ${formatDurationFromMs(elapsedMs)}${targetText}`;
+        }
+        timeSummaryElement.textContent = `Summary: ${correct} correct, ${incorrect} incorrect, ${unanswered} unanswered. ${timeText}`;
+    }
 }
 
 function reviewAnswers() {
     // Reset to first question and show test screen in review mode
     currentQuestionIndex = 0;
     reviewMode = true;
+    hideTimerDisplay();
     showScreen('test-screen');
     displayQuestion();
+}
+function escapeHtml(text) {
+    const div = document.createElement('div');
+    div.textContent = text;
+    return div.innerHTML;
+}
+
+function formatPassageWithLineNumbers(passageText) {
+    if (!passageText) return '';
+    const lines = passageText.split(/\r?\n/);
+    let lineNumber = 1;
+    return lines.map(line => {
+        if (!line.trim()) {
+            return '<div class="passage-line empty">&nbsp;</div>';
+        }
+        const numberLabel = lineNumber.toString().padStart(2, '0');
+        const escapedLine = escapeHtml(line);
+        lineNumber++;
+        return `<div class="passage-line"><span class="line-number">${numberLabel}</span><span class="line-text">${escapedLine}</span></div>`;
+    }).join('');
 }

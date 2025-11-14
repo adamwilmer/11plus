@@ -14,6 +14,9 @@
         gtag('config', 'G-KNVM44YVQV');
     </script>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -57,10 +60,16 @@
         <div id="test-screen" class="screen">
             <div class="test-header">
                 <button class="back-button" onclick="showScreen('test-selector')">← Back</button>
-                <div class="progress">
-                    <span id="question-counter">Question 1 of 50</span>
-                    <div class="progress-bar">
-                        <div id="progress-fill" class="progress-fill"></div>
+                <div class="progress-wrapper">
+                    <div class="progress">
+                        <span id="question-counter">Question 1 of 50</span>
+                        <div class="progress-bar">
+                            <div id="progress-fill" class="progress-fill"></div>
+                        </div>
+                    </div>
+                    <div id="timer-display" class="timer-display" style="display: none;">
+                        <span id="timer-label">Time left:</span>
+                        <span id="timer-value">00:00</span>
                     </div>
                 </div>
             </div>
@@ -98,6 +107,7 @@
                     <p><strong id="correct-count">0</strong> correct</p>
                     <p><strong id="incorrect-count">0</strong> incorrect</p>
                     <p><strong id="unanswered-count">0</strong> unanswered</p>
+                    <p class="time-summary" id="time-summary">Summary: --</p>
                 </div>
             </div>
             <div class="results-actions">
