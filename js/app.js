@@ -5,6 +5,78 @@ let currentQuestionIndex = 0;
 let userAnswers = {};
 let questionDatabase = {};
 let reviewMode = false;
+let debugMode = false;
+let currentQuestions = [];
+
+function getCurrentQuestions() {
+    if (currentQuestions.length) {
+        return currentQuestions;
+    }
+    if (currentExam && currentTest && questionDatabase[currentExam] && questionDatabase[currentExam][currentTest]) {
+        return questionDatabase[currentExam][currentTest].questions || [];
+    }
+    return [];
+}
+
+function getCorrectAnswers(question) {
+    if (!question) return [];
+    if (Array.isArray(question.correctAnswers)) {
+        return question.correctAnswers;
+    }
+    if (Array.isArray(question.correctAnswer)) {
+        return question.correctAnswer;
+    }
+    if (typeof question.correctAnswer === 'string' && question.correctAnswer.includes(',')) {
+        return question.correctAnswer.split(',').map(answer => answer.trim()).filter(Boolean);
+    }
+    return question.correctAnswer ? [question.correctAnswer] : [];
+}
+
+function getRequiredSelectionCount(question) {
+    const answers = getCorrectAnswers(question);
+    return Math.max(answers.length, 1);
+}
+
+function getUserSelections(questionId) {
+    const stored = userAnswers[questionId];
+    if (!stored) {
+        return [];
+    }
+    if (Array.isArray(stored)) {
+        return stored;
+    }
+    return [stored];
+}
+
+function setUserSelections(questionId, selections) {
+    if (!selections || selections.length === 0) {
+        delete userAnswers[questionId];
+        return;
+    }
+    // Ensure unique selections while preserving order of selection
+    const unique = [];
+    selections.forEach(selection => {
+        if (!unique.includes(selection)) {
+            unique.push(selection);
+        }
+    });
+    userAnswers[questionId] = unique;
+}
+
+function isQuestionAnswered(question) {
+    const requiredSelections = getRequiredSelectionCount(question);
+    return getUserSelections(question.id).length === requiredSelections;
+}
+
+function areAnswersCorrect(question, selections) {
+    const correct = getCorrectAnswers(question);
+    if (selections.length !== correct.length) {
+        return false;
+    }
+    const sortedSelections = [...selections].sort();
+    const sortedCorrect = [...correct].sort();
+    return sortedCorrect.every((answer, index) => answer === sortedSelections[index]);
+}
 
 // Data loading configuration
 const dataFiles = {
@@ -41,6 +113,10 @@ async function loadQuestionData() {
 
 // Initialize app
 document.addEventListener('DOMContentLoaded', async () => {
+    // Check for debug mode
+    const urlParams = new URLSearchParams(window.location.search);
+    debugMode = urlParams.get('debug') === 'true';
+
     // Show loading state
     const appContainer = document.querySelector('.app-container');
     if (appContainer) {
@@ -100,11 +176,59 @@ function selectExam(examType) {
     Object.keys(examData).forEach(testKey => {
         const test = examData[testKey];
         if (test.questions && test.questions.length > 0) {
-            const button = document.createElement('button');
-            button.className = 'test-button';
-            button.textContent = test.title;
-            button.onclick = () => startTest(testKey);
-            testList.appendChild(button);
+            // Create test card container
+            const testCard = document.createElement('div');
+            testCard.className = 'test-card';
+
+            // Test title and question count
+            const testInfo = document.createElement('div');
+            testInfo.className = 'test-info';
+            testInfo.innerHTML = `
+                <div class="test-title">${test.title}</div>
+                <div class="test-question-count">${test.questions.length} questions</div>
+            `;
+            testCard.appendChild(testInfo);
+
+            // Question count selector
+            const selectorContainer = document.createElement('div');
+            selectorContainer.className = 'test-controls';
+
+            const selectLabel = document.createElement('label');
+            selectLabel.textContent = 'Number of questions: ';
+            selectLabel.style.fontSize = '0.9em';
+            selectLabel.style.marginRight = '10px';
+
+            const select = document.createElement('select');
+            select.id = `question-count-${testKey}`;
+            select.className = 'question-count-selector';
+
+            // Add options
+            const allOption = document.createElement('option');
+            allOption.value = 'all';
+            allOption.textContent = `All (${test.questions.length})`;
+            select.appendChild(allOption);
+
+            [5, 10, 15, 20, 25].forEach(count => {
+                if (count < test.questions.length) {
+                    const option = document.createElement('option');
+                    option.value = count;
+                    option.textContent = count;
+                    select.appendChild(option);
+                }
+            });
+
+            selectorContainer.appendChild(selectLabel);
+            selectorContainer.appendChild(select);
+            testCard.appendChild(selectorContainer);
+
+            // Start test button
+            const startButton = document.createElement('button');
+            startButton.className = 'start-test-button';
+            startButton.textContent = 'Start Test';
+            startButton.onclick = () => startTest(testKey);
+            testCard.appendChild(startButton);
+
+            testList.appendChild(testCard);
         }
     });
 
@@ -118,11 +242,24 @@ function startTest(testKey) {
     reviewMode = false;
 
     const testData = questionDatabase[currentExam][currentTest];
-    const questions = testData.questions;
+    const fullQuestionSet = testData.questions || [];
 
-    if (questions.length === 0) {
+    if (fullQuestionSet.length === 0) {
         alert('This test is not yet available.');
         return;
+    }
+
+    // Check if user selected a specific number of questions
+    const questionCountSelect = document.getElementById(`question-count-${testKey}`);
+    const questionCount = questionCountSelect ? questionCountSelect.value : 'all';
+
+    currentQuestions = [...fullQuestionSet];
+
+    if (questionCount !== 'all') {
+        const count = parseInt(questionCount, 10);
+        // Randomly select N questions without mutating the source array
+        const shuffled = [...fullQuestionSet].sort(() => Math.random() - 0.5);
+        currentQuestions = shuffled.slice(0, Math.min(count, fullQuestionSet.length));
     }
 
     // Setup passage if present (visibility will be handled by displayQuestion)
@@ -132,13 +269,66 @@ function startTest(testKey) {
     }
 
     showScreen('test-screen');
+
+    // Show debug panel if in debug mode
+    if (debugMode) {
+        showDebugPanel();
+    } else {
+        hideDebugPanel();
+    }
+
     displayQuestion();
+}
+
+function showDebugPanel() {
+    const testScreen = document.getElementById('test-screen');
+    testScreen.classList.add('debug-mode');
+
+    const questions = currentQuestions;
+
+    let debugHTML = '<div class="debug-panel"><h3>Debug: Questions</h3><ul class="debug-question-list">';
+    questions.forEach((q, index) => {
+        const answered = isQuestionAnswered(q) ? '✓' : '';
+        const current = index === currentQuestionIndex ? 'current' : '';
+        debugHTML += `<li class="${current}" onclick="jumpToQuestion(${index})">
+            <span class="q-num">Q${q.id}</span> ${answered}
+        </li>`;
+    });
+    debugHTML += '</ul></div>';
+
+    // Remove existing debug panel if any
+    const existingPanel = document.querySelector('.debug-panel');
+    if (existingPanel) {
+        existingPanel.remove();
+    }
+
+    // Insert debug panel
+    testScreen.insertAdjacentHTML('afterbegin', debugHTML);
+}
+
+function hideDebugPanel() {
+    const testScreen = document.getElementById('test-screen');
+    testScreen.classList.remove('debug-mode');
+    const debugPanel = document.querySelector('.debug-panel');
+    if (debugPanel) {
+        debugPanel.remove();
+    }
+}
+
+function jumpToQuestion(index) {
+    currentQuestionIndex = index;
+    displayQuestion();
+    if (debugMode) {
+        showDebugPanel();
+    }
 }
 
 function displayQuestion() {
     const testData = questionDatabase[currentExam][currentTest];
-    const questions = testData.questions;
+    const questions = getCurrentQuestions();
     const question = questions[currentQuestionIndex];
+    const userSelections = getUserSelections(question.id);
+    const requiredSelections = getRequiredSelectionCount(question);
 
     // Update question counter
     document.getElementById('question-counter').textContent =
@@ -170,26 +360,46 @@ function displayQuestion() {
 
     // Display instruction if present
     const instructionElement = document.getElementById('question-instruction');
-    if (question.instruction) {
-        instructionElement.textContent = question.instruction;
+    let instructionText = question.instruction || '';
+    if (requiredSelections > 1) {
+        const multiSelectNote = `Select ${requiredSelections} answers.`;
+        instructionText = instructionText ? `${instructionText}\n\n${multiSelectNote}` : multiSelectNote;
+    }
+    if (instructionText) {
+        instructionElement.textContent = instructionText;
         instructionElement.style.display = 'block';
     } else {
         instructionElement.style.display = 'none';
     }
 
-    document.getElementById('question-text').textContent = question.question;
+    // Display image if present (before question text)
+    const imageContainer = document.getElementById('question-image');
+    if (question.image) {
+        imageContainer.innerHTML = `<img src="${question.image}" alt="Question ${question.id} diagram">`;
+        imageContainer.style.display = 'block';
+    } else {
+        imageContainer.innerHTML = '';
+        imageContainer.style.display = 'none';
+    }
+
+    // Display question text (always shown)
+    const questionTextElement = document.getElementById('question-text');
+    questionTextElement.textContent = question.question;
+    questionTextElement.style.display = 'block';
 
     // Display options
     const optionsContainer = document.getElementById('options');
     optionsContainer.innerHTML = '';
 
+    const correctAnswers = getCorrectAnswers(question);
+
     question.options.forEach(option => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
+        optionDiv.dataset.letter = option.letter;
 
-        const userAnswer = userAnswers[question.id];
-        const isCorrectAnswer = option.letter === question.correctAnswer;
-        const isUserAnswer = userAnswer === option.letter;
+        const isCorrectAnswer = correctAnswers.includes(option.letter);
+        const isUserAnswer = userSelections.includes(option.letter);
 
         if (reviewMode) {
             // In review mode, show correct and incorrect answers
@@ -224,27 +434,59 @@ function displayQuestion() {
     document.getElementById('prev-button').disabled = currentQuestionIndex === 0;
 
     const isLastQuestion = currentQuestionIndex === questions.length - 1;
+    const isCurrentQuestionAnswered = isQuestionAnswered(question);
 
     if (reviewMode) {
         // In review mode, hide submit button, always show next button
         document.getElementById('next-button').style.display = isLastQuestion ? 'none' : 'block';
+        document.getElementById('next-button').disabled = false;
         document.getElementById('submit-button').style.display = 'none';
     } else {
-        // Normal mode
-        document.getElementById('next-button').style.display = isLastQuestion ? 'none' : 'block';
-        document.getElementById('submit-button').style.display = isLastQuestion ? 'block' : 'none';
+        // Normal mode - require answer before continuing
+        if (isLastQuestion) {
+            document.getElementById('next-button').style.display = 'none';
+            document.getElementById('submit-button').style.display = 'block';
+            document.getElementById('submit-button').disabled = !isCurrentQuestionAnswered;
+        } else {
+            document.getElementById('next-button').style.display = 'block';
+            document.getElementById('next-button').disabled = !isCurrentQuestionAnswered;
+            document.getElementById('submit-button').style.display = 'none';
+        }
     }
 }
 
 function selectOption(questionId, letter) {
-    userAnswers[questionId] = letter;
+    if (reviewMode) {
+        return;
+    }
 
-    // Update UI
-    document.querySelectorAll('.option').forEach(opt => {
-        opt.classList.remove('selected');
-    });
+    const question = getCurrentQuestions().find(q => q.id === questionId);
+    if (!question) {
+        return;
+    }
 
-    event.currentTarget.classList.add('selected');
+    const requiredSelections = getRequiredSelectionCount(question);
+    const allowsMultiple = requiredSelections > 1;
+    let selections = getUserSelections(questionId);
+
+    if (allowsMultiple) {
+        if (selections.includes(letter)) {
+            selections = selections.filter(selection => selection !== letter);
+        } else {
+            if (selections.length >= requiredSelections) {
+                return;
+            }
+            selections = [...selections, letter];
+        }
+    } else {
+        selections = [letter];
+    }
+
+    setUserSelections(questionId, selections);
+    displayQuestion();
+    if (debugMode) {
+        showDebugPanel();
+    }
 }
 
 function previousQuestion() {
@@ -255,7 +497,7 @@ function previousQuestion() {
 }
 
 function nextQuestion() {
-    const questions = questionDatabase[currentExam][currentTest].questions;
+    const questions = getCurrentQuestions();
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
         displayQuestion();
@@ -263,10 +505,10 @@ function nextQuestion() {
 }
 
 function submitTest() {
-    const questions = questionDatabase[currentExam][currentTest].questions;
+    const questions = getCurrentQuestions();
 
     // Check if all questions are answered
-    const unansweredCount = questions.length - Object.keys(userAnswers).length;
+    const unansweredCount = questions.filter(question => !isQuestionAnswered(question)).length;
 
     if (unansweredCount > 0) {
         const confirmSubmit = confirm(
@@ -280,17 +522,17 @@ function submitTest() {
 }
 
 function calculateResults() {
-    const questions = questionDatabase[currentExam][currentTest].questions;
+    const questions = getCurrentQuestions();
     let correct = 0;
     let incorrect = 0;
     let unanswered = 0;
 
     questions.forEach(question => {
-        const userAnswer = userAnswers[question.id];
+        const selections = getUserSelections(question.id);
 
-        if (!userAnswer) {
+        if (selections.length === 0) {
             unanswered++;
-        } else if (userAnswer === question.correctAnswer) {
+        } else if (areAnswersCorrect(question, selections)) {
             correct++;
         } else {
             incorrect++;

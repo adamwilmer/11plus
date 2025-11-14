@@ -7,11 +7,26 @@
         "question": "metal though",
         "instruction": "In this question, one letter can be moved from the first word to the second word to make two new words. The letters must not otherwise be rearranged and both new words must make sense. Find the letter that moves.",
         "options": [
-          { "letter": "A", "text": "m" },
-          { "letter": "B", "text": "e" },
-          { "letter": "C", "text": "t" },
-          { "letter": "D", "text": "a" },
-          { "letter": "E", "text": "l" }
+          {
+            "letter": "A",
+            "text": "m"
+          },
+          {
+            "letter": "B",
+            "text": "e"
+          },
+          {
+            "letter": "C",
+            "text": "t"
+          },
+          {
+            "letter": "D",
+            "text": "a"
+          },
+          {
+            "letter": "E",
+            "text": "l"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -20,11 +35,26 @@
         "question": "liner bother",
         "instruction": "In this question, one letter can be moved from the first word to the second word to make two new words. The letters must not otherwise be rearranged and both new words must make sense. Find the letter that moves.",
         "options": [
-          { "letter": "A", "text": "l" },
-          { "letter": "B", "text": "i" },
-          { "letter": "C", "text": "n" },
-          { "letter": "D", "text": "e" },
-          { "letter": "E", "text": "r" }
+          {
+            "letter": "A",
+            "text": "l"
+          },
+          {
+            "letter": "B",
+            "text": "i"
+          },
+          {
+            "letter": "C",
+            "text": "n"
+          },
+          {
+            "letter": "D",
+            "text": "e"
+          },
+          {
+            "letter": "E",
+            "text": "r"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -33,11 +63,26 @@
         "question": "biased pant",
         "instruction": "In this question, one letter can be moved from the first word to the second word to make two new words. The letters must not otherwise be rearranged and both new words must make sense. Find the letter that moves.",
         "options": [
-          { "letter": "A", "text": "b" },
-          { "letter": "B", "text": "i" },
-          { "letter": "C", "text": "a" },
-          { "letter": "D", "text": "s" },
-          { "letter": "E", "text": "d" }
+          {
+            "letter": "A",
+            "text": "b"
+          },
+          {
+            "letter": "B",
+            "text": "i"
+          },
+          {
+            "letter": "C",
+            "text": "a"
+          },
+          {
+            "letter": "D",
+            "text": "s"
+          },
+          {
+            "letter": "E",
+            "text": "d"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -46,11 +91,26 @@
         "question": "chomp tea",
         "instruction": "In this question, one letter can be moved from the first word to the second word to make two new words. The letters must not otherwise be rearranged and both new words must make sense. Find the letter that moves.",
         "options": [
-          { "letter": "A", "text": "c" },
-          { "letter": "B", "text": "h" },
-          { "letter": "C", "text": "o" },
-          { "letter": "D", "text": "m" },
-          { "letter": "E", "text": "p" }
+          {
+            "letter": "A",
+            "text": "c"
+          },
+          {
+            "letter": "B",
+            "text": "h"
+          },
+          {
+            "letter": "C",
+            "text": "o"
+          },
+          {
+            "letter": "D",
+            "text": "m"
+          },
+          {
+            "letter": "E",
+            "text": "p"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -59,11 +119,26 @@
         "question": "player fight",
         "instruction": "In this question, one letter can be moved from the first word to the second word to make two new words. The letters must not otherwise be rearranged and both new words must make sense. Find the letter that moves.",
         "options": [
-          { "letter": "A", "text": "p" },
-          { "letter": "B", "text": "l" },
-          { "letter": "C", "text": "a" },
-          { "letter": "D", "text": "y" },
-          { "letter": "E", "text": "r" }
+          {
+            "letter": "A",
+            "text": "p"
+          },
+          {
+            "letter": "B",
+            "text": "l"
+          },
+          {
+            "letter": "C",
+            "text": "a"
+          },
+          {
+            "letter": "D",
+            "text": "y"
+          },
+          {
+            "letter": "E",
+            "text": "r"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -72,11 +147,26 @@
         "question": "brain tale",
         "instruction": "In this question, one letter can be moved from the first word to the second word to make two new words. The letters must not otherwise be rearranged and both new words must make sense. Find the letter that moves.",
         "options": [
-          { "letter": "A", "text": "b" },
-          { "letter": "B", "text": "r" },
-          { "letter": "C", "text": "a" },
-          { "letter": "D", "text": "i" },
-          { "letter": "E", "text": "n" }
+          {
+            "letter": "A",
+            "text": "b"
+          },
+          {
+            "letter": "B",
+            "text": "r"
+          },
+          {
+            "letter": "C",
+            "text": "a"
+          },
+          {
+            "letter": "D",
+            "text": "i"
+          },
+          {
+            "letter": "E",
+            "text": "n"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -85,11 +175,26 @@
         "question": "flower lit",
         "instruction": "In this question, one letter can be moved from the first word to the second word to make two new words. The letters must not otherwise be rearranged and both new words must make sense. Find the letter that moves.",
         "options": [
-          { "letter": "A", "text": "f" },
-          { "letter": "B", "text": "l" },
-          { "letter": "C", "text": "o" },
-          { "letter": "D", "text": "w" },
-          { "letter": "E", "text": "r" }
+          {
+            "letter": "A",
+            "text": "f"
+          },
+          {
+            "letter": "B",
+            "text": "l"
+          },
+          {
+            "letter": "C",
+            "text": "o"
+          },
+          {
+            "letter": "D",
+            "text": "w"
+          },
+          {
+            "letter": "E",
+            "text": "r"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -98,11 +203,26 @@
         "question": "wor [ ? ] en    fin [ ? ] ice",
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter.",
         "options": [
-          { "letter": "A", "text": "m" },
-          { "letter": "B", "text": "t" },
-          { "letter": "C", "text": "d" },
-          { "letter": "D", "text": "s" },
-          { "letter": "E", "text": "n" }
+          {
+            "letter": "A",
+            "text": "m"
+          },
+          {
+            "letter": "B",
+            "text": "t"
+          },
+          {
+            "letter": "C",
+            "text": "d"
+          },
+          {
+            "letter": "D",
+            "text": "s"
+          },
+          {
+            "letter": "E",
+            "text": "n"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -111,11 +231,26 @@
         "question": "loo [ ? ] eak    wee [ ? ] ull",
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter.",
         "options": [
-          { "letter": "A", "text": "b" },
-          { "letter": "B", "text": "k" },
-          { "letter": "C", "text": "m" },
-          { "letter": "D", "text": "p" },
-          { "letter": "E", "text": "s" }
+          {
+            "letter": "A",
+            "text": "b"
+          },
+          {
+            "letter": "B",
+            "text": "k"
+          },
+          {
+            "letter": "C",
+            "text": "m"
+          },
+          {
+            "letter": "D",
+            "text": "p"
+          },
+          {
+            "letter": "E",
+            "text": "s"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -124,11 +259,26 @@
         "question": "roo [ ? ] ick    oa [ ? ] ind",
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter.",
         "options": [
-          { "letter": "A", "text": "w" },
-          { "letter": "B", "text": "r" },
-          { "letter": "C", "text": "m" },
-          { "letter": "D", "text": "f" },
-          { "letter": "E", "text": "k" }
+          {
+            "letter": "A",
+            "text": "w"
+          },
+          {
+            "letter": "B",
+            "text": "r"
+          },
+          {
+            "letter": "C",
+            "text": "m"
+          },
+          {
+            "letter": "D",
+            "text": "f"
+          },
+          {
+            "letter": "E",
+            "text": "k"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -137,11 +287,26 @@
         "question": "car [ ? ] ip    fac [ ? ] rust",
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter.",
         "options": [
-          { "letter": "A", "text": "t" },
-          { "letter": "B", "text": "d" },
-          { "letter": "C", "text": "p" },
-          { "letter": "D", "text": "c" },
-          { "letter": "E", "text": "e" }
+          {
+            "letter": "A",
+            "text": "t"
+          },
+          {
+            "letter": "B",
+            "text": "d"
+          },
+          {
+            "letter": "C",
+            "text": "p"
+          },
+          {
+            "letter": "D",
+            "text": "c"
+          },
+          {
+            "letter": "E",
+            "text": "e"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -150,11 +315,26 @@
         "question": "chee [ ? ] ang    spea [ ? ] ide",
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter.",
         "options": [
-          { "letter": "A", "text": "s" },
-          { "letter": "B", "text": "r" },
-          { "letter": "C", "text": "b" },
-          { "letter": "D", "text": "p" },
-          { "letter": "E", "text": "k" }
+          {
+            "letter": "A",
+            "text": "s"
+          },
+          {
+            "letter": "B",
+            "text": "r"
+          },
+          {
+            "letter": "C",
+            "text": "b"
+          },
+          {
+            "letter": "D",
+            "text": "p"
+          },
+          {
+            "letter": "E",
+            "text": "k"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -163,11 +343,26 @@
         "question": "pe [ ? ] et    cla [ ? ] umber",
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter.",
         "options": [
-          { "letter": "A", "text": "w" },
-          { "letter": "B", "text": "g" },
-          { "letter": "C", "text": "p" },
-          { "letter": "D", "text": "l" },
-          { "letter": "E", "text": "n" }
+          {
+            "letter": "A",
+            "text": "w"
+          },
+          {
+            "letter": "B",
+            "text": "g"
+          },
+          {
+            "letter": "C",
+            "text": "p"
+          },
+          {
+            "letter": "D",
+            "text": "l"
+          },
+          {
+            "letter": "E",
+            "text": "n"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -176,11 +371,26 @@
         "question": "her [ ? ] ut    pol [ ? ] asis",
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter.",
         "options": [
-          { "letter": "A", "text": "b" },
-          { "letter": "B", "text": "o" },
-          { "letter": "C", "text": "e" },
-          { "letter": "D", "text": "l" },
-          { "letter": "E", "text": "d" }
+          {
+            "letter": "A",
+            "text": "b"
+          },
+          {
+            "letter": "B",
+            "text": "o"
+          },
+          {
+            "letter": "C",
+            "text": "e"
+          },
+          {
+            "letter": "D",
+            "text": "l"
+          },
+          {
+            "letter": "E",
+            "text": "d"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -189,11 +399,26 @@
         "question": "(staff [not] gnome)    (epoch [ ? ] image)",
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group.",
         "options": [
-          { "letter": "A", "text": "gem" },
-          { "letter": "B", "text": "map" },
-          { "letter": "C", "text": "hip" },
-          { "letter": "D", "text": "ham" },
-          { "letter": "E", "text": "mop" }
+          {
+            "letter": "A",
+            "text": "gem"
+          },
+          {
+            "letter": "B",
+            "text": "map"
+          },
+          {
+            "letter": "C",
+            "text": "hip"
+          },
+          {
+            "letter": "D",
+            "text": "ham"
+          },
+          {
+            "letter": "E",
+            "text": "mop"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -202,11 +427,26 @@
         "question": "(puzzle [zip] boiler)    (nettle [ ? ] brands)",
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group.",
         "options": [
-          { "letter": "A", "text": "tan" },
-          { "letter": "B", "text": "tee" },
-          { "letter": "C", "text": "ten" },
-          { "letter": "D", "text": "tar" },
-          { "letter": "E", "text": "tab" }
+          {
+            "letter": "A",
+            "text": "tan"
+          },
+          {
+            "letter": "B",
+            "text": "tee"
+          },
+          {
+            "letter": "C",
+            "text": "ten"
+          },
+          {
+            "letter": "D",
+            "text": "tar"
+          },
+          {
+            "letter": "E",
+            "text": "tab"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -215,11 +455,26 @@
         "question": "(kiosk [sky] syrup)    (agile [ ? ] upset)",
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group.",
         "options": [
-          { "letter": "A", "text": "use" },
-          { "letter": "B", "text": "lip" },
-          { "letter": "C", "text": "pea" },
-          { "letter": "D", "text": "gap" },
-          { "letter": "E", "text": "lap" }
+          {
+            "letter": "A",
+            "text": "use"
+          },
+          {
+            "letter": "B",
+            "text": "lip"
+          },
+          {
+            "letter": "C",
+            "text": "pea"
+          },
+          {
+            "letter": "D",
+            "text": "gap"
+          },
+          {
+            "letter": "E",
+            "text": "lap"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -228,11 +483,26 @@
         "question": "(pedal [idea] saint)    (swamp [ ? ] issue)",
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group.",
         "options": [
-          { "letter": "A", "text": "swap" },
-          { "letter": "B", "text": "saps" },
-          { "letter": "C", "text": "sums" },
-          { "letter": "D", "text": "saws" },
-          { "letter": "E", "text": "swim" }
+          {
+            "letter": "A",
+            "text": "swap"
+          },
+          {
+            "letter": "B",
+            "text": "saps"
+          },
+          {
+            "letter": "C",
+            "text": "sums"
+          },
+          {
+            "letter": "D",
+            "text": "saws"
+          },
+          {
+            "letter": "E",
+            "text": "swim"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -241,11 +511,26 @@
         "question": "(relax [axe] exists)    (jewel [ ? ] byway)",
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group.",
         "options": [
-          { "letter": "A", "text": "eel" },
-          { "letter": "B", "text": "ale" },
-          { "letter": "C", "text": "eye" },
-          { "letter": "D", "text": "awe" },
-          { "letter": "E", "text": "ewe" }
+          {
+            "letter": "A",
+            "text": "eel"
+          },
+          {
+            "letter": "B",
+            "text": "ale"
+          },
+          {
+            "letter": "C",
+            "text": "eye"
+          },
+          {
+            "letter": "D",
+            "text": "awe"
+          },
+          {
+            "letter": "E",
+            "text": "ewe"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -254,11 +539,26 @@
         "question": "(occupy [cape] repeat)    (snouts [ ? ] chisel)",
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group.",
         "options": [
-          { "letter": "A", "text": "once" },
-          { "letter": "B", "text": "hens" },
-          { "letter": "C", "text": "nets" },
-          { "letter": "D", "text": "oils" },
-          { "letter": "E", "text": "nest" }
+          {
+            "letter": "A",
+            "text": "once"
+          },
+          {
+            "letter": "B",
+            "text": "hens"
+          },
+          {
+            "letter": "C",
+            "text": "nets"
+          },
+          {
+            "letter": "D",
+            "text": "oils"
+          },
+          {
+            "letter": "E",
+            "text": "nest"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -267,11 +567,26 @@
         "question": "(thigh [hat] atlas)    (dwarf [ ? ] moths)",
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group.",
         "options": [
-          { "letter": "A", "text": "for" },
-          { "letter": "B", "text": "who" },
-          { "letter": "C", "text": "was" },
-          { "letter": "D", "text": "oar" },
-          { "letter": "E", "text": "wad" }
+          {
+            "letter": "A",
+            "text": "for"
+          },
+          {
+            "letter": "B",
+            "text": "who"
+          },
+          {
+            "letter": "C",
+            "text": "was"
+          },
+          {
+            "letter": "D",
+            "text": "oar"
+          },
+          {
+            "letter": "E",
+            "text": "wad"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -280,11 +595,26 @@
         "question": "27 26 28 25 29 24 30 [ ? ]",
         "instruction": "In each question, find the number that continues the series in the most sensible way.",
         "options": [
-          { "letter": "A", "text": "33" },
-          { "letter": "B", "text": "29" },
-          { "letter": "C", "text": "25" },
-          { "letter": "D", "text": "23" },
-          { "letter": "E", "text": "31" }
+          {
+            "letter": "A",
+            "text": "33"
+          },
+          {
+            "letter": "B",
+            "text": "29"
+          },
+          {
+            "letter": "C",
+            "text": "25"
+          },
+          {
+            "letter": "D",
+            "text": "23"
+          },
+          {
+            "letter": "E",
+            "text": "31"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -293,11 +623,26 @@
         "question": "4 8 11 15 18 [ ? ]",
         "instruction": "In each question, find the number that continues the series in the most sensible way.",
         "options": [
-          { "letter": "A", "text": "21" },
-          { "letter": "B", "text": "20" },
-          { "letter": "C", "text": "25" },
-          { "letter": "D", "text": "22" },
-          { "letter": "E", "text": "28" }
+          {
+            "letter": "A",
+            "text": "21"
+          },
+          {
+            "letter": "B",
+            "text": "20"
+          },
+          {
+            "letter": "C",
+            "text": "25"
+          },
+          {
+            "letter": "D",
+            "text": "22"
+          },
+          {
+            "letter": "E",
+            "text": "28"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -306,11 +651,26 @@
         "question": "28 32 25 27 22 22 19 17 16 [ ? ]",
         "instruction": "In each question, find the number that continues the series in the most sensible way.",
         "options": [
-          { "letter": "A", "text": "15" },
-          { "letter": "B", "text": "13" },
-          { "letter": "C", "text": "12" },
-          { "letter": "D", "text": "14" },
-          { "letter": "E", "text": "11" }
+          {
+            "letter": "A",
+            "text": "15"
+          },
+          {
+            "letter": "B",
+            "text": "13"
+          },
+          {
+            "letter": "C",
+            "text": "12"
+          },
+          {
+            "letter": "D",
+            "text": "14"
+          },
+          {
+            "letter": "E",
+            "text": "11"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -319,11 +679,26 @@
         "question": "20 23 27 32 38 [ ? ]",
         "instruction": "In each question, find the number that continues the series in the most sensible way.",
         "options": [
-          { "letter": "A", "text": "45" },
-          { "letter": "B", "text": "48" },
-          { "letter": "C", "text": "46" },
-          { "letter": "D", "text": "39" },
-          { "letter": "E", "text": "51" }
+          {
+            "letter": "A",
+            "text": "45"
+          },
+          {
+            "letter": "B",
+            "text": "48"
+          },
+          {
+            "letter": "C",
+            "text": "46"
+          },
+          {
+            "letter": "D",
+            "text": "39"
+          },
+          {
+            "letter": "E",
+            "text": "51"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -332,11 +707,26 @@
         "question": "57 56 54 52 50 47 45 41 39 [ ? ]",
         "instruction": "In each question, find the number that continues the series in the most sensible way.",
         "options": [
-          { "letter": "A", "text": "32" },
-          { "letter": "B", "text": "31" },
-          { "letter": "C", "text": "35" },
-          { "letter": "D", "text": "33" },
-          { "letter": "E", "text": "34" }
+          {
+            "letter": "A",
+            "text": "32"
+          },
+          {
+            "letter": "B",
+            "text": "31"
+          },
+          {
+            "letter": "C",
+            "text": "35"
+          },
+          {
+            "letter": "D",
+            "text": "33"
+          },
+          {
+            "letter": "E",
+            "text": "34"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -345,11 +735,26 @@
         "question": "88 92 90 95 92 98 94 101 [ ? ]",
         "instruction": "In each question, find the number that continues the series in the most sensible way.",
         "options": [
-          { "letter": "A", "text": "100" },
-          { "letter": "B", "text": "95" },
-          { "letter": "C", "text": "93" },
-          { "letter": "D", "text": "96" },
-          { "letter": "E", "text": "99" }
+          {
+            "letter": "A",
+            "text": "100"
+          },
+          {
+            "letter": "B",
+            "text": "95"
+          },
+          {
+            "letter": "C",
+            "text": "93"
+          },
+          {
+            "letter": "D",
+            "text": "96"
+          },
+          {
+            "letter": "E",
+            "text": "99"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -358,11 +763,26 @@
         "question": "2 5 14 41 [ ? ]",
         "instruction": "In each question, find the number that continues the series in the most sensible way.",
         "options": [
-          { "letter": "A", "text": "122" },
-          { "letter": "B", "text": "84" },
-          { "letter": "C", "text": "62" },
-          { "letter": "D", "text": "140" },
-          { "letter": "E", "text": "112" }
+          {
+            "letter": "A",
+            "text": "122"
+          },
+          {
+            "letter": "B",
+            "text": "84"
+          },
+          {
+            "letter": "C",
+            "text": "62"
+          },
+          {
+            "letter": "D",
+            "text": "140"
+          },
+          {
+            "letter": "E",
+            "text": "112"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -371,11 +791,26 @@
         "question": "At the shops Darren bought 8 oranges. Laura bought 3 oranges fewer than Chris. Rosario bought 3 oranges fewer than Darren and 1 fewer than Chris. How many oranges did Laura buy?",
         "instruction": "Read the following information, then find the correct answer to the question.",
         "options": [
-          { "letter": "A", "text": "1" },
-          { "letter": "B", "text": "9" },
-          { "letter": "C", "text": "3" },
-          { "letter": "D", "text": "5" },
-          { "letter": "E", "text": "2" }
+          {
+            "letter": "A",
+            "text": "1"
+          },
+          {
+            "letter": "B",
+            "text": "9"
+          },
+          {
+            "letter": "C",
+            "text": "3"
+          },
+          {
+            "letter": "D",
+            "text": "5"
+          },
+          {
+            "letter": "E",
+            "text": "2"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -384,99 +819,282 @@
         "question": "(break ignore hit) (poke miss aim)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "break", "pair": "X poke" },
-          { "letter": "B", "text": "ignore", "pair": "Y miss" },
-          { "letter": "C", "text": "hit", "pair": "Z aim" }
+          {
+            "letter": "A",
+            "text": "break"
+          },
+          {
+            "letter": "B",
+            "text": "ignore"
+          },
+          {
+            "letter": "C",
+            "text": "hit"
+          },
+          {
+            "letter": "X",
+            "text": "poke"
+          },
+          {
+            "letter": "Y",
+            "text": "miss"
+          },
+          {
+            "letter": "Z",
+            "text": "aim"
+          }
         ],
-        "correctAnswer": "C, Y"
+        "correctAnswer": "C,Y"
       },
       {
         "id": 31,
         "question": "(cheap price cost) (amount dear expense)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "cheap", "pair": "X amount" },
-          { "letter": "B", "text": "price", "pair": "Y dear" },
-          { "letter": "C", "text": "cost", "pair": "Z expense" }
+          {
+            "letter": "A",
+            "text": "cheap"
+          },
+          {
+            "letter": "B",
+            "text": "price"
+          },
+          {
+            "letter": "C",
+            "text": "cost"
+          },
+          {
+            "letter": "X",
+            "text": "amount"
+          },
+          {
+            "letter": "Y",
+            "text": "dear"
+          },
+          {
+            "letter": "Z",
+            "text": "expense"
+          }
         ],
-        "correctAnswer": "A, Y"
+        "correctAnswer": "A,Y"
       },
       {
         "id": 32,
         "question": "(complex superior modern) (old new fresh)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "complex", "pair": "X old" },
-          { "letter": "B", "text": "superior", "pair": "Y new" },
-          { "letter": "C", "text": "modern", "pair": "Z fresh" }
+          {
+            "letter": "A",
+            "text": "complex"
+          },
+          {
+            "letter": "B",
+            "text": "superior"
+          },
+          {
+            "letter": "C",
+            "text": "modern"
+          },
+          {
+            "letter": "X",
+            "text": "old"
+          },
+          {
+            "letter": "Y",
+            "text": "new"
+          },
+          {
+            "letter": "Z",
+            "text": "fresh"
+          }
         ],
-        "correctAnswer": "C, X"
+        "correctAnswer": "C,X"
       },
       {
         "id": 33,
         "question": "(lock close away) (key distant shut)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "lock", "pair": "X key" },
-          { "letter": "B", "text": "close", "pair": "Y distant" },
-          { "letter": "C", "text": "away", "pair": "Z shut" }
+          {
+            "letter": "A",
+            "text": "lock"
+          },
+          {
+            "letter": "B",
+            "text": "close"
+          },
+          {
+            "letter": "C",
+            "text": "away"
+          },
+          {
+            "letter": "X",
+            "text": "key"
+          },
+          {
+            "letter": "Y",
+            "text": "distant"
+          },
+          {
+            "letter": "Z",
+            "text": "shut"
+          }
         ],
-        "correctAnswer": "B, Y"
+        "correctAnswer": "B,Y"
       },
       {
         "id": 34,
         "question": "(hobby usual rarely) (habit often seldom)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "hobby", "pair": "X habit" },
-          { "letter": "B", "text": "usual", "pair": "Y often" },
-          { "letter": "C", "text": "rarely", "pair": "Z seldom" }
+          {
+            "letter": "A",
+            "text": "hobby"
+          },
+          {
+            "letter": "B",
+            "text": "usual"
+          },
+          {
+            "letter": "C",
+            "text": "rarely"
+          },
+          {
+            "letter": "X",
+            "text": "habit"
+          },
+          {
+            "letter": "Y",
+            "text": "often"
+          },
+          {
+            "letter": "Z",
+            "text": "seldom"
+          }
         ],
-        "correctAnswer": "C, Y"
+        "correctAnswer": "C,Y"
       },
       {
         "id": 35,
         "question": "(heavy glow stiff) (shine hard flexible)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "heavy", "pair": "X shine" },
-          { "letter": "B", "text": "glow", "pair": "Y hard" },
-          { "letter": "C", "text": "stiff", "pair": "Z flexible" }
+          {
+            "letter": "A",
+            "text": "heavy"
+          },
+          {
+            "letter": "B",
+            "text": "glow"
+          },
+          {
+            "letter": "C",
+            "text": "stiff"
+          },
+          {
+            "letter": "X",
+            "text": "shine"
+          },
+          {
+            "letter": "Y",
+            "text": "hard"
+          },
+          {
+            "letter": "Z",
+            "text": "flexible"
+          }
         ],
-        "correctAnswer": "C, Z"
+        "correctAnswer": "C,Z"
       },
       {
         "id": 36,
         "question": "(approximate true close) (broad precise rough)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "approximate", "pair": "X broad" },
-          { "letter": "B", "text": "true", "pair": "Y precise" },
-          { "letter": "C", "text": "close", "pair": "Z rough" }
+          {
+            "letter": "A",
+            "text": "approximate"
+          },
+          {
+            "letter": "B",
+            "text": "true"
+          },
+          {
+            "letter": "C",
+            "text": "close"
+          },
+          {
+            "letter": "X",
+            "text": "broad"
+          },
+          {
+            "letter": "Y",
+            "text": "precise"
+          },
+          {
+            "letter": "Z",
+            "text": "rough"
+          }
         ],
-        "correctAnswer": "B, Y"
+        "correctAnswer": "B,Y"
       },
       {
         "id": 37,
         "question": "(transparent clear hollow) (empty vague glass)",
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "transparent", "pair": "X empty" },
-          { "letter": "B", "text": "clear", "pair": "Y vague" },
-          { "letter": "C", "text": "hollow", "pair": "Z glass" }
+          {
+            "letter": "A",
+            "text": "transparent"
+          },
+          {
+            "letter": "B",
+            "text": "clear"
+          },
+          {
+            "letter": "C",
+            "text": "hollow"
+          },
+          {
+            "letter": "X",
+            "text": "empty"
+          },
+          {
+            "letter": "Y",
+            "text": "vague"
+          },
+          {
+            "letter": "Z",
+            "text": "glass"
+          }
         ],
-        "correctAnswer": "B, Y"
+        "correctAnswer": "B,Y"
       },
       {
         "id": 38,
         "question": "They were not alerted at once.",
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.",
         "options": [
-          { "letter": "A", "text": "They were" },
-          { "letter": "B", "text": "were not" },
-          { "letter": "C", "text": "not alerted" },
-          { "letter": "D", "text": "alerted at" },
-          { "letter": "E", "text": "at once." }
+          {
+            "letter": "A",
+            "text": "They were"
+          },
+          {
+            "letter": "B",
+            "text": "were not"
+          },
+          {
+            "letter": "C",
+            "text": "not alerted"
+          },
+          {
+            "letter": "D",
+            "text": "alerted at"
+          },
+          {
+            "letter": "E",
+            "text": "at once."
+          }
         ],
         "correctAnswer": "C"
       },
@@ -485,11 +1103,26 @@
         "question": "The shampoo left bubbles in the bath.",
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.",
         "options": [
-          { "letter": "A", "text": "The shampoo" },
-          { "letter": "B", "text": "shampoo left" },
-          { "letter": "C", "text": "left bubbles" },
-          { "letter": "D", "text": "bubbles in" },
-          { "letter": "E", "text": "in the" }
+          {
+            "letter": "A",
+            "text": "The shampoo"
+          },
+          {
+            "letter": "B",
+            "text": "shampoo left"
+          },
+          {
+            "letter": "C",
+            "text": "left bubbles"
+          },
+          {
+            "letter": "D",
+            "text": "bubbles in"
+          },
+          {
+            "letter": "E",
+            "text": "in the"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -498,11 +1131,26 @@
         "question": "Visitors wandered around the colourful gardens.",
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.",
         "options": [
-          { "letter": "A", "text": "Visitors wandered" },
-          { "letter": "B", "text": "wandered around" },
-          { "letter": "C", "text": "around the" },
-          { "letter": "D", "text": "the colourful" },
-          { "letter": "E", "text": "colourful gardens." }
+          {
+            "letter": "A",
+            "text": "Visitors wandered"
+          },
+          {
+            "letter": "B",
+            "text": "wandered around"
+          },
+          {
+            "letter": "C",
+            "text": "around the"
+          },
+          {
+            "letter": "D",
+            "text": "the colourful"
+          },
+          {
+            "letter": "E",
+            "text": "colourful gardens."
+          }
         ],
         "correctAnswer": "A"
       },
@@ -511,11 +1159,26 @@
         "question": "She tried to grasp another rope.",
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.",
         "options": [
-          { "letter": "A", "text": "She tried" },
-          { "letter": "B", "text": "tried to" },
-          { "letter": "C", "text": "to grasp" },
-          { "letter": "D", "text": "grasp another" },
-          { "letter": "E", "text": "another rope." }
+          {
+            "letter": "A",
+            "text": "She tried"
+          },
+          {
+            "letter": "B",
+            "text": "tried to"
+          },
+          {
+            "letter": "C",
+            "text": "to grasp"
+          },
+          {
+            "letter": "D",
+            "text": "grasp another"
+          },
+          {
+            "letter": "E",
+            "text": "another rope."
+          }
         ],
         "correctAnswer": "D"
       },
@@ -524,11 +1187,26 @@
         "question": "The rhinoceros escaped from the cage.",
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.",
         "options": [
-          { "letter": "A", "text": "The rhinoceros" },
-          { "letter": "B", "text": "rhinoceros escaped" },
-          { "letter": "C", "text": "escaped from" },
-          { "letter": "D", "text": "from the" },
-          { "letter": "E", "text": "the cage." }
+          {
+            "letter": "A",
+            "text": "The rhinoceros"
+          },
+          {
+            "letter": "B",
+            "text": "rhinoceros escaped"
+          },
+          {
+            "letter": "C",
+            "text": "escaped from"
+          },
+          {
+            "letter": "D",
+            "text": "from the"
+          },
+          {
+            "letter": "E",
+            "text": "the cage."
+          }
         ],
         "correctAnswer": "B"
       },
@@ -537,11 +1215,26 @@
         "question": "He hid the banjo inside the cupboard.",
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.",
         "options": [
-          { "letter": "A", "text": "He hid" },
-          { "letter": "B", "text": "hid the" },
-          { "letter": "C", "text": "the banjo" },
-          { "letter": "D", "text": "banjo inside" },
-          { "letter": "E", "text": "inside the" }
+          {
+            "letter": "A",
+            "text": "He hid"
+          },
+          {
+            "letter": "B",
+            "text": "hid the"
+          },
+          {
+            "letter": "C",
+            "text": "the banjo"
+          },
+          {
+            "letter": "D",
+            "text": "banjo inside"
+          },
+          {
+            "letter": "E",
+            "text": "inside the"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -550,11 +1243,26 @@
         "question": "They searched the patrol area systematically.",
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word.",
         "options": [
-          { "letter": "A", "text": "They searched" },
-          { "letter": "B", "text": "searched the" },
-          { "letter": "C", "text": "the patrol" },
-          { "letter": "D", "text": "patrol area" },
-          { "letter": "E", "text": "area systematically." }
+          {
+            "letter": "A",
+            "text": "They searched"
+          },
+          {
+            "letter": "B",
+            "text": "searched the"
+          },
+          {
+            "letter": "C",
+            "text": "the patrol"
+          },
+          {
+            "letter": "D",
+            "text": "patrol area"
+          },
+          {
+            "letter": "E",
+            "text": "area systematically."
+          }
         ],
         "correctAnswer": "E"
       },
@@ -563,11 +1271,26 @@
         "question": "UD VF WH XJ [ ? ]",
         "instruction": "Find the next pair of letters in the series.",
         "options": [
-          { "letter": "A", "text": "ZL" },
-          { "letter": "B", "text": "YL" },
-          { "letter": "C", "text": "YK" },
-          { "letter": "D", "text": "ZK" },
-          { "letter": "E", "text": "YM" }
+          {
+            "letter": "A",
+            "text": "ZL"
+          },
+          {
+            "letter": "B",
+            "text": "YL"
+          },
+          {
+            "letter": "C",
+            "text": "YK"
+          },
+          {
+            "letter": "D",
+            "text": "ZK"
+          },
+          {
+            "letter": "E",
+            "text": "YM"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -576,11 +1299,26 @@
         "question": "ZO WL TI QF [ ? ]",
         "instruction": "Find the next pair of letters in the series.",
         "options": [
-          { "letter": "A", "text": "NC" },
-          { "letter": "B", "text": "OD" },
-          { "letter": "C", "text": "MC" },
-          { "letter": "D", "text": "ND" },
-          { "letter": "E", "text": "OB" }
+          {
+            "letter": "A",
+            "text": "NC"
+          },
+          {
+            "letter": "B",
+            "text": "OD"
+          },
+          {
+            "letter": "C",
+            "text": "MC"
+          },
+          {
+            "letter": "D",
+            "text": "ND"
+          },
+          {
+            "letter": "E",
+            "text": "OB"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -589,11 +1327,26 @@
         "question": "AQ CM EI GE [ ? ]",
         "instruction": "Find the next pair of letters in the series.",
         "options": [
-          { "letter": "A", "text": "JB" },
-          { "letter": "B", "text": "IB" },
-          { "letter": "C", "text": "HE" },
-          { "letter": "D", "text": "IA" },
-          { "letter": "E", "text": "JA" }
+          {
+            "letter": "A",
+            "text": "JB"
+          },
+          {
+            "letter": "B",
+            "text": "IB"
+          },
+          {
+            "letter": "C",
+            "text": "HE"
+          },
+          {
+            "letter": "D",
+            "text": "IA"
+          },
+          {
+            "letter": "E",
+            "text": "JA"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -602,11 +1355,26 @@
         "question": "HQ LR PS TT [ ? ]",
         "instruction": "Find the next pair of letters in the series.",
         "options": [
-          { "letter": "A", "text": "WV" },
-          { "letter": "B", "text": "UV" },
-          { "letter": "C", "text": "XU" },
-          { "letter": "D", "text": "XT" },
-          { "letter": "E", "text": "UX" }
+          {
+            "letter": "A",
+            "text": "WV"
+          },
+          {
+            "letter": "B",
+            "text": "UV"
+          },
+          {
+            "letter": "C",
+            "text": "XU"
+          },
+          {
+            "letter": "D",
+            "text": "XT"
+          },
+          {
+            "letter": "E",
+            "text": "UX"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -615,11 +1383,26 @@
         "question": "SG NL JP GS [ ? ]",
         "instruction": "Find the next pair of letters in the series.",
         "options": [
-          { "letter": "A", "text": "ET" },
-          { "letter": "B", "text": "UE" },
-          { "letter": "C", "text": "DT" },
-          { "letter": "D", "text": "DU" },
-          { "letter": "E", "text": "EU" }
+          {
+            "letter": "A",
+            "text": "ET"
+          },
+          {
+            "letter": "B",
+            "text": "UE"
+          },
+          {
+            "letter": "C",
+            "text": "DT"
+          },
+          {
+            "letter": "D",
+            "text": "DU"
+          },
+          {
+            "letter": "E",
+            "text": "EU"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -628,11 +1411,26 @@
         "question": "KM LL ML NM OO PR [ ? ]",
         "instruction": "Find the next pair of letters in the series.",
         "options": [
-          { "letter": "A", "text": "QU" },
-          { "letter": "B", "text": "RU" },
-          { "letter": "C", "text": "RV" },
-          { "letter": "D", "text": "QV" },
-          { "letter": "E", "text": "QW" }
+          {
+            "letter": "A",
+            "text": "QU"
+          },
+          {
+            "letter": "B",
+            "text": "RU"
+          },
+          {
+            "letter": "C",
+            "text": "RV"
+          },
+          {
+            "letter": "D",
+            "text": "QV"
+          },
+          {
+            "letter": "E",
+            "text": "QW"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -641,11 +1439,26 @@
         "question": "CQ BL ZH WE [ ? ]",
         "instruction": "Find the next pair of letters in the series.",
         "options": [
-          { "letter": "A", "text": "SC" },
-          { "letter": "B", "text": "RC" },
-          { "letter": "C", "text": "TD" },
-          { "letter": "D", "text": "TC" },
-          { "letter": "E", "text": "SD" }
+          {
+            "letter": "A",
+            "text": "SC"
+          },
+          {
+            "letter": "B",
+            "text": "RC"
+          },
+          {
+            "letter": "C",
+            "text": "TD"
+          },
+          {
+            "letter": "D",
+            "text": "TC"
+          },
+          {
+            "letter": "E",
+            "text": "SD"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -654,11 +1467,26 @@
         "question": "His favourite food was CABE.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "BAG" },
-          { "letter": "B", "text": "GET" },
-          { "letter": "C", "text": "EVE" },
-          { "letter": "D", "text": "SAG" },
-          { "letter": "E", "text": "BAT" }
+          {
+            "letter": "A",
+            "text": "BAG"
+          },
+          {
+            "letter": "B",
+            "text": "GET"
+          },
+          {
+            "letter": "C",
+            "text": "EVE"
+          },
+          {
+            "letter": "D",
+            "text": "SAG"
+          },
+          {
+            "letter": "E",
+            "text": "BAT"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -667,11 +1495,26 @@
         "question": "The cars SDED in the bad weather.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "DEN" },
-          { "letter": "B", "text": "KID" },
-          { "letter": "C", "text": "PAR" },
-          { "letter": "D", "text": "RAN" },
-          { "letter": "E", "text": "LAD" }
+          {
+            "letter": "A",
+            "text": "DEN"
+          },
+          {
+            "letter": "B",
+            "text": "KID"
+          },
+          {
+            "letter": "C",
+            "text": "PAR"
+          },
+          {
+            "letter": "D",
+            "text": "RAN"
+          },
+          {
+            "letter": "E",
+            "text": "LAD"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -680,11 +1523,26 @@
         "question": "He BED for more space in the room.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "EGG" },
-          { "letter": "B", "text": "LAB" },
-          { "letter": "C", "text": "ONE" },
-          { "letter": "D", "text": "TUG" },
-          { "letter": "E", "text": "RIP" }
+          {
+            "letter": "A",
+            "text": "EGG"
+          },
+          {
+            "letter": "B",
+            "text": "LAB"
+          },
+          {
+            "letter": "C",
+            "text": "ONE"
+          },
+          {
+            "letter": "D",
+            "text": "TUG"
+          },
+          {
+            "letter": "E",
+            "text": "RIP"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -693,11 +1551,26 @@
         "question": "The morning was spent CLING the garden.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "ROE" },
-          { "letter": "B", "text": "AFT" },
-          { "letter": "C", "text": "APE" },
-          { "letter": "D", "text": "EAR" },
-          { "letter": "E", "text": "OWE" }
+          {
+            "letter": "A",
+            "text": "ROE"
+          },
+          {
+            "letter": "B",
+            "text": "AFT"
+          },
+          {
+            "letter": "C",
+            "text": "APE"
+          },
+          {
+            "letter": "D",
+            "text": "EAR"
+          },
+          {
+            "letter": "E",
+            "text": "OWE"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -706,11 +1579,26 @@
         "question": "I introduced my STEPHER.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "FAT" },
-          { "letter": "B", "text": "MOW" },
-          { "letter": "C", "text": "VAN" },
-          { "letter": "D", "text": "CAP" },
-          { "letter": "E", "text": "RAT" }
+          {
+            "letter": "A",
+            "text": "FAT"
+          },
+          {
+            "letter": "B",
+            "text": "MOW"
+          },
+          {
+            "letter": "C",
+            "text": "VAN"
+          },
+          {
+            "letter": "D",
+            "text": "CAP"
+          },
+          {
+            "letter": "E",
+            "text": "RAT"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -719,11 +1607,26 @@
         "question": "They were OVERED at the news.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "GAP" },
-          { "letter": "B", "text": "NIL" },
-          { "letter": "C", "text": "JOY" },
-          { "letter": "D", "text": "TON" },
-          { "letter": "E", "text": "POT" }
+          {
+            "letter": "A",
+            "text": "GAP"
+          },
+          {
+            "letter": "B",
+            "text": "NIL"
+          },
+          {
+            "letter": "C",
+            "text": "JOY"
+          },
+          {
+            "letter": "D",
+            "text": "TON"
+          },
+          {
+            "letter": "E",
+            "text": "POT"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -732,11 +1635,26 @@
         "question": "He gave his final JUDENT.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "HUM" },
-          { "letter": "B", "text": "GEM" },
-          { "letter": "C", "text": "ACE" },
-          { "letter": "D", "text": "TEN" },
-          { "letter": "E", "text": "TRY" }
+          {
+            "letter": "A",
+            "text": "HUM"
+          },
+          {
+            "letter": "B",
+            "text": "GEM"
+          },
+          {
+            "letter": "C",
+            "text": "ACE"
+          },
+          {
+            "letter": "D",
+            "text": "TEN"
+          },
+          {
+            "letter": "E",
+            "text": "TRY"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -745,11 +1663,26 @@
         "question": "Teabags have lots of PERATIONS.",
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word.",
         "options": [
-          { "letter": "A", "text": "SET" },
-          { "letter": "B", "text": "HIP" },
-          { "letter": "C", "text": "FOR" },
-          { "letter": "D", "text": "COT" },
-          { "letter": "E", "text": "LET" }
+          {
+            "letter": "A",
+            "text": "SET"
+          },
+          {
+            "letter": "B",
+            "text": "HIP"
+          },
+          {
+            "letter": "C",
+            "text": "FOR"
+          },
+          {
+            "letter": "D",
+            "text": "COT"
+          },
+          {
+            "letter": "E",
+            "text": "LET"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -758,88 +1691,250 @@
         "question": "Look is to (eye blink see) as listen is to (hear tone noise)",
         "instruction": "In these questions, find the two words, one from each group, that will complete the sentence in the best way. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "eye", "pair": "X hear" },
-          { "letter": "B", "text": "blink", "pair": "Y tone" },
-          { "letter": "C", "text": "see", "pair": "Z noise" }
+          {
+            "letter": "A",
+            "text": "eye"
+          },
+          {
+            "letter": "B",
+            "text": "blink"
+          },
+          {
+            "letter": "C",
+            "text": "see"
+          },
+          {
+            "letter": "X",
+            "text": "hear"
+          },
+          {
+            "letter": "Y",
+            "text": "tone"
+          },
+          {
+            "letter": "Z",
+            "text": "noise"
+          }
         ],
-        "correctAnswer": "C, X"
+        "correctAnswer": "C,X"
       },
       {
         "id": 61,
         "question": "High is to (low far big) as deep is to (fall shallow water)",
         "instruction": "In these questions, find the two words, one from each group, that will complete the sentence in the best way. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "low", "pair": "X fall" },
-          { "letter": "B", "text": "far", "pair": "Y shallow" },
-          { "letter": "C", "text": "big", "pair": "Z water" }
+          {
+            "letter": "A",
+            "text": "low"
+          },
+          {
+            "letter": "B",
+            "text": "far"
+          },
+          {
+            "letter": "C",
+            "text": "big"
+          },
+          {
+            "letter": "X",
+            "text": "fall"
+          },
+          {
+            "letter": "Y",
+            "text": "shallow"
+          },
+          {
+            "letter": "Z",
+            "text": "water"
+          }
         ],
-        "correctAnswer": "A, Y"
+        "correctAnswer": "A,Y"
       },
       {
         "id": 62,
         "question": "Bus is to (driver passengers road) as plane is to (airline cloud pilot)",
         "instruction": "In these questions, find the two words, one from each group, that will complete the sentence in the best way. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "driver", "pair": "X airline" },
-          { "letter": "B", "text": "passengers", "pair": "Y cloud" },
-          { "letter": "C", "text": "road", "pair": "Z pilot" }
+          {
+            "letter": "A",
+            "text": "driver"
+          },
+          {
+            "letter": "B",
+            "text": "passengers"
+          },
+          {
+            "letter": "C",
+            "text": "road"
+          },
+          {
+            "letter": "X",
+            "text": "airline"
+          },
+          {
+            "letter": "Y",
+            "text": "cloud"
+          },
+          {
+            "letter": "Z",
+            "text": "pilot"
+          }
         ],
-        "correctAnswer": "A, Z"
+        "correctAnswer": "A,Z"
       },
       {
         "id": 63,
         "question": "Plug is to (sink stopper block) as cork is to (bottle float screw)",
         "instruction": "In these questions, find the two words, one from each group, that will complete the sentence in the best way. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "sink", "pair": "X bottle" },
-          { "letter": "B", "text": "stopper", "pair": "Y float" },
-          { "letter": "C", "text": "block", "pair": "Z screw" }
+          {
+            "letter": "A",
+            "text": "sink"
+          },
+          {
+            "letter": "B",
+            "text": "stopper"
+          },
+          {
+            "letter": "C",
+            "text": "block"
+          },
+          {
+            "letter": "X",
+            "text": "bottle"
+          },
+          {
+            "letter": "Y",
+            "text": "float"
+          },
+          {
+            "letter": "Z",
+            "text": "screw"
+          }
         ],
-        "correctAnswer": "A, X"
+        "correctAnswer": "A,X"
       },
       {
         "id": 64,
         "question": "Fly is to (insect wings feathers) as run is to (fast person legs)",
         "instruction": "In these questions, find the two words, one from each group, that will complete the sentence in the best way. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "insect", "pair": "X fast" },
-          { "letter": "B", "text": "wings", "pair": "Y person" },
-          { "letter": "C", "text": "feathers", "pair": "Z legs" }
+          {
+            "letter": "A",
+            "text": "insect"
+          },
+          {
+            "letter": "B",
+            "text": "wings"
+          },
+          {
+            "letter": "C",
+            "text": "feathers"
+          },
+          {
+            "letter": "X",
+            "text": "fast"
+          },
+          {
+            "letter": "Y",
+            "text": "person"
+          },
+          {
+            "letter": "Z",
+            "text": "legs"
+          }
         ],
-        "correctAnswer": "B, Z"
+        "correctAnswer": "B,Z"
       },
       {
         "id": 65,
         "question": "Stitch is to (sew needle cloth) as stroke is to (pat paint cat)",
         "instruction": "In these questions, find the two words, one from each group, that will complete the sentence in the best way. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "sew", "pair": "X pat" },
-          { "letter": "B", "text": "needle", "pair": "Y paint" },
-          { "letter": "C", "text": "cloth", "pair": "Z cat" }
+          {
+            "letter": "A",
+            "text": "sew"
+          },
+          {
+            "letter": "B",
+            "text": "needle"
+          },
+          {
+            "letter": "C",
+            "text": "cloth"
+          },
+          {
+            "letter": "X",
+            "text": "pat"
+          },
+          {
+            "letter": "Y",
+            "text": "paint"
+          },
+          {
+            "letter": "Z",
+            "text": "cat"
+          }
         ],
-        "correctAnswer": "A, Y"
+        "correctAnswer": "A,Y"
       },
       {
         "id": 66,
         "question": "Large is to (open spacious great) as small is to (confined close near)",
         "instruction": "In these questions, find the two words, one from each group, that will complete the sentence in the best way. Mark both words on the answer sheet.",
         "options": [
-          { "letter": "A", "text": "open", "pair": "X confined" },
-          { "letter": "B", "text": "spacious", "pair": "Y close" },
-          { "letter": "C", "text": "great", "pair": "Z near" }
+          {
+            "letter": "A",
+            "text": "open"
+          },
+          {
+            "letter": "B",
+            "text": "spacious"
+          },
+          {
+            "letter": "C",
+            "text": "great"
+          },
+          {
+            "letter": "X",
+            "text": "confined"
+          },
+          {
+            "letter": "Y",
+            "text": "close"
+          },
+          {
+            "letter": "Z",
+            "text": "near"
+          }
         ],
-        "correctAnswer": "B, X"
+        "correctAnswer": "B,X"
       },
       {
         "id": 67,
         "question": "A cinema is open every night from 7 pm. The latest time a film begins is 11 pm. Films start at 7.15 pm, 8.15 pm and 9.15 pm on Tuesdays and Thursdays. On Mondays and Wednesdays films start on the hour, every hour. At the weekend, films start every half hour from 7 pm. If these statements are true, only one of the sentences below must be true. Which one?",
         "instruction": "Read the following information, then find the correct answer to the question.",
         "options": [
-          { "letter": "A", "text": "No films start at 9.30 pm." },
-          { "letter": "B", "text": "On Tuesday, a film starts at 9 pm." },
-          { "letter": "C", "text": "Films start at 9.15 pm three days each week." },
-          { "letter": "D", "text": "A film starts at 9 pm on Monday, Wednesday and at the weekend." },
-          { "letter": "E", "text": "All films finish before 11 pm." }
+          {
+            "letter": "A",
+            "text": "No films start at 9.30 pm."
+          },
+          {
+            "letter": "B",
+            "text": "On Tuesday, a film starts at 9 pm."
+          },
+          {
+            "letter": "C",
+            "text": "Films start at 9.15 pm three days each week."
+          },
+          {
+            "letter": "D",
+            "text": "A film starts at 9 pm on Monday, Wednesday and at the weekend."
+          },
+          {
+            "letter": "E",
+            "text": "All films finish before 11 pm."
+          }
         ],
         "correctAnswer": "D"
       },
@@ -848,11 +1943,26 @@
         "question": "(permit allow) (rent hire)",
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs.",
         "options": [
-          { "letter": "A", "text": "grant" },
-          { "letter": "B", "text": "let" },
-          { "letter": "C", "text": "agree" },
-          { "letter": "D", "text": "use" },
-          { "letter": "E", "text": "loan" }
+          {
+            "letter": "A",
+            "text": "grant"
+          },
+          {
+            "letter": "B",
+            "text": "let"
+          },
+          {
+            "letter": "C",
+            "text": "agree"
+          },
+          {
+            "letter": "D",
+            "text": "use"
+          },
+          {
+            "letter": "E",
+            "text": "loan"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -861,11 +1971,26 @@
         "question": "(wood trunk) (howl wail)",
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs.",
         "options": [
-          { "letter": "A", "text": "tree" },
-          { "letter": "B", "text": "shout" },
-          { "letter": "C", "text": "cut" },
-          { "letter": "D", "text": "bark" },
-          { "letter": "E", "text": "call" }
+          {
+            "letter": "A",
+            "text": "tree"
+          },
+          {
+            "letter": "B",
+            "text": "shout"
+          },
+          {
+            "letter": "C",
+            "text": "cut"
+          },
+          {
+            "letter": "D",
+            "text": "bark"
+          },
+          {
+            "letter": "E",
+            "text": "call"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -874,11 +1999,26 @@
         "question": "(resemble similar) (fond admire)",
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs.",
         "options": [
-          { "letter": "A", "text": "please" },
-          { "letter": "B", "text": "copy" },
-          { "letter": "C", "text": "enjoy" },
-          { "letter": "D", "text": "like" },
-          { "letter": "E", "text": "same" }
+          {
+            "letter": "A",
+            "text": "please"
+          },
+          {
+            "letter": "B",
+            "text": "copy"
+          },
+          {
+            "letter": "C",
+            "text": "enjoy"
+          },
+          {
+            "letter": "D",
+            "text": "like"
+          },
+          {
+            "letter": "E",
+            "text": "same"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -887,11 +2027,26 @@
         "question": "(token disc) (worktop surface)",
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs.",
         "options": [
-          { "letter": "A", "text": "flat" },
-          { "letter": "B", "text": "voucher" },
-          { "letter": "C", "text": "counter" },
-          { "letter": "D", "text": "sideboard" },
-          { "letter": "E", "text": "coin" }
+          {
+            "letter": "A",
+            "text": "flat"
+          },
+          {
+            "letter": "B",
+            "text": "voucher"
+          },
+          {
+            "letter": "C",
+            "text": "counter"
+          },
+          {
+            "letter": "D",
+            "text": "sideboard"
+          },
+          {
+            "letter": "E",
+            "text": "coin"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -900,11 +2055,26 @@
         "question": "(jump leap) (well water)",
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs.",
         "options": [
-          { "letter": "A", "text": "hop" },
-          { "letter": "B", "text": "flow" },
-          { "letter": "C", "text": "move" },
-          { "letter": "D", "text": "source" },
-          { "letter": "E", "text": "spring" }
+          {
+            "letter": "A",
+            "text": "hop"
+          },
+          {
+            "letter": "B",
+            "text": "flow"
+          },
+          {
+            "letter": "C",
+            "text": "move"
+          },
+          {
+            "letter": "D",
+            "text": "source"
+          },
+          {
+            "letter": "E",
+            "text": "spring"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -913,11 +2083,26 @@
         "question": "(chapter paragraph) (corridor alley)",
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs.",
         "options": [
-          { "letter": "A", "text": "book" },
-          { "letter": "B", "text": "path" },
-          { "letter": "C", "text": "walk" },
-          { "letter": "D", "text": "read" },
-          { "letter": "E", "text": "passage" }
+          {
+            "letter": "A",
+            "text": "book"
+          },
+          {
+            "letter": "B",
+            "text": "path"
+          },
+          {
+            "letter": "C",
+            "text": "walk"
+          },
+          {
+            "letter": "D",
+            "text": "read"
+          },
+          {
+            "letter": "E",
+            "text": "passage"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -926,11 +2111,26 @@
         "question": "(allotment patch) (conspire plan)",
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs.",
         "options": [
-          { "letter": "A", "text": "plot" },
-          { "letter": "B", "text": "scheme" },
-          { "letter": "C", "text": "garden" },
-          { "letter": "D", "text": "land" },
-          { "letter": "E", "text": "conceive" }
+          {
+            "letter": "A",
+            "text": "plot"
+          },
+          {
+            "letter": "B",
+            "text": "scheme"
+          },
+          {
+            "letter": "C",
+            "text": "garden"
+          },
+          {
+            "letter": "D",
+            "text": "land"
+          },
+          {
+            "letter": "E",
+            "text": "conceive"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -939,11 +2139,26 @@
         "question": "Three of these four words are given in code: ANTS BASE LETS BLUE. The codes are: 5836 4172 8672. Find the code for the word BASE.",
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing.",
         "options": [
-          { "letter": "A", "text": "5836" },
-          { "letter": "B", "text": "5368" },
-          { "letter": "C", "text": "5872" },
-          { "letter": "D", "text": "5462" },
-          { "letter": "E", "text": "5426" }
+          {
+            "letter": "A",
+            "text": "5836"
+          },
+          {
+            "letter": "B",
+            "text": "5368"
+          },
+          {
+            "letter": "C",
+            "text": "5872"
+          },
+          {
+            "letter": "D",
+            "text": "5462"
+          },
+          {
+            "letter": "E",
+            "text": "5426"
+          }
         ],
         "correctAnswer": "E"
       },
@@ -952,11 +2167,26 @@
         "question": "Find the code for the word EAST.",
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing.",
         "options": [
-          { "letter": "A", "text": "4627" },
-          { "letter": "B", "text": "6428" },
-          { "letter": "C", "text": "6472" },
-          { "letter": "D", "text": "6427" },
-          { "letter": "E", "text": "4678" }
+          {
+            "letter": "A",
+            "text": "4627"
+          },
+          {
+            "letter": "B",
+            "text": "6428"
+          },
+          {
+            "letter": "C",
+            "text": "6472"
+          },
+          {
+            "letter": "D",
+            "text": "6427"
+          },
+          {
+            "letter": "E",
+            "text": "4678"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -965,11 +2195,26 @@
         "question": "Find the word that has the number code 7316.",
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing.",
         "options": [
-          { "letter": "A", "text": "TUBS" },
-          { "letter": "B", "text": "TUNE" },
-          { "letter": "C", "text": "TUNA" },
-          { "letter": "D", "text": "TANS" },
-          { "letter": "E", "text": "TABS" }
+          {
+            "letter": "A",
+            "text": "TUBS"
+          },
+          {
+            "letter": "B",
+            "text": "TUNE"
+          },
+          {
+            "letter": "C",
+            "text": "TUNA"
+          },
+          {
+            "letter": "D",
+            "text": "TANS"
+          },
+          {
+            "letter": "E",
+            "text": "TABS"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -978,11 +2223,26 @@
         "question": "Three of these four words are given in code: KITE INTO PAIN POET. The codes are: 8457 5716 3512. Find the code for the word KITE.",
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing.",
         "options": [
-          { "letter": "A", "text": "3512" },
-          { "letter": "B", "text": "5716" },
-          { "letter": "C", "text": "8621" },
-          { "letter": "D", "text": "3421" },
-          { "letter": "E", "text": "5632" }
+          {
+            "letter": "A",
+            "text": "3512"
+          },
+          {
+            "letter": "B",
+            "text": "5716"
+          },
+          {
+            "letter": "C",
+            "text": "8621"
+          },
+          {
+            "letter": "D",
+            "text": "3421"
+          },
+          {
+            "letter": "E",
+            "text": "5632"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -991,11 +2251,26 @@
         "question": "Find the word that has the number code 8243.",
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing.",
         "options": [
-          { "letter": "A", "text": "PEAT" },
-          { "letter": "B", "text": "PEAK" },
-          { "letter": "C", "text": "TEAK" },
-          { "letter": "D", "text": "TANK" },
-          { "letter": "E", "text": "PENT" }
+          {
+            "letter": "A",
+            "text": "PEAT"
+          },
+          {
+            "letter": "B",
+            "text": "PEAK"
+          },
+          {
+            "letter": "C",
+            "text": "TEAK"
+          },
+          {
+            "letter": "D",
+            "text": "TANK"
+          },
+          {
+            "letter": "E",
+            "text": "PENT"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -1004,11 +2279,26 @@
         "question": "Find the code for the word KNOT.",
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing.",
         "options": [
-          { "letter": "A", "text": "3751" },
-          { "letter": "B", "text": "3761" },
-          { "letter": "C", "text": "7351" },
-          { "letter": "D", "text": "7361" },
-          { "letter": "E", "text": "3851" }
+          {
+            "letter": "A",
+            "text": "3751"
+          },
+          {
+            "letter": "B",
+            "text": "3761"
+          },
+          {
+            "letter": "C",
+            "text": "7351"
+          },
+          {
+            "letter": "D",
+            "text": "7361"
+          },
+          {
+            "letter": "E",
+            "text": "3851"
+          }
         ],
         "correctAnswer": "B"
       }

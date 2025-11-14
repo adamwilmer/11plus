@@ -13,11 +13,32 @@ A simple, mobile-friendly browser-based application for practicing 11+ exam ques
 
 ## How to Use
 
-1. **Open the app**: Simply open `index.html` in any modern web browser (Chrome, Firefox, Safari, Edge)
-2. **Select exam type**: Choose from Maths, English, Verbal Reasoning, Non-Verbal Reasoning, or Verbal Skills
-3. **Take the test**: Answer questions by clicking on options
-4. **Navigate**: Use Previous/Next buttons to move between questions
-5. **Submit**: Click Submit on the last question to see your results
+### For Local Testing (Recommended)
+
+Due to browser security restrictions, you need to run a local web server:
+
+```bash
+./serve.sh
+```
+
+Then open http://localhost:8000 in your browser.
+
+Alternatively, you can specify a different port:
+```bash
+./serve.sh 3000  # Use port 3000 instead
+```
+
+### For Deployed/Hosted Sites
+
+Simply open `index.html` in any modern web browser (Chrome, Firefox, Safari, Edge)
+
+### Taking the Test
+
+1. **Select exam type**: Choose from Maths, English, Verbal Reasoning, Non-Verbal Reasoning, or Verbal Skills
+2. **Take the test**: Answer questions by clicking on options (you must answer each question to continue)
+3. **Navigate**: Use Previous/Next buttons to move between questions
+4. **Submit**: Click Submit on the last question to see your results
+5. **Review**: Review your answers to see which were correct/incorrect
 
 ## Current Status
 
