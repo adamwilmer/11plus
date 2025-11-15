@@ -167,11 +167,18 @@ When extracting images from PDFs, follow these principles to avoid duplication a
 
 Crop coordinates should be adjusted iteratively to capture exactly what's needed and nothing more.
 
+## Git Commit Guidelines
+
+When creating git commits:
+- **DO NOT** include Claude Code attribution or co-authorship in commit messages
+- Keep commit messages concise and focused on the changes made
+- Use standard commit message format (summary line, optional detailed description)
+
 ## File Organization
 
 - `index.html`: Single-page app shell with all screens defined
 - `css/style.css`: All styling including responsive design
 - `js/app.js`: All application logic and state management
 - `data/*.json`: Question data organized by subject
-- `exams/`: Source PDF files (reference only, not used by app)
-- `images/`: Directory for question images (currently unused)
+- `exams/`: Source PDF files (reference only, not used by app, excluded from git via .gitignore)
+- `images/`: Directory for question images
