@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Crop Tool - 11+ Practice Tests</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .controls {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .control-group {
+            margin-bottom: 15px;
+        }
+
+        .control-group label {
+            display: inline-block;
+            width: 120px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        input[type="file"],
+        input[type="number"] {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+
+        button {
+            padding: 8px 16px;
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-right: 8px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        button:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+        }
+
+        .canvas-container {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            display: inline-block;
+            position: relative;
+        }
+
+        #pdfCanvas {
+            border: 1px solid #ddd;
+            cursor: crosshair;
+            display: block;
+        }
+
+        .selection-box {
+            position: absolute;
+            border: 2px solid #007bff;
+            background: rgba(0, 123, 255, 0.1);
+            pointer-events: none;
+        }
+
+        .output {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .output h3 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .coord-display {
+            background: #f8f9fa;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .coord-values {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .coord-item {
+            background: white;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+
+        .coord-item label {
+            display: block;
+            font-weight: 600;
+            color: #666;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+
+        .coord-item span {
+            font-size: 18px;
+            color: #007bff;
+            font-weight: 600;
+        }
+
+        .code-output {
+            background: #282c34;
+            color: #abb2bf;
+            padding: 15px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            font-size: 13px;
+            overflow-x: auto;
+            margin-bottom: 10px;
+        }
+
+        .copy-btn {
+            background: #28a745;
+        }
+
+        .copy-btn:hover {
+            background: #218838;
+        }
+
+        .instructions {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 15px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color: #856404;
+        }
+
+        .instructions h3 {
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            margin-left: 20px;
+        }
+
+        .instructions li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📄 PDF Crop Tool for 11+ Practice Tests</h1>
+
+        <div class="instructions">
+            <h3>How to use:</h3>
+            <ul>
+                <li>1. Select a PDF file from the exams folder</li>
+                <li>2. Navigate to the page with the question image</li>
+                <li>3. Click and drag on the canvas to select the area you want to crop</li>
+                <li>4. The coordinates will update in real-time below</li>
+                <li>5. Click "Copy Python Code" to copy the extraction code</li>
+                <li>6. Paste into extract_question_images.py</li>
+            </ul>
+        </div>
+
+        <div class="controls">
+            <div class="control-group">
+                <label for="pdfFile">Select PDF:</label>
+                <input type="file" id="pdfFile" accept=".pdf">
+            </div>
+
+            <div class="control-group">
+                <label for="pageNum">Page Number:</label>
+                <input type="number" id="pageNum" min="1" value="1">
+                <button id="prevPage">← Previous</button>
+                <button id="nextPage">Next →</button>
+                <span id="pageInfo"></span>
+            </div>
+
+            <div class="control-group">
+                <label for="questionNum">Question #:</label>
+                <input type="number" id="questionNum" min="1" value="1" placeholder="For code output">
+            </div>
+
+            <div class="control-group">
+                <label for="pageIndex">Page Index:</label>
+                <input type="number" id="pageIndex" min="0" value="0" placeholder="0-indexed for code">
+            </div>
+
+            <div class="control-group">
+                <button id="clearSelection">Clear Selection</button>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <canvas id="pdfCanvas"></canvas>
+            <div id="selectionBox" class="selection-box" style="display: none;"></div>
+        </div>
+
+        <div class="output">
+            <h3>Crop Coordinates</h3>
+
+            <div class="coord-values">
+                <div class="coord-item">
+                    <label>Left</label>
+                    <span id="coordLeft">0.00</span>
+                </div>
+                <div class="coord-item">
+                    <label>Top</label>
+                    <span id="coordTop">0.00</span>
+                </div>
+                <div class="coord-item">
+                    <label>Right</label>
+                    <span id="coordRight">0.00</span>
+                </div>
+                <div class="coord-item">
+                    <label>Bottom</label>
+                    <span id="coordBottom">0.00</span>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 20px;">Python Code</h3>
+            <div class="code-output" id="pythonCode">
+# Select an area on the canvas to generate code
+            </div>
+            <button class="copy-btn" id="copyCode">📋 Copy Python Code</button>
+        </div>
+    </div>
+
+    <script>
+        pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+
+        let pdfDoc = null;
+        let pageNum = 1;
+        let pageRendering = false;
+        let pageNumPending = null;
+        const scale = 2; // Higher scale for better quality
+        const canvas = document.getElementById('pdfCanvas');
+        const ctx = canvas.getContext('2d');
+
+        // Selection variables
+        let isSelecting = false;
+        let startX, startY, endX, endY;
+        const selectionBox = document.getElementById('selectionBox');
+
+        // Load PDF
+        document.getElementById('pdfFile').addEventListener('change', function(e) {
+            const file = e.target.files[0];
+            if (file) {
+                const fileReader = new FileReader();
+                fileReader.onload = function() {
+                    const typedarray = new Uint8Array(this.result);
+                    pdfjsLib.getDocument(typedarray).promise.then(function(pdf) {
+                        pdfDoc = pdf;
+                        document.getElementById('pageNum').max = pdf.numPages;
+                        document.getElementById('pageInfo').textContent = `/ ${pdf.numPages}`;
+                        renderPage(pageNum);
+                    });
+                };
+                fileReader.readAsArrayBuffer(file);
+            }
+        });
+
+        // Render page
+        function renderPage(num) {
+            pageRendering = true;
+            pdfDoc.getPage(num).then(function(page) {
+                const viewport = page.getViewport({scale: scale});
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                const renderContext = {
+                    canvasContext: ctx,
+                    viewport: viewport
+                };
+
+                const renderTask = page.render(renderContext);
+                renderTask.promise.then(function() {
+                    pageRendering = false;
+                    if (pageNumPending !== null) {
+                        renderPage(pageNumPending);
+                        pageNumPending = null;
+                    }
+                });
+            });
+
+            document.getElementById('pageNum').value = num;
+            document.getElementById('pageIndex').value = num - 1;
+        }
+
+        function queueRenderPage(num) {
+            if (pageRendering) {
+                pageNumPending = num;
+            } else {
+                renderPage(num);
+            }
+        }
+
+        // Page navigation
+        document.getElementById('prevPage').addEventListener('click', function() {
+            if (pageNum <= 1) return;
+            pageNum--;
+            queueRenderPage(pageNum);
+        });
+
+        document.getElementById('nextPage').addEventListener('click', function() {
+            if (pageNum >= pdfDoc.numPages) return;
+            pageNum++;
+            queueRenderPage(pageNum);
+        });
+
+        document.getElementById('pageNum').addEventListener('change', function() {
+            const val = parseInt(this.value);
+            if (val > 0 && val <= pdfDoc.numPages) {
+                pageNum = val;
+                queueRenderPage(pageNum);
+            }
+        });
+
+        // Canvas selection
+        canvas.addEventListener('mousedown', function(e) {
+            const rect = canvas.getBoundingClientRect();
+            startX = e.clientX - rect.left;
+            startY = e.clientY - rect.top;
+            isSelecting = true;
+            selectionBox.style.display = 'block';
+        });
+
+        canvas.addEventListener('mousemove', function(e) {
+            if (!isSelecting) return;
+
+            const rect = canvas.getBoundingClientRect();
+            endX = e.clientX - rect.left;
+            endY = e.clientY - rect.top;
+
+            const left = Math.min(startX, endX);
+            const top = Math.min(startY, endY);
+            const width = Math.abs(endX - startX);
+            const height = Math.abs(endY - startY);
+
+            selectionBox.style.left = left + 'px';
+            selectionBox.style.top = top + 'px';
+            selectionBox.style.width = width + 'px';
+            selectionBox.style.height = height + 'px';
+
+            updateCoordinates(left, top, left + width, top + height);
+        });
+
+        canvas.addEventListener('mouseup', function() {
+            isSelecting = false;
+        });
+
+        document.getElementById('clearSelection').addEventListener('click', function() {
+            selectionBox.style.display = 'none';
+            document.getElementById('coordLeft').textContent = '0.00';
+            document.getElementById('coordTop').textContent = '0.00';
+            document.getElementById('coordRight').textContent = '0.00';
+            document.getElementById('coordBottom').textContent = '0.00';
+            document.getElementById('pythonCode').textContent = '# Select an area on the canvas to generate code';
+        });
+
+        function updateCoordinates(left, top, right, bottom) {
+            const canvasWidth = canvas.width;
+            const canvasHeight = canvas.height;
+
+            const leftPercent = (left / canvasWidth).toFixed(2);
+            const topPercent = (top / canvasHeight).toFixed(2);
+            const rightPercent = (right / canvasWidth).toFixed(2);
+            const bottomPercent = (bottom / canvasHeight).toFixed(2);
+
+            document.getElementById('coordLeft').textContent = leftPercent;
+            document.getElementById('coordTop').textContent = topPercent;
+            document.getElementById('coordRight').textContent = rightPercent;
+            document.getElementById('coordBottom').textContent = bottomPercent;
+
+            generatePythonCode(leftPercent, topPercent, rightPercent, bottomPercent);
+        }
+
+        function generatePythonCode(left, top, right, bottom) {
+            const questionNum = document.getElementById('questionNum').value || '1';
+            const pageIndex = document.getElementById('pageIndex').value || '0';
+
+            const code = `# Question ${questionNum}
+extract_question_image(
+    doc, ${pageIndex}, ${questionNum},
+    crop_coords=(${left}, ${top}, ${right}, ${bottom}),
+    output_name="maths_q${questionNum}_diagram.png"
+)`;
+
+            document.getElementById('pythonCode').textContent = code;
+        }
+
+        document.getElementById('copyCode').addEventListener('click', function() {
+            const code = document.getElementById('pythonCode').textContent;
+            navigator.clipboard.writeText(code).then(function() {
+                const btn = document.getElementById('copyCode');
+                const originalText = btn.textContent;
+                btn.textContent = '✓ Copied!';
+                setTimeout(() => {
+                    btn.textContent = originalText;
+                }, 2000);
+            });
+        });
+    </script>
+</body>
+</html>

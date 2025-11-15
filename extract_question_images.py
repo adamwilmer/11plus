@@ -72,14 +72,14 @@ extract_question_image(
 # Question 8: Triangle with more at top (page 4)
 extract_question_image(
     doc, 4, 8,
-    crop_coords=(0.28, 0.28, 0.72, 0.50),
+    crop_coords=(0.28, 0.22, 0.72, 0.50),
     output_name="maths_q8_triangle.png"
 )
 
 # Question 11: Jug and jar with more at top (page 5)
 extract_question_image(
     doc, 5, 11,
-    crop_coords=(0.20, 0.15, 0.80, 0.38),
+    crop_coords=(0.20, 0.10, 0.90, 0.38),
     output_name="maths_q11_containers.png"
 )
 
@@ -107,77 +107,77 @@ extract_question_image(
 # Question 20: All five shapes A-E complete, no question text (page 8)
 extract_question_image(
     doc, 8, 20,
-    crop_coords=(0.10, 0.32, 0.90, 0.40),
+    crop_coords=(0.10, 0.28, 0.95, 0.40),
     output_name="maths_q20_shapes.png"
 )
 
 # Question 23: Baby weight graph only (page 9)
 extract_question_image(
     doc, 9, 23,
-    crop_coords=(0.22, 0.40, 0.78, 0.70),
+    crop_coords=(0.22, 0.26, 0.92, 0.58),
     output_name="maths_q23_graph.png"
 )
 
 # Question 24: 3D shapes only (page 10)
 extract_question_image(
     doc, 10, 24,
-    crop_coords=(0.22, 0.16, 0.78, 0.44),
+    crop_coords=(0.15, 0.08, 0.78, 0.33),
     output_name="maths_q24_cuboids.png"
 )
 
 # Question 25: Angle diagram only (page 10)
 extract_question_image(
     doc, 10, 25,
-    crop_coords=(0.34, 0.62, 0.66, 0.72),
+    crop_coords=(0.26, 0.48, 0.76, 0.60),
     output_name="maths_q25_angle.png"
 )
 
 # Question 30: Population graph only (page 12)
 extract_question_image(
     doc, 12, 30,
-    crop_coords=(0.22, 0.26, 0.78, 0.60),
+    crop_coords=(0.22, 0.12, 0.88, 0.48),
     output_name="maths_q30_population.png"
 )
 
 # Question 40: Venn diagram only (page 15)
 extract_question_image(
     doc, 15, 40,
-    crop_coords=(0.30, 0.24, 0.70, 0.46),
+    crop_coords=(0.22, 0.12, 0.88, 0.34),
     output_name="maths_q40_venn.png"
 )
 
 # Question 42: Number line only (page 15)
 extract_question_image(
     doc, 15, 42,
-    crop_coords=(0.20, 0.71, 0.80, 0.77),
+    crop_coords=(0.19, 0.69, 0.97, 0.82),
     output_name="maths_q42_numberline.png"
 )
 
 # Question 43: Frog on pond only (page 16)
 extract_question_image(
     doc, 16, 43,
-    crop_coords=(0.26, 0.22, 0.74, 0.46),
+    crop_coords=(0.18, 0.19, 0.90, 0.42),
     output_name="maths_q43_frog.png"
 )
 
 # Question 45: Weather pie chart only (page 17)
 extract_question_image(
     doc, 17, 45,
-    crop_coords=(0.34, 0.22, 0.66, 0.44),
+    crop_coords=(0.29, 0.13, 0.75, 0.37),
     output_name="maths_q45_weather.png"
 )
 
 # Question 47: Transport bar chart only (page 18)
 extract_question_image(
     doc, 18, 47,
-    crop_coords=(0.24, 0.28, 0.76, 0.64),
+    crop_coords=(0.20, 0.18, 0.95, 0.49),
     output_name="maths_q47_transport.png"
 )
 
 # Question 48: Pizza diagram only (page 19)
 extract_question_image(
     doc, 19, 48,
-    crop_coords=(0.34, 0.20, 0.66, 0.42),
+    crop_coords=(0.19, 0.13, 0.84, 0.42),
     output_name="maths_q48_pizza.png"
 )
 

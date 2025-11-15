@@ -146,6 +146,27 @@ python3 extract_question_images.py
 
 This script extracts images for questions that require visual diagrams (coordinate grids, charts, shapes, etc.) and saves them to the `images/` directory. Adjust crop coordinates in the script as needed for new questions.
 
+#### Image Extraction Best Practices
+
+When extracting images from PDFs, follow these principles to avoid duplication and ensure clean presentation:
+
+**What to INCLUDE:**
+- The essential visual diagram, chart, graph, or shape that the question refers to
+- Answer option letters (A-E) if they are part of the visual diagram itself (e.g., labeled shapes)
+
+**What to EXCLUDE:**
+- Question text - this belongs in the JSON `question` field
+- Answer options text - this belongs in the JSON `options` array
+- Superfluous text or labels that will be duplicated in the JSON
+- Extra whitespace at edges
+
+**Example:** For a question with 3D shapes labeled A-E:
+- ✅ Include: The shapes with their A-E labels
+- ❌ Exclude: The question text "Which shape has the most faces?"
+- ❌ Exclude: Answer options like "A. Shape A", "B. Shape B", etc.
+
+Crop coordinates should be adjusted iteratively to capture exactly what's needed and nothing more.
+
 ## File Organization
 
 - `index.html`: Single-page app shell with all screens defined

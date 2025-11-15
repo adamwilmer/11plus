@@ -10,6 +10,7 @@ let currentQuestions = [];
 let timerEnabled = false;
 let timerInterval = null;
 let timerTargetMs = 0;
+let timerExpiredEventFired = false;
 let testStartTime = null;
 let testEndTime = null;
 let currentPassageHtml = '';
@@ -181,6 +182,20 @@ function updateTimerDisplay() {
     timerValue.textContent = `${isNegative ? '-' : ''}${formatDurationFromMs(displayMs)}`;
     timerLabel.textContent = isNegative ? 'Over time:' : 'Time left:';
     timerDisplay.classList.toggle('timer-negative', isNegative);
+
+    // Track timer expiry in Google Analytics (only once)
+    if (isNegative && !timerExpiredEventFired) {
+        timerExpiredEventFired = true;
+        if (typeof gtag !== 'undefined') {
+            const testData = questionDatabase[currentExam] && questionDatabase[currentExam][currentTest];
+            gtag('event', 'timer_expired', {
+                'exam_type': currentExam,
+                'test_name': testData ? (testData.title || currentTest) : currentTest,
+                'event_category': 'engagement',
+                'event_label': `${currentExam}_${currentTest}`
+            });
+        }
+    }
 }
 
 function startTimerCountdown() {
@@ -192,6 +207,18 @@ function startTimerCountdown() {
     updateTimerDisplay();
     clearActiveTimer();
     timerInterval = setInterval(updateTimerDisplay, 1000);
+
+    // Track timer start in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        const testData = questionDatabase[currentExam] && questionDatabase[currentExam][currentTest];
+        gtag('event', 'timer_started', {
+            'exam_type': currentExam,
+            'test_name': testData ? (testData.title || currentTest) : currentTest,
+            'duration_seconds': Math.round(timerTargetMs / 1000),
+            'event_category': 'engagement',
+            'event_label': `${currentExam}_${currentTest}`
+        });
+    }
 }
 
 function stopTimerCountdown() {
@@ -282,6 +309,15 @@ function selectExam(examType) {
     currentExam = examType;
     const examData = questionDatabase[examType];
 
+    // Track exam selection in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'exam_selected', {
+            'exam_type': examType,
+            'event_category': 'engagement',
+            'event_label': examType
+        });
+    }
+
     // Update title
     const titleMap = {
         'maths': 'Maths Tests',
@@ -359,6 +395,20 @@ function selectExam(examType) {
             timerCheckbox.type = 'checkbox';
             timerCheckbox.id = `timer-toggle-${testKey}`;
             timerCheckbox.disabled = baseTimerMinutes === 0;
+
+            // Track timer toggle in Google Analytics
+            timerCheckbox.addEventListener('change', (e) => {
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'timer_toggled', {
+                        'exam_type': examType,
+                        'test_name': test.title || testKey,
+                        'timer_enabled': e.target.checked,
+                        'event_category': 'engagement',
+                        'event_label': `${examType}_${testKey}`
+                    });
+                }
+            });
+
             timerLabel.appendChild(timerCheckbox);
 
             const timerText = document.createElement('span');
@@ -424,6 +474,18 @@ function startTest(testKey) {
     currentQuestions = selectedQuestions;
     const selectedQuestionCount = currentQuestions.length;
 
+    // Track test start in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'test_started', {
+            'exam_type': currentExam,
+            'test_name': testData.title || testKey,
+            'question_count': selectedQuestionCount,
+            'total_questions': totalQuestions,
+            'event_category': 'engagement',
+            'event_label': `${currentExam}_${testKey}`
+        });
+    }
+
     // Setup passage if present (visibility will be handled by displayQuestion)
     const passageTitleElement = document.getElementById('passage-title');
     const passageTextElement = document.getElementById('passage-text');
@@ -454,6 +516,7 @@ function startTest(testKey) {
     clearActiveTimer();
     timerEnabled = false;
     timerTargetMs = 0;
+    timerExpiredEventFired = false;
 
     const baseTimerMinutes = getBaseTimerMinutes(currentExam);
     const timerToggle = document.getElementById(`timer-toggle-${testKey}`);
@@ -487,24 +550,37 @@ function showDebugPanel() {
 
     const questions = currentQuestions;
 
+    // Save scroll position before removing panel
+    const existingPanel = document.querySelector('.debug-panel');
+    const existingList = document.querySelector('.debug-question-list');
+    const scrollPosition = existingList ? existingList.scrollTop : 0;
+
     let debugHTML = '<div class="debug-panel"><h3>Debug: Questions</h3><ul class="debug-question-list">';
     questions.forEach((q, index) => {
         const answered = isQuestionAnswered(q) ? '✓' : '';
+        const hasImage = q.image ? '*' : '';
         const current = index === currentQuestionIndex ? 'current' : '';
         debugHTML += `<li class="${current}" onclick="jumpToQuestion(${index})">
-            <span class="q-num">Q${q.id}</span> ${answered}
+            <span class="q-num">Q${q.id}${hasImage}</span> ${answered}
         </li>`;
     });
     debugHTML += '</ul></div>';
 
     // Remove existing debug panel if any
-    const existingPanel = document.querySelector('.debug-panel');
     if (existingPanel) {
         existingPanel.remove();
     }
 
     // Insert debug panel
     testScreen.insertAdjacentHTML('afterbegin', debugHTML);
+
+    // Restore scroll position after browser renders
+    requestAnimationFrame(() => {
+        const newList = document.querySelector('.debug-question-list');
+        if (newList) {
+            newList.scrollTop = scrollPosition;
+        }
+    });
 }
 
 function hideDebugPanel() {
@@ -762,6 +838,28 @@ function calculateResults() {
         }
         timeSummaryElement.textContent = `Summary: ${correct} correct, ${incorrect} incorrect, ${unanswered} unanswered. ${timeText}`;
     }
+
+    // Track test completion in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        const testData = questionDatabase[currentExam][currentTest];
+        const elapsedMs = testEndTime && testStartTime ? testEndTime - testStartTime : 0;
+        const elapsedSeconds = Math.round(elapsedMs / 1000);
+
+        gtag('event', 'test_completed', {
+            'exam_type': currentExam,
+            'test_name': testData.title || currentTest,
+            'score_percentage': percentage,
+            'correct_count': correct,
+            'incorrect_count': incorrect,
+            'unanswered_count': unanswered,
+            'total_questions': questions.length,
+            'time_seconds': elapsedSeconds,
+            'timer_enabled': timerEnabled,
+            'event_category': 'engagement',
+            'event_label': `${currentExam}_${currentTest}`,
+            'value': percentage
+        });
+    }
 }
 
 function reviewAnswers() {
@@ -769,6 +867,18 @@ function reviewAnswers() {
     currentQuestionIndex = 0;
     reviewMode = true;
     hideTimerDisplay();
+
+    // Track review mode in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        const testData = questionDatabase[currentExam][currentTest];
+        gtag('event', 'review_started', {
+            'exam_type': currentExam,
+            'test_name': testData.title || currentTest,
+            'event_category': 'engagement',
+            'event_label': `${currentExam}_${currentTest}`
+        });
+    }
+
     showScreen('test-screen');
     displayQuestion();
 }
