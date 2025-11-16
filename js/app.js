@@ -14,6 +14,7 @@ let timerExpiredEventFired = false;
 let testStartTime = null;
 let testEndTime = null;
 let currentPassageHtml = '';
+let focusedOptionIndex = -1;
 
 const examTimerDefaults = {
     'maths': 50,
@@ -293,6 +294,82 @@ function setupEventListeners() {
             selectExam(examType);
         });
     });
+
+    // Global keyboard handler for test screen
+    document.addEventListener('keydown', (e) => {
+        const testScreen = document.getElementById('test-screen');
+        if (!testScreen || !testScreen.classList.contains('active')) return;
+        if (reviewMode) return;
+
+        const questions = getCurrentQuestions();
+        if (questions.length === 0) return;
+
+        const question = questions[currentQuestionIndex];
+        const optionCount = question.options ? question.options.length : 0;
+
+        // Handle Enter key - submit/advance
+        if (e.key === 'Enter') {
+            if (!isQuestionAnswered(question)) return;
+
+            e.preventDefault();
+            const isLastQuestion = currentQuestionIndex === questions.length - 1;
+            if (isLastQuestion) {
+                submitTest();
+            } else {
+                nextQuestion();
+            }
+            return;
+        }
+
+        // Handle arrow keys - navigate focus
+        if (e.key === 'ArrowDown' || e.key === 'ArrowUp') {
+            e.preventDefault();
+
+            if (optionCount === 0) return;
+
+            if (e.key === 'ArrowDown') {
+                focusedOptionIndex = (focusedOptionIndex + 1) % optionCount;
+            } else {
+                focusedOptionIndex = (focusedOptionIndex - 1 + optionCount) % optionCount;
+            }
+
+            updateOptionFocus();
+            return;
+        }
+
+        // Handle space key - select/deselect focused option
+        if (e.key === ' ' || e.key === 'Spacebar') {
+            e.preventDefault();
+
+            if (focusedOptionIndex >= 0 && focusedOptionIndex < optionCount) {
+                const optionLetter = question.options[focusedOptionIndex].letter;
+                selectOption(question.id, optionLetter);
+            }
+            return;
+        }
+    });
+}
+
+function updateOptionFocus() {
+    const optionsContainer = document.getElementById('options');
+    if (!optionsContainer) return;
+
+    const optionElements = optionsContainer.querySelectorAll('.option');
+    optionElements.forEach((optionEl, index) => {
+        if (index === focusedOptionIndex) {
+            optionEl.classList.add('focused');
+        } else {
+            optionEl.classList.remove('focused');
+        }
+    });
+
+    // Scroll focused option into view if needed
+    if (focusedOptionIndex >= 0 && focusedOptionIndex < optionElements.length) {
+        optionElements[focusedOptionIndex].scrollIntoView({
+            block: 'nearest',
+            behavior: 'smooth'
+        });
+    }
 }
 
 function showScreen(screenId) {
@@ -541,6 +618,7 @@ function startTest(testKey) {
         stopTimerCountdown();
     }
 
+    focusedOptionIndex = -1; // Reset focus for new test
     displayQuestion();
 }
 
@@ -594,6 +672,7 @@ function hideDebugPanel() {
 
 function jumpToQuestion(index) {
     currentQuestionIndex = index;
+    focusedOptionIndex = -1; // Reset focus when jumping to a question
     displayQuestion();
     if (debugMode) {
         showDebugPanel();
@@ -670,13 +749,14 @@ function displayQuestion() {
 
     const correctAnswers = getCorrectAnswers(question);
 
-    question.options.forEach(option => {
+    question.options.forEach((option, index) => {
         const optionDiv = document.createElement('div');
         optionDiv.className = 'option';
         optionDiv.dataset.letter = option.letter;
 
         const isCorrectAnswer = correctAnswers.includes(option.letter);
         const isUserAnswer = userSelections.includes(option.letter);
+        const isFocused = index === focusedOptionIndex;
 
         if (reviewMode) {
             // In review mode, show correct and incorrect answers
@@ -695,6 +775,9 @@ function displayQuestion() {
             // Normal mode - just show selection
             if (isUserAnswer) {
                 optionDiv.classList.add('selected');
+            }
+            if (isFocused) {
+                optionDiv.classList.add('focused');
             }
             optionDiv.onclick = () => selectOption(question.id, option.letter);
         }
@@ -742,6 +825,12 @@ function selectOption(questionId, letter) {
         return;
     }
 
+    // Update focused index to match clicked option
+    const optionIndex = question.options.findIndex(opt => opt.letter === letter);
+    if (optionIndex >= 0) {
+        focusedOptionIndex = optionIndex;
+    }
+
     const requiredSelections = getRequiredSelectionCount(question);
     const allowsMultiple = requiredSelections > 1;
     let selections = getUserSelections(questionId);
@@ -756,7 +845,12 @@ function selectOption(questionId, letter) {
             selections = [...selections, letter];
         }
     } else {
-        selections = [letter];
+        // Single-select: toggle if same option, otherwise select new option
+        if (selections.includes(letter)) {
+            selections = [];
+        } else {
+            selections = [letter];
+        }
     }
 
     setUserSelections(questionId, selections);
@@ -769,6 +863,7 @@ function selectOption(questionId, letter) {
 function previousQuestion() {
     if (currentQuestionIndex > 0) {
         currentQuestionIndex--;
+        focusedOptionIndex = -1; // Reset focus when changing questions
         displayQuestion();
     }
 }
@@ -777,6 +872,7 @@ function nextQuestion() {
     const questions = getCurrentQuestions();
     if (currentQuestionIndex < questions.length - 1) {
         currentQuestionIndex++;
+        focusedOptionIndex = -1; // Reset focus when changing questions
         displayQuestion();
     }
 }
@@ -879,6 +975,7 @@ function reviewAnswers() {
         });
     }
 
+    focusedOptionIndex = -1; // Reset focus for review mode
     showScreen('test-screen');
     displayQuestion();
 }

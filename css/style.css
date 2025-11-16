@@ -481,6 +481,12 @@ h2 {
     color: white;
 }
 
+.option.focused {
+    border-color: #3b82f6;
+    border-width: 3px;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
 .option.correct {
     border-color: #10b981;
     background: #10b981;
