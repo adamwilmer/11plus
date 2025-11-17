@@ -280,7 +280,7 @@
             "text": "k"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "E"
       },
       {
         "id": 11,
@@ -1036,7 +1036,7 @@
             "text": "rough"
           }
         ],
-        "correctAnswer": "B,Y"
+        "correctAnswer": "A,Y"
       },
       {
         "id": 37,
@@ -2837,28 +2837,28 @@
       {
         "id": 41,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
-        "question": "grow   develop   remove   exist   seize",
+        "question": "grow   time   develop   exist   mature",
         "options": [
           { "letter": "A", "text": "grow" },
-          { "letter": "B", "text": "develop" },
-          { "letter": "C", "text": "remove" },
+          { "letter": "B", "text": "time" },
+          { "letter": "C", "text": "develop" },
           { "letter": "D", "text": "exist" },
-          { "letter": "E", "text": "seize" }
+          { "letter": "E", "text": "mature" }
         ],
         "correctAnswers": ["B", "D"]
       },
       {
         "id": 42,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
-        "question": "mature   terminate   conclude   finish   prevent",
+        "question": "clear   conclude   finish   terminate   prevent",
         "options": [
-          { "letter": "A", "text": "mature" },
-          { "letter": "B", "text": "terminate" },
-          { "letter": "C", "text": "conclude" },
-          { "letter": "D", "text": "finish" },
+          { "letter": "A", "text": "clear" },
+          { "letter": "B", "text": "conclude" },
+          { "letter": "C", "text": "finish" },
+          { "letter": "D", "text": "terminate" },
           { "letter": "E", "text": "prevent" }
         ],
-        "correctAnswers": ["C", "E"]
+        "correctAnswers": ["A", "E"]
       },
       {
         "id": 43,
@@ -3274,7 +3274,7 @@
       {
         "id": 74,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
-        "question": "JL   ML   PL   SL   [?]",
+        "question": "JL   ML   PL   SL   VL   [?]",
         "options": [
           { "letter": "A", "text": "ZL" },
           { "letter": "B", "text": "YL" },
@@ -3287,11 +3287,11 @@
       {
         "id": 75,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
-        "question": "BE   CJ   EN   FL   LS   [?]",
+        "question": "BE   CJ   EN   HQ   LS   [?]",
         "options": [
           { "letter": "A", "text": "QS" },
           { "letter": "B", "text": "QT" },
-          { "letter": "C", "text": "PH" },
+          { "letter": "C", "text": "MS" },
           { "letter": "D", "text": "ST" },
           { "letter": "E", "text": "MT" }
         ],
@@ -3300,12 +3300,12 @@
       {
         "id": 76,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
-        "question": "KD   NG   VN   GM   TM   [?]",
+        "question": "KD   XP   NG   VN   QJ   TL   TM   RJ   [?]",
         "options": [
-          { "letter": "A", "text": "MI" },
+          { "letter": "A", "text": "WP" },
           { "letter": "B", "text": "VM" },
-          { "letter": "C", "text": "MS" },
-          { "letter": "D", "text": "XL" },
+          { "letter": "C", "text": "PH" },
+          { "letter": "D", "text": "RK" },
           { "letter": "E", "text": "VO" }
         ],
         "correctAnswer": "A"
@@ -3313,12 +3313,12 @@
       {
         "id": 77,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
-        "question": "XP   VL   HQ   DJ   [?]",
+        "question": "FL   EK   GM   DJ   HN   [?]",
         "options": [
-          { "letter": "A", "text": "QJ" },
+          { "letter": "A", "text": "MI" },
           { "letter": "B", "text": "DJ" },
-          { "letter": "C", "text": "MS" },
-          { "letter": "D", "text": "RK" },
+          { "letter": "C", "text": "CJ" },
+          { "letter": "D", "text": "MS" },
           { "letter": "E", "text": "CI" }
         ],
         "correctAnswer": "E"
@@ -3326,7 +3326,7 @@
       {
         "id": 78,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
-        "question": "WX   DE   ZA   IJ   [?]",
+        "question": "WX   ZA   DE   IJ   [?]",
         "options": [
           { "letter": "A", "text": "QR" },
           { "letter": "B", "text": "OP" },
@@ -3339,9 +3339,9 @@
       {
         "id": 79,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
-        "question": "BX   XZ   BY   HH   [?]",
+        "question": "BX   BY   CA   ED   HH   [?]",
         "options": [
-          { "letter": "A", "text": "BA" },
+          { "letter": "A", "text": "MM" },
           { "letter": "B", "text": "LM" },
           { "letter": "C", "text": "ML" },
           { "letter": "D", "text": "LN" },
@@ -3352,7 +3352,7 @@
       {
         "id": 80,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
-        "question": "YZ   ZY   CA   ED   AZ   ZB   [?]",
+        "question": "XZ   ZY   YA   AZ   ZB   [?]",
         "options": [
           { "letter": "A", "text": "BA" },
           { "letter": "B", "text": "YD" },
