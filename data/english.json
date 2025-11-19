@@ -770,22 +770,26 @@
         "options": [
           {
             "letter": "A",
-            "text": "The local county's superior players"
+            "text": "The local county's"
           },
           {
             "letter": "B",
-            "text": "dominated the tennis"
+            "text": "superior players"
           },
           {
             "letter": "C",
-            "text": "tornament."
+            "text": "dominated the"
           },
           {
             "letter": "D",
+            "text": "tennis tornament."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "D"
       },
       {
         "id": 30,
@@ -793,18 +797,22 @@
         "options": [
           {
             "letter": "A",
-            "text": "I recieved an elaborate invitation"
+            "text": "I recieved an"
           },
           {
             "letter": "B",
-            "text": "to an exclusive party"
+            "text": " elaborate invitation"
           },
           {
             "letter": "C",
-            "text": "next week."
+            "text": "to an exclusive"
           },
           {
             "letter": "D",
+            "text": "party next week."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -816,18 +824,22 @@
         "options": [
           {
             "letter": "A",
-            "text": "The telephone company"
+            "text": "The telephone"
           },
           {
             "letter": "B",
-            "text": "persued the customers"
+            "text": "company persued"
           },
           {
             "letter": "C",
-            "text": "that did not pay."
+            "text": "the customers"
           },
           {
             "letter": "D",
+            "text": "that did not pay."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -839,18 +851,22 @@
         "options": [
           {
             "letter": "A",
-            "text": "Oli asked his mum for"
+            "text": "Oli asked his"
           },
           {
             "letter": "B",
-            "text": "permision to attend"
+            "text": "mum for permision"
           },
           {
             "letter": "C",
-            "text": "the charity concert."
+            "text": "to attend the"
           },
           {
             "letter": "D",
+            "text": "charity concert."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -862,22 +878,26 @@
         "options": [
           {
             "letter": "A",
-            "text": "Julia regretted postponing"
+            "text": "Julia regretted"
           },
           {
             "letter": "B",
-            "text": "her annual expedition"
+            "text": "postponing her"
           },
           {
             "letter": "C",
-            "text": "to Norway."
+            "text": "annual expedition"
           },
           {
             "letter": "D",
+            "text": "to Norway."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "N"
       },
       {
         "id": 34,
@@ -885,22 +905,26 @@
         "options": [
           {
             "letter": "A",
-            "text": "Attendance at the secret meeting"
+            "text": "Attendance at"
           },
           {
             "letter": "B",
-            "text": "was compulsery"
+            "text": "the secret meeting"
           },
           {
             "letter": "C",
-            "text": "and critical."
+            "text": "was compulsery"
           },
           {
             "letter": "D",
+            "text": "and critical."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "C"
       },
       {
         "id": 35,
@@ -908,22 +932,26 @@
         "options": [
           {
             "letter": "A",
-            "text": "Ezra's adorable new puppy"
+            "text": "Ezra's adorable new"
           },
           {
             "letter": "B",
-            "text": "was obedient but also"
+            "text": "puppy was obedient"
           },
           {
             "letter": "C",
-            "text": "enthusiastic and playfull."
+            "text": "but also enthusiastic"
           },
           {
             "letter": "D",
+            "text": "and playfull."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "D"
       },
       {
         "id": 36,
@@ -931,22 +959,26 @@
         "options": [
           {
             "letter": "A",
-            "text": "Sam enjoyed climing mountains"
+            "text": "Sam enjoyed"
           },
           {
             "letter": "B",
-            "text": "and spending time"
+            "text": "climing mountains"
           },
           {
             "letter": "C",
-            "text": "in the countryside."
+            "text": "and spending time"
           },
           {
             "letter": "D",
+            "text": "in the countryside."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "B"
       },
       {
         "id": 37,
@@ -954,18 +986,22 @@
         "options": [
           {
             "letter": "A",
-            "text": "Consistant hard work"
+            "text": "Consistant hard"
           },
           {
             "letter": "B",
-            "text": "has contributed to"
+            "text": "work has contributed"
           },
           {
             "letter": "C",
-            "text": "significant improvements."
+            "text": "to significant"
           },
           {
             "letter": "D",
+            "text": " improvements."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -977,18 +1013,22 @@
         "options": [
           {
             "letter": "A",
-            "text": "Mention the word hippo"
+            "text": "Mention the word"
           },
           {
             "letter": "B",
-            "text": "and you will probably think"
+            "text": "hippo and you will"
           },
           {
             "letter": "C",
-            "text": "of a cute but robust animal"
+            "text": "probably think of a cute"
           },
           {
             "letter": "D",
+            "text": "but robust animal"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -1000,18 +1040,22 @@
         "options": [
           {
             "letter": "A",
-            "text": "But how accurate"
+            "text": "But how accurate is"
           },
           {
             "letter": "B",
-            "text": "is this. Hippos look like"
+            "text": "this. Hippos look like"
           },
           {
             "letter": "C",
-            "text": "they have tough skin when, in fact, their"
+            "text": "they have tough skin"
           },
           {
             "letter": "D",
+            "text": "when, in fact, their"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -1027,18 +1071,22 @@
           },
           {
             "letter": "B",
-            "text": "and susceptible to burn in the sun."
+            "text": "and susceptible to"
           },
           {
             "letter": "C",
-            "text": "Hippo sweat even has special"
+            "text": "burn in the sun. Hippo"
           },
           {
             "letter": "D",
+            "text": "sweat even has special"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "N"
       },
       {
         "id": 41,
@@ -1046,22 +1094,26 @@
         "options": [
           {
             "letter": "A",
-            "text": "properties to protect the skin"
+            "text": "properties to protect"
           },
           {
             "letter": "B",
-            "text": "from the suns harmful rays."
+            "text": "the skin from the"
           },
           {
             "letter": "C",
-            "text": "The same fluid, red in"
+            "text": "suns harmful rays."
           },
           {
             "letter": "D",
+            "text": "The same fluid, red in"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "C"
       },
       {
         "id": 42,
@@ -1073,18 +1125,22 @@
           },
           {
             "letter": "B",
-            "text": "and serves as an antibiotic."
+            "text": "and serves as an"
           },
           {
             "letter": "C",
-            "text": "Imagine using hippo sweat"
+            "text": "antibiotic. Imagine"
           },
           {
             "letter": "D",
+            "text": "using hippo sweat"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "A"
       },
       {
         "id": 43,
@@ -1092,18 +1148,22 @@
         "options": [
           {
             "letter": "A",
-            "text": "as a cosmetic or a medicine!"
+            "text": "as a cosmetic or a"
           },
           {
             "letter": "B",
-            "text": "Its true that hippos are omnivores"
+            "text": "medicine! Its true that"
           },
           {
             "letter": "C",
-            "text": "but don't let yourself"
+            "text": "hippos are omnivores"
           },
           {
             "letter": "D",
+            "text": "but don't let yourself"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -1119,14 +1179,18 @@
           },
           {
             "letter": "B",
-            "text": "gentle creatures and can be"
+            "text": "gentle creatures and"
           },
           {
             "letter": "C",
-            "text": "quite dangerous, especially given the"
+            "text": "can be quite dangerous,"
           },
           {
             "letter": "D",
+            "text": "especially given the"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
@@ -1142,18 +1206,22 @@
           },
           {
             "letter": "B",
-            "text": "(up to 30 kilometres per hour."
+            "text": "(up to 30 kilometres"
           },
           {
             "letter": "C",
-            "text": "Hippos typically do their"
+            "text": "per hour. Hippos"
           },
           {
             "letter": "D",
+            "text": "typically do their"
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "C"
       },
       {
         "id": 46,
@@ -1161,22 +1229,26 @@
         "options": [
           {
             "letter": "A",
-            "text": "running at night whilst hunting for food."
+            "text": "running at night whilst"
           },
           {
             "letter": "B",
-            "text": "During the day,"
+            "text": "hunting for food."
           },
           {
             "letter": "C",
-            "text": "they stay in the water."
+            "text": "During the day, they"
           },
           {
             "letter": "D",
+            "text": "stay in the water."
+          },
+          {
+            "letter": "N",
             "text": "No mistake"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "N"
       },
       {
         "id": 47,
@@ -1203,7 +1275,7 @@
             "text": "excites"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "D"
       },
       {
         "id": 48,
@@ -1686,10 +1758,10 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "'Why don't you play outside today,' suggested Tom's aunt.",
         "options": [
-          { "letter": "A", "text": "'Why don't you play outside today,'" },
-          { "letter": "B", "text": "suggested" },
-          { "letter": "C", "text": "Tom's aunt." },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "'Why don't" },
+          { "letter": "B", "text": "you play outside" },
+          { "letter": "C", "text": "today,' suggested" },
+          { "letter": "D", "text": "Tom's aunt." },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "C"
@@ -1699,8 +1771,8 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Even the best, most expensive detergent, couldn't remove the mud stains.",
         "options": [
-          { "letter": "A", "text": "Even the best," },
-          { "letter": "B", "text": "most expensive" },
+          { "letter": "A", "text": "Even the" },
+          { "letter": "B", "text": "best, most expensive" },
           { "letter": "C", "text": "detergent, couldn't" },
           { "letter": "D", "text": "remove the mud stains." },
           { "letter": "N", "text": "No mistake" }
@@ -1712,10 +1784,10 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "The recipe had two simple stages: finely chop the ingredients and then blend together.",
         "options": [
-          { "letter": "A", "text": "The recipe had two simple stages:" },
-          { "letter": "B", "text": "finely chop the ingredients" },
-          { "letter": "C", "text": "and then blend together." },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "The recipe had two" },
+          { "letter": "B", "text": "simple stages: finely" },
+          { "letter": "C", "text": "chop the ingredients" },
+          { "letter": "D", "text": "and then blend together." },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "N"
@@ -1725,10 +1797,10 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Caitlin had carelessly lost Asaf's charger (his brand new one)",
         "options": [
-          { "letter": "A", "text": "Caitlin had carelessly lost" },
-          { "letter": "B", "text": "Asaf's charger" },
-          { "letter": "C", "text": "(his brand new one)" },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "Caitlin had" },
+          { "letter": "B", "text": "carelessly lost Asaf's" },
+          { "letter": "C", "text": "charger (his" },
+          { "letter": "D", "text": "brand new one)" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "D"
@@ -1739,9 +1811,9 @@
         "question": "'I'd book first because the restaurant is so popular especially on Fridays.'",
         "options": [
           { "letter": "A", "text": "'I'd book first" },
-          { "letter": "B", "text": "because the restaurant is so popular" },
-          { "letter": "C", "text": "especially on Fridays.'" },
-          { "letter": "D", "text": "" },
+          { "letter": "B", "text": "because the restaurant is" },
+          { "letter": "C", "text": "so popular especially" },
+          { "letter": "D", "text": "on Fridays.'" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "C"
@@ -1751,10 +1823,10 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Looking through my parents music collection, I was amazed to see so many CDs!",
         "options": [
-          { "letter": "A", "text": "Looking through" },
-          { "letter": "B", "text": "my parents music collection," },
-          { "letter": "C", "text": "I was amazed to see so many CDs!" },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "Looking through my" },
+          { "letter": "B", "text": "parents music collection," },
+          { "letter": "C", "text": "I was amazed to" },
+          { "letter": "D", "text": "see so many CDs!" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "B"
@@ -1764,10 +1836,10 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "If we hadnt seen the road sign, we would have ended up in Wales.",
         "options": [
-          { "letter": "A", "text": "If we hadnt seen the road sign," },
-          { "letter": "B", "text": "we would have ended up" },
-          { "letter": "C", "text": "in Wales." },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "If we hadnt seen" },
+          { "letter": "B", "text": "the road sign, we" },
+          { "letter": "C", "text": "would have ended" },
+          { "letter": "D", "text": "up in Wales." },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "A"
@@ -1777,10 +1849,10 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "We were lucky to win tickets to see The Nutcracker this Winter.",
         "options": [
-          { "letter": "A", "text": "We were lucky to win tickets" },
-          { "letter": "B", "text": "to see The Nutcracker" },
-          { "letter": "C", "text": "this Winter." },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "We were lucky" },
+          { "letter": "B", "text": "to win tickets" },
+          { "letter": "C", "text": "to see The Nutcracker" },
+          { "letter": "D", "text": "this Winter." },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "D"
@@ -1788,12 +1860,12 @@
       {
         "id": 32,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "There was something different about the school playground today: not the usual lull before exams or antisipation before sports day. This was a one-off, whatever it was.",
+        "question": "There was something different about the school playground today: not the usual lull",
         "options": [
-          { "letter": "A", "text": "playground today: not the usual lull" },
-          { "letter": "B", "text": "before exams or antisipation" },
-          { "letter": "C", "text": "before sports day. This was" },
-          { "letter": "D", "text": "a one-off, whatever it was." },
+          { "letter": "A", "text": "before exams or" },
+          { "letter": "B", "text": "antisipation before" },
+          { "letter": "C", "text": "sports day. This was a" },
+          { "letter": "D", "text": "one-off, whatever it" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "B"
@@ -1801,12 +1873,12 @@
       {
         "id": 33,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "One thing you couldn't fail to notice on entering the school gates was a sea of hats, as far as the eye could see: not the usual peeked caps but wide-brimmed hats with feathers.",
+        "question": "was. One thing you couldn't fail to notice on entering the school gates was a sea of",
         "options": [
-          { "letter": "A", "text": "couldn't fail to notice on entering" },
-          { "letter": "B", "text": "the school gates was a sea of hats," },
-          { "letter": "C", "text": "as far as the eye could see: not the usual peeked caps" },
-          { "letter": "D", "text": "but wide-brimmed hats with feathers." },
+          { "letter": "A", "text": "hats, as far as the eye" },
+          { "letter": "B", "text": "could see: not the" },
+          { "letter": "C", "text": "usual peeked caps" },
+          { "letter": "D", "text": "but wide-brimmed" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "C"
@@ -1814,12 +1886,12 @@
       {
         "id": 34,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "There were also helmets (not the bicycle kind) and even some crowns. No-one was wearing modern clothes either; the usual sportswear was knowhere in sight.",
+        "question": "hats with feathers. There were also helmets (not the bicycle kind) and even some crowns. No-one was wearing modern clothes either; the usual sportswear",
         "options": [
-          { "letter": "A", "text": "There were also helmets (not the bicycle kind) and even some crowns. No-one was wearing modern clothes either; the usual sportswear was knowhere" },
-          { "letter": "B", "text": "and even some crowns. No-one was" },
-          { "letter": "C", "text": "wearing modern clothes either; the usual" },
-          { "letter": "D", "text": "sportswear was knowhere in sight." },
+          { "letter": "A", "text": "was knowhere in" },
+          { "letter": "B", "text": "sight. The vast majority" },
+          { "letter": "C", "text": "of children wore" },
+          { "letter": "D", "text": "robes, some adorned" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "A"
@@ -1827,12 +1899,12 @@
       {
         "id": 35,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "The vast majority of children wore robes, some adorned with jewels and others very plane.",
+        "question": "",
         "options": [
-          { "letter": "A", "text": "The vast majority of children" },
-          { "letter": "B", "text": "wore robes, some adorned with jewels" },
-          { "letter": "C", "text": "and others very plane." },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "with jewels and" },
+          { "letter": "B", "text": "others very plane." },
+          { "letter": "C", "text": "You could say it was an" },
+          { "letter": "D", "text": "attempt by the school" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "B"
@@ -1840,12 +1912,12 @@
       {
         "id": 36,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "You could say it was an attempt by the school to bring the past to life. In spite of their altered appearence, pupils lined up as normal and Class 5B waited for Mr Holterson to take the register.",
+        "question": "",
         "options": [
-          { "letter": "A", "text": "You could say it was an attempt by the school" },
-          { "letter": "B", "text": "to bring the past to life. In spite of" },
-          { "letter": "C", "text": "their altered appearence, pupils lined up" },
-          { "letter": "D", "text": "as normal and Class 5B waited for Mr Holterson to take the register." },
+          { "letter": "A", "text": "to bring the past to" },
+          { "letter": "B", "text": "life. In spite of their" },
+          { "letter": "C", "text": "altered appearence," },
+          { "letter": "D", "text": "pupils lined up" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "C"
@@ -1853,12 +1925,12 @@
       {
         "id": 37,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "The only differance on this morning, however, was that pupils answered to the name of their chosen person from history.",
+        "question": "as normal and Class 5B waited for Mr Holterson to take the register. The only",
         "options": [
-          { "letter": "A", "text": "The only differance on this morning," },
-          { "letter": "B", "text": "however, was that pupils answered" },
-          { "letter": "C", "text": "to the name of their chosen" },
-          { "letter": "D", "text": "person from history." },
+          { "letter": "A", "text": "differance on this" },
+          { "letter": "B", "text": "morning, however," },
+          { "letter": "C", "text": "was that pupils" },
+          { "letter": "D", "text": "answered to the name of" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "A"
@@ -1866,12 +1938,12 @@
       {
         "id": 38,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "'Cleopatra! Gandhi! Einstein!… Einstein?' After a slight delay, a mumbled response emerged from the line of pupils.",
+        "question": "their chosen person from history. 'Cleopatra! Gandhi! Einstein!… Einstein?'",
         "options": [
-          { "letter": "A", "text": "'Cleopatra! Gandhi! Einstein!… Einstein?'" },
-          { "letter": "B", "text": "After a slight delay," },
-          { "letter": "C", "text": "a mumbled response emerged" },
-          { "letter": "D", "text": "from the line of pupils." },
+          { "letter": "A", "text": "After a slight delay,"},
+          { "letter": "B", "text": "a mumbled response" },
+          { "letter": "C", "text": "emerged from" },
+          { "letter": "D", "text": "the line of pupils." },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "N"
@@ -1879,12 +1951,12 @@
       {
         "id": 39,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "'Wow, Johnny, that's a really good impersonatian. You even sound German!' 'That's because I am Albert Einstein.' 'Very good, Johnny!' the teacher laughed.",
+        "question": "",
         "options": [
-          { "letter": "A", "text": "'Wow, Johnny, that's a really good" },
-          { "letter": "B", "text": "impersonatian. You even sound German!'" },
-          { "letter": "C", "text": "'That's because I am Albert Einstein.' 'Very good, Johnny!' the teacher laughed." },
-          { "letter": "D", "text": "" },
+          { "letter": "A", "text": "'Wow, Johnny, that's" },
+          { "letter": "B", "text": "a really good" },
+          { "letter": "C", "text": "impersonatian. You"},
+          { "letter": "D", "text": "even sound German!'"},
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "C"
@@ -1892,12 +1964,12 @@
       {
         "id": 40,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "But Einstein did not laugh and, instead, started to cough: an old-man's cough that couldn't possibly come from a ten-year-old – could it? Mr Holterson looked worried for a moment, then sheperded the pupils, or rather the phantoms of the past, inside.",
+        "question": "That's because I am Albert Einstein.' 'Very good, Johnny!' the teacher laughed. But Einstein did not laugh and, instead, started to cough: an old-man’s cough that couldn’t possibly come from a ten-year-old – could it?",
         "options": [
-          { "letter": "A", "text": "But Einstein did not laugh and, instead, started to cough:" },
-          { "letter": "B", "text": "an old-man's cough that couldn't possibly come from a ten-year-old – could it?" },
-          { "letter": "C", "text": "Mr Holterson looked worried for a moment, then sheperded the pupils," },
-          { "letter": "D", "text": "or rather the phantoms of the past, inside." },
+          { "letter": "A", "text": "Mr Holterson looked" },
+          { "letter": "B", "text": "worried for a moment," },
+          { "letter": "C", "text": "then sheperded" },
+          { "letter": "D", "text": "the pupils, or rather" },
           { "letter": "N", "text": "No mistake" }
         ],
         "correctAnswer": "C"
@@ -1946,11 +2018,11 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "The green team ___ their previous round of batting feeling disheartened, having only managed to score three-and-a-half rounders compared to the yellow team's six.",
         "options": [
-          { "letter": "A", "text": "had finished" },
-          { "letter": "B", "text": "were finishing" },
-          { "letter": "C", "text": "will finish" },
-          { "letter": "D", "text": "finish" },
-          { "letter": "E", "text": "are finishing" }
+          { "letter": "A", "text": "were finishing" },
+          { "letter": "B", "text": "will finish" },
+          { "letter": "C", "text": "finish" },
+          { "letter": "D", "text": "are finishing" },
+          { "letter": "E", "text": "had finished" }
         ],
         "correctAnswer": "E"
       },
@@ -1972,10 +2044,10 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "The encouragement lifted Ellie's spirits as she sprinted from first to second base, ___ to believe that she might get all the way round.",
         "options": [
-          { "letter": "A", "text": "hardly" },
-          { "letter": "B", "text": "dared" },
-          { "letter": "C", "text": "daring" },
-          { "letter": "D", "text": "to dare" },
+          { "letter": "A", "text": "dared" },
+          { "letter": "B", "text": "daring" },
+          { "letter": "C", "text": "to dare" },
+          { "letter": "D", "text": "having dared" },
           { "letter": "E", "text": "without daring" }
         ],
         "correctAnswer": "B"
