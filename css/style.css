@@ -603,6 +603,45 @@ h2 {
     padding: 20px;
     overflow-y: auto;
     z-index: 1000;
+    transition: width 0.3s ease, padding 0.3s ease;
+}
+
+.debug-panel.collapsed {
+    width: 40px;
+    padding: 10px 5px;
+}
+
+.debug-panel-toggle {
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    width: 30px;
+    height: 30px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    transition: background 0.2s ease;
+}
+
+.debug-panel-toggle:hover {
+    background: #5568d3;
+}
+
+.debug-panel.collapsed .debug-panel-toggle {
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.debug-panel.collapsed h3,
+.debug-panel.collapsed .debug-question-list {
+    display: none;
 }
 
 .debug-panel h3 {
@@ -648,8 +687,13 @@ h2 {
     font-weight: 600;
 }
 
-.test-screen.debug-mode .test-container {
-    margin-left: 220px;
+#test-screen.debug-mode {
+    padding-left: 220px;
+    transition: padding-left 0.3s ease;
+}
+
+#test-screen.debug-mode.collapsed {
+    padding-left: 60px;
 }
 
 .results-summary {

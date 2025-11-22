@@ -58,14 +58,14 @@ print()
 # Question 4: Coordinate grid only (page 3, 0-indexed)
 extract_question_image(
     doc, 3, 4,
-    crop_coords=(0.28, 0.08, 0.72, 0.35),
+    crop_coords=(0.30, 0.08, 0.76, 0.38),
     output_name="maths_q4_grid.png"
 )
 
 # Question 6: Triangle and hexagon (page 3)
 extract_question_image(
     doc, 3, 6,
-    crop_coords=(0.18, 0.67, 0.82, 0.83),
+    crop_coords=(0.23, 0.71, 0.79, 0.84),
     output_name="maths_q6_shapes.png"
 )
 
@@ -107,14 +107,14 @@ extract_question_image(
 # Question 20: All five shapes A-E complete, no question text (page 8)
 extract_question_image(
     doc, 8, 20,
-    crop_coords=(0.10, 0.28, 0.95, 0.40),
+    crop_coords=(0.19, 0.29, 0.97, 0.42),
     output_name="maths_q20_shapes.png"
 )
 
 # Question 23: Baby weight graph only (page 9)
 extract_question_image(
     doc, 9, 23,
-    crop_coords=(0.22, 0.26, 0.92, 0.58),
+    crop_coords=(0.15, 0.25, 0.96, 0.56),
     output_name="maths_q23_graph.png"
 )
 
@@ -128,7 +128,7 @@ extract_question_image(
 # Question 25: Angle diagram only (page 10)
 extract_question_image(
     doc, 10, 25,
-    crop_coords=(0.26, 0.48, 0.76, 0.60),
+    crop_coords=(0.21, 0.47, 0.87, 0.61),
     output_name="maths_q25_angle.png"
 )
 
@@ -149,7 +149,7 @@ extract_question_image(
 # Question 42: Number line only (page 15)
 extract_question_image(
     doc, 15, 42,
-    crop_coords=(0.19, 0.69, 0.97, 0.82),
+    crop_coords=(0.17, 0.69, 0.97, 0.82),
     output_name="maths_q42_numberline.png"
 )
 
@@ -163,25 +163,105 @@ extract_question_image(
 # Question 45: Weather pie chart only (page 17)
 extract_question_image(
     doc, 17, 45,
-    crop_coords=(0.29, 0.13, 0.75, 0.37),
+    crop_coords=(0.27, 0.14, 0.78, 0.37),
     output_name="maths_q45_weather.png"
 )
 
 # Question 47: Transport bar chart only (page 18)
 extract_question_image(
     doc, 18, 47,
-    crop_coords=(0.20, 0.18, 0.95, 0.49),
+    crop_coords=(0.22, 0.19, 0.94, 0.48),
     output_name="maths_q47_transport.png"
 )
 
 # Question 48: Pizza diagram only (page 19)
 extract_question_image(
     doc, 19, 48,
-    crop_coords=(0.19, 0.13, 0.84, 0.42),
+    crop_coords=(0.28, 0.14, 0.77, 0.41),
     output_name="maths_q48_pizza.png"
 )
 
 doc.close()
+
+# Maths Test 2
+pdf_path_2 = "exams/Maths/Maths_2_Test Booklet.pdf.pdf"
+doc2 = fitz.open(pdf_path_2)
+
+print()
+print("Extracting question images from Maths Test 2 PDF...")
+print()
+
+# Question 2
+extract_question_image(
+    doc2, 1, 2,
+    crop_coords=(0.17, 0.21, 0.99, 0.44),
+    output_name="maths2_q2_birthdays.png"
+)
+
+# Question 5
+extract_question_image(
+    doc2, 2, 5,
+    crop_coords=(0.25, 0.08, 0.85, 0.39),
+    output_name="maths2_q5_coordinates.png"
+)
+
+# Question 8
+extract_question_image(
+    doc2, 3, 8,
+    crop_coords=(0.29, 0.08, 0.73, 0.29),
+    output_name="maths2_q8_circle.png"
+)
+
+# Question 11
+extract_question_image(
+    doc2, 4, 11,
+    crop_coords=(0.31, 0.15, 0.76, 0.43),
+    output_name="maths2_q11_library.png"
+)
+
+# Question 24
+extract_question_image(
+    doc2, 9, 24,
+    crop_coords=(0.28, 0.13, 0.81, 0.46),
+    output_name="maths2_q24_heights.png"
+)
+
+# Question 32
+extract_question_image(
+    doc2, 12, 32,
+    crop_coords=(0.25, 0.13, 0.79, 0.47),
+    output_name="maths2_q32_squares.png"
+)
+
+# Question 34
+extract_question_image(
+    doc2, 13, 34,
+    crop_coords=(0.24, 0.15, 0.76, 0.41),
+    output_name="maths2_q34_rectangle.png"
+)
+
+# Question 35
+extract_question_image(
+    doc2, 13, 35,
+    crop_coords=(0.30, 0.57, 0.78, 0.73),
+    output_name="maths2_q35_hexagon.png"
+)
+
+# Question 40
+extract_question_image(
+    doc2, 15, 40,
+    crop_coords=(0.22, 0.31, 0.92, 0.61),
+    output_name="maths2_q40_graph.png"
+)
+
+# Question 43
+extract_question_image(
+    doc2, 17, 43,
+    crop_coords=(0.23, 0.14, 0.81, 0.39),
+    output_name="maths2_q43_parallel.png"
+)
+
+doc2.close()
 print()
 print("All images extracted successfully!")
 print("Remember to update data/maths.json to reference these images.")

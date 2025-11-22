@@ -633,7 +633,7 @@ function showDebugPanel() {
     const existingList = document.querySelector('.debug-question-list');
     const scrollPosition = existingList ? existingList.scrollTop : 0;
 
-    let debugHTML = '<div class="debug-panel"><h3>Debug: Questions</h3><ul class="debug-question-list">';
+    let debugHTML = '<div class="debug-panel"><button class="debug-panel-toggle" onclick="toggleDebugPanel()" title="Toggle navigation">◀</button><h3>Debug: Questions</h3><ul class="debug-question-list">';
     questions.forEach((q, index) => {
         const answered = isQuestionAnswered(q) ? '✓' : '';
         const hasImage = q.image ? '*' : '';
@@ -677,6 +677,18 @@ function jumpToQuestion(index) {
     if (debugMode) {
         showDebugPanel();
     }
+}
+
+function toggleDebugPanel() {
+    const debugPanel = document.querySelector('.debug-panel');
+    const toggleButton = document.querySelector('.debug-panel-toggle');
+    const testScreen = document.getElementById('test-screen');
+    if (!debugPanel || !toggleButton || !testScreen) return;
+
+    const isCollapsed = debugPanel.classList.toggle('collapsed');
+    testScreen.classList.toggle('collapsed', isCollapsed);
+    toggleButton.textContent = isCollapsed ? '▶' : '◀';
+    toggleButton.title = isCollapsed ? 'Expand navigation' : 'Collapse navigation';
 }
 
 function displayQuestion() {
