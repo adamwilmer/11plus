@@ -111,6 +111,13 @@ extract_question_image(
     output_name="maths_q20_shapes.png"
 )
 
+# Question 21: Train timetable (page 8)
+extract_question_image(
+    doc, 8, 21,
+    crop_coords=(0.20, 0.53, 0.97, 0.80),
+    output_name="maths_q21_diagram.png"
+)
+
 # Question 23: Baby weight graph only (page 9)
 extract_question_image(
     doc, 9, 23,

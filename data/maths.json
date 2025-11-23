@@ -552,7 +552,8 @@
       },
       {
         "id": 21,
-        "question": "Here is part of a train timetable:\n\nPurley           ...      ...      ...      23:21     ...\nEast Croydon  22:56   23:01   23:10   23:27   23:30\nClapham Junc. 23:07   23:13   23:21   23:37   23:40\nVictoria      23:12   23:18   23:27   23:43   23:45\n\nA train leaves East Croydon at 23:27. How long does it take to get to Victoria?",
+        "question": "Here is part of a train timetable:\n\nA train leaves East Croydon at 23:27. How long does it take to get to Victoria?",
+        "image": "images/maths_q21_diagram.png",
         "options": [
           {
             "letter": "A",
@@ -1235,7 +1236,7 @@
       },
       {
         "id": 46,
-        "question": "Put the correct number in the box: 27 \u00cd 99 = 2700 \u2013 ?",
+        "question": "Put the correct number in the box: 27 \u00d7 99 = 2700 \u2013 ?",
         "options": [
           {
             "letter": "A",
