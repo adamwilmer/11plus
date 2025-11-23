@@ -269,6 +269,30 @@ extract_question_image(
 )
 
 doc2.close()
+
+# Verbal Reasoning Test 1
+pdf_path_vr = "exams/Verbal Reasoning/Verbal Reasoning_1_Test Booklet.pdf"
+doc_vr = fitz.open(pdf_path_vr)
+
+print()
+print("Extracting question images from Verbal Reasoning Test 1 PDF...")
+print()
+
+# Question 75-77: Shared diagram
+extract_question_image(
+    doc_vr, 21, 75,
+    crop_coords=(0.04, 0.08, 0.99, 0.47),
+    output_name="verbal_reasoning_q75_diagram.png"
+)
+
+# Question 78-80: Shared diagram
+extract_question_image(
+    doc_vr, 22, 78,
+    crop_coords=(0.02, 0.08, 0.99, 0.36),
+    output_name="verbal_reasoning_q78_diagram.png"
+)
+
+doc_vr.close()
 print()
 print("All images extracted successfully!")
-print("Remember to update data/maths.json to reference these images.")
+print("Remember to update data/maths.json and data/verbal-reasoning.json to reference these images.")
