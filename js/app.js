@@ -740,12 +740,11 @@ function displayQuestion() {
         instructionElement.style.display = 'none';
     }
 
-    // Show alphabet reference for Verbal Reasoning Test 1, questions 45-51
+    // Show alphabet reference for Verbal Reasoning tests
     const alphabetElement = document.getElementById('alphabet-reference');
     const showAlphabet = currentExam === 'verbal-reasoning' &&
-                         currentTest === 'test1' &&
-                         question.id >= 45 &&
-                         question.id <= 51;
+                         ((currentTest === 'test1' && question.id >= 45 && question.id <= 51) ||
+                          (currentTest === 'test2' && question.id >= 74 && question.id <= 80));
     alphabetElement.style.display = showAlphabet ? 'block' : 'none';
 
     // Display image if present (before question text)

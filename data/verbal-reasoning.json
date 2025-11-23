@@ -2635,7 +2635,7 @@
       {
         "id": 25,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
-        "question": "inc [ ? ] eat   sou [ ? ] unch",
+        "question": "inc [ ? ] eat   mes [ ? ] ide",
         "options": [
           { "letter": "A", "text": "b" },
           { "letter": "B", "text": "s" },
@@ -2648,7 +2648,7 @@
       {
         "id": 26,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
-        "question": "mes [ ? ] ide   bel [ ? ] ight",
+        "question": "sou [ ? ] unch   bel [ ? ] ight",
         "options": [
           { "letter": "A", "text": "r" },
           { "letter": "B", "text": "l" },
@@ -2830,15 +2830,15 @@
       {
         "id": 40,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
-        "question": "pollute   time   clear   take   destroy",
+        "question": "pollute   remove   take   destroy   seize",
         "options": [
           { "letter": "A", "text": "pollute" },
-          { "letter": "B", "text": "time" },
-          { "letter": "C", "text": "clear" },
-          { "letter": "D", "text": "take" },
-          { "letter": "E", "text": "destroy" }
+          { "letter": "B", "text": "remove" },
+          { "letter": "C", "text": "take" },
+          { "letter": "D", "text": "destroy" },
+          { "letter": "E", "text": "seize" }
         ],
-        "correctAnswers": ["A", "E"]
+        "correctAnswers": ["A", "D"]
       },
       {
         "id": 41,
@@ -3203,6 +3203,7 @@
         "id": 68,
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing. Find the code for the word FIND.",
         "question": "NAIL   FIND   LATE   FIST\n\n3752   5674   4689",
+        "image": "images/verbal_reasoning2_q68_diagram.png",
         "options": [
           { "letter": "A", "text": "3752" },
           { "letter": "B", "text": "5674" },
@@ -3216,6 +3217,7 @@
         "id": 69,
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing. Find the word that has the number code 4963.",
         "question": "NAIL   FIND   LATE   FIST\n\n3752   5674   4689",
+        "image": "images/verbal_reasoning2_q68_diagram.png",
         "options": [
           { "letter": "A", "text": "DEAL" },
           { "letter": "B", "text": "LIFE" },
@@ -3229,6 +3231,7 @@
         "id": 70,
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing. Find the code for the word FLINT.",
         "question": "NAIL   FIND   LATE   FIST\n\n3752   5674   4689",
+        "image": "images/verbal_reasoning2_q68_diagram.png",
         "options": [
           { "letter": "A", "text": "53758" },
           { "letter": "B", "text": "34762" },
@@ -3242,6 +3245,7 @@
         "id": 71,
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing. Find the code for the word SAIL.",
         "question": "TIME   HEAT   MELT   SAIL\n\n4726   5163   3251",
+        "image": "images/verbal_reasoning2_q71_diagram.png",
         "options": [
           { "letter": "A", "text": "4726" },
           { "letter": "B", "text": "5163" },
@@ -3255,6 +3259,7 @@
         "id": 72,
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing. Find the word that has the number code 61743.",
         "question": "TIME   HEAT   MELT   SAIL\n\n4726   5163   3251",
+        "image": "images/verbal_reasoning2_q71_diagram.png",
         "options": [
           { "letter": "A", "text": "MEATS" },
           { "letter": "B", "text": "LEAKS" },
@@ -3268,6 +3273,7 @@
         "id": 73,
         "instruction": "Three of these four words are given in code. The codes are not written in the same order as the words and one code is missing. Find the code for the word STEAM.",
         "question": "TIME   HEAT   MELT   SAIL\n\n4726   5163   3251",
+        "image": "images/verbal_reasoning2_q71_diagram.png",
         "options": [
           { "letter": "A", "text": "41725" },
           { "letter": "B", "text": "43875" },
