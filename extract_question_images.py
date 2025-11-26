@@ -104,6 +104,13 @@ extract_question_image(
     output_name="maths_q15_clocks.png"
 )
 
+# Question 18: Diagram (page 7)
+extract_question_image(
+    doc, 7, 18,
+    crop_coords=(0.18, 0.47, 0.93, 0.76),
+    output_name="maths_q18_diagram.png"
+)
+
 # Question 20: All five shapes A-E complete, no question text (page 8)
 extract_question_image(
     doc, 8, 20,

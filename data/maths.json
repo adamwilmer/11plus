@@ -470,7 +470,8 @@
       },
       {
         "id": 18,
-        "question": "Mrs Ward wants to join Heritage with her three children, aged 10, 12 and 15. The Family one adult membership (1 adult and children under 18) offer price is \u00a346.50.\n\nHow much must she pay?",
+        "question": "Mrs Ward wants to join Heritage with her three children, aged 10, 12 and 15.\n\nHow much must she pay?",
+        "image": "images/maths_q18_diagram.png",
         "options": [
           {
             "letter": "A",
@@ -772,7 +773,7 @@
       },
       {
         "id": 29,
-        "question": "3.6 \u00cd 10 =",
+        "question": "3.6 \u00d7 10 =",
         "options": [
           {
             "letter": "A",
