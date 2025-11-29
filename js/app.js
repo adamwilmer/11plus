@@ -24,6 +24,177 @@ const examTimerDefaults = {
     'non-verbal-reasoning': 60
 };
 
+// Test progress persistence
+const STORAGE_KEY = 'elevenPlusTestProgress';
+
+function saveTestProgress() {
+    if (!currentExam || !currentTest || reviewMode) {
+        return;
+    }
+
+    const progressData = {
+        currentExam,
+        currentTest,
+        currentQuestionIndex,
+        userAnswers,
+        currentQuestions,
+        timerEnabled,
+        timerTargetMs,
+        testStartTime,
+        savedAt: Date.now()
+    };
+
+    try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(progressData));
+    } catch (error) {
+        console.error('Failed to save test progress:', error);
+    }
+}
+
+function loadTestProgress() {
+    try {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (!saved) {
+            return null;
+        }
+        return JSON.parse(saved);
+    } catch (error) {
+        console.error('Failed to load test progress:', error);
+        return null;
+    }
+}
+
+function clearTestProgress() {
+    try {
+        localStorage.removeItem(STORAGE_KEY);
+    } catch (error) {
+        console.error('Failed to clear test progress:', error);
+    }
+}
+
+function checkForSavedProgress() {
+    const savedProgress = loadTestProgress();
+    if (!savedProgress) {
+        return;
+    }
+
+    // Verify the saved data is valid
+    if (!savedProgress.currentExam || !savedProgress.currentTest ||
+        !questionDatabase[savedProgress.currentExam] ||
+        !questionDatabase[savedProgress.currentExam][savedProgress.currentTest]) {
+        clearTestProgress();
+        return;
+    }
+
+    showResumeModal(savedProgress);
+}
+
+function showResumeModal(savedProgress) {
+    const modal = document.getElementById('resume-modal');
+    const messageElement = document.getElementById('resume-message');
+    const resumeButton = document.getElementById('resume-button');
+    const startFreshButton = document.getElementById('start-fresh-button');
+
+    // Get test title for display
+    const testData = questionDatabase[savedProgress.currentExam][savedProgress.currentTest];
+    const testTitle = testData.title || savedProgress.currentTest;
+    const examTitleMap = {
+        'maths': 'Maths',
+        'english': 'English',
+        'verbal-reasoning': 'Verbal Reasoning',
+        'non-verbal-reasoning': 'Non-Verbal Reasoning',
+        'verbal-skills': 'Verbal Skills'
+    };
+    const examTitle = examTitleMap[savedProgress.currentExam] || savedProgress.currentExam;
+
+    messageElement.innerHTML = `You have an unfinished test in progress:<br><strong>${examTitle} - ${testTitle}</strong><br>Question ${savedProgress.currentQuestionIndex + 1} of ${savedProgress.currentQuestions.length}`;
+
+    // Set up button handlers
+    resumeButton.onclick = () => {
+        modal.style.display = 'none';
+        resumeTest(savedProgress);
+    };
+
+    startFreshButton.onclick = () => {
+        modal.style.display = 'none';
+        clearTestProgress();
+    };
+
+    // Show the modal
+    modal.style.display = 'flex';
+}
+
+function resumeTest(savedProgress) {
+    // Restore state
+    currentExam = savedProgress.currentExam;
+    currentTest = savedProgress.currentTest;
+    currentQuestionIndex = savedProgress.currentQuestionIndex;
+    userAnswers = savedProgress.userAnswers || {};
+    currentQuestions = savedProgress.currentQuestions || [];
+    timerEnabled = savedProgress.timerEnabled || false;
+    timerTargetMs = savedProgress.timerTargetMs || 0;
+    testStartTime = savedProgress.testStartTime || Date.now();
+    reviewMode = false;
+
+    const testData = questionDatabase[currentExam][currentTest];
+
+    // Setup passage if present
+    const passageTitleElement = document.getElementById('passage-title');
+    const passageTextElement = document.getElementById('passage-text');
+    if (testData.passageTitle) {
+        passageTitleElement.textContent = testData.passageTitle;
+    } else {
+        passageTitleElement.textContent = 'Reading Passage';
+    }
+
+    if (testData.passageImage) {
+        const imagePaths = Array.isArray(testData.passageImage) ? testData.passageImage : [testData.passageImage];
+        passageTextElement.innerHTML = imagePaths.map((src, index) =>
+            `<img src="${src}" alt="Reading passage page ${index + 1}" class="passage-image">`
+        ).join('');
+        passageTextElement.classList.add('has-image');
+    } else if (testData.passage) {
+        currentPassageHtml = formatPassageWithLineNumbers(testData.passage);
+        passageTextElement.innerHTML = currentPassageHtml;
+        passageTextElement.classList.remove('has-image');
+    } else {
+        currentPassageHtml = '';
+        passageTextElement.innerHTML = '';
+        passageTextElement.classList.remove('has-image');
+    }
+
+    // Show test screen
+    showScreen('test-screen');
+
+    // Show debug panel if in debug mode
+    if (debugMode) {
+        showDebugPanel();
+    } else {
+        hideDebugPanel();
+    }
+
+    // Resume timer if it was enabled
+    if (timerEnabled && timerTargetMs > 0) {
+        startTimerCountdown();
+    } else {
+        stopTimerCountdown();
+    }
+
+    focusedOptionIndex = -1;
+    displayQuestion();
+
+    // Track resume in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'test_resumed', {
+            'exam_type': currentExam,
+            'test_name': testData.title || currentTest,
+            'question_index': currentQuestionIndex,
+            'event_category': 'engagement',
+            'event_label': `${currentExam}_${currentTest}`
+        });
+    }
+}
+
 function getCurrentQuestions() {
     if (currentQuestions.length) {
         return currentQuestions;
@@ -277,6 +448,10 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     if (loaded) {
         setupEventListeners();
+
+        // Check for saved progress before showing initial screen
+        checkForSavedProgress();
+
         showScreen('exam-selector');
 
         // Remove loading state
@@ -522,6 +697,7 @@ function selectExam(examType) {
 }
 
 function startTest(testKey) {
+    clearTestProgress(); // Clear any existing saved progress
     currentTest = testKey;
     currentQuestionIndex = 0;
     userAnswers = {};
@@ -620,6 +796,7 @@ function startTest(testKey) {
 
     focusedOptionIndex = -1; // Reset focus for new test
     displayQuestion();
+    saveTestProgress(); // Save initial test state
 }
 
 function showDebugPanel() {
@@ -877,6 +1054,7 @@ function selectOption(questionId, letter) {
     if (debugMode) {
         showDebugPanel();
     }
+    saveTestProgress(); // Save progress after answer selection
 }
 
 function previousQuestion() {
@@ -884,6 +1062,7 @@ function previousQuestion() {
         currentQuestionIndex--;
         focusedOptionIndex = -1; // Reset focus when changing questions
         displayQuestion();
+        saveTestProgress(); // Save progress after navigation
     }
 }
 
@@ -893,6 +1072,7 @@ function nextQuestion() {
         currentQuestionIndex++;
         focusedOptionIndex = -1; // Reset focus when changing questions
         displayQuestion();
+        saveTestProgress(); // Save progress after navigation
     }
 }
 
@@ -911,6 +1091,7 @@ function submitTest() {
 
     testEndTime = Date.now();
     stopTimerCountdown();
+    clearTestProgress(); // Clear saved progress after test completion
 
     calculateResults();
     showScreen('results-screen');
