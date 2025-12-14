@@ -805,17 +805,14 @@ function showDebugPanel() {
 
     const questions = currentQuestions;
 
-    // Save scroll position before removing panel
     const existingPanel = document.querySelector('.debug-panel');
-    const existingList = document.querySelector('.debug-question-list');
-    const scrollPosition = existingList ? existingList.scrollTop : 0;
 
     let debugHTML = '<div class="debug-panel"><button class="debug-panel-toggle" onclick="toggleDebugPanel()" title="Toggle navigation">◀</button><h3>Debug: Questions</h3><ul class="debug-question-list">';
     questions.forEach((q, index) => {
         const answered = isQuestionAnswered(q) ? '✓' : '';
         const hasImage = q.image ? '*' : '';
         const current = index === currentQuestionIndex ? 'current' : '';
-        debugHTML += `<li class="${current}" onclick="jumpToQuestion(${index})">
+        debugHTML += `<li class="${current}" data-index="${index}" onclick="jumpToQuestion(${index})">
             <span class="q-num">Q${q.id}${hasImage}</span> ${answered}
         </li>`;
     });
@@ -829,13 +826,7 @@ function showDebugPanel() {
     // Insert debug panel
     testScreen.insertAdjacentHTML('afterbegin', debugHTML);
 
-    // Restore scroll position after browser renders
-    requestAnimationFrame(() => {
-        const newList = document.querySelector('.debug-question-list');
-        if (newList) {
-            newList.scrollTop = scrollPosition;
-        }
-    });
+    requestAnimationFrame(scrollDebugNavToCurrent);
 }
 
 function hideDebugPanel() {
@@ -868,6 +859,28 @@ function toggleDebugPanel() {
     toggleButton.title = isCollapsed ? 'Expand navigation' : 'Collapse navigation';
 }
 
+function scrollDebugNavToCurrent() {
+    if (!debugMode) return;
+    const list = document.querySelector('.debug-question-list');
+    if (!list) return;
+    const currentItem = list.querySelector('li.current');
+    if (!currentItem) return;
+    currentItem.scrollIntoView({ block: 'nearest', inline: 'nearest' });
+}
+
+function updateDebugNavSelection() {
+    if (!debugMode) return;
+    const items = document.querySelectorAll('.debug-question-list li');
+    if (!items.length) return;
+    items.forEach(item => {
+        const index = Number(item.dataset.index);
+        if (Number.isNaN(index)) {
+            return;
+        }
+        item.classList.toggle('current', index === currentQuestionIndex);
+    });
+}
+
 function displayQuestion() {
     const testData = questionDatabase[currentExam][currentTest];
     const questions = getCurrentQuestions();
@@ -888,9 +901,13 @@ function displayQuestion() {
     let showPassage = false;
 
     if (testData.passage) {
-        // For English test, show passage for questions 1-28 (reading comprehension)
-        if (currentExam === 'english' && question.id >= 1 && question.id <= 28) {
-            showPassage = true;
+        if (typeof question.showPassage === 'boolean') {
+            showPassage = question.showPassage;
+        } else if (currentExam === 'english') {
+            const passageEndId = currentTest === 'test1' ? 28 : 23;
+            if (question.id >= 1 && question.id <= passageEndId) {
+                showPassage = true;
+            }
         }
         // For Verbal Skills test, show passage for questions 1-14 (reading comprehension)
         else if (currentExam === 'verbal-skills' && question.id >= 1 && question.id <= 14) {
@@ -1008,6 +1025,11 @@ function displayQuestion() {
             document.getElementById('next-button').disabled = !isCurrentQuestionAnswered;
             document.getElementById('submit-button').style.display = 'none';
         }
+    }
+
+    if (debugMode) {
+        updateDebugNavSelection();
+        scrollDebugNavToCurrent();
     }
 }
 

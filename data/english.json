@@ -33,7 +33,8 @@
             "text": "autumn"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 2,
@@ -60,7 +61,8 @@
             "text": "They had been unfairly accused of crimes but the accusations had been dropped."
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 3,
@@ -87,7 +89,8 @@
             "text": "calmed"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 4,
@@ -114,7 +117,8 @@
             "text": "The family have found themselves on an island surrounded by water."
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "showPassage": true
       },
       {
         "id": 5,
@@ -141,7 +145,8 @@
             "text": "5"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 6,
@@ -168,7 +173,8 @@
             "text": "The tree-house quickly dried out by itself."
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 7,
@@ -195,7 +201,8 @@
             "text": "outside, in barrels"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 8,
@@ -222,7 +229,8 @@
             "text": "They placed them out in the sun to dry."
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 9,
@@ -249,7 +257,8 @@
             "text": "The father had never seen damage like it before."
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 10,
@@ -276,7 +285,8 @@
             "text": "beds"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 11,
@@ -303,7 +313,8 @@
             "text": "It rains all the time."
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 12,
@@ -330,7 +341,8 @@
             "text": "to provide accommodation for the winter season"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 13,
@@ -357,7 +369,8 @@
             "text": "a shelter for rain showers"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 14,
@@ -384,7 +397,8 @@
             "text": "completely impossible"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 15,
@@ -411,7 +425,8 @@
             "text": "They worked cautiously because there was a high chance they wouldn't succeed."
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 16,
@@ -438,7 +453,8 @@
             "text": "The work was uninspiring and monotonous."
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 17,
@@ -465,7 +481,8 @@
             "text": "achievement"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "showPassage": true
       },
       {
         "id": 18,
@@ -492,7 +509,8 @@
             "text": "They had learned from the experience so it hadn't been a complete waste of time."
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 19,
@@ -519,7 +537,8 @@
             "text": "preposition"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 20,
@@ -546,7 +565,8 @@
             "text": "prepositions"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 21,
@@ -573,7 +593,8 @@
             "text": "Jack and his father were nervous because they didn't know what to expect."
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 22,
@@ -600,7 +621,8 @@
             "text": "powerlessly"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 23,
@@ -627,7 +649,8 @@
             "text": "Jack had a rest so that he could take over next."
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 24,
@@ -654,7 +677,8 @@
             "text": "prepositions"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 25,
@@ -681,7 +705,8 @@
             "text": "They were overwhelmed at the dazzling appearance."
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 26,
@@ -708,7 +733,8 @@
             "text": "crystal"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 27,
@@ -735,7 +761,8 @@
             "text": "alliteration"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 28,
@@ -762,10 +789,12 @@
             "text": "because it was warm inside"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 29,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: The local county's superior players dominated the tennis tornament.",
         "options": [
           {
@@ -793,6 +822,7 @@
       },
       {
         "id": 30,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: I recieved an elaborate invitation to an exclusive party next week.",
         "options": [
           {
@@ -820,6 +850,7 @@
       },
       {
         "id": 31,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: The telephone company persued the customers that did not pay.",
         "options": [
           {
@@ -847,6 +878,7 @@
       },
       {
         "id": 32,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: Oli asked his mum for permision to attend the charity concert.",
         "options": [
           {
@@ -874,6 +906,7 @@
       },
       {
         "id": 33,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: Julia regretted postponing her annual expedition to Norway.",
         "options": [
           {
@@ -901,6 +934,7 @@
       },
       {
         "id": 34,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: Attendance at the secret meeting was compulsery and critical.",
         "options": [
           {
@@ -928,6 +962,7 @@
       },
       {
         "id": 35,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: Ezra's adorable new puppy was obedient but also enthusiastic and playfull.",
         "options": [
           {
@@ -955,6 +990,7 @@
       },
       {
         "id": 36,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: Sam enjoyed climing mountains and spending time in the countryside.",
         "options": [
           {
@@ -982,6 +1018,7 @@
       },
       {
         "id": 37,
+        "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Spelling: Consistant hard work has contributed to significant improvements.",
         "options": [
           {
@@ -1009,6 +1046,7 @@
       },
       {
         "id": 38,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: Mention the word hippo and you will probably think of a cute but robust animal",
         "options": [
           {
@@ -1036,6 +1074,7 @@
       },
       {
         "id": 39,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: But how accurate is this. Hippos look like they have tough skin when, in fact, their",
         "options": [
           {
@@ -1063,6 +1102,7 @@
       },
       {
         "id": 40,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: skin is highly sensitive and susceptible to burn in the sun. Hippo sweat even has special",
         "options": [
           {
@@ -1090,6 +1130,7 @@
       },
       {
         "id": 41,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: properties to protect the skin from the suns harmful rays. The same fluid, red in",
         "options": [
           {
@@ -1117,6 +1158,7 @@
       },
       {
         "id": 42,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: colour also moisturises and serves as an antibiotic. Imagine using hippo sweat",
         "options": [
           {
@@ -1144,6 +1186,7 @@
       },
       {
         "id": 43,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: as a cosmetic or a medicine! Its true that hippos are omnivores but don't let yourself",
         "options": [
           {
@@ -1171,6 +1214,7 @@
       },
       {
         "id": 44,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: be fooled they are not gentle creatures and can be quite dangerous, especially given the",
         "options": [
           {
@@ -1198,6 +1242,7 @@
       },
       {
         "id": 45,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: speed they can run (up to 30 kilometres per hour. Hippos typically do their",
         "options": [
           {
@@ -1225,6 +1270,7 @@
       },
       {
         "id": 46,
+        "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Punctuation: running at night whilst hunting for food. During the day, they stay in the water.",
         "options": [
           {
@@ -1252,6 +1298,7 @@
       },
       {
         "id": 47,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: Waiting in the wings, the students' nerves soared as they listened to the _____ whispers from the audience.",
         "options": [
           {
@@ -1279,6 +1326,7 @@
       },
       {
         "id": 48,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: All of _____ friends and family had come to see them perform in the end-of-year show.",
         "options": [
           {
@@ -1306,6 +1354,7 @@
       },
       {
         "id": 49,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: But what they were about to see was not what you _____ a normal show.",
         "options": [
           {
@@ -1333,6 +1382,7 @@
       },
       {
         "id": 50,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: One of the boxes _____ slightly so they hastily slammed it shut.",
         "options": [
           {
@@ -1360,6 +1410,7 @@
       },
       {
         "id": 51,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: The noise from the audience was getting _____",
         "options": [
           {
@@ -1387,6 +1438,7 @@
       },
       {
         "id": 52,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: \"Who _____ their goggles?\" asked their teacher in an urgent whisper.",
         "options": [
           {
@@ -1414,6 +1466,7 @@
       },
       {
         "id": 53,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: Sara rushed forward to grab them and almost tripped on the ropes _____ three of the students were harnessed.",
         "options": [
           {
@@ -1441,6 +1494,7 @@
       },
       {
         "id": 54,
+        "instruction": "Choose the best word, or group of words, to complete each sentence so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Grammar: _____ the teacher nodded, the three students rose into the air and the curtain lifted.",
         "options": [
           {
@@ -1470,7 +1524,7 @@
   },
   "test2": {
     "title": "English Test 2 - Familiarisation",
-    "passage": "While walking in the garden Mary watched a robin and, after following it, discovered a key on the ground.\n\nShe looked at the key quite a long time. She turned it over and over, and thought about it. All she thought about the key was that if it was the key to the closed garden, and she could find out where the door was, she could perhaps open it and see what was inside the walls, and what had happened to the old rose-trees. It was because it had been shut up so long that she wanted to see it. It seemed as if it must be different from other places and that something strange must have happened to it during ten years. Besides that, if she liked it she could go into it every day and shut the door behind her, and she could make up some play of her own and play it quite alone, because nobody would ever know where she was, but would think the door was still locked and the key buried in the earth. The thought of that pleased her very much.\n\nLiving in a house with a hundred mysteriously closed rooms and having nothing whatever to do to amuse herself, had set her inactive brain to working and was actually awakening her imagination.\n\nShe put the key in her pocket and walked up and down her path. No one but herself ever seemed to come there, so she could walk slowly and look at the wall, or, rather, at the ivy growing on it. The ivy was the baffling thing. Howsoever carefully she looked she could see nothing but thickly growing, glossy, dark green leaves. She was very much disappointed as she paced the path and looked over it at the tree-tops inside. It seemed so silly, she said to herself, to be near it and not be able to get in. She took the key in her pocket when she went back to the house, and she made up her mind that she would always carry it with her when she went out, so that if she ever should find the hidden door she would be ready.\n\n* * *\n\nThe skipping-rope was a wonderful thing. The sun was shining and a little wind was blowing – not a rough wind, but one which came in delightful little gusts and brought a fresh scent of newly turned earth with it.\n\nMary skipped round all the gardens and round the orchard, resting every few minutes. At length she went to her own special path and made up her mind to try if she could skip the whole length of it. It was a good long skip and she began slowly, but before she had gone half-way down the path she was so hot and breathless that she was obliged to stop. She did not mind much, because she had already counted up to thirty. She stopped with a little laugh of pleasure, and there, lo and behold, was the robin swaying on a long branch of ivy. He had followed her and he greeted her with a chirp. As Mary had skipped toward him she felt something heavy in her pocket strike against her at each jump, and when she saw the robin she laughed again.\n\n\"You showed me where the key was yesterday,\" she said. \"You ought to show me the door today; but I don't believe you know!\"\n\nThe robin flew from his swinging spray of ivy on to the top of the wall and he opened his beak and sang a loud, lovely trill, merely to show off. Nothing in the world is quite as adorably lovely as a robin when he shows off – and they are nearly always doing it.\n\nOne of the nice little gusts of wind rushed down the path, and it was a stronger one than the rest. It was strong enough to wave the branches of the trees, and it was more than strong enough to sway the trailing sprays of untrimmed ivy hanging from the wall. Mary had stepped close to the robin, and suddenly the gust of wind swung aside some loose ivy trails, and more suddenly still she jumped toward it and caught it in her hand. This she did because she had seen something under it – a round knob which had been covered by the leaves hanging over it. It was the knob of a door.\n\nShe put her hands under the leaves and began to pull and push them aside. Thick as the ivy hung, it nearly all was a loose and swinging curtain, though some had crept over wood and iron. Mary's heart began to thump and her hands to shake a little in her delight and excitement. The robin kept singing and twittering away and tilting his head on one side, as if he were as excited as she was. What was this under her hands which was square and made of iron and which her fingers found a hole in?\n\nIt was the lock of the door which had been closed ten years and she put her hand in her pocket, drew out the key and found it fitted the keyhole. She put the key in and turned it. It took two hands to do it, but it did turn.\n\nAnd then she took a long breath and looked behind her up the long path to see if anyone was coming. No one was coming. No one ever did come, it seemed, and she took another long breath, because she could not help it, and she held back the swinging curtain of ivy and pushed back the door which opened slowly – slowly.\n\nThen she slipped through it, and shut it behind her, and stood with her back against it, looking about her and breathing quite fast with excitement, and wonder, and delight.\n\nShe was standing inside the secret garden.",
+    "passage": "While walking in the garden Mary watched a robin and, after following it, discovered a key on the ground.\n\nShe looked at the key quite a long time. She turned it over and over, and thought about it. All she thought about the key was that if it was the key to the closed garden, and she could find out where the door was, she could perhaps open it and see what was inside the walls, and what had happened to the old rose-trees. It was because it had been shut up so long that she wanted to see it. It seemed as if it must be different from other places and that something strange must have happened to it during ten years. Besides that, if she liked it she could go into it every day and shut the door behind her, and she could make up some play of her own and play it quite alone, because nobody would ever know where she was, but would think the door was still locked and the key buried in the earth. The thought of that pleased her very much.\n\nLiving in a house with a hundred mysteriously closed rooms and having nothing whatever to do to amuse herself, had set her inactive brain to working and was actually awakening her imagination.\n\nShe put the key in her pocket and walked up and down her path. No one but herself ever seemed to come there, so she could walk slowly and look at the wall, or, rather, at the ivy growing on it. The ivy was the baffling thing. Howsoever carefully she looked she could see nothing but thickly growing, glossy, dark green leaves. She was very much disappointed as she paced the path and looked over it at the tree-tops inside. It seemed so silly, she said to herself, to be near it and not be able to get in. She took the key in her pocket when she went back to the house, and she made up her mind that she would always carry it with her when she went out, so that if she ever should find the hidden door she would be ready.\n\n* * *\n\nThe skipping-rope was a wonderful thing. The sun was shining and a little wind was blowing \u2013 not a rough wind, but one which came in delightful little gusts and brought a fresh scent of newly turned earth with it.\n\nMary skipped round all the gardens and round the orchard, resting every few minutes. At length she went to her own special path and made up her mind to try if she could skip the whole length of it. It was a good long skip and she began slowly, but before she had gone half-way down the path she was so hot and breathless that she was obliged to stop. She did not mind much, because she had already counted up to thirty. She stopped with a little laugh of pleasure, and there, lo and behold, was the robin swaying on a long branch of ivy. He had followed her and he greeted her with a chirp. As Mary had skipped toward him she felt something heavy in her pocket strike against her at each jump, and when she saw the robin she laughed again.\n\n\"You showed me where the key was yesterday,\" she said. \"You ought to show me the door today; but I don't believe you know!\"\n\nThe robin flew from his swinging spray of ivy on to the top of the wall and he opened his beak and sang a loud, lovely trill, merely to show off. Nothing in the world is quite as adorably lovely as a robin when he shows off \u2013 and they are nearly always doing it.\n\nOne of the nice little gusts of wind rushed down the path, and it was a stronger one than the rest. It was strong enough to wave the branches of the trees, and it was more than strong enough to sway the trailing sprays of untrimmed ivy hanging from the wall. Mary had stepped close to the robin, and suddenly the gust of wind swung aside some loose ivy trails, and more suddenly still she jumped toward it and caught it in her hand. This she did because she had seen something under it \u2013 a round knob which had been covered by the leaves hanging over it. It was the knob of a door.\n\nShe put her hands under the leaves and began to pull and push them aside. Thick as the ivy hung, it nearly all was a loose and swinging curtain, though some had crept over wood and iron. Mary's heart began to thump and her hands to shake a little in her delight and excitement. The robin kept singing and twittering away and tilting his head on one side, as if he were as excited as she was. What was this under her hands which was square and made of iron and which her fingers found a hole in?\n\nIt was the lock of the door which had been closed ten years and she put her hand in her pocket, drew out the key and found it fitted the keyhole. She put the key in and turned it. It took two hands to do it, but it did turn.\n\nAnd then she took a long breath and looked behind her up the long path to see if anyone was coming. No one was coming. No one ever did come, it seemed, and she took another long breath, because she could not help it, and she held back the swinging curtain of ivy and pushed back the door which opened slowly \u2013 slowly.\n\nThen she slipped through it, and shut it behind her, and stood with her back against it, looking about her and breathing quite fast with excitement, and wonder, and delight.\n\nShe was standing inside the secret garden.",
     "passageTitle": "The Secret Garden by Frances Hodgson Burnett",
     "passageImage": [
       "images/english_test2_passage_1.png",
@@ -1481,288 +1535,671 @@
         "id": 1,
         "question": "For how many years had the secret garden been locked?",
         "options": [
-          { "letter": "A", "text": "seven" },
-          { "letter": "B", "text": "eight" },
-          { "letter": "C", "text": "nine" },
-          { "letter": "D", "text": "ten" },
-          { "letter": "E", "text": "eleven" }
+          {
+            "letter": "A",
+            "text": "seven"
+          },
+          {
+            "letter": "B",
+            "text": "eight"
+          },
+          {
+            "letter": "C",
+            "text": "nine"
+          },
+          {
+            "letter": "D",
+            "text": "ten"
+          },
+          {
+            "letter": "E",
+            "text": "eleven"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 2,
         "question": "Which of the following facts do we know about the secret garden from the passage?",
         "options": [
-          { "letter": "A", "text": "It receives a lot of sunlight." },
-          { "letter": "B", "text": "There is lots of space for playing." },
-          { "letter": "C", "text": "There is a pond." },
-          { "letter": "D", "text": "There are trees inside." },
-          { "letter": "E", "text": "There is a gardener." }
+          {
+            "letter": "A",
+            "text": "It receives a lot of sunlight."
+          },
+          {
+            "letter": "B",
+            "text": "There is lots of space for playing."
+          },
+          {
+            "letter": "C",
+            "text": "There is a pond."
+          },
+          {
+            "letter": "D",
+            "text": "There are trees inside."
+          },
+          {
+            "letter": "E",
+            "text": "There is a gardener."
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 3,
         "question": "What word best describes Mary as she 'turned it [the key] over and over'?",
         "options": [
-          { "letter": "A", "text": "regretful" },
-          { "letter": "B", "text": "frustrated" },
-          { "letter": "C", "text": "pensive" },
-          { "letter": "D", "text": "frightened" },
-          { "letter": "E", "text": "ecstatic" }
+          {
+            "letter": "A",
+            "text": "regretful"
+          },
+          {
+            "letter": "B",
+            "text": "frustrated"
+          },
+          {
+            "letter": "C",
+            "text": "pensive"
+          },
+          {
+            "letter": "D",
+            "text": "frightened"
+          },
+          {
+            "letter": "E",
+            "text": "ecstatic"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 4,
         "question": "What made Mary especially keen to see the secret garden?",
         "options": [
-          { "letter": "A", "text": "It had been inaccessible for so long." },
-          { "letter": "B", "text": "People had been saying how beautiful it was inside." },
-          { "letter": "C", "text": "She could see a bit of it through the wall and it looked very tempting." },
-          { "letter": "D", "text": "She was bored of playing in the rest of the garden." },
-          { "letter": "E", "text": "Her parents had encouraged her to play outside." }
+          {
+            "letter": "A",
+            "text": "It had been inaccessible for so long."
+          },
+          {
+            "letter": "B",
+            "text": "People had been saying how beautiful it was inside."
+          },
+          {
+            "letter": "C",
+            "text": "She could see a bit of it through the wall and it looked very tempting."
+          },
+          {
+            "letter": "D",
+            "text": "She was bored of playing in the rest of the garden."
+          },
+          {
+            "letter": "E",
+            "text": "Her parents had encouraged her to play outside."
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "showPassage": true
       },
       {
         "id": 5,
         "question": "Mary was keen to keep the garden a secret even if she found the entrance. Why?",
         "options": [
-          { "letter": "A", "text": "Mary didn't like spending time with other people." },
-          { "letter": "B", "text": "People had warned her that she shouldn't go into the garden." },
-          { "letter": "C", "text": "Mary wanted to play by herself." },
-          { "letter": "D", "text": "Mary found it thrilling to keep secrets." },
-          { "letter": "E", "text": "Mary had promised a friend that she would keep it a secret." }
+          {
+            "letter": "A",
+            "text": "Mary didn't like spending time with other people."
+          },
+          {
+            "letter": "B",
+            "text": "People had warned her that she shouldn't go into the garden."
+          },
+          {
+            "letter": "C",
+            "text": "Mary wanted to play by herself."
+          },
+          {
+            "letter": "D",
+            "text": "Mary found it thrilling to keep secrets."
+          },
+          {
+            "letter": "E",
+            "text": "Mary had promised a friend that she would keep it a secret."
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 6,
         "question": "What did Mary plan to do in the secret garden?",
         "options": [
-          { "letter": "A", "text": "play with her skipping rope" },
-          { "letter": "B", "text": "invite her friends over to play" },
-          { "letter": "C", "text": "tend to the plants" },
-          { "letter": "D", "text": "read her books" },
-          { "letter": "E", "text": "play her own games" }
+          {
+            "letter": "A",
+            "text": "play with her skipping rope"
+          },
+          {
+            "letter": "B",
+            "text": "invite her friends over to play"
+          },
+          {
+            "letter": "C",
+            "text": "tend to the plants"
+          },
+          {
+            "letter": "D",
+            "text": "read her books"
+          },
+          {
+            "letter": "E",
+            "text": "play her own games"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 7,
         "question": "According to the first paragraph, where had the key been hidden? (line 9)",
         "options": [
-          { "letter": "A", "text": "on the wall" },
-          { "letter": "B", "text": "next to a flower pot" },
-          { "letter": "C", "text": "in the earth" },
-          { "letter": "D", "text": "in a bird's nest" },
-          { "letter": "E", "text": "on the window-sill" }
+          {
+            "letter": "A",
+            "text": "on the wall"
+          },
+          {
+            "letter": "B",
+            "text": "next to a flower pot"
+          },
+          {
+            "letter": "C",
+            "text": "in the earth"
+          },
+          {
+            "letter": "D",
+            "text": "in a bird's nest"
+          },
+          {
+            "letter": "E",
+            "text": "on the window-sill"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 8,
         "question": "According to the passage, what accounted for Mary's particularly strong imagination?",
         "options": [
-          { "letter": "A", "text": "Mary had been brought up with no toys." },
-          { "letter": "B", "text": "Mary had always been a very creative child." },
-          { "letter": "C", "text": "Mary's school encouraged imaginative activities." },
-          { "letter": "D", "text": "Mary had nothing to entertain her at home." },
-          { "letter": "E", "text": "Mary's parents had instilled in Mary a love of imaginative games." }
+          {
+            "letter": "A",
+            "text": "Mary had been brought up with no toys."
+          },
+          {
+            "letter": "B",
+            "text": "Mary had always been a very creative child."
+          },
+          {
+            "letter": "C",
+            "text": "Mary's school encouraged imaginative activities."
+          },
+          {
+            "letter": "D",
+            "text": "Mary had nothing to entertain her at home."
+          },
+          {
+            "letter": "E",
+            "text": "Mary's parents had instilled in Mary a love of imaginative games."
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 9,
         "question": "According to the passage, what impression do we get of the house in which Mary lived?",
         "options": [
-          { "letter": "A", "text": "It was an inviting place." },
-          { "letter": "B", "text": "The house contained many secrets." },
-          { "letter": "C", "text": "The house was an old, dilapidated building." },
-          { "letter": "D", "text": "The people who lived there were very posh." },
-          { "letter": "E", "text": "All the neighbours were in awe of the house." }
+          {
+            "letter": "A",
+            "text": "It was an inviting place."
+          },
+          {
+            "letter": "B",
+            "text": "The house contained many secrets."
+          },
+          {
+            "letter": "C",
+            "text": "The house was an old, dilapidated building."
+          },
+          {
+            "letter": "D",
+            "text": "The people who lived there were very posh."
+          },
+          {
+            "letter": "E",
+            "text": "All the neighbours were in awe of the house."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 10,
         "question": "Why was it particularly hard to see if there was a door to the garden?",
         "options": [
-          { "letter": "A", "text": "The garden walls were covered in thick ivy." },
-          { "letter": "B", "text": "The garden was so large it was hard to get all the way around it." },
-          { "letter": "C", "text": "There were trees obscuring the garden walls." },
-          { "letter": "D", "text": "Mary only ever looked for the door after dark, when no one was around." },
-          { "letter": "E", "text": "The house towered over the garden so the walls were in shadow." }
+          {
+            "letter": "A",
+            "text": "The garden walls were covered in thick ivy."
+          },
+          {
+            "letter": "B",
+            "text": "The garden was so large it was hard to get all the way around it."
+          },
+          {
+            "letter": "C",
+            "text": "There were trees obscuring the garden walls."
+          },
+          {
+            "letter": "D",
+            "text": "Mary only ever looked for the door after dark, when no one was around."
+          },
+          {
+            "letter": "E",
+            "text": "The house towered over the garden so the walls were in shadow."
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "showPassage": true
       },
       {
         "id": 11,
         "question": "Why did Mary decide to keep the key on her at all times?",
         "options": [
-          { "letter": "A", "text": "She didn't trust anyone else to keep it safe." },
-          { "letter": "B", "text": "She had nowhere to store it in her house." },
-          { "letter": "C", "text": "She wanted to be able to open the door whenever she found it." },
-          { "letter": "D", "text": "She often lost things, even if they were important." },
-          { "letter": "E", "text": "It might get lost amongst the other keys." }
+          {
+            "letter": "A",
+            "text": "She didn't trust anyone else to keep it safe."
+          },
+          {
+            "letter": "B",
+            "text": "She had nowhere to store it in her house."
+          },
+          {
+            "letter": "C",
+            "text": "She wanted to be able to open the door whenever she found it."
+          },
+          {
+            "letter": "D",
+            "text": "She often lost things, even if they were important."
+          },
+          {
+            "letter": "E",
+            "text": "It might get lost amongst the other keys."
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 12,
         "question": "What best describes the wind that blew along the path?",
         "options": [
-          { "letter": "A", "text": "gentle gust" },
-          { "letter": "B", "text": "strong wind" },
-          { "letter": "C", "text": "stiff breeze" },
-          { "letter": "D", "text": "gale-force" },
-          { "letter": "E", "text": "high wind" }
+          {
+            "letter": "A",
+            "text": "gentle gust"
+          },
+          {
+            "letter": "B",
+            "text": "strong wind"
+          },
+          {
+            "letter": "C",
+            "text": "stiff breeze"
+          },
+          {
+            "letter": "D",
+            "text": "gale-force"
+          },
+          {
+            "letter": "E",
+            "text": "high wind"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "showPassage": true
       },
       {
         "id": 13,
         "question": "What else did Mary skip around other than the gardens?",
         "options": [
-          { "letter": "A", "text": "the old rose trees" },
-          { "letter": "B", "text": "the summerhouse" },
-          { "letter": "C", "text": "the stables" },
-          { "letter": "D", "text": "the orchard" },
-          { "letter": "E", "text": "the boating lake" }
+          {
+            "letter": "A",
+            "text": "the old rose trees"
+          },
+          {
+            "letter": "B",
+            "text": "the summerhouse"
+          },
+          {
+            "letter": "C",
+            "text": "the stables"
+          },
+          {
+            "letter": "D",
+            "text": "the orchard"
+          },
+          {
+            "letter": "E",
+            "text": "the boating lake"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 14,
         "question": "What challenge did Mary set herself as she played in the gardens?",
         "options": [
-          { "letter": "A", "text": "Mary decided to run from one side to the other." },
-          { "letter": "B", "text": "Mary wanted to skip all the way down the path." },
-          { "letter": "C", "text": "Mary aimed to do more than thirty skips." },
-          { "letter": "D", "text": "Mary aimed to exercise for thirty minutes without getting out of breath." },
-          { "letter": "E", "text": "Mary wanted to run up and down the path to find her friend, the robin." }
+          {
+            "letter": "A",
+            "text": "Mary decided to run from one side to the other."
+          },
+          {
+            "letter": "B",
+            "text": "Mary wanted to skip all the way down the path."
+          },
+          {
+            "letter": "C",
+            "text": "Mary aimed to do more than thirty skips."
+          },
+          {
+            "letter": "D",
+            "text": "Mary aimed to exercise for thirty minutes without getting out of breath."
+          },
+          {
+            "letter": "E",
+            "text": "Mary wanted to run up and down the path to find her friend, the robin."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 15,
         "question": "What happened just before Mary's discovery of the key AND the hidden door?",
         "options": [
-          { "letter": "A", "text": "Mary came across the robin." },
-          { "letter": "B", "text": "Mary played with her skipping rope." },
-          { "letter": "C", "text": "The winds increased." },
-          { "letter": "D", "text": "Mary felt breathless." },
-          { "letter": "E", "text": "Mary started laughing." }
+          {
+            "letter": "A",
+            "text": "Mary came across the robin."
+          },
+          {
+            "letter": "B",
+            "text": "Mary played with her skipping rope."
+          },
+          {
+            "letter": "C",
+            "text": "The winds increased."
+          },
+          {
+            "letter": "D",
+            "text": "Mary felt breathless."
+          },
+          {
+            "letter": "E",
+            "text": "Mary started laughing."
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "showPassage": true
       },
       {
         "id": 16,
         "question": "Which of the following quotations from the passage suggests that the gardens in which Mary played were neglected?",
         "options": [
-          { "letter": "A", "text": "\"thickly growing, glossy, dark green leaves\" (line 17)" },
-          { "letter": "B", "text": "\"fresh scent of newly turned earth\" (line 25)" },
-          { "letter": "C", "text": "\"skipped round all the gardens and round the orchard\" (line 26)" },
-          { "letter": "D", "text": "\"the robin swaying on a long branch of ivy\" (line 31)" },
-          { "letter": "E", "text": "\"trailing sprays of untrimmed ivy\" (line 42)" }
+          {
+            "letter": "A",
+            "text": "\"thickly growing, glossy, dark green leaves\" (line 17)"
+          },
+          {
+            "letter": "B",
+            "text": "\"fresh scent of newly turned earth\" (line 25)"
+          },
+          {
+            "letter": "C",
+            "text": "\"skipped round all the gardens and round the orchard\" (line 26)"
+          },
+          {
+            "letter": "D",
+            "text": "\"the robin swaying on a long branch of ivy\" (line 31)"
+          },
+          {
+            "letter": "E",
+            "text": "\"trailing sprays of untrimmed ivy\" (line 42)"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 17,
         "question": "What was the significance of the wind in the story?",
         "options": [
-          { "letter": "A", "text": "The wind filled the silence." },
-          { "letter": "B", "text": "The wind stopped Mary doing what she wanted to do." },
-          { "letter": "C", "text": "The wind brushed aside the earth to uncover the key." },
-          { "letter": "D", "text": "The wind propelled the robin to Mary." },
-          { "letter": "E", "text": "The wind blew the ivy to reveal the doorknob." }
+          {
+            "letter": "A",
+            "text": "The wind filled the silence."
+          },
+          {
+            "letter": "B",
+            "text": "The wind stopped Mary doing what she wanted to do."
+          },
+          {
+            "letter": "C",
+            "text": "The wind brushed aside the earth to uncover the key."
+          },
+          {
+            "letter": "D",
+            "text": "The wind propelled the robin to Mary."
+          },
+          {
+            "letter": "E",
+            "text": "The wind blew the ivy to reveal the doorknob."
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "showPassage": true
       },
       {
         "id": 18,
         "question": "What metaphor is used when describing the ivy?",
         "options": [
-          { "letter": "A", "text": "It is a curtain." },
-          { "letter": "B", "text": "It is thick." },
-          { "letter": "C", "text": "It is untrimmed hair." },
-          { "letter": "D", "text": "It is like a swing." },
-          { "letter": "E", "text": "It is glossy." }
+          {
+            "letter": "A",
+            "text": "It is a curtain."
+          },
+          {
+            "letter": "B",
+            "text": "It is thick."
+          },
+          {
+            "letter": "C",
+            "text": "It is untrimmed hair."
+          },
+          {
+            "letter": "D",
+            "text": "It is like a swing."
+          },
+          {
+            "letter": "E",
+            "text": "It is glossy."
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "showPassage": true
       },
       {
         "id": 19,
         "question": "What suggests that the robin was as excited as Mary at finding the door to the garden?",
         "options": [
-          { "letter": "A", "text": "The robin was silent as Mary uncovered the door." },
-          { "letter": "B", "text": "The robin flew around frantically." },
-          { "letter": "C", "text": "The robin made lots of noise." },
-          { "letter": "D", "text": "The robin started pecking at the doorknob." },
-          { "letter": "E", "text": "The robin came and sat on Mary's shoulder." }
+          {
+            "letter": "A",
+            "text": "The robin was silent as Mary uncovered the door."
+          },
+          {
+            "letter": "B",
+            "text": "The robin flew around frantically."
+          },
+          {
+            "letter": "C",
+            "text": "The robin made lots of noise."
+          },
+          {
+            "letter": "D",
+            "text": "The robin started pecking at the doorknob."
+          },
+          {
+            "letter": "E",
+            "text": "The robin came and sat on Mary's shoulder."
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "showPassage": true
       },
       {
         "id": 20,
         "question": "Why is \"no one\" repeated in line 57?",
         "options": [
-          { "letter": "A", "text": "The author couldn't think of anything else to write." },
-          { "letter": "B", "text": "Repetition can build suspense." },
-          { "letter": "C", "text": "Mary's actions were repetitive." },
-          { "letter": "D", "text": "Mary was feeling lonely at that moment." },
-          { "letter": "E", "text": "It reflects Mary's muddled thoughts." }
+          {
+            "letter": "A",
+            "text": "The author couldn't think of anything else to write."
+          },
+          {
+            "letter": "B",
+            "text": "Repetition can build suspense."
+          },
+          {
+            "letter": "C",
+            "text": "Mary's actions were repetitive."
+          },
+          {
+            "letter": "D",
+            "text": "Mary was feeling lonely at that moment."
+          },
+          {
+            "letter": "E",
+            "text": "It reflects Mary's muddled thoughts."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 21,
         "question": "Why is there an emphasis on Mary's breathing in the last seven lines of the passage?",
         "options": [
-          { "letter": "A", "text": "Mary had been skipping a lot and was out of breath." },
-          { "letter": "B", "text": "The key was very hard to turn so Mary had to breathe deeply to give her strength." },
-          { "letter": "C", "text": "Mary was being dramatic so she was exaggerating her breathing." },
-          { "letter": "D", "text": "Mary was breathless with excitement and anticipation." },
-          { "letter": "E", "text": "Mary was inhaling deeply before calling to her friends." }
+          {
+            "letter": "A",
+            "text": "Mary had been skipping a lot and was out of breath."
+          },
+          {
+            "letter": "B",
+            "text": "The key was very hard to turn so Mary had to breathe deeply to give her strength."
+          },
+          {
+            "letter": "C",
+            "text": "Mary was being dramatic so she was exaggerating her breathing."
+          },
+          {
+            "letter": "D",
+            "text": "Mary was breathless with excitement and anticipation."
+          },
+          {
+            "letter": "E",
+            "text": "Mary was inhaling deeply before calling to her friends."
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 22,
         "question": "What type of words are the following?\n\nmysteriously (line 11) carefully (line 16) thickly (line 17) adorably (line 39)",
         "options": [
-          { "letter": "A", "text": "nouns" },
-          { "letter": "B", "text": "verbs" },
-          { "letter": "C", "text": "adjectives" },
-          { "letter": "D", "text": "adverbs" },
-          { "letter": "E", "text": "prepositions" }
+          {
+            "letter": "A",
+            "text": "nouns"
+          },
+          {
+            "letter": "B",
+            "text": "verbs"
+          },
+          {
+            "letter": "C",
+            "text": "adjectives"
+          },
+          {
+            "letter": "D",
+            "text": "adverbs"
+          },
+          {
+            "letter": "E",
+            "text": "prepositions"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "showPassage": true
       },
       {
         "id": 23,
         "question": "Which of these words is an adjective?",
         "options": [
-          { "letter": "A", "text": "swaying (line 31)" },
-          { "letter": "B", "text": "trailing (line 42)" },
-          { "letter": "C", "text": "singing (line 50)" },
-          { "letter": "D", "text": "tilting (line 50)" },
-          { "letter": "E", "text": "standing (line 62)" }
+          {
+            "letter": "A",
+            "text": "swaying (line 31)"
+          },
+          {
+            "letter": "B",
+            "text": "trailing (line 42)"
+          },
+          {
+            "letter": "C",
+            "text": "singing (line 50)"
+          },
+          {
+            "letter": "D",
+            "text": "tilting (line 50)"
+          },
+          {
+            "letter": "E",
+            "text": "standing (line 62)"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "showPassage": true
       },
       {
         "id": 24,
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "'Why don't you play outside today,' suggested Tom's aunt.",
         "options": [
-          { "letter": "A", "text": "'Why don't" },
-          { "letter": "B", "text": "you play outside" },
-          { "letter": "C", "text": "today,' suggested" },
-          { "letter": "D", "text": "Tom's aunt." },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "'Why don't"
+          },
+          {
+            "letter": "B",
+            "text": "you play outside"
+          },
+          {
+            "letter": "C",
+            "text": "today,' suggested"
+          },
+          {
+            "letter": "D",
+            "text": "Tom's aunt."
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -1771,11 +2208,26 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Even the best, most expensive detergent, couldn't remove the mud stains.",
         "options": [
-          { "letter": "A", "text": "Even the" },
-          { "letter": "B", "text": "best, most expensive" },
-          { "letter": "C", "text": "detergent, couldn't" },
-          { "letter": "D", "text": "remove the mud stains." },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Even the"
+          },
+          {
+            "letter": "B",
+            "text": "best, most expensive"
+          },
+          {
+            "letter": "C",
+            "text": "detergent, couldn't"
+          },
+          {
+            "letter": "D",
+            "text": "remove the mud stains."
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -1784,11 +2236,26 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "The recipe had two simple stages: finely chop the ingredients and then blend together.",
         "options": [
-          { "letter": "A", "text": "The recipe had two" },
-          { "letter": "B", "text": "simple stages: finely" },
-          { "letter": "C", "text": "chop the ingredients" },
-          { "letter": "D", "text": "and then blend together." },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "The recipe had two"
+          },
+          {
+            "letter": "B",
+            "text": "simple stages: finely"
+          },
+          {
+            "letter": "C",
+            "text": "chop the ingredients"
+          },
+          {
+            "letter": "D",
+            "text": "and then blend together."
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "N"
       },
@@ -1797,11 +2264,26 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Caitlin had carelessly lost Asaf's charger (his brand new one)",
         "options": [
-          { "letter": "A", "text": "Caitlin had" },
-          { "letter": "B", "text": "carelessly lost Asaf's" },
-          { "letter": "C", "text": "charger (his" },
-          { "letter": "D", "text": "brand new one)" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Caitlin had"
+          },
+          {
+            "letter": "B",
+            "text": "carelessly lost Asaf's"
+          },
+          {
+            "letter": "C",
+            "text": "charger (his"
+          },
+          {
+            "letter": "D",
+            "text": "brand new one)"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -1810,11 +2292,26 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "'I'd book first because the restaurant is so popular especially on Fridays.'",
         "options": [
-          { "letter": "A", "text": "'I'd book first" },
-          { "letter": "B", "text": "because the restaurant is" },
-          { "letter": "C", "text": "so popular especially" },
-          { "letter": "D", "text": "on Fridays.'" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "'I'd book first"
+          },
+          {
+            "letter": "B",
+            "text": "because the restaurant is"
+          },
+          {
+            "letter": "C",
+            "text": "so popular especially"
+          },
+          {
+            "letter": "D",
+            "text": "on Fridays.'"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -1823,11 +2320,26 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Looking through my parents music collection, I was amazed to see so many CDs!",
         "options": [
-          { "letter": "A", "text": "Looking through my" },
-          { "letter": "B", "text": "parents music collection," },
-          { "letter": "C", "text": "I was amazed to" },
-          { "letter": "D", "text": "see so many CDs!" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Looking through my"
+          },
+          {
+            "letter": "B",
+            "text": "parents music collection,"
+          },
+          {
+            "letter": "C",
+            "text": "I was amazed to"
+          },
+          {
+            "letter": "D",
+            "text": "see so many CDs!"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -1836,11 +2348,26 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "If we hadnt seen the road sign, we would have ended up in Wales.",
         "options": [
-          { "letter": "A", "text": "If we hadnt seen" },
-          { "letter": "B", "text": "the road sign, we" },
-          { "letter": "C", "text": "would have ended" },
-          { "letter": "D", "text": "up in Wales." },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "If we hadnt seen"
+          },
+          {
+            "letter": "B",
+            "text": "the road sign, we"
+          },
+          {
+            "letter": "C",
+            "text": "would have ended"
+          },
+          {
+            "letter": "D",
+            "text": "up in Wales."
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -1849,128 +2376,278 @@
         "instruction": "In these sentences there are some punctuation mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "We were lucky to win tickets to see The Nutcracker this Winter.",
         "options": [
-          { "letter": "A", "text": "We were lucky" },
-          { "letter": "B", "text": "to win tickets" },
-          { "letter": "C", "text": "to see The Nutcracker" },
-          { "letter": "D", "text": "this Winter." },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "We were lucky"
+          },
+          {
+            "letter": "B",
+            "text": "to win tickets"
+          },
+          {
+            "letter": "C",
+            "text": "to see The Nutcracker"
+          },
+          {
+            "letter": "D",
+            "text": "this Winter."
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "D"
       },
       {
         "id": 32,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "There was something different about the school playground today: not the usual lull",
+        "question": "before exams or antisipation before sports day. This was a one-off, whatever it",
         "options": [
-          { "letter": "A", "text": "before exams or" },
-          { "letter": "B", "text": "antisipation before" },
-          { "letter": "C", "text": "sports day. This was a" },
-          { "letter": "D", "text": "one-off, whatever it" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "before exams or"
+          },
+          {
+            "letter": "B",
+            "text": "antisipation before"
+          },
+          {
+            "letter": "C",
+            "text": "sports day. This was a"
+          },
+          {
+            "letter": "D",
+            "text": "one-off, whatever it"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "B"
       },
       {
         "id": 33,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "was. One thing you couldn't fail to notice on entering the school gates was a sea of",
+        "question": "was. One thing you couldn't fail to notice on entering the school gates was a sea of hats, as far as the eye could see: not the usual peeked caps but wide-brimmed",
         "options": [
-          { "letter": "A", "text": "hats, as far as the eye" },
-          { "letter": "B", "text": "could see: not the" },
-          { "letter": "C", "text": "usual peeked caps" },
-          { "letter": "D", "text": "but wide-brimmed" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "hats, as far as the eye"
+          },
+          {
+            "letter": "B",
+            "text": "could see: not the"
+          },
+          {
+            "letter": "C",
+            "text": "usual peeked caps"
+          },
+          {
+            "letter": "D",
+            "text": "but wide-brimmed"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "C"
       },
       {
         "id": 34,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "hats with feathers. There were also helmets (not the bicycle kind) and even some crowns. No-one was wearing modern clothes either; the usual sportswear",
+        "question": "was knowhere in sight. The vast majority of children wore",
         "options": [
-          { "letter": "A", "text": "was knowhere in" },
-          { "letter": "B", "text": "sight. The vast majority" },
-          { "letter": "C", "text": "of children wore" },
-          { "letter": "D", "text": "robes, some adorned" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "was knowhere in"
+          },
+          {
+            "letter": "B",
+            "text": "sight. The vast majority"
+          },
+          {
+            "letter": "C",
+            "text": "of children wore"
+          },
+          {
+            "letter": "D",
+            "text": "robes, some adorned"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "A"
       },
       {
         "id": 35,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "",
+        "question": "with jewels and others very plane. You could say it was an",
         "options": [
-          { "letter": "A", "text": "with jewels and" },
-          { "letter": "B", "text": "others very plane." },
-          { "letter": "C", "text": "You could say it was an" },
-          { "letter": "D", "text": "attempt by the school" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "with jewels and"
+          },
+          {
+            "letter": "B",
+            "text": "others very plane."
+          },
+          {
+            "letter": "C",
+            "text": "You could say it was an"
+          },
+          {
+            "letter": "D",
+            "text": "attempt by the school"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "B"
       },
       {
         "id": 36,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "",
+        "question": "to bring the past to life. In spite of their altered appearence,",
         "options": [
-          { "letter": "A", "text": "to bring the past to" },
-          { "letter": "B", "text": "life. In spite of their" },
-          { "letter": "C", "text": "altered appearence," },
-          { "letter": "D", "text": "pupils lined up" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "to bring the past to"
+          },
+          {
+            "letter": "B",
+            "text": "life. In spite of their"
+          },
+          {
+            "letter": "C",
+            "text": "altered appearence,"
+          },
+          {
+            "letter": "D",
+            "text": "pupils lined up"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "C"
       },
       {
         "id": 37,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "as normal and Class 5B waited for Mr Holterson to take the register. The only",
+        "question": "pupils lined up as normal and Class 5B waited for Mr Holterson to take the register. The only differance on this morning, however, was that pupils answered to the name of their chosen person from history.",
         "options": [
-          { "letter": "A", "text": "differance on this" },
-          { "letter": "B", "text": "morning, however," },
-          { "letter": "C", "text": "was that pupils" },
-          { "letter": "D", "text": "answered to the name of" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "differance on this"
+          },
+          {
+            "letter": "B",
+            "text": "morning, however,"
+          },
+          {
+            "letter": "C",
+            "text": "was that pupils"
+          },
+          {
+            "letter": "D",
+            "text": "answered to the name of"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "A"
       },
       {
         "id": 38,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "their chosen person from history. 'Cleopatra! Gandhi! Einstein!… Einstein?'",
+        "question": "After a slight delay, a mumbled response emerged from the line of pupils.",
         "options": [
-          { "letter": "A", "text": "After a slight delay,"},
-          { "letter": "B", "text": "a mumbled response" },
-          { "letter": "C", "text": "emerged from" },
-          { "letter": "D", "text": "the line of pupils." },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "After a slight delay,"
+          },
+          {
+            "letter": "B",
+            "text": "a mumbled response"
+          },
+          {
+            "letter": "C",
+            "text": "emerged from"
+          },
+          {
+            "letter": "D",
+            "text": "the line of pupils."
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "N"
       },
       {
         "id": 39,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "",
+        "question": "'Wow, Johnny, that's a really good impersonatian. You even sound German!'",
         "options": [
-          { "letter": "A", "text": "'Wow, Johnny, that's" },
-          { "letter": "B", "text": "a really good" },
-          { "letter": "C", "text": "impersonatian. You"},
-          { "letter": "D", "text": "even sound German!'"},
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "'Wow, Johnny, that's"
+          },
+          {
+            "letter": "B",
+            "text": "a really good"
+          },
+          {
+            "letter": "C",
+            "text": "impersonatian. You"
+          },
+          {
+            "letter": "D",
+            "text": "even sound German!'"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "C"
       },
       {
         "id": 40,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
-        "question": "That's because I am Albert Einstein.' 'Very good, Johnny!' the teacher laughed. But Einstein did not laugh and, instead, started to cough: an old-man’s cough that couldn’t possibly come from a ten-year-old – could it?",
+        "question": "Mr Holterson looked worried for a moment, then sheperded the pupils, or rather the phantoms of the past, inside.",
         "options": [
-          { "letter": "A", "text": "Mr Holterson looked" },
-          { "letter": "B", "text": "worried for a moment," },
-          { "letter": "C", "text": "then sheperded" },
-          { "letter": "D", "text": "the pupils, or rather" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Mr Holterson looked"
+          },
+          {
+            "letter": "B",
+            "text": "worried for a moment,"
+          },
+          {
+            "letter": "C",
+            "text": "then sheperded"
+          },
+          {
+            "letter": "D",
+            "text": "the pupils, or rather"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -1979,11 +2656,26 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Ellie launched the ball into the air and watched it for ___ split-second before racing to first base.",
         "options": [
-          { "letter": "A", "text": "the" },
-          { "letter": "B", "text": "an" },
-          { "letter": "C", "text": "this" },
-          { "letter": "D", "text": "a" },
-          { "letter": "E", "text": "that" }
+          {
+            "letter": "A",
+            "text": "the"
+          },
+          {
+            "letter": "B",
+            "text": "an"
+          },
+          {
+            "letter": "C",
+            "text": "this"
+          },
+          {
+            "letter": "D",
+            "text": "a"
+          },
+          {
+            "letter": "E",
+            "text": "that"
+          }
         ],
         "correctAnswer": "D"
       },
@@ -1992,11 +2684,26 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "It was summer and that meant rounders: a game which not all pupils enjoyed, ___ of all the green team because they always seemed to lose.",
         "options": [
-          { "letter": "A", "text": "least" },
-          { "letter": "B", "text": "most" },
-          { "letter": "C", "text": "top" },
-          { "letter": "D", "text": "less" },
-          { "letter": "E", "text": "more" }
+          {
+            "letter": "A",
+            "text": "least"
+          },
+          {
+            "letter": "B",
+            "text": "most"
+          },
+          {
+            "letter": "C",
+            "text": "top"
+          },
+          {
+            "letter": "D",
+            "text": "less"
+          },
+          {
+            "letter": "E",
+            "text": "more"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -2005,11 +2712,26 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Perhaps the other teams had velcro attached to their hands or super-human vision even in bright sunlight ___ they never failed to pull off miraculous catches and thunderous strikes of the ball.",
         "options": [
-          { "letter": "A", "text": "unless" },
-          { "letter": "B", "text": "because" },
-          { "letter": "C", "text": "whereas" },
-          { "letter": "D", "text": "although" },
-          { "letter": "E", "text": "while" }
+          {
+            "letter": "A",
+            "text": "unless"
+          },
+          {
+            "letter": "B",
+            "text": "because"
+          },
+          {
+            "letter": "C",
+            "text": "whereas"
+          },
+          {
+            "letter": "D",
+            "text": "although"
+          },
+          {
+            "letter": "E",
+            "text": "while"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -2018,24 +2740,54 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "The green team ___ their previous round of batting feeling disheartened, having only managed to score three-and-a-half rounders compared to the yellow team's six.",
         "options": [
-          { "letter": "A", "text": "were finishing" },
-          { "letter": "B", "text": "will finish" },
-          { "letter": "C", "text": "finish" },
-          { "letter": "D", "text": "are finishing" },
-          { "letter": "E", "text": "had finished" }
+          {
+            "letter": "A",
+            "text": "were finishing"
+          },
+          {
+            "letter": "B",
+            "text": "will finish"
+          },
+          {
+            "letter": "C",
+            "text": "finish"
+          },
+          {
+            "letter": "D",
+            "text": "are finishing"
+          },
+          {
+            "letter": "E",
+            "text": "had finished"
+          }
         ],
         "correctAnswer": "E"
       },
       {
         "id": 45,
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
-        "question": "What they needed now was a moment ___ inspiration and maybe – just maybe – Ellie could provide that.",
+        "question": "What they needed now was a moment ___ inspiration and maybe \u2013 just maybe \u2013 Ellie could provide that.",
         "options": [
-          { "letter": "A", "text": "to" },
-          { "letter": "B", "text": "at" },
-          { "letter": "C", "text": "of" },
-          { "letter": "D", "text": "with" },
-          { "letter": "E", "text": "in" }
+          {
+            "letter": "A",
+            "text": "to"
+          },
+          {
+            "letter": "B",
+            "text": "at"
+          },
+          {
+            "letter": "C",
+            "text": "of"
+          },
+          {
+            "letter": "D",
+            "text": "with"
+          },
+          {
+            "letter": "E",
+            "text": "in"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -2044,11 +2796,26 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "The encouragement lifted Ellie's spirits as she sprinted from first to second base, ___ to believe that she might get all the way round.",
         "options": [
-          { "letter": "A", "text": "dared" },
-          { "letter": "B", "text": "daring" },
-          { "letter": "C", "text": "to dare" },
-          { "letter": "D", "text": "having dared" },
-          { "letter": "E", "text": "without daring" }
+          {
+            "letter": "A",
+            "text": "dared"
+          },
+          {
+            "letter": "B",
+            "text": "daring"
+          },
+          {
+            "letter": "C",
+            "text": "to dare"
+          },
+          {
+            "letter": "D",
+            "text": "having dared"
+          },
+          {
+            "letter": "E",
+            "text": "without daring"
+          }
         ],
         "correctAnswer": "B"
       },
@@ -2057,11 +2824,26 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "The ball ___ a long time to finally descend but, when it did, the green team's expressions of excitement turned to horror as they spotted the tallest boy in their year standing directly underneath it, watching, waiting.",
         "options": [
-          { "letter": "A", "text": "takes" },
-          { "letter": "B", "text": "is taking" },
-          { "letter": "C", "text": "took" },
-          { "letter": "D", "text": "has taken" },
-          { "letter": "E", "text": "will take" }
+          {
+            "letter": "A",
+            "text": "takes"
+          },
+          {
+            "letter": "B",
+            "text": "is taking"
+          },
+          {
+            "letter": "C",
+            "text": "took"
+          },
+          {
+            "letter": "D",
+            "text": "has taken"
+          },
+          {
+            "letter": "E",
+            "text": "will take"
+          }
         ],
         "correctAnswer": "C"
       },
@@ -2070,11 +2852,26 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "The ball took a long time to finally descend but, when it did, the green team's expressions of excitement turned to horror as they spotted the tallest boy in ___ year standing directly underneath it, watching, waiting.",
         "options": [
-          { "letter": "A", "text": "their" },
-          { "letter": "B", "text": "they're" },
-          { "letter": "C", "text": "there" },
-          { "letter": "D", "text": "them" },
-          { "letter": "E", "text": "his" }
+          {
+            "letter": "A",
+            "text": "their"
+          },
+          {
+            "letter": "B",
+            "text": "they're"
+          },
+          {
+            "letter": "C",
+            "text": "there"
+          },
+          {
+            "letter": "D",
+            "text": "them"
+          },
+          {
+            "letter": "E",
+            "text": "his"
+          }
         ],
         "correctAnswer": "A"
       },
@@ -2083,11 +2880,26 @@
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "When the yellow team protested, the umpire simply smiled and said, 'Well, the bird's not officially on your team, ___?'",
         "options": [
-          { "letter": "A", "text": "isn't it" },
-          { "letter": "B", "text": "won't it" },
-          { "letter": "C", "text": "will it" },
-          { "letter": "D", "text": "is it" },
-          { "letter": "E", "text": "could it" }
+          {
+            "letter": "A",
+            "text": "isn't it"
+          },
+          {
+            "letter": "B",
+            "text": "won't it"
+          },
+          {
+            "letter": "C",
+            "text": "will it"
+          },
+          {
+            "letter": "D",
+            "text": "is it"
+          },
+          {
+            "letter": "E",
+            "text": "could it"
+          }
         ],
         "correctAnswer": "D"
       }
