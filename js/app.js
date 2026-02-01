@@ -1033,6 +1033,26 @@ function displayQuestion() {
     }
 }
 
+function getOptionGroup(letter) {
+    // Group 1: A, B, C, D, E
+    // Group 2: X, Y, Z
+    if (['A', 'B', 'C', 'D', 'E'].includes(letter)) {
+        return 1;
+    } else if (['X', 'Y', 'Z'].includes(letter)) {
+        return 2;
+    }
+    return null;
+}
+
+function hasTwoGroups(question) {
+    if (!question || !question.options) {
+        return false;
+    }
+    const hasGroup1 = question.options.some(opt => getOptionGroup(opt.letter) === 1);
+    const hasGroup2 = question.options.some(opt => getOptionGroup(opt.letter) === 2);
+    return hasGroup1 && hasGroup2;
+}
+
 function selectOption(questionId, letter) {
     if (reviewMode) {
         return;
@@ -1054,13 +1074,32 @@ function selectOption(questionId, letter) {
     let selections = getUserSelections(questionId);
 
     if (allowsMultiple) {
-        if (selections.includes(letter)) {
-            selections = selections.filter(selection => selection !== letter);
-        } else {
-            if (selections.length >= requiredSelections) {
-                return;
+        // Check if this is a two-group question (A, B, C vs X, Y, Z)
+        const isTwoGroupQuestion = hasTwoGroups(question);
+
+        if (isTwoGroupQuestion) {
+            // For two-group questions, enforce one selection per group
+            const clickedGroup = getOptionGroup(letter);
+
+            if (selections.includes(letter)) {
+                // Deselect the clicked option
+                selections = selections.filter(selection => selection !== letter);
+            } else {
+                // Remove any existing selection from the same group
+                selections = selections.filter(selection => getOptionGroup(selection) !== clickedGroup);
+                // Add the new selection
+                selections = [...selections, letter];
             }
-            selections = [...selections, letter];
+        } else {
+            // Standard multi-select logic for non-grouped questions
+            if (selections.includes(letter)) {
+                selections = selections.filter(selection => selection !== letter);
+            } else {
+                if (selections.length >= requiredSelections) {
+                    return;
+                }
+                selections = [...selections, letter];
+            }
         }
     } else {
         // Single-select: toggle if same option, otherwise select new option
