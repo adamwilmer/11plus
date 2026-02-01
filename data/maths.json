@@ -27,7 +27,8 @@
             "text": "5109"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Number & Place Value"
       },
       {
         "id": 2,
@@ -54,7 +55,8 @@
             "text": "6"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Data Interpretation"
       },
       {
         "id": 3,
@@ -81,7 +83,8 @@
             "text": "7 thousandths"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Number & Place Value"
       },
       {
         "id": 4,
@@ -109,7 +112,8 @@
             "text": "(1, 7)"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Coordinates & Graphs"
       },
       {
         "id": 5,
@@ -136,7 +140,8 @@
             "text": "366"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Sequences & Patterns"
       },
       {
         "id": 6,
@@ -164,7 +169,8 @@
             "text": "4"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 7,
@@ -191,7 +197,8 @@
             "text": "1.603 m"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Measurement & Units"
       },
       {
         "id": 8,
@@ -219,11 +226,12 @@
             "text": "3/11"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 9,
-        "question": "Write the correct number in the box:\n\n123 \u00f7 __ = 123",
+        "question": "Write the correct number in the box:\n\n123 ÷ __ = 123",
         "options": [
           {
             "letter": "A",
@@ -246,7 +254,8 @@
             "text": "1"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 10,
@@ -273,7 +282,8 @@
             "text": "-19"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Algebra"
       },
       {
         "id": 11,
@@ -301,7 +311,8 @@
             "text": "200 millilitres"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Measurement & Units"
       },
       {
         "id": 12,
@@ -329,11 +340,12 @@
             "text": "8.5 hours"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Data Interpretation"
       },
       {
         "id": 13,
-        "question": "Wendy saved \u00a32.50 a week.\n\nHow many weeks did it take her to save \u00a320?",
+        "question": "Wendy saved £2.50 a week.\n\nHow many weeks did it take her to save £20?",
         "options": [
           {
             "letter": "A",
@@ -356,7 +368,8 @@
             "text": "14 weeks"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Money & Word Problems"
       },
       {
         "id": 14,
@@ -384,7 +397,8 @@
             "text": "24"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 15,
@@ -412,7 +426,8 @@
             "text": "21:15"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Time"
       },
       {
         "id": 16,
@@ -439,7 +454,8 @@
             "text": "14"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Algebra"
       },
       {
         "id": 17,
@@ -466,7 +482,8 @@
             "text": "95 mins"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Time"
       },
       {
         "id": 18,
@@ -475,26 +492,27 @@
         "options": [
           {
             "letter": "A",
-            "text": "\u00a382.00"
+            "text": "£82.00"
           },
           {
             "letter": "B",
-            "text": "\u00a362.63"
+            "text": "£62.63"
           },
           {
             "letter": "C",
-            "text": "\u00a362.00"
+            "text": "£62.00"
           },
           {
             "letter": "D",
-            "text": "\u00a361.50"
+            "text": "£61.50"
           },
           {
             "letter": "E",
-            "text": "\u00a346.50"
+            "text": "£46.50"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Money & Word Problems"
       },
       {
         "id": 19,
@@ -521,7 +539,8 @@
             "text": "300 litres"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Measurement & Units"
       },
       {
         "id": 20,
@@ -549,7 +568,8 @@
             "text": "E"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 21,
@@ -577,11 +597,12 @@
             "text": "26 mins"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Time"
       },
       {
         "id": 22,
-        "question": "What percentage of \u00a35 is 50p?",
+        "question": "What percentage of £5 is 50p?",
         "options": [
           {
             "letter": "A",
@@ -604,7 +625,8 @@
             "text": "50%"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Percentages"
       },
       {
         "id": 23,
@@ -632,7 +654,8 @@
             "text": "8 weeks"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Data Interpretation"
       },
       {
         "id": 24,
@@ -660,7 +683,8 @@
             "text": "E"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 25,
@@ -688,11 +712,12 @@
             "text": "Angle x is 180 degrees."
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 26,
-        "question": "105 \u00f7 ? = 21\n\nWhat number does ? stand for?",
+        "question": "105 ÷ ? = 21\n\nWhat number does ? stand for?",
         "options": [
           {
             "letter": "A",
@@ -715,11 +740,12 @@
             "text": "15"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 27,
-        "question": "A swimming pool charges \u00a33.60 for entry. You can save 1/3 of the entry fee with a membership card. On his first visit, Ken spends \u00a35 on a membership card plus the reduced entry fee.\n\nHow many times does Ken visit before he gets back his \u00a35?",
+        "question": "A swimming pool charges £3.60 for entry. You can save 1/3 of the entry fee with a membership card. On his first visit, Ken spends £5 on a membership card plus the reduced entry fee.\n\nHow many times does Ken visit before he gets back his £5?",
         "options": [
           {
             "letter": "A",
@@ -742,38 +768,40 @@
             "text": "3"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Money & Word Problems"
       },
       {
         "id": 28,
-        "question": "A boy delivered newspapers and was paid \u00a31.40 for every 100 papers. How much was he paid for delivering 250 papers?",
+        "question": "A boy delivered newspapers and was paid £1.40 for every 100 papers. How much was he paid for delivering 250 papers?",
         "options": [
           {
             "letter": "A",
-            "text": "\u00a32.80"
+            "text": "£2.80"
           },
           {
             "letter": "B",
-            "text": "\u00a33.40"
+            "text": "£3.40"
           },
           {
             "letter": "C",
-            "text": "\u00a33.50"
+            "text": "£3.50"
           },
           {
             "letter": "D",
-            "text": "\u00a34.20"
+            "text": "£4.20"
           },
           {
             "letter": "E",
-            "text": "\u00a34.40"
+            "text": "£4.40"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Money & Word Problems"
       },
       {
         "id": 29,
-        "question": "3.6 \u00d7 10 =",
+        "question": "3.6 × 10 =",
         "options": [
           {
             "letter": "A",
@@ -796,7 +824,8 @@
             "text": "36.6"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 30,
@@ -824,7 +853,8 @@
             "text": "1910"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Data Interpretation"
       },
       {
         "id": 31,
@@ -851,7 +881,8 @@
             "text": "26"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 32,
@@ -878,7 +909,8 @@
             "text": "7950"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 33,
@@ -905,7 +937,8 @@
             "text": "They can all be divided by 2 without a remainder."
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Number & Place Value"
       },
       {
         "id": 34,
@@ -932,7 +965,8 @@
             "text": "40.5 degrees C"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 35,
@@ -959,7 +993,8 @@
             "text": "7/8, 5/8, 1/2, 3/4, 1/4"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 36,
@@ -986,7 +1021,8 @@
             "text": "4500 kg"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Measurement & Units"
       },
       {
         "id": 37,
@@ -1013,7 +1049,8 @@
             "text": "27"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 38,
@@ -1040,7 +1077,8 @@
             "text": "9 boys"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Ratio & Proportion"
       },
       {
         "id": 39,
@@ -1067,7 +1105,8 @@
             "text": "30"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Percentages"
       },
       {
         "id": 40,
@@ -1095,7 +1134,8 @@
             "text": "18"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Logic & Problem Solving"
       },
       {
         "id": 41,
@@ -1122,7 +1162,8 @@
             "text": "MDLXXXVI"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Number & Place Value"
       },
       {
         "id": 42,
@@ -1150,7 +1191,8 @@
             "text": "E"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Coordinates & Graphs"
       },
       {
         "id": 43,
@@ -1178,7 +1220,8 @@
             "text": "125 cm"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Sequences & Patterns"
       },
       {
         "id": 44,
@@ -1205,7 +1248,8 @@
             "text": "Multiply by ten, subtract sixteen, then halve."
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Logic & Problem Solving"
       },
       {
         "id": 45,
@@ -1233,11 +1277,12 @@
             "text": "10 hours"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Data Interpretation"
       },
       {
         "id": 46,
-        "question": "Put the correct number in the box: 27 \u00d7 99 = 2700 \u2013 ?",
+        "question": "Put the correct number in the box: 27 × 99 = 2700 – ?",
         "options": [
           {
             "letter": "A",
@@ -1260,7 +1305,8 @@
             "text": "687"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 47,
@@ -1288,7 +1334,8 @@
             "text": "walk"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Data Interpretation"
       },
       {
         "id": 48,
@@ -1316,7 +1363,8 @@
             "text": "1/6"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 49,
@@ -1343,7 +1391,8 @@
             "text": "1.35 kg"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Measurement & Units"
       },
       {
         "id": 50,
@@ -1370,7 +1419,8 @@
             "text": "2 litres"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Ratio & Proportion"
       }
     ]
   },
@@ -1381,619 +1431,1419 @@
         "id": 1,
         "question": "How many 10p coins can I get for £1.80?",
         "options": [
-          { "letter": "A", "text": "10 coins" },
-          { "letter": "B", "text": "18 coins" },
-          { "letter": "C", "text": "88 coins" },
-          { "letter": "D", "text": "108 coins" },
-          { "letter": "E", "text": "180 coins" }
+          {
+            "letter": "A",
+            "text": "10 coins"
+          },
+          {
+            "letter": "B",
+            "text": "18 coins"
+          },
+          {
+            "letter": "C",
+            "text": "88 coins"
+          },
+          {
+            "letter": "D",
+            "text": "108 coins"
+          },
+          {
+            "letter": "E",
+            "text": "180 coins"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Money & Word Problems"
       },
       {
         "id": 2,
         "question": "This bar chart shows during which months the children in a class have their birthdays.\n\nDuring which month are there most birthdays?",
         "image": "images/maths2_q2_birthdays.png",
         "options": [
-          { "letter": "A", "text": "April" },
-          { "letter": "B", "text": "December" },
-          { "letter": "C", "text": "January" },
-          { "letter": "D", "text": "July" },
-          { "letter": "E", "text": "November" }
+          {
+            "letter": "A",
+            "text": "April"
+          },
+          {
+            "letter": "B",
+            "text": "December"
+          },
+          {
+            "letter": "C",
+            "text": "January"
+          },
+          {
+            "letter": "D",
+            "text": "July"
+          },
+          {
+            "letter": "E",
+            "text": "November"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Data Interpretation"
       },
       {
         "id": 3,
         "question": "Change the order of the figures 6085 to make the biggest number possible.",
         "options": [
-          { "letter": "A", "text": "8605" },
-          { "letter": "B", "text": "6850" },
-          { "letter": "C", "text": "8650" },
-          { "letter": "D", "text": "6580" },
-          { "letter": "E", "text": "8560" }
+          {
+            "letter": "A",
+            "text": "8605"
+          },
+          {
+            "letter": "B",
+            "text": "6850"
+          },
+          {
+            "letter": "C",
+            "text": "8650"
+          },
+          {
+            "letter": "D",
+            "text": "6580"
+          },
+          {
+            "letter": "E",
+            "text": "8560"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Number & Place Value"
       },
       {
         "id": 4,
         "question": "The time in New York is 5 hours behind the time in London.\n\nIn London it is 9 am.\n\nWhat time is it in New York?",
         "options": [
-          { "letter": "A", "text": "14:00" },
-          { "letter": "B", "text": "04:00" },
-          { "letter": "C", "text": "05:00" },
-          { "letter": "D", "text": "4 pm" },
-          { "letter": "E", "text": "5 pm" }
+          {
+            "letter": "A",
+            "text": "14:00"
+          },
+          {
+            "letter": "B",
+            "text": "04:00"
+          },
+          {
+            "letter": "C",
+            "text": "05:00"
+          },
+          {
+            "letter": "D",
+            "text": "4 pm"
+          },
+          {
+            "letter": "E",
+            "text": "5 pm"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Time"
       },
       {
         "id": 5,
         "question": "What are the coordinates of A?",
         "image": "images/maths2_q5_coordinates.png",
         "options": [
-          { "letter": "A", "text": "(1, 2)" },
-          { "letter": "B", "text": "(1, 1)" },
-          { "letter": "C", "text": "(2, 0)" },
-          { "letter": "D", "text": "(2, 2)" },
-          { "letter": "E", "text": "(2, 1)" }
+          {
+            "letter": "A",
+            "text": "(1, 2)"
+          },
+          {
+            "letter": "B",
+            "text": "(1, 1)"
+          },
+          {
+            "letter": "C",
+            "text": "(2, 0)"
+          },
+          {
+            "letter": "D",
+            "text": "(2, 2)"
+          },
+          {
+            "letter": "E",
+            "text": "(2, 1)"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Coordinates & Graphs"
       },
       {
         "id": 6,
         "question": "Write this number in figures:\n\neight thousand and twenty-five",
         "options": [
-          { "letter": "A", "text": "8250" },
-          { "letter": "B", "text": "80025" },
-          { "letter": "C", "text": "8205" },
-          { "letter": "D", "text": "8025" },
-          { "letter": "E", "text": "800025" }
+          {
+            "letter": "A",
+            "text": "8250"
+          },
+          {
+            "letter": "B",
+            "text": "80025"
+          },
+          {
+            "letter": "C",
+            "text": "8205"
+          },
+          {
+            "letter": "D",
+            "text": "8025"
+          },
+          {
+            "letter": "E",
+            "text": "800025"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Number & Place Value"
       },
       {
         "id": 7,
         "question": "Share 240 into 4 equal parts.\n\nHow much is one part?",
         "options": [
-          { "letter": "A", "text": "80" },
-          { "letter": "B", "text": "60" },
-          { "letter": "C", "text": "65" },
-          { "letter": "D", "text": "40" },
-          { "letter": "E", "text": "70" }
+          {
+            "letter": "A",
+            "text": "80"
+          },
+          {
+            "letter": "B",
+            "text": "60"
+          },
+          {
+            "letter": "C",
+            "text": "65"
+          },
+          {
+            "letter": "D",
+            "text": "40"
+          },
+          {
+            "letter": "E",
+            "text": "70"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 8,
         "question": "What fraction of this circle is shaded?",
         "image": "images/maths2_q8_circle.png",
         "options": [
-          { "letter": "A", "text": "1/12" },
-          { "letter": "B", "text": "1/5" },
-          { "letter": "C", "text": "1/4" },
-          { "letter": "D", "text": "1/6" },
-          { "letter": "E", "text": "1/8" }
+          {
+            "letter": "A",
+            "text": "1/12"
+          },
+          {
+            "letter": "B",
+            "text": "1/5"
+          },
+          {
+            "letter": "C",
+            "text": "1/4"
+          },
+          {
+            "letter": "D",
+            "text": "1/6"
+          },
+          {
+            "letter": "E",
+            "text": "1/8"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 9,
         "question": "In the number 836, what does the 3 stand for?",
         "options": [
-          { "letter": "A", "text": "3 hundreds" },
-          { "letter": "B", "text": "3 ones" },
-          { "letter": "C", "text": "3 thousands" },
-          { "letter": "D", "text": "3 hundredths" },
-          { "letter": "E", "text": "3 tens" }
+          {
+            "letter": "A",
+            "text": "3 hundreds"
+          },
+          {
+            "letter": "B",
+            "text": "3 ones"
+          },
+          {
+            "letter": "C",
+            "text": "3 thousands"
+          },
+          {
+            "letter": "D",
+            "text": "3 hundredths"
+          },
+          {
+            "letter": "E",
+            "text": "3 tens"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Number & Place Value"
       },
       {
         "id": 10,
         "question": "What number would go in the box?\n\n3/4 = __/8",
         "options": [
-          { "letter": "A", "text": "5" },
-          { "letter": "B", "text": "6" },
-          { "letter": "C", "text": "7" },
-          { "letter": "D", "text": "9" },
-          { "letter": "E", "text": "12" }
+          {
+            "letter": "A",
+            "text": "5"
+          },
+          {
+            "letter": "B",
+            "text": "6"
+          },
+          {
+            "letter": "C",
+            "text": "7"
+          },
+          {
+            "letter": "D",
+            "text": "9"
+          },
+          {
+            "letter": "E",
+            "text": "12"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 11,
         "question": "Sati records how many children visit the school library each day.\n\nThis is the bar chart Sati draws to show her data.\n\nHow many children visited the library over the five days?",
         "image": "images/maths2_q11_library.png",
         "options": [
-          { "letter": "A", "text": "55" },
-          { "letter": "B", "text": "54" },
-          { "letter": "C", "text": "53" },
-          { "letter": "D", "text": "52" },
-          { "letter": "E", "text": "51" }
+          {
+            "letter": "A",
+            "text": "55"
+          },
+          {
+            "letter": "B",
+            "text": "54"
+          },
+          {
+            "letter": "C",
+            "text": "53"
+          },
+          {
+            "letter": "D",
+            "text": "52"
+          },
+          {
+            "letter": "E",
+            "text": "51"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Data Interpretation"
       },
       {
         "id": 12,
         "question": "Three pieces of wood are cut from a plank 1 metre long.\n\nEach piece is 30 cm long.\n\nHow long is the piece left over?",
         "options": [
-          { "letter": "A", "text": "10 cm" },
-          { "letter": "B", "text": "40 cm" },
-          { "letter": "C", "text": "70 cm" },
-          { "letter": "D", "text": "910 cm" },
-          { "letter": "E", "text": "970 cm" }
+          {
+            "letter": "A",
+            "text": "10 cm"
+          },
+          {
+            "letter": "B",
+            "text": "40 cm"
+          },
+          {
+            "letter": "C",
+            "text": "70 cm"
+          },
+          {
+            "letter": "D",
+            "text": "910 cm"
+          },
+          {
+            "letter": "E",
+            "text": "970 cm"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Measurement & Units"
       },
       {
         "id": 13,
         "question": "These three angles fit together to make a straight line:\n\nLook at the angle below.\n\nHow many of these 30° angles will fit together to make a straight line?",
         "image": "images/maths2_q13_angles.png",
         "options": [
-          { "letter": "A", "text": "3" },
-          { "letter": "B", "text": "4" },
-          { "letter": "C", "text": "5" },
-          { "letter": "D", "text": "6" },
-          { "letter": "E", "text": "7" }
+          {
+            "letter": "A",
+            "text": "3"
+          },
+          {
+            "letter": "B",
+            "text": "4"
+          },
+          {
+            "letter": "C",
+            "text": "5"
+          },
+          {
+            "letter": "D",
+            "text": "6"
+          },
+          {
+            "letter": "E",
+            "text": "7"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 14,
         "question": "Callum is thinking of a two-digit number.\n\nIts digits add up to 5.\nIt is a prime number.\nIts square is a three-digit number.\n\nWhat number is he thinking of?",
         "options": [
-          { "letter": "A", "text": "31" },
-          { "letter": "B", "text": "14" },
-          { "letter": "C", "text": "23" },
-          { "letter": "D", "text": "13" },
-          { "letter": "E", "text": "41" }
+          {
+            "letter": "A",
+            "text": "31"
+          },
+          {
+            "letter": "B",
+            "text": "14"
+          },
+          {
+            "letter": "C",
+            "text": "23"
+          },
+          {
+            "letter": "D",
+            "text": "13"
+          },
+          {
+            "letter": "E",
+            "text": "41"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Logic & Problem Solving"
       },
       {
         "id": 15,
         "question": "What is the next number in this sequence?\n\n49   43   37   31   ______",
         "options": [
-          { "letter": "A", "text": "27" },
-          { "letter": "B", "text": "21" },
-          { "letter": "C", "text": "25" },
-          { "letter": "D", "text": "23" },
-          { "letter": "E", "text": "29" }
+          {
+            "letter": "A",
+            "text": "27"
+          },
+          {
+            "letter": "B",
+            "text": "21"
+          },
+          {
+            "letter": "C",
+            "text": "25"
+          },
+          {
+            "letter": "D",
+            "text": "23"
+          },
+          {
+            "letter": "E",
+            "text": "29"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Sequences & Patterns"
       },
       {
         "id": 16,
         "question": "The thermometer shows the temperature in Kiev.\n\nLondon is 18° C warmer.\n\nWhat is the temperature in London?",
         "image": "images/maths2_q16_thermometer.png",
         "options": [
-          { "letter": "A", "text": "17° C" },
-          { "letter": "B", "text": "16° C" },
-          { "letter": "C", "text": "15° C" },
-          { "letter": "D", "text": "14° C" },
-          { "letter": "E", "text": "13° C" }
+          {
+            "letter": "A",
+            "text": "17° C"
+          },
+          {
+            "letter": "B",
+            "text": "16° C"
+          },
+          {
+            "letter": "C",
+            "text": "15° C"
+          },
+          {
+            "letter": "D",
+            "text": "14° C"
+          },
+          {
+            "letter": "E",
+            "text": "13° C"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Time"
       },
       {
         "id": 17,
         "question": "324 ÷ 6 =",
         "options": [
-          { "letter": "A", "text": "44" },
-          { "letter": "B", "text": "54" },
-          { "letter": "C", "text": "56" },
-          { "letter": "D", "text": "58" },
-          { "letter": "E", "text": "64" }
+          {
+            "letter": "A",
+            "text": "44"
+          },
+          {
+            "letter": "B",
+            "text": "54"
+          },
+          {
+            "letter": "C",
+            "text": "56"
+          },
+          {
+            "letter": "D",
+            "text": "58"
+          },
+          {
+            "letter": "E",
+            "text": "64"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 18,
         "question": "Look at these bottles.\n\nHow many times would you have to fill the 250 ml bottle to make 1 litre?",
         "image": "images/maths2_q18_bottles.png",
         "options": [
-          { "letter": "A", "text": "8 times" },
-          { "letter": "B", "text": "14 times" },
-          { "letter": "C", "text": "4 times" },
-          { "letter": "D", "text": "3 times" },
-          { "letter": "E", "text": "40 times" }
+          {
+            "letter": "A",
+            "text": "8 times"
+          },
+          {
+            "letter": "B",
+            "text": "14 times"
+          },
+          {
+            "letter": "C",
+            "text": "4 times"
+          },
+          {
+            "letter": "D",
+            "text": "3 times"
+          },
+          {
+            "letter": "E",
+            "text": "40 times"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Measurement & Units"
       },
       {
         "id": 19,
         "question": "There were 24 marbles in a bag.\n\nI took out 1/3 of the marbles.\n\nHow many marbles did I take out?",
         "options": [
-          { "letter": "A", "text": "16" },
-          { "letter": "B", "text": "17" },
-          { "letter": "C", "text": "9" },
-          { "letter": "D", "text": "8" },
-          { "letter": "E", "text": "18" }
+          {
+            "letter": "A",
+            "text": "16"
+          },
+          {
+            "letter": "B",
+            "text": "17"
+          },
+          {
+            "letter": "C",
+            "text": "9"
+          },
+          {
+            "letter": "D",
+            "text": "8"
+          },
+          {
+            "letter": "E",
+            "text": "18"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 20,
         "question": "Karen wants to buy a guitar.\n\nShe has saved £43.95\nThe guitar costs £65.00\n\nHow much more money does she need?",
         "options": [
-          { "letter": "A", "text": "£22.05" },
-          { "letter": "B", "text": "£21.05" },
-          { "letter": "C", "text": "£20.05" },
-          { "letter": "D", "text": "£12.05" },
-          { "letter": "E", "text": "£11.05" }
+          {
+            "letter": "A",
+            "text": "£22.05"
+          },
+          {
+            "letter": "B",
+            "text": "£21.05"
+          },
+          {
+            "letter": "C",
+            "text": "£20.05"
+          },
+          {
+            "letter": "D",
+            "text": "£12.05"
+          },
+          {
+            "letter": "E",
+            "text": "£11.05"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Money & Word Problems"
       },
       {
         "id": 21,
         "question": "Put these numbers in order from the smallest to the biggest.\n\n0.525   0.7   0.35   0.175",
         "options": [
-          { "letter": "A", "text": "0.7, 0.525, 0.35, 0.175" },
-          { "letter": "B", "text": "0.175, 0.525, 0.35, 0.7" },
-          { "letter": "C", "text": "0.175, 0.35, 0.525, 0.7" },
-          { "letter": "D", "text": "0.7, 0.35, 0.175, 0.525" },
-          { "letter": "E", "text": "0.175, 0.35, 0.7, 0.525" }
+          {
+            "letter": "A",
+            "text": "0.7, 0.525, 0.35, 0.175"
+          },
+          {
+            "letter": "B",
+            "text": "0.175, 0.525, 0.35, 0.7"
+          },
+          {
+            "letter": "C",
+            "text": "0.175, 0.35, 0.525, 0.7"
+          },
+          {
+            "letter": "D",
+            "text": "0.7, 0.35, 0.175, 0.525"
+          },
+          {
+            "letter": "E",
+            "text": "0.175, 0.35, 0.7, 0.525"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 22,
         "question": "8 chocolate bars cost £5.20.\n\nHow much do 6 chocolate bars cost?",
         "options": [
-          { "letter": "A", "text": "£3.75" },
-          { "letter": "B", "text": "£3.80" },
-          { "letter": "C", "text": "£3.85" },
-          { "letter": "D", "text": "£3.90" },
-          { "letter": "E", "text": "£3.95" }
+          {
+            "letter": "A",
+            "text": "£3.75"
+          },
+          {
+            "letter": "B",
+            "text": "£3.80"
+          },
+          {
+            "letter": "C",
+            "text": "£3.85"
+          },
+          {
+            "letter": "D",
+            "text": "£3.90"
+          },
+          {
+            "letter": "E",
+            "text": "£3.95"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Money & Word Problems"
       },
       {
         "id": 23,
         "question": "What is 50% of 40?",
         "options": [
-          { "letter": "A", "text": "16" },
-          { "letter": "B", "text": "20" },
-          { "letter": "C", "text": "25" },
-          { "letter": "D", "text": "8" },
-          { "letter": "E", "text": "18" }
+          {
+            "letter": "A",
+            "text": "16"
+          },
+          {
+            "letter": "B",
+            "text": "20"
+          },
+          {
+            "letter": "C",
+            "text": "25"
+          },
+          {
+            "letter": "D",
+            "text": "8"
+          },
+          {
+            "letter": "E",
+            "text": "18"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Percentages"
       },
       {
         "id": 24,
         "question": "The bar chart shows the heights of a class of pupils.\n\nWhich statement MUST be true?",
         "image": "images/maths2_q24_heights.png",
         "options": [
-          { "letter": "A", "text": "1 child is exactly 165 cm tall." },
-          { "letter": "B", "text": "5 children have a height between 120 cm and 129 cm." },
-          { "letter": "C", "text": "No children have a height less than 111 cm." },
-          { "letter": "D", "text": "7 children have a height more than 140 cm but less than 150 cm." },
-          { "letter": "E", "text": "8 children have a height of less than 139 cm." }
+          {
+            "letter": "A",
+            "text": "1 child is exactly 165 cm tall."
+          },
+          {
+            "letter": "B",
+            "text": "5 children have a height between 120 cm and 129 cm."
+          },
+          {
+            "letter": "C",
+            "text": "No children have a height less than 111 cm."
+          },
+          {
+            "letter": "D",
+            "text": "7 children have a height more than 140 cm but less than 150 cm."
+          },
+          {
+            "letter": "E",
+            "text": "8 children have a height of less than 139 cm."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Data Interpretation"
       },
       {
         "id": 25,
         "question": "A television programme finished at 4.55 pm.\n\nIt lasted for three-quarters of an hour.\n\nAt what time did it start?",
         "options": [
-          { "letter": "A", "text": "4.15 pm" },
-          { "letter": "B", "text": "4.10 pm" },
-          { "letter": "C", "text": "4.05 pm" },
-          { "letter": "D", "text": "4.25 pm" },
-          { "letter": "E", "text": "4.20 pm" }
+          {
+            "letter": "A",
+            "text": "4.15 pm"
+          },
+          {
+            "letter": "B",
+            "text": "4.10 pm"
+          },
+          {
+            "letter": "C",
+            "text": "4.05 pm"
+          },
+          {
+            "letter": "D",
+            "text": "4.25 pm"
+          },
+          {
+            "letter": "E",
+            "text": "4.20 pm"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Time"
       },
       {
         "id": 26,
         "question": "Which of these moves is not a translation?",
         "image": "images/maths2_q26_translation.png",
         "options": [
-          { "letter": "A", "text": "3→5" },
-          { "letter": "B", "text": "4→1" },
-          { "letter": "C", "text": "6→4" },
-          { "letter": "D", "text": "5→2" },
-          { "letter": "E", "text": "1→6" }
+          {
+            "letter": "A",
+            "text": "3→5"
+          },
+          {
+            "letter": "B",
+            "text": "4→1"
+          },
+          {
+            "letter": "C",
+            "text": "6→4"
+          },
+          {
+            "letter": "D",
+            "text": "5→2"
+          },
+          {
+            "letter": "E",
+            "text": "1→6"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 27,
         "question": "Zoey has a large carpet in her room.\n\nIt is 5 metres long and 4 metres wide.\n\nWhat is the distance all around the edge of the carpet?",
         "options": [
-          { "letter": "A", "text": "14 m" },
-          { "letter": "B", "text": "16 m" },
-          { "letter": "C", "text": "18 m" },
-          { "letter": "D", "text": "19 m" },
-          { "letter": "E", "text": "20 m" }
+          {
+            "letter": "A",
+            "text": "14 m"
+          },
+          {
+            "letter": "B",
+            "text": "16 m"
+          },
+          {
+            "letter": "C",
+            "text": "18 m"
+          },
+          {
+            "letter": "D",
+            "text": "19 m"
+          },
+          {
+            "letter": "E",
+            "text": "20 m"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 28,
         "question": "Ella paid £780 per month in rent.\n\nHow much rent did she pay in 12 months?",
         "options": [
-          { "letter": "A", "text": "£2340" },
-          { "letter": "B", "text": "£8360" },
-          { "letter": "C", "text": "£8580" },
-          { "letter": "D", "text": "£9260" },
-          { "letter": "E", "text": "£9360" }
+          {
+            "letter": "A",
+            "text": "£2340"
+          },
+          {
+            "letter": "B",
+            "text": "£8360"
+          },
+          {
+            "letter": "C",
+            "text": "£8580"
+          },
+          {
+            "letter": "D",
+            "text": "£9260"
+          },
+          {
+            "letter": "E",
+            "text": "£9360"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Money & Word Problems"
       },
       {
         "id": 29,
         "question": "Jenny is wallpapering her bedroom.\n\nShe starts with a 6 metre roll but has to cut off 1.75 metres because it is damaged.\nIf she needs 33.75 metres of wallpaper in total, how many more rolls of 6 metres must she buy?",
         "options": [
-          { "letter": "A", "text": "8" },
-          { "letter": "B", "text": "7" },
-          { "letter": "C", "text": "6" },
-          { "letter": "D", "text": "5" },
-          { "letter": "E", "text": "4" }
+          {
+            "letter": "A",
+            "text": "8"
+          },
+          {
+            "letter": "B",
+            "text": "7"
+          },
+          {
+            "letter": "C",
+            "text": "6"
+          },
+          {
+            "letter": "D",
+            "text": "5"
+          },
+          {
+            "letter": "E",
+            "text": "4"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Measurement & Units"
       },
       {
         "id": 30,
         "question": "An empty box weighs 150 grams.\n\nWhen it is filled with paper it weighs 1 kilogram.\n\nHow much does the paper weigh?",
         "options": [
-          { "letter": "A", "text": "350 g" },
-          { "letter": "B", "text": "750 g" },
-          { "letter": "C", "text": "850 g" },
-          { "letter": "D", "text": "950 g" },
-          { "letter": "E", "text": "9850 g" }
+          {
+            "letter": "A",
+            "text": "350 g"
+          },
+          {
+            "letter": "B",
+            "text": "750 g"
+          },
+          {
+            "letter": "C",
+            "text": "850 g"
+          },
+          {
+            "letter": "D",
+            "text": "950 g"
+          },
+          {
+            "letter": "E",
+            "text": "9850 g"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Measurement & Units"
       },
       {
         "id": 31,
         "question": "Mrs Shaw has 175 ml of liquid.\n\nShe needs a container for it.\n\nWhich one suits her needs best?",
         "options": [
-          { "letter": "A", "text": "Bath" },
-          { "letter": "B", "text": "Mug" },
-          { "letter": "C", "text": "Large saucepan" },
-          { "letter": "D", "text": "Egg cup" },
-          { "letter": "E", "text": "Bucket" }
+          {
+            "letter": "A",
+            "text": "Bath"
+          },
+          {
+            "letter": "B",
+            "text": "Mug"
+          },
+          {
+            "letter": "C",
+            "text": "Large saucepan"
+          },
+          {
+            "letter": "D",
+            "text": "Egg cup"
+          },
+          {
+            "letter": "E",
+            "text": "Bucket"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Measurement & Units"
       },
       {
         "id": 32,
         "question": "The vertices of the two squares below are labelled with letters.\n\nWhich of the following lines is perpendicular to the line connecting P and R?",
         "image": "images/maths2_q32_squares.png",
         "options": [
-          { "letter": "A", "text": "the line connecting X and Y" },
-          { "letter": "B", "text": "the line connecting P and S" },
-          { "letter": "C", "text": "the line connecting Q and S" },
-          { "letter": "D", "text": "the line connecting S and W" },
-          { "letter": "E", "text": "the line connecting Q and R" }
+          {
+            "letter": "A",
+            "text": "the line connecting X and Y"
+          },
+          {
+            "letter": "B",
+            "text": "the line connecting P and S"
+          },
+          {
+            "letter": "C",
+            "text": "the line connecting Q and S"
+          },
+          {
+            "letter": "D",
+            "text": "the line connecting S and W"
+          },
+          {
+            "letter": "E",
+            "text": "the line connecting Q and R"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 33,
         "question": "If X stands for a whole number and 3 lots of X are equal to 36, what are 2 lots of X equal to?",
         "options": [
-          { "letter": "A", "text": "12" },
-          { "letter": "B", "text": "18" },
-          { "letter": "C", "text": "24" },
-          { "letter": "D", "text": "26" },
-          { "letter": "E", "text": "28" }
+          {
+            "letter": "A",
+            "text": "12"
+          },
+          {
+            "letter": "B",
+            "text": "18"
+          },
+          {
+            "letter": "C",
+            "text": "24"
+          },
+          {
+            "letter": "D",
+            "text": "26"
+          },
+          {
+            "letter": "E",
+            "text": "28"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Algebra"
       },
       {
         "id": 34,
         "question": "A rectangle is drawn with corner A at (1, 1).\n\nAll sides of the rectangle are then doubled in length.\n\nThe new rectangle is drawn with A again at (1, 1).\n\nWhere will corner C now be drawn?",
         "image": "images/maths2_q34_rectangle.png",
         "options": [
-          { "letter": "A", "text": "(6, 4)" },
-          { "letter": "B", "text": "(4, 2)" },
-          { "letter": "C", "text": "(5, 2)" },
-          { "letter": "D", "text": "(4, 3)" },
-          { "letter": "E", "text": "(5, 3)" }
+          {
+            "letter": "A",
+            "text": "(6, 4)"
+          },
+          {
+            "letter": "B",
+            "text": "(4, 2)"
+          },
+          {
+            "letter": "C",
+            "text": "(5, 2)"
+          },
+          {
+            "letter": "D",
+            "text": "(4, 3)"
+          },
+          {
+            "letter": "E",
+            "text": "(5, 3)"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Coordinates & Graphs"
       },
       {
         "id": 35,
         "question": "Which of these statements is NOT true for this regular hexagon?",
         "image": "images/maths2_q35_hexagon.png",
         "options": [
-          { "letter": "A", "text": "There are 6 equal sides." },
-          { "letter": "B", "text": "There are 6 equal angles." },
-          { "letter": "C", "text": "The perimeter is 24 cm." },
-          { "letter": "D", "text": "There are 6 lines of symmetry." },
-          { "letter": "E", "text": "There is only 1 pair of parallel sides." }
+          {
+            "letter": "A",
+            "text": "There are 6 equal sides."
+          },
+          {
+            "letter": "B",
+            "text": "There are 6 equal angles."
+          },
+          {
+            "letter": "C",
+            "text": "The perimeter is 24 cm."
+          },
+          {
+            "letter": "D",
+            "text": "There are 6 lines of symmetry."
+          },
+          {
+            "letter": "E",
+            "text": "There is only 1 pair of parallel sides."
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 36,
         "question": "0.02 + 7.8 =",
         "options": [
-          { "letter": "A", "text": "7.802" },
-          { "letter": "B", "text": "7.82" },
-          { "letter": "C", "text": "7.822" },
-          { "letter": "D", "text": "8.00" },
-          { "letter": "E", "text": "7.102" }
+          {
+            "letter": "A",
+            "text": "7.802"
+          },
+          {
+            "letter": "B",
+            "text": "7.82"
+          },
+          {
+            "letter": "C",
+            "text": "7.822"
+          },
+          {
+            "letter": "D",
+            "text": "8.00"
+          },
+          {
+            "letter": "E",
+            "text": "7.102"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Arithmetic Operations"
       },
       {
         "id": 37,
         "question": "Emily has six sticks.\n\nTheir lengths are: 3 cm, 5 cm, 6 cm, 8 cm, 9 cm, 11 cm\n\nEmily can lay the sticks end to end to make triangles.\n\nEmily wants to make the smallest triangle she can using the 11 cm stick.\n\nWhich two other lengths of stick should she use?",
         "image": "images/maths2_q37_sticks.png",
         "options": [
-          { "letter": "A", "text": "3 cm and 5 cm" },
-          { "letter": "B", "text": "3 cm and 6 cm" },
-          { "letter": "C", "text": "5 cm and 6 cm" },
-          { "letter": "D", "text": "5 cm and 8 cm" },
-          { "letter": "E", "text": "6 cm and 8 cm" }
+          {
+            "letter": "A",
+            "text": "3 cm and 5 cm"
+          },
+          {
+            "letter": "B",
+            "text": "3 cm and 6 cm"
+          },
+          {
+            "letter": "C",
+            "text": "5 cm and 6 cm"
+          },
+          {
+            "letter": "D",
+            "text": "5 cm and 8 cm"
+          },
+          {
+            "letter": "E",
+            "text": "6 cm and 8 cm"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 38,
         "question": "Muhammed must get up at 07.30 hours.\n\nHe goes to bed at 22.38 hours the night before.\n\nHow long does he spend in bed?",
         "options": [
-          { "letter": "A", "text": "8 hours 22 minutes" },
-          { "letter": "B", "text": "8 hours 42 minutes" },
-          { "letter": "C", "text": "8 hours 52 minutes" },
-          { "letter": "D", "text": "9 hours 42 minutes" },
-          { "letter": "E", "text": "9 hours 52 minutes" }
+          {
+            "letter": "A",
+            "text": "8 hours 22 minutes"
+          },
+          {
+            "letter": "B",
+            "text": "8 hours 42 minutes"
+          },
+          {
+            "letter": "C",
+            "text": "8 hours 52 minutes"
+          },
+          {
+            "letter": "D",
+            "text": "9 hours 42 minutes"
+          },
+          {
+            "letter": "E",
+            "text": "9 hours 52 minutes"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Time"
       },
       {
         "id": 39,
         "question": "Liam carried ten parcels.\n\nEach parcel weighed 250 grams.\n\nHow many KILOGRAMS was this altogether?",
         "options": [
-          { "letter": "A", "text": "25 kg" },
-          { "letter": "B", "text": "2.50 kg" },
-          { "letter": "C", "text": "2.25 kg" },
-          { "letter": "D", "text": "0.25 kg" },
-          { "letter": "E", "text": "0.025 kg" }
+          {
+            "letter": "A",
+            "text": "25 kg"
+          },
+          {
+            "letter": "B",
+            "text": "2.50 kg"
+          },
+          {
+            "letter": "C",
+            "text": "2.25 kg"
+          },
+          {
+            "letter": "D",
+            "text": "0.25 kg"
+          },
+          {
+            "letter": "E",
+            "text": "0.025 kg"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Measurement & Units"
       },
       {
         "id": 40,
         "question": "This graph converts British Pounds (£) to United States Dollars ($).\n\nHow many Dollars ($) is £34?",
         "image": "images/maths2_q40_graph.png",
         "options": [
-          { "letter": "A", "text": "$42.50" },
-          { "letter": "B", "text": "$47.50" },
-          { "letter": "C", "text": "$45" },
-          { "letter": "D", "text": "$42.05" },
-          { "letter": "E", "text": "$27.20" }
+          {
+            "letter": "A",
+            "text": "$42.50"
+          },
+          {
+            "letter": "B",
+            "text": "$47.50"
+          },
+          {
+            "letter": "C",
+            "text": "$45"
+          },
+          {
+            "letter": "D",
+            "text": "$42.05"
+          },
+          {
+            "letter": "E",
+            "text": "$27.20"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Data Interpretation"
       },
       {
         "id": 41,
         "question": "To add up all the angles inside a polygon, you subtract 2 from the number of sides and multiply this by 180.\n\nAn octagon has 8 sides.\n\nWhat do the angles inside an octagon add up to?",
         "options": [
-          { "letter": "A", "text": "1438 degrees" },
-          { "letter": "B", "text": "1086 degrees" },
-          { "letter": "C", "text": "186 degrees" },
-          { "letter": "D", "text": "1080 degrees" },
-          { "letter": "E", "text": "1806 degrees" }
+          {
+            "letter": "A",
+            "text": "1438 degrees"
+          },
+          {
+            "letter": "B",
+            "text": "1086 degrees"
+          },
+          {
+            "letter": "C",
+            "text": "186 degrees"
+          },
+          {
+            "letter": "D",
+            "text": "1080 degrees"
+          },
+          {
+            "letter": "E",
+            "text": "1806 degrees"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 42,
         "question": "The bar chart shows the amount of money Lewis, Jordan and Zoe have in their savings accounts.\n\nWhich one of these is NOT true?",
         "image": "images/maths2_q42_savings.png",
         "options": [
-          { "letter": "A", "text": "Lewis and Jordan have £35 altogether." },
-          { "letter": "B", "text": "Lewis has half as much as Jordan." },
-          { "letter": "C", "text": "The children have £65 altogether." },
-          { "letter": "D", "text": "Zoe has twice as much as Lewis." },
-          { "letter": "E", "text": "Jordan has £10 less than Zoe." }
+          {
+            "letter": "A",
+            "text": "Lewis and Jordan have £35 altogether."
+          },
+          {
+            "letter": "B",
+            "text": "Lewis has half as much as Jordan."
+          },
+          {
+            "letter": "C",
+            "text": "The children have £65 altogether."
+          },
+          {
+            "letter": "D",
+            "text": "Zoe has twice as much as Lewis."
+          },
+          {
+            "letter": "E",
+            "text": "Jordan has £10 less than Zoe."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Data Interpretation"
       },
       {
         "id": 43,
         "question": "The end points of five lines are shown in the answer options below.\n\nWhich line is parallel to the line in the diagram?",
         "image": "images/maths2_q43_parallel.png",
         "options": [
-          { "letter": "A", "text": "(3, 1) and (1, 4)" },
-          { "letter": "B", "text": "(2, 6) and (4, 3)" },
-          { "letter": "C", "text": "(5, 1) and (1, 5)" },
-          { "letter": "D", "text": "(2, 5) and (4, 2)" },
-          { "letter": "E", "text": "(5, 2) and (1, 6)" }
+          {
+            "letter": "A",
+            "text": "(3, 1) and (1, 4)"
+          },
+          {
+            "letter": "B",
+            "text": "(2, 6) and (4, 3)"
+          },
+          {
+            "letter": "C",
+            "text": "(5, 1) and (1, 5)"
+          },
+          {
+            "letter": "D",
+            "text": "(2, 5) and (4, 2)"
+          },
+          {
+            "letter": "E",
+            "text": "(5, 2) and (1, 6)"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Coordinates & Graphs"
       },
       {
         "id": 44,
         "question": "What is the area of this rectangle?",
         "image": "images/maths2_q44_area.png",
         "options": [
-          { "letter": "A", "text": "0.24 cm²" },
-          { "letter": "B", "text": "2.4 cm²" },
-          { "letter": "C", "text": "24 cm²" },
-          { "letter": "D", "text": "240 cm²" },
-          { "letter": "E", "text": "2400 cm²" }
+          {
+            "letter": "A",
+            "text": "0.24 cm²"
+          },
+          {
+            "letter": "B",
+            "text": "2.4 cm²"
+          },
+          {
+            "letter": "C",
+            "text": "24 cm²"
+          },
+          {
+            "letter": "D",
+            "text": "240 cm²"
+          },
+          {
+            "letter": "E",
+            "text": "2400 cm²"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 45,
         "question": "What is 1.7 as a fraction?",
         "options": [
-          { "letter": "A", "text": "17/10" },
-          { "letter": "B", "text": "1/17" },
-          { "letter": "C", "text": "10/17" },
-          { "letter": "D", "text": "17/100" },
-          { "letter": "E", "text": "17/11" }
+          {
+            "letter": "A",
+            "text": "17/10"
+          },
+          {
+            "letter": "B",
+            "text": "1/17"
+          },
+          {
+            "letter": "C",
+            "text": "10/17"
+          },
+          {
+            "letter": "D",
+            "text": "17/100"
+          },
+          {
+            "letter": "E",
+            "text": "17/11"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Fractions & Decimals"
       },
       {
         "id": 46,
         "question": "Greg thinks of a number, multiplies it by 3, subtracts 5 and then multiplies by 2.\n\nHis answer is 26.\n\nWhat number did Greg think of?",
         "options": [
-          { "letter": "A", "text": "9" },
-          { "letter": "B", "text": "8" },
-          { "letter": "C", "text": "7" },
-          { "letter": "D", "text": "6" },
-          { "letter": "E", "text": "5" }
+          {
+            "letter": "A",
+            "text": "9"
+          },
+          {
+            "letter": "B",
+            "text": "8"
+          },
+          {
+            "letter": "C",
+            "text": "7"
+          },
+          {
+            "letter": "D",
+            "text": "6"
+          },
+          {
+            "letter": "E",
+            "text": "5"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Algebra"
       },
       {
         "id": 47,
         "question": "Henry says that to change from kilometres to miles you divide the number of kilometres by 8 and then multiply by 5.\n\nWhich of these is NOT correct?",
         "options": [
-          { "letter": "A", "text": "168 kilometres is 105 miles." },
-          { "letter": "B", "text": "248 kilometres is 155 miles." },
-          { "letter": "C", "text": "192 kilometres is 125 miles." },
-          { "letter": "D", "text": "216 kilometres is 135 miles." },
-          { "letter": "E", "text": "264 kilometres is 165 miles." }
+          {
+            "letter": "A",
+            "text": "168 kilometres is 105 miles."
+          },
+          {
+            "letter": "B",
+            "text": "248 kilometres is 155 miles."
+          },
+          {
+            "letter": "C",
+            "text": "192 kilometres is 125 miles."
+          },
+          {
+            "letter": "D",
+            "text": "216 kilometres is 135 miles."
+          },
+          {
+            "letter": "E",
+            "text": "264 kilometres is 165 miles."
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Logic & Problem Solving"
       },
       {
         "id": 48,
         "question": "A shape, PQRS is shown on a coordinate grid.\n\nFollowing a reflection, the position of point S in the reflected shape is (6, 1).\n\nIn what line is the shape reflected?",
         "image": "images/maths2_q48_reflection.png",
         "options": [
-          { "letter": "A", "text": "A horizontal line that passes through the y-axis at (0, 6)" },
-          { "letter": "B", "text": "A vertical line that passes through the x-axis at (5, 0)" },
-          { "letter": "C", "text": "A horizontal line that passes through the y-axis at (0, 5)" },
-          { "letter": "D", "text": "A horizontal line that passes through the y-axis at (0, 4)" },
-          { "letter": "E", "text": "A vertical line that passes through the x-axis at (6, 0)" }
+          {
+            "letter": "A",
+            "text": "A horizontal line that passes through the y-axis at (0, 6)"
+          },
+          {
+            "letter": "B",
+            "text": "A vertical line that passes through the x-axis at (5, 0)"
+          },
+          {
+            "letter": "C",
+            "text": "A horizontal line that passes through the y-axis at (0, 5)"
+          },
+          {
+            "letter": "D",
+            "text": "A horizontal line that passes through the y-axis at (0, 4)"
+          },
+          {
+            "letter": "E",
+            "text": "A vertical line that passes through the x-axis at (6, 0)"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 49,
         "question": "The area of a rectangular playground is 210 metres squared.\n\nWhich of the following could be the playground's perimeter?",
         "options": [
-          { "letter": "A", "text": "44 metres" },
-          { "letter": "B", "text": "52 metres" },
-          { "letter": "C", "text": "64 metres" },
-          { "letter": "D", "text": "72 metres" },
-          { "letter": "E", "text": "74 metres" }
+          {
+            "letter": "A",
+            "text": "44 metres"
+          },
+          {
+            "letter": "B",
+            "text": "52 metres"
+          },
+          {
+            "letter": "C",
+            "text": "64 metres"
+          },
+          {
+            "letter": "D",
+            "text": "72 metres"
+          },
+          {
+            "letter": "E",
+            "text": "74 metres"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Geometry & Shapes"
       },
       {
         "id": 50,
         "question": "4³ × 4 × 3² is NOT the same as which of the following?",
         "options": [
-          { "letter": "A", "text": "9 × 8² × 4" },
-          { "letter": "B", "text": "3² × 4² × 4²" },
-          { "letter": "C", "text": "4³ × 6²" },
-          { "letter": "D", "text": "6 × 12 × 16" },
-          { "letter": "E", "text": "36 × 64" }
+          {
+            "letter": "A",
+            "text": "9 × 8² × 4"
+          },
+          {
+            "letter": "B",
+            "text": "3² × 4² × 4²"
+          },
+          {
+            "letter": "C",
+            "text": "4³ × 6²"
+          },
+          {
+            "letter": "D",
+            "text": "6 × 12 × 16"
+          },
+          {
+            "letter": "E",
+            "text": "36 × 64"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Arithmetic Operations"
       }
     ]
   }

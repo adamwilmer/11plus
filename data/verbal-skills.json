@@ -8,749 +8,1695 @@
         "id": 1,
         "question": "At what time of year is the passage set?",
         "options": [
-          { "letter": "A", "text": "winter" },
-          { "letter": "B", "text": "spring" },
-          { "letter": "C", "text": "rainy season" },
-          { "letter": "D", "text": "mid-summer" },
-          { "letter": "E", "text": "autumn" }
+          {
+            "letter": "A",
+            "text": "winter"
+          },
+          {
+            "letter": "B",
+            "text": "spring"
+          },
+          {
+            "letter": "C",
+            "text": "rainy season"
+          },
+          {
+            "letter": "D",
+            "text": "mid-summer"
+          },
+          {
+            "letter": "E",
+            "text": "autumn"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Reading Comprehension"
       },
       {
         "id": 2,
         "question": "The father compares himself and his family to prisoners set free. (lines 2–3) Why?",
         "options": [
-          { "letter": "A", "text": "They had been held hostage by pirates." },
-          { "letter": "B", "text": "They had been trapped in their cave." },
-          { "letter": "C", "text": "They had been trapped in their house due to stormy weather." },
-          { "letter": "D", "text": "They had been caught in heavy rain which had finally stopped." },
-          { "letter": "E", "text": "They had been unfairly accused of crimes but the accusations had been dropped." }
+          {
+            "letter": "A",
+            "text": "They had been held hostage by pirates."
+          },
+          {
+            "letter": "B",
+            "text": "They had been trapped in their cave."
+          },
+          {
+            "letter": "C",
+            "text": "They had been trapped in their house due to stormy weather."
+          },
+          {
+            "letter": "D",
+            "text": "They had been caught in heavy rain which had finally stopped."
+          },
+          {
+            "letter": "E",
+            "text": "They had been unfairly accused of crimes but the accusations had been dropped."
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Reading Comprehension"
       },
       {
         "id": 3,
         "question": "How did the family attempt to rescue their supplies?",
         "options": [
-          { "letter": "A", "text": "They shook all of the water off them." },
-          { "letter": "B", "text": "They fetched new materials to mend them." },
-          { "letter": "C", "text": "They took them to the tree-house instead of the tent." },
-          { "letter": "D", "text": "They made a fire to dry them out." },
-          { "letter": "E", "text": "They placed them out in the sun to dry." }
+          {
+            "letter": "A",
+            "text": "They shook all of the water off them."
+          },
+          {
+            "letter": "B",
+            "text": "They fetched new materials to mend them."
+          },
+          {
+            "letter": "C",
+            "text": "They took them to the tree-house instead of the tent."
+          },
+          {
+            "letter": "D",
+            "text": "They made a fire to dry them out."
+          },
+          {
+            "letter": "E",
+            "text": "They placed them out in the sun to dry."
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Reading Comprehension"
       },
       {
         "id": 4,
         "question": "If they only managed to carve out a smaller cave, what did the father hope to use it as?",
         "options": [
-          { "letter": "A", "text": "a shelter for emergencies" },
-          { "letter": "B", "text": "a house for their dog" },
-          { "letter": "C", "text": "a playroom for the children" },
-          { "letter": "D", "text": "a storage space for supplies" },
-          { "letter": "E", "text": "a shelter for rain showers" }
+          {
+            "letter": "A",
+            "text": "a shelter for emergencies"
+          },
+          {
+            "letter": "B",
+            "text": "a house for their dog"
+          },
+          {
+            "letter": "C",
+            "text": "a playroom for the children"
+          },
+          {
+            "letter": "D",
+            "text": "a storage space for supplies"
+          },
+          {
+            "letter": "E",
+            "text": "a shelter for rain showers"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Reading Comprehension"
       },
       {
         "id": 5,
         "instruction": "'… with minds bent on success…' (line 23)",
         "question": "What does this imply about their attitude to the work?",
         "options": [
-          { "letter": "A", "text": "They were indifferent as to whether they succeeded." },
-          { "letter": "B", "text": "They wanted to succeed but struggled to believe they could." },
-          { "letter": "C", "text": "They were absolutely determined to see it through." },
-          { "letter": "D", "text": "They were so confident they felt they had already succeeded." },
-          { "letter": "E", "text": "They worked cautiously because there was a high chance they wouldn't succeed." }
+          {
+            "letter": "A",
+            "text": "They were indifferent as to whether they succeeded."
+          },
+          {
+            "letter": "B",
+            "text": "They wanted to succeed but struggled to believe they could."
+          },
+          {
+            "letter": "C",
+            "text": "They were absolutely determined to see it through."
+          },
+          {
+            "letter": "D",
+            "text": "They were so confident they felt they had already succeeded."
+          },
+          {
+            "letter": "E",
+            "text": "They worked cautiously because there was a high chance they wouldn't succeed."
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Reading Comprehension"
       },
       {
         "id": 6,
         "question": "Why did the family feel 'relieved' after they had started their work? (line 27)",
         "options": [
-          { "letter": "A", "text": "They knew they couldn't get any further and could stop working." },
-          { "letter": "B", "text": "They had finally begun to make progress." },
-          { "letter": "C", "text": "Somebody rewarded them for their six days of work." },
-          { "letter": "D", "text": "They realised they could fit their dog in the hole." },
-          { "letter": "E", "text": "They had learned from the experience so it hadn't been a complete waste of time." }
+          {
+            "letter": "A",
+            "text": "They knew they couldn't get any further and could stop working."
+          },
+          {
+            "letter": "B",
+            "text": "They had finally begun to make progress."
+          },
+          {
+            "letter": "C",
+            "text": "Somebody rewarded them for their six days of work."
+          },
+          {
+            "letter": "D",
+            "text": "They realised they could fit their dog in the hole."
+          },
+          {
+            "letter": "E",
+            "text": "They had learned from the experience so it hadn't been a complete waste of time."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Reading Comprehension"
       },
       {
         "id": 7,
         "question": "What was the reaction when Jack lost his crowbar?",
         "options": [
-          { "letter": "A", "text": "Jack's father was angry because Jack had lost one of their tools." },
-          { "letter": "B", "text": "Jack was embarrassed because he looked incompetent." },
-          { "letter": "C", "text": "Jack was excited because of what it implied about the rock." },
-          { "letter": "D", "text": "Jack and his father were relieved because it meant they could stop work." },
-          { "letter": "E", "text": "Jack and his father were nervous because they didn't know what to expect." }
+          {
+            "letter": "A",
+            "text": "Jack's father was angry because Jack had lost one of their tools."
+          },
+          {
+            "letter": "B",
+            "text": "Jack was embarrassed because he looked incompetent."
+          },
+          {
+            "letter": "C",
+            "text": "Jack was excited because of what it implied about the rock."
+          },
+          {
+            "letter": "D",
+            "text": "Jack and his father were relieved because it meant they could stop work."
+          },
+          {
+            "letter": "E",
+            "text": "Jack and his father were nervous because they didn't know what to expect."
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Reading Comprehension"
       },
       {
         "id": 8,
         "question": "What did Jack do while Fritz and his father enlarged the opening of the cave?",
         "options": [
-          { "letter": "A", "text": "Jack went for a ride on his horse to celebrate the work was over." },
-          { "letter": "B", "text": "Jack went to inform his mother." },
-          { "letter": "C", "text": "Jack shouted loudly." },
-          { "letter": "D", "text": "Jack went to collect more tools." },
-          { "letter": "E", "text": "Jack had a rest so that he could take over next." }
+          {
+            "letter": "A",
+            "text": "Jack went for a ride on his horse to celebrate the work was over."
+          },
+          {
+            "letter": "B",
+            "text": "Jack went to inform his mother."
+          },
+          {
+            "letter": "C",
+            "text": "Jack shouted loudly."
+          },
+          {
+            "letter": "D",
+            "text": "Jack went to collect more tools."
+          },
+          {
+            "letter": "E",
+            "text": "Jack had a rest so that he could take over next."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Reading Comprehension"
       },
       {
         "id": 9,
         "question": "What was the family's reaction to the cave?",
         "options": [
-          { "letter": "A", "text": "They thought it was so beautiful they couldn't possibly make a home inside." },
-          { "letter": "B", "text": "They were excited but fearful about what was inside." },
-          { "letter": "C", "text": "They couldn't see much because it was so dark." },
-          { "letter": "D", "text": "The cave was as they had expected and they immediately felt at-home." },
-          { "letter": "E", "text": "They were overwhelmed at the dazzling appearance." }
+          {
+            "letter": "A",
+            "text": "They thought it was so beautiful they couldn't possibly make a home inside."
+          },
+          {
+            "letter": "B",
+            "text": "They were excited but fearful about what was inside."
+          },
+          {
+            "letter": "C",
+            "text": "They couldn't see much because it was so dark."
+          },
+          {
+            "letter": "D",
+            "text": "The cave was as they had expected and they immediately felt at-home."
+          },
+          {
+            "letter": "E",
+            "text": "They were overwhelmed at the dazzling appearance."
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Reading Comprehension"
       },
       {
         "id": 10,
         "question": "Why was the cave considered suitable as a home?",
         "options": [
-          { "letter": "A", "text": "because it resembled the family's previous home" },
-          { "letter": "B", "text": "because it was high and hidden from animals" },
-          { "letter": "C", "text": "because the crystal made it brighter inside" },
-          { "letter": "D", "text": "because the hard, dry sand would protect against damp" },
-          { "letter": "E", "text": "because it was warm inside" }
+          {
+            "letter": "A",
+            "text": "because it resembled the family's previous home"
+          },
+          {
+            "letter": "B",
+            "text": "because it was high and hidden from animals"
+          },
+          {
+            "letter": "C",
+            "text": "because the crystal made it brighter inside"
+          },
+          {
+            "letter": "D",
+            "text": "because the hard, dry sand would protect against damp"
+          },
+          {
+            "letter": "E",
+            "text": "because it was warm inside"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Reading Comprehension"
       },
       {
         "id": 11,
         "question": "What would be another word for 'impression' on line 24?",
         "options": [
-          { "letter": "A", "text": "impact" },
-          { "letter": "B", "text": "dent" },
-          { "letter": "C", "text": "consequence" },
-          { "letter": "D", "text": "trouble" },
-          { "letter": "E", "text": "achievement" }
+          {
+            "letter": "A",
+            "text": "impact"
+          },
+          {
+            "letter": "B",
+            "text": "dent"
+          },
+          {
+            "letter": "C",
+            "text": "consequence"
+          },
+          {
+            "letter": "D",
+            "text": "trouble"
+          },
+          {
+            "letter": "E",
+            "text": "achievement"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Reading Comprehension"
       },
       {
         "id": 12,
         "instruction": "'… we battered vigorously at the rock…' (line 36)",
         "question": "Which of the following words is closest in meaning to 'vigorously'?",
         "options": [
-          { "letter": "A", "text": "painfully" },
-          { "letter": "B", "text": "rebelliously" },
-          { "letter": "C", "text": "energetically" },
-          { "letter": "D", "text": "carefully" },
-          { "letter": "E", "text": "powerlessly" }
+          {
+            "letter": "A",
+            "text": "painfully"
+          },
+          {
+            "letter": "B",
+            "text": "rebelliously"
+          },
+          {
+            "letter": "C",
+            "text": "energetically"
+          },
+          {
+            "letter": "D",
+            "text": "carefully"
+          },
+          {
+            "letter": "E",
+            "text": "powerlessly"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Reading Comprehension"
       },
       {
         "id": 13,
         "question": "What type of word is 'persevering' on line 28?",
         "options": [
-          { "letter": "A", "text": "noun" },
-          { "letter": "B", "text": "verb" },
-          { "letter": "C", "text": "adjective" },
-          { "letter": "D", "text": "adverb" },
-          { "letter": "E", "text": "preposition" }
+          {
+            "letter": "A",
+            "text": "noun"
+          },
+          {
+            "letter": "B",
+            "text": "verb"
+          },
+          {
+            "letter": "C",
+            "text": "adjective"
+          },
+          {
+            "letter": "D",
+            "text": "adverb"
+          },
+          {
+            "letter": "E",
+            "text": "preposition"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Reading Comprehension"
       },
       {
         "id": 14,
         "question": "What type of words are the following? resolve (line 13), sprang (line 32), thrust (line 32), enlarged (line 38), thundered (line 38)",
         "options": [
-          { "letter": "A", "text": "nouns" },
-          { "letter": "B", "text": "verbs" },
-          { "letter": "C", "text": "adjectives" },
-          { "letter": "D", "text": "adverbs" },
-          { "letter": "E", "text": "prepositions" }
+          {
+            "letter": "A",
+            "text": "nouns"
+          },
+          {
+            "letter": "B",
+            "text": "verbs"
+          },
+          {
+            "letter": "C",
+            "text": "adjectives"
+          },
+          {
+            "letter": "D",
+            "text": "adverbs"
+          },
+          {
+            "letter": "E",
+            "text": "prepositions"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Reading Comprehension"
       },
       {
         "id": 15,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "The local county's superior players dominated the tennis tornament.",
         "options": [
-          { "letter": "A", "text": "The local county's" },
-          { "letter": "B", "text": "superior players" },
-          { "letter": "C", "text": "dominated the tennis" },
-          { "letter": "D", "text": "tornament" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "The local county's"
+          },
+          {
+            "letter": "B",
+            "text": "superior players"
+          },
+          {
+            "letter": "C",
+            "text": "dominated the tennis"
+          },
+          {
+            "letter": "D",
+            "text": "tornament"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Spelling"
       },
       {
         "id": 16,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "I recieved an elaborate invitation to an exclusive party next week.",
         "options": [
-          { "letter": "A", "text": "I recieved" },
-          { "letter": "B", "text": "an elaborate invitation" },
-          { "letter": "C", "text": "to an exclusive" },
-          { "letter": "D", "text": "party next week" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "I recieved"
+          },
+          {
+            "letter": "B",
+            "text": "an elaborate invitation"
+          },
+          {
+            "letter": "C",
+            "text": "to an exclusive"
+          },
+          {
+            "letter": "D",
+            "text": "party next week"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Spelling"
       },
       {
         "id": 17,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Julia regretted postponing her annual expedition to Norway.",
         "options": [
-          { "letter": "A", "text": "Julia regretted" },
-          { "letter": "B", "text": "postponing her annual" },
-          { "letter": "C", "text": "expedition to" },
-          { "letter": "D", "text": "Norway" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Julia regretted"
+          },
+          {
+            "letter": "B",
+            "text": "postponing her annual"
+          },
+          {
+            "letter": "C",
+            "text": "expedition to"
+          },
+          {
+            "letter": "D",
+            "text": "Norway"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
-        "correctAnswer": "N"
+        "correctAnswer": "N",
+        "category": "Spelling"
       },
       {
         "id": 18,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Attendance at the secret meeting was compulsery and critical.",
         "options": [
-          { "letter": "A", "text": "Attendance at" },
-          { "letter": "B", "text": "the secret meeting" },
-          { "letter": "C", "text": "was compulsery" },
-          { "letter": "D", "text": "and critical" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Attendance at"
+          },
+          {
+            "letter": "B",
+            "text": "the secret meeting"
+          },
+          {
+            "letter": "C",
+            "text": "was compulsery"
+          },
+          {
+            "letter": "D",
+            "text": "and critical"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Spelling"
       },
       {
         "id": 19,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Sam enjoyed climing mountains and spending time in the countryside.",
         "options": [
-          { "letter": "A", "text": "Sam enjoyed" },
-          { "letter": "B", "text": "climing mountains" },
-          { "letter": "C", "text": "and spending time" },
-          { "letter": "D", "text": "in the countryside" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Sam enjoyed"
+          },
+          {
+            "letter": "B",
+            "text": "climing mountains"
+          },
+          {
+            "letter": "C",
+            "text": "and spending time"
+          },
+          {
+            "letter": "D",
+            "text": "in the countryside"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Spelling"
       },
       {
         "id": 20,
         "instruction": "In these sentences there are some spelling mistakes. On each numbered line there is either one mistake or no mistake. Find the group of words with the mistake in it and mark its letter on your answer sheet. If there is no mistake, mark N.",
         "question": "Consistant hard work has contributed to significant improvements.",
         "options": [
-          { "letter": "A", "text": "Consistant hard work" },
-          { "letter": "B", "text": "has contributed" },
-          { "letter": "C", "text": "to significant" },
-          { "letter": "D", "text": "improvements" },
-          { "letter": "N", "text": "No mistake" }
+          {
+            "letter": "A",
+            "text": "Consistant hard work"
+          },
+          {
+            "letter": "B",
+            "text": "has contributed"
+          },
+          {
+            "letter": "C",
+            "text": "to significant"
+          },
+          {
+            "letter": "D",
+            "text": "improvements"
+          },
+          {
+            "letter": "N",
+            "text": "No mistake"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Spelling"
       },
       {
         "id": 21,
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Waiting in the wings, the students' nerves soared as they listened to the [ ? ] whispers from the audience.",
         "options": [
-          { "letter": "A", "text": "excitement" },
-          { "letter": "B", "text": "excite" },
-          { "letter": "C", "text": "exciting" },
-          { "letter": "D", "text": "excited" },
-          { "letter": "E", "text": "excites" }
+          {
+            "letter": "A",
+            "text": "excitement"
+          },
+          {
+            "letter": "B",
+            "text": "excite"
+          },
+          {
+            "letter": "C",
+            "text": "exciting"
+          },
+          {
+            "letter": "D",
+            "text": "excited"
+          },
+          {
+            "letter": "E",
+            "text": "excites"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Passage Completion"
       },
       {
         "id": 22,
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "All of [ ? ] friends and family had come to see them perform in the end-of-year show.",
         "options": [
-          { "letter": "A", "text": "there" },
-          { "letter": "B", "text": "they're" },
-          { "letter": "C", "text": "their" },
-          { "letter": "D", "text": "those" },
-          { "letter": "E", "text": "them" }
+          {
+            "letter": "A",
+            "text": "there"
+          },
+          {
+            "letter": "B",
+            "text": "they're"
+          },
+          {
+            "letter": "C",
+            "text": "their"
+          },
+          {
+            "letter": "D",
+            "text": "those"
+          },
+          {
+            "letter": "E",
+            "text": "them"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Passage Completion"
       },
       {
         "id": 23,
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "But what they were about to see was not what you [ ? ] a normal show.",
         "options": [
-          { "letter": "A", "text": "considered" },
-          { "letter": "B", "text": "would consider" },
-          { "letter": "C", "text": "are considering" },
-          { "letter": "D", "text": "considering" },
-          { "letter": "E", "text": "wouldn't consider" }
+          {
+            "letter": "A",
+            "text": "considered"
+          },
+          {
+            "letter": "B",
+            "text": "would consider"
+          },
+          {
+            "letter": "C",
+            "text": "are considering"
+          },
+          {
+            "letter": "D",
+            "text": "considering"
+          },
+          {
+            "letter": "E",
+            "text": "wouldn't consider"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Passage Completion"
       },
       {
         "id": 24,
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "One of the boxes [ ? ] slightly so they hastily slammed it shut.",
         "options": [
-          { "letter": "A", "text": "will open" },
-          { "letter": "B", "text": "was opened" },
-          { "letter": "C", "text": "would open" },
-          { "letter": "D", "text": "won't open" },
-          { "letter": "E", "text": "had opened" }
+          {
+            "letter": "A",
+            "text": "will open"
+          },
+          {
+            "letter": "B",
+            "text": "was opened"
+          },
+          {
+            "letter": "C",
+            "text": "would open"
+          },
+          {
+            "letter": "D",
+            "text": "won't open"
+          },
+          {
+            "letter": "E",
+            "text": "had opened"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Passage Completion"
       },
       {
         "id": 25,
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "'Who [ ? ] their goggles?' asked their teacher in an urgent whisper.",
         "options": [
-          { "letter": "A", "text": "has missed" },
-          { "letter": "B", "text": "misses" },
-          { "letter": "C", "text": "is missing" },
-          { "letter": "D", "text": "will miss" },
-          { "letter": "E", "text": "does miss" }
+          {
+            "letter": "A",
+            "text": "has missed"
+          },
+          {
+            "letter": "B",
+            "text": "misses"
+          },
+          {
+            "letter": "C",
+            "text": "is missing"
+          },
+          {
+            "letter": "D",
+            "text": "will miss"
+          },
+          {
+            "letter": "E",
+            "text": "does miss"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Passage Completion"
       },
       {
         "id": 26,
         "instruction": "In this passage you have to choose the best word, or group of words, to complete each numbered line so that it makes sense and is written in correct English. Choose the best answer and mark its letter on your answer sheet.",
         "question": "Sara rushed forward to grab them and almost tripped on the ropes [ ? ] three of the students were harnessed.",
         "options": [
-          { "letter": "A", "text": "next to" },
-          { "letter": "B", "text": "to which" },
-          { "letter": "C", "text": "onto" },
-          { "letter": "D", "text": "in between" },
-          { "letter": "E", "text": "from" }
+          {
+            "letter": "A",
+            "text": "next to"
+          },
+          {
+            "letter": "B",
+            "text": "to which"
+          },
+          {
+            "letter": "C",
+            "text": "onto"
+          },
+          {
+            "letter": "D",
+            "text": "in between"
+          },
+          {
+            "letter": "E",
+            "text": "from"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Passage Completion"
       },
       {
         "id": 27,
         "instruction": "In these questions, the same letter must fit into both sets of brackets to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on your answer sheet.",
         "question": "wor [ ? ] en   fin [ ? ] ice",
         "options": [
-          { "letter": "A", "text": "m" },
-          { "letter": "B", "text": "t" },
-          { "letter": "C", "text": "d" },
-          { "letter": "D", "text": "s" },
-          { "letter": "E", "text": "n" }
+          {
+            "letter": "A",
+            "text": "m"
+          },
+          {
+            "letter": "B",
+            "text": "t"
+          },
+          {
+            "letter": "C",
+            "text": "d"
+          },
+          {
+            "letter": "D",
+            "text": "s"
+          },
+          {
+            "letter": "E",
+            "text": "n"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Word Completion"
       },
       {
         "id": 28,
         "instruction": "In these questions, the same letter must fit into both sets of brackets to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on your answer sheet.",
         "question": "loo [ ? ] eak   wee [ ? ] ull",
         "options": [
-          { "letter": "A", "text": "b" },
-          { "letter": "B", "text": "k" },
-          { "letter": "C", "text": "m" },
-          { "letter": "D", "text": "p" },
-          { "letter": "E", "text": "s" }
+          {
+            "letter": "A",
+            "text": "b"
+          },
+          {
+            "letter": "B",
+            "text": "k"
+          },
+          {
+            "letter": "C",
+            "text": "m"
+          },
+          {
+            "letter": "D",
+            "text": "p"
+          },
+          {
+            "letter": "E",
+            "text": "s"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Word Completion"
       },
       {
         "id": 29,
         "instruction": "In these questions, the same letter must fit into both sets of brackets to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on your answer sheet.",
         "question": "roo [ ? ] ick   oa [ ? ] ind",
         "options": [
-          { "letter": "A", "text": "w" },
-          { "letter": "B", "text": "r" },
-          { "letter": "C", "text": "m" },
-          { "letter": "D", "text": "f" },
-          { "letter": "E", "text": "k" }
+          {
+            "letter": "A",
+            "text": "w"
+          },
+          {
+            "letter": "B",
+            "text": "r"
+          },
+          {
+            "letter": "C",
+            "text": "m"
+          },
+          {
+            "letter": "D",
+            "text": "f"
+          },
+          {
+            "letter": "E",
+            "text": "k"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Word Completion"
       },
       {
         "id": 30,
         "instruction": "In these questions, the same letter must fit into both sets of brackets to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on your answer sheet.",
         "question": "car [ ? ] ip   fac [ ? ] rust",
         "options": [
-          { "letter": "A", "text": "t" },
-          { "letter": "B", "text": "d" },
-          { "letter": "C", "text": "p" },
-          { "letter": "D", "text": "c" },
-          { "letter": "E", "text": "e" }
+          {
+            "letter": "A",
+            "text": "t"
+          },
+          {
+            "letter": "B",
+            "text": "d"
+          },
+          {
+            "letter": "C",
+            "text": "p"
+          },
+          {
+            "letter": "D",
+            "text": "c"
+          },
+          {
+            "letter": "E",
+            "text": "e"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Word Completion"
       },
       {
         "id": 31,
         "instruction": "In these questions, the same letter must fit into both sets of brackets to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on your answer sheet.",
         "question": "chee [ ? ] ang   spea [ ? ] ide",
         "options": [
-          { "letter": "A", "text": "s" },
-          { "letter": "B", "text": "r" },
-          { "letter": "C", "text": "b" },
-          { "letter": "D", "text": "p" },
-          { "letter": "E", "text": "k" }
+          {
+            "letter": "A",
+            "text": "s"
+          },
+          {
+            "letter": "B",
+            "text": "r"
+          },
+          {
+            "letter": "C",
+            "text": "b"
+          },
+          {
+            "letter": "D",
+            "text": "p"
+          },
+          {
+            "letter": "E",
+            "text": "k"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Word Completion"
       },
       {
         "id": 32,
         "instruction": "In these questions, the same letter must fit into both sets of brackets to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on your answer sheet.",
         "question": "pe [ ? ] et   cla [ ? ] umber",
         "options": [
-          { "letter": "A", "text": "w" },
-          { "letter": "B", "text": "g" },
-          { "letter": "C", "text": "p" },
-          { "letter": "D", "text": "l" },
-          { "letter": "E", "text": "n" }
+          {
+            "letter": "A",
+            "text": "w"
+          },
+          {
+            "letter": "B",
+            "text": "g"
+          },
+          {
+            "letter": "C",
+            "text": "p"
+          },
+          {
+            "letter": "D",
+            "text": "l"
+          },
+          {
+            "letter": "E",
+            "text": "n"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Word Completion"
       },
       {
         "id": 33,
         "instruction": "Read the following information, then find the correct answer to the question and mark it on your answer sheet.",
         "question": "At the shops Darren bought 8 oranges. Laura bought 3 oranges fewer than Chris. Rosario bought 3 oranges fewer than Darren and 1 fewer than Chris. How many oranges did Laura buy?",
         "options": [
-          { "letter": "A", "text": "1" },
-          { "letter": "B", "text": "9" },
-          { "letter": "C", "text": "3" },
-          { "letter": "D", "text": "5" },
-          { "letter": "E", "text": "2" }
+          {
+            "letter": "A",
+            "text": "1"
+          },
+          {
+            "letter": "B",
+            "text": "9"
+          },
+          {
+            "letter": "C",
+            "text": "3"
+          },
+          {
+            "letter": "D",
+            "text": "5"
+          },
+          {
+            "letter": "E",
+            "text": "2"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Logic Problems"
       },
       {
         "id": 34,
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on your answer sheet.",
         "question": "(break ignore hit)   (poke miss aim)",
         "options": [
-          { "letter": "A", "text": "break" },
-          { "letter": "B", "text": "ignore" },
-          { "letter": "C", "text": "hit" },
-          { "letter": "X", "text": "poke" },
-          { "letter": "Y", "text": "miss" },
-          { "letter": "Z", "text": "aim" }
+          {
+            "letter": "A",
+            "text": "break"
+          },
+          {
+            "letter": "B",
+            "text": "ignore"
+          },
+          {
+            "letter": "C",
+            "text": "hit"
+          },
+          {
+            "letter": "X",
+            "text": "poke"
+          },
+          {
+            "letter": "Y",
+            "text": "miss"
+          },
+          {
+            "letter": "Z",
+            "text": "aim"
+          }
         ],
-        "correctAnswer": "C,Y"
+        "correctAnswer": "C,Y",
+        "category": "Antonyms"
       },
       {
         "id": 35,
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on your answer sheet.",
         "question": "(complex superior modern)   (old new fresh)",
         "options": [
-          { "letter": "A", "text": "complex" },
-          { "letter": "B", "text": "superior" },
-          { "letter": "C", "text": "modern" },
-          { "letter": "X", "text": "old" },
-          { "letter": "Y", "text": "new" },
-          { "letter": "Z", "text": "fresh" }
+          {
+            "letter": "A",
+            "text": "complex"
+          },
+          {
+            "letter": "B",
+            "text": "superior"
+          },
+          {
+            "letter": "C",
+            "text": "modern"
+          },
+          {
+            "letter": "X",
+            "text": "old"
+          },
+          {
+            "letter": "Y",
+            "text": "new"
+          },
+          {
+            "letter": "Z",
+            "text": "fresh"
+          }
         ],
-        "correctAnswer": "C,X"
+        "correctAnswer": "C,X",
+        "category": "Antonyms"
       },
       {
         "id": 36,
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on your answer sheet.",
         "question": "(lock close away)   (key distant shut)",
         "options": [
-          { "letter": "A", "text": "lock" },
-          { "letter": "B", "text": "close" },
-          { "letter": "C", "text": "away" },
-          { "letter": "X", "text": "key" },
-          { "letter": "Y", "text": "distant" },
-          { "letter": "Z", "text": "shut" }
+          {
+            "letter": "A",
+            "text": "lock"
+          },
+          {
+            "letter": "B",
+            "text": "close"
+          },
+          {
+            "letter": "C",
+            "text": "away"
+          },
+          {
+            "letter": "X",
+            "text": "key"
+          },
+          {
+            "letter": "Y",
+            "text": "distant"
+          },
+          {
+            "letter": "Z",
+            "text": "shut"
+          }
         ],
-        "correctAnswer": "B,Y"
+        "correctAnswer": "B,Y",
+        "category": "Antonyms"
       },
       {
         "id": 37,
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on your answer sheet.",
         "question": "(heavy glow stiff)   (shine hard flexible)",
         "options": [
-          { "letter": "A", "text": "heavy" },
-          { "letter": "B", "text": "glow" },
-          { "letter": "C", "text": "stiff" },
-          { "letter": "X", "text": "shine" },
-          { "letter": "Y", "text": "hard" },
-          { "letter": "Z", "text": "flexible" }
+          {
+            "letter": "A",
+            "text": "heavy"
+          },
+          {
+            "letter": "B",
+            "text": "glow"
+          },
+          {
+            "letter": "C",
+            "text": "stiff"
+          },
+          {
+            "letter": "X",
+            "text": "shine"
+          },
+          {
+            "letter": "Y",
+            "text": "hard"
+          },
+          {
+            "letter": "Z",
+            "text": "flexible"
+          }
         ],
-        "correctAnswer": "C,Z"
+        "correctAnswer": "C,Z",
+        "category": "Antonyms"
       },
       {
         "id": 38,
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on your answer sheet.",
         "question": "(approximate true close)   (broad precise rough)",
         "options": [
-          { "letter": "A", "text": "approximate" },
-          { "letter": "B", "text": "true" },
-          { "letter": "C", "text": "close" },
-          { "letter": "X", "text": "broad" },
-          { "letter": "Y", "text": "precise" },
-          { "letter": "Z", "text": "rough" }
+          {
+            "letter": "A",
+            "text": "approximate"
+          },
+          {
+            "letter": "B",
+            "text": "true"
+          },
+          {
+            "letter": "C",
+            "text": "close"
+          },
+          {
+            "letter": "X",
+            "text": "broad"
+          },
+          {
+            "letter": "Y",
+            "text": "precise"
+          },
+          {
+            "letter": "Z",
+            "text": "rough"
+          }
         ],
-        "correctAnswer": "A,Y"
+        "correctAnswer": "A,Y",
+        "category": "Antonyms"
       },
       {
         "id": 39,
         "instruction": "In these questions, find two words, one from each group, that are most opposite in meaning. Mark both words on your answer sheet.",
         "question": "(transparent clear hollow)   (empty vague glass)",
         "options": [
-          { "letter": "A", "text": "transparent" },
-          { "letter": "B", "text": "clear" },
-          { "letter": "C", "text": "hollow" },
-          { "letter": "X", "text": "empty" },
-          { "letter": "Y", "text": "vague" },
-          { "letter": "Z", "text": "glass" }
+          {
+            "letter": "A",
+            "text": "transparent"
+          },
+          {
+            "letter": "B",
+            "text": "clear"
+          },
+          {
+            "letter": "C",
+            "text": "hollow"
+          },
+          {
+            "letter": "X",
+            "text": "empty"
+          },
+          {
+            "letter": "Y",
+            "text": "vague"
+          },
+          {
+            "letter": "Z",
+            "text": "glass"
+          }
         ],
-        "correctAnswer": "B,Y"
+        "correctAnswer": "B,Y",
+        "category": "Antonyms"
       },
       {
         "id": 40,
         "instruction": "Find the next pair of letters in the series and mark it on your answer sheet.",
         "question": "UD  VF  WH  XJ  [ ? ]",
         "options": [
-          { "letter": "A", "text": "ZL" },
-          { "letter": "B", "text": "YL" },
-          { "letter": "C", "text": "YK" },
-          { "letter": "D", "text": "ZK" },
-          { "letter": "E", "text": "YM" }
+          {
+            "letter": "A",
+            "text": "ZL"
+          },
+          {
+            "letter": "B",
+            "text": "YL"
+          },
+          {
+            "letter": "C",
+            "text": "YK"
+          },
+          {
+            "letter": "D",
+            "text": "ZK"
+          },
+          {
+            "letter": "E",
+            "text": "YM"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Series"
       },
       {
         "id": 41,
         "instruction": "Find the next pair of letters in the series and mark it on your answer sheet.",
         "question": "ZO  WL  TI  QF  [ ? ]",
         "options": [
-          { "letter": "A", "text": "NC" },
-          { "letter": "B", "text": "OD" },
-          { "letter": "C", "text": "MC" },
-          { "letter": "D", "text": "ND" },
-          { "letter": "E", "text": "OB" }
+          {
+            "letter": "A",
+            "text": "NC"
+          },
+          {
+            "letter": "B",
+            "text": "OD"
+          },
+          {
+            "letter": "C",
+            "text": "MC"
+          },
+          {
+            "letter": "D",
+            "text": "ND"
+          },
+          {
+            "letter": "E",
+            "text": "OB"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Series"
       },
       {
         "id": 42,
         "instruction": "Find the next pair of letters in the series and mark it on your answer sheet.",
         "question": "AQ  CM  EI  GE  [ ? ]",
         "options": [
-          { "letter": "A", "text": "JB" },
-          { "letter": "B", "text": "IB" },
-          { "letter": "C", "text": "HE" },
-          { "letter": "D", "text": "IA" },
-          { "letter": "E", "text": "JA" }
+          {
+            "letter": "A",
+            "text": "JB"
+          },
+          {
+            "letter": "B",
+            "text": "IB"
+          },
+          {
+            "letter": "C",
+            "text": "HE"
+          },
+          {
+            "letter": "D",
+            "text": "IA"
+          },
+          {
+            "letter": "E",
+            "text": "JA"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Series"
       },
       {
         "id": 43,
         "instruction": "Find the next pair of letters in the series and mark it on your answer sheet.",
         "question": "HQ  LR  PS  TT  [ ? ]",
         "options": [
-          { "letter": "A", "text": "WV" },
-          { "letter": "B", "text": "UV" },
-          { "letter": "C", "text": "XU" },
-          { "letter": "D", "text": "XT" },
-          { "letter": "E", "text": "UX" }
+          {
+            "letter": "A",
+            "text": "WV"
+          },
+          {
+            "letter": "B",
+            "text": "UV"
+          },
+          {
+            "letter": "C",
+            "text": "XU"
+          },
+          {
+            "letter": "D",
+            "text": "XT"
+          },
+          {
+            "letter": "E",
+            "text": "UX"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Letter Series"
       },
       {
         "id": 44,
         "instruction": "Find the next pair of letters in the series and mark it on your answer sheet.",
         "question": "KM  LL  ML  NM  OO  PR  [ ? ]",
         "options": [
-          { "letter": "A", "text": "QU" },
-          { "letter": "B", "text": "RU" },
-          { "letter": "C", "text": "RV" },
-          { "letter": "D", "text": "QV" },
-          { "letter": "E", "text": "QW" }
+          {
+            "letter": "A",
+            "text": "QU"
+          },
+          {
+            "letter": "B",
+            "text": "RU"
+          },
+          {
+            "letter": "C",
+            "text": "RV"
+          },
+          {
+            "letter": "D",
+            "text": "QV"
+          },
+          {
+            "letter": "E",
+            "text": "QW"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Series"
       },
       {
         "id": 45,
         "instruction": "Find the next pair of letters in the series and mark it on your answer sheet.",
         "question": "CQ  BL  ZH  WE  [ ? ]",
         "options": [
-          { "letter": "A", "text": "SC" },
-          { "letter": "B", "text": "RC" },
-          { "letter": "C", "text": "TD" },
-          { "letter": "D", "text": "TC" },
-          { "letter": "E", "text": "SD" }
+          {
+            "letter": "A",
+            "text": "SC"
+          },
+          {
+            "letter": "B",
+            "text": "RC"
+          },
+          {
+            "letter": "C",
+            "text": "TD"
+          },
+          {
+            "letter": "D",
+            "text": "TC"
+          },
+          {
+            "letter": "E",
+            "text": "SD"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Series"
       },
       {
         "id": 46,
         "instruction": "Read the following information, then find the correct answer to the question and mark it on your answer sheet.",
         "question": "A cinema is open every night from 7 pm. The latest time a film begins is 11 pm. Films start at 7.15 pm, 8.15 pm and 9.15 pm on Tuesdays and Thursdays. On Mondays and Wednesdays films start on the hour, every hour. At the weekend, films start every half-hour from 7 pm. If these statements are true, only one of the sentences below must be true. Which one?",
         "options": [
-          { "letter": "A", "text": "No films start at 9.30 pm." },
-          { "letter": "B", "text": "On Tuesday, a film starts at 9 pm." },
-          { "letter": "C", "text": "Films start at 9.15 pm three days each week." },
-          { "letter": "D", "text": "A film starts at 9 pm on Monday, Wednesday and at the weekend." },
-          { "letter": "E", "text": "All films finish before 11 pm." }
+          {
+            "letter": "A",
+            "text": "No films start at 9.30 pm."
+          },
+          {
+            "letter": "B",
+            "text": "On Tuesday, a film starts at 9 pm."
+          },
+          {
+            "letter": "C",
+            "text": "Films start at 9.15 pm three days each week."
+          },
+          {
+            "letter": "D",
+            "text": "A film starts at 9 pm on Monday, Wednesday and at the weekend."
+          },
+          {
+            "letter": "E",
+            "text": "All films finish before 11 pm."
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Logic Problems"
       },
       {
         "id": 47,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on your answer sheet.",
         "question": "His favourite food was CABE.",
         "options": [
-          { "letter": "A", "text": "BAG" },
-          { "letter": "B", "text": "GET" },
-          { "letter": "C", "text": "EVE" },
-          { "letter": "D", "text": "SAG" },
-          { "letter": "E", "text": "BAT" }
+          {
+            "letter": "A",
+            "text": "BAG"
+          },
+          {
+            "letter": "B",
+            "text": "GET"
+          },
+          {
+            "letter": "C",
+            "text": "EVE"
+          },
+          {
+            "letter": "D",
+            "text": "SAG"
+          },
+          {
+            "letter": "E",
+            "text": "BAT"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Letters"
       },
       {
         "id": 48,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on your answer sheet.",
         "question": "The cars SDED in the bad weather.",
         "options": [
-          { "letter": "A", "text": "DEN" },
-          { "letter": "B", "text": "KID" },
-          { "letter": "C", "text": "PAR" },
-          { "letter": "D", "text": "RAN" },
-          { "letter": "E", "text": "LAD" }
+          {
+            "letter": "A",
+            "text": "DEN"
+          },
+          {
+            "letter": "B",
+            "text": "KID"
+          },
+          {
+            "letter": "C",
+            "text": "PAR"
+          },
+          {
+            "letter": "D",
+            "text": "RAN"
+          },
+          {
+            "letter": "E",
+            "text": "LAD"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Letters"
       },
       {
         "id": 49,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on your answer sheet.",
         "question": "He BED for more space in the room.",
         "options": [
-          { "letter": "A", "text": "EGG" },
-          { "letter": "B", "text": "LAB" },
-          { "letter": "C", "text": "ONE" },
-          { "letter": "D", "text": "TUG" },
-          { "letter": "E", "text": "RIP" }
+          {
+            "letter": "A",
+            "text": "EGG"
+          },
+          {
+            "letter": "B",
+            "text": "LAB"
+          },
+          {
+            "letter": "C",
+            "text": "ONE"
+          },
+          {
+            "letter": "D",
+            "text": "TUG"
+          },
+          {
+            "letter": "E",
+            "text": "RIP"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Letters"
       },
       {
         "id": 50,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on your answer sheet.",
         "question": "The morning was spent CLING the garden.",
         "options": [
-          { "letter": "A", "text": "ROE" },
-          { "letter": "B", "text": "AFT" },
-          { "letter": "C", "text": "APE" },
-          { "letter": "D", "text": "EAR" },
-          { "letter": "E", "text": "OWE" }
+          {
+            "letter": "A",
+            "text": "ROE"
+          },
+          {
+            "letter": "B",
+            "text": "AFT"
+          },
+          {
+            "letter": "C",
+            "text": "APE"
+          },
+          {
+            "letter": "D",
+            "text": "EAR"
+          },
+          {
+            "letter": "E",
+            "text": "OWE"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Hidden Letters"
       },
       {
         "id": 51,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on your answer sheet.",
         "question": "They were OVERED at the news.",
         "options": [
-          { "letter": "A", "text": "GAP" },
-          { "letter": "B", "text": "NIL" },
-          { "letter": "C", "text": "JOY" },
-          { "letter": "D", "text": "TON" },
-          { "letter": "E", "text": "POT" }
+          {
+            "letter": "A",
+            "text": "GAP"
+          },
+          {
+            "letter": "B",
+            "text": "NIL"
+          },
+          {
+            "letter": "C",
+            "text": "JOY"
+          },
+          {
+            "letter": "D",
+            "text": "TON"
+          },
+          {
+            "letter": "E",
+            "text": "POT"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Letters"
       },
       {
         "id": 52,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on your answer sheet.",
         "question": "He gave his final JUDENT.",
         "options": [
-          { "letter": "A", "text": "HUM" },
-          { "letter": "B", "text": "GEM" },
-          { "letter": "C", "text": "ACE" },
-          { "letter": "D", "text": "TEN" },
-          { "letter": "E", "text": "TRY" }
+          {
+            "letter": "A",
+            "text": "HUM"
+          },
+          {
+            "letter": "B",
+            "text": "GEM"
+          },
+          {
+            "letter": "C",
+            "text": "ACE"
+          },
+          {
+            "letter": "D",
+            "text": "TEN"
+          },
+          {
+            "letter": "E",
+            "text": "TRY"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Letters"
       },
       {
         "id": 53,
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs. Mark it on your answer sheet.",
         "question": "(permit allow)   (rent hire)",
         "options": [
-          { "letter": "A", "text": "grant" },
-          { "letter": "B", "text": "let" },
-          { "letter": "C", "text": "agree" },
-          { "letter": "D", "text": "use" },
-          { "letter": "E", "text": "loan" }
+          {
+            "letter": "A",
+            "text": "grant"
+          },
+          {
+            "letter": "B",
+            "text": "let"
+          },
+          {
+            "letter": "C",
+            "text": "agree"
+          },
+          {
+            "letter": "D",
+            "text": "use"
+          },
+          {
+            "letter": "E",
+            "text": "loan"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Other"
       },
       {
         "id": 54,
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs. Mark it on your answer sheet.",
         "question": "(resemble similar)   (fond admire)",
         "options": [
-          { "letter": "A", "text": "please" },
-          { "letter": "B", "text": "copy" },
-          { "letter": "C", "text": "enjoy" },
-          { "letter": "D", "text": "like" },
-          { "letter": "E", "text": "same" }
+          {
+            "letter": "A",
+            "text": "please"
+          },
+          {
+            "letter": "B",
+            "text": "copy"
+          },
+          {
+            "letter": "C",
+            "text": "enjoy"
+          },
+          {
+            "letter": "D",
+            "text": "like"
+          },
+          {
+            "letter": "E",
+            "text": "same"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 55,
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs. Mark it on your answer sheet.",
         "question": "(token disc)   (worktop surface)",
         "options": [
-          { "letter": "A", "text": "flat" },
-          { "letter": "B", "text": "voucher" },
-          { "letter": "C", "text": "counter" },
-          { "letter": "D", "text": "sideboard" },
-          { "letter": "E", "text": "coin" }
+          {
+            "letter": "A",
+            "text": "flat"
+          },
+          {
+            "letter": "B",
+            "text": "voucher"
+          },
+          {
+            "letter": "C",
+            "text": "counter"
+          },
+          {
+            "letter": "D",
+            "text": "sideboard"
+          },
+          {
+            "letter": "E",
+            "text": "coin"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 56,
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs. Mark it on your answer sheet.",
         "question": "(jump leap)   (well water)",
         "options": [
-          { "letter": "A", "text": "hop" },
-          { "letter": "B", "text": "flow" },
-          { "letter": "C", "text": "move" },
-          { "letter": "D", "text": "source" },
-          { "letter": "E", "text": "spring" }
+          {
+            "letter": "A",
+            "text": "hop"
+          },
+          {
+            "letter": "B",
+            "text": "flow"
+          },
+          {
+            "letter": "C",
+            "text": "move"
+          },
+          {
+            "letter": "D",
+            "text": "source"
+          },
+          {
+            "letter": "E",
+            "text": "spring"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 57,
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs. Mark it on your answer sheet.",
         "question": "(chapter paragraph)   (corridor alley)",
         "options": [
-          { "letter": "A", "text": "book" },
-          { "letter": "B", "text": "path" },
-          { "letter": "C", "text": "walk" },
-          { "letter": "D", "text": "read" },
-          { "letter": "E", "text": "passage" }
+          {
+            "letter": "A",
+            "text": "book"
+          },
+          {
+            "letter": "B",
+            "text": "path"
+          },
+          {
+            "letter": "C",
+            "text": "walk"
+          },
+          {
+            "letter": "D",
+            "text": "read"
+          },
+          {
+            "letter": "E",
+            "text": "passage"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 58,
         "instruction": "In these questions, there are two pairs of words. Only one of the five possible answers will go equally well with both of these pairs. Mark it on your answer sheet.",
         "question": "(allotment patch)   (conspire plan)",
         "options": [
-          { "letter": "A", "text": "plot" },
-          { "letter": "B", "text": "scheme" },
-          { "letter": "C", "text": "garden" },
-          { "letter": "D", "text": "land" },
-          { "letter": "E", "text": "conceive" }
+          {
+            "letter": "A",
+            "text": "plot"
+          },
+          {
+            "letter": "B",
+            "text": "scheme"
+          },
+          {
+            "letter": "C",
+            "text": "garden"
+          },
+          {
+            "letter": "D",
+            "text": "land"
+          },
+          {
+            "letter": "E",
+            "text": "conceive"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Other"
       }
     ]
   }

@@ -49,6 +49,14 @@
                     <span class="label">Verbal Skills</span>
                 </button>
             </div>
+            <div class="home-actions">
+                <button class="nav-button" onclick="showPerformanceTrends()">
+                    📊 View Performance Trends
+                </button>
+                <button class="nav-button" onclick="showMistakesReview()">
+                    📝 Review Mistakes
+                </button>
+            </div>
         </div>
 
         <div id="test-selector" class="screen">
@@ -116,7 +124,102 @@
             </div>
             <div class="results-actions">
                 <button class="nav-button" onclick="reviewAnswers()">Review Answers</button>
+                <button class="nav-button" onclick="showCategoryBreakdown()">Category Breakdown</button>
+                <button class="nav-button" onclick="showPerformanceTrends()">Performance Trends</button>
+                <button class="nav-button" onclick="showMistakesReview()">Review Mistakes</button>
                 <button class="nav-button primary" onclick="showScreen('exam-selector')">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Category Breakdown Modal -->
+    <div id="breakdown-modal" class="modal" style="display: none;">
+        <div class="modal-content breakdown-modal">
+            <button class="modal-close" onclick="closeBreakdownModal()">×</button>
+            <h3>Performance by Category</h3>
+            <div id="breakdown-content" class="breakdown-content"></div>
+        </div>
+    </div>
+
+    <!-- Question Detail Modal -->
+    <div id="question-detail-modal" class="modal" style="display: none;">
+        <div class="modal-content question-detail-modal">
+            <button class="modal-close" onclick="closeQuestionDetailModal()">×</button>
+            <h3>Question Details</h3>
+            <div id="question-detail-content"></div>
+        </div>
+    </div>
+
+    <!-- Mistakes Review Modal -->
+    <div id="mistakes-modal" class="modal" style="display: none;">
+        <div class="modal-content mistakes-modal">
+            <button class="modal-close" onclick="closeMistakesModal()">×</button>
+            <h3>Review Your Mistakes</h3>
+
+            <div class="mistakes-controls">
+                <div class="exam-filter">
+                    <label>Subject:</label>
+                    <select id="mistakes-exam-filter" onchange="updateMistakesView()">
+                        <option value="all">All Subjects</option>
+                        <option value="maths">Maths</option>
+                        <option value="english">English</option>
+                        <option value="verbal-reasoning">Verbal Reasoning</option>
+                        <option value="non-verbal-reasoning">Non-Verbal Reasoning</option>
+                        <option value="verbal-skills">Verbal Skills</option>
+                    </select>
+                </div>
+
+                <div class="exam-filter">
+                    <label>Category:</label>
+                    <select id="mistakes-category-filter" onchange="updateMistakesView()">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="mistakes-stats" id="mistakes-stats"></div>
+            </div>
+
+            <div id="mistakes-content" class="mistakes-content"></div>
+        </div>
+    </div>
+
+    <!-- Performance Trends Modal -->
+    <div id="trends-modal" class="modal" style="display: none;">
+        <div class="modal-content trends-modal">
+            <button class="modal-close" onclick="closeTrendsModal()">×</button>
+            <h3>Performance Trends</h3>
+
+            <div class="trends-controls">
+                <div class="exam-filter">
+                    <label>Subject:</label>
+                    <select id="trends-exam-filter" onchange="updateTrendsView()">
+                        <option value="all">All Subjects</option>
+                        <option value="maths">Maths</option>
+                        <option value="english">English</option>
+                        <option value="verbal-reasoning">Verbal Reasoning</option>
+                        <option value="non-verbal-reasoning">Non-Verbal Reasoning</option>
+                        <option value="verbal-skills">Verbal Skills</option>
+                    </select>
+                </div>
+
+                <div class="time-range-control">
+                    <label>Time Range: <span id="time-range-label">All Time</span></label>
+                    <input type="range" id="time-slider" min="0" max="100" value="100" oninput="updateTimeRange(this.value)">
+                    <div class="time-range-labels">
+                        <span id="time-start">Start</span>
+                        <span id="time-end">Now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div id="trends-summary" class="trends-summary"></div>
+
+            <div id="trends-heatmap" class="trends-heatmap"></div>
+
+            <div id="trends-insights" class="trends-insights"></div>
+
+            <div class="trends-actions">
+                <button class="nav-button" onclick="clearTestHistory()">Clear History</button>
             </div>
         </div>
     </div>

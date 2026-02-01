@@ -26,6 +26,7 @@ const examTimerDefaults = {
 
 // Test progress persistence
 const STORAGE_KEY = 'elevenPlusTestProgress';
+const HISTORY_STORAGE_KEY = 'elevenPlusTestHistory';
 
 function saveTestProgress() {
     if (!currentExam || !currentTest || reviewMode) {
@@ -1217,6 +1218,9 @@ function calculateResults() {
             'value': percentage
         });
     }
+
+    // Save test result to history for trend tracking
+    saveTestResultToHistory();
 }
 
 function reviewAnswers() {
@@ -1259,4 +1263,840 @@ function formatPassageWithLineNumbers(passageText) {
         lineNumber++;
         return `<div class="passage-line"><span class="line-number">${numberLabel}</span><span class="line-text">${escapedLine}</span></div>`;
     }).join('');
+}
+
+// Category Breakdown Functions
+function calculateCategoryBreakdown() {
+    const categoryStats = {};
+
+    currentQuestions.forEach(question => {
+        const category = question.category || 'Uncategorized';
+        const questionId = question.id;
+        const selections = getUserSelections(questionId);
+        const isAnswered = selections.length > 0;
+        const isCorrect = isAnswered && areAnswersCorrect(question, selections);
+
+        if (!categoryStats[category]) {
+            categoryStats[category] = {
+                total: 0,
+                correct: 0,
+                incorrect: 0,
+                unanswered: 0
+            };
+        }
+
+        categoryStats[category].total++;
+        if (!isAnswered) {
+            categoryStats[category].unanswered++;
+        } else if (isCorrect) {
+            categoryStats[category].correct++;
+        } else {
+            categoryStats[category].incorrect++;
+        }
+    });
+
+    return categoryStats;
+}
+
+function getPerformanceClass(percentage) {
+    if (percentage >= 80) return 'excellent';
+    if (percentage >= 60) return 'good';
+    if (percentage >= 40) return 'average';
+    return 'poor';
+}
+
+function showCategoryBreakdown() {
+    const categoryStats = calculateCategoryBreakdown();
+    const breakdownContent = document.getElementById('breakdown-content');
+
+    // Sort categories by name
+    const sortedCategories = Object.keys(categoryStats).sort();
+
+    let html = '';
+
+    if (sortedCategories.length === 0) {
+        html = '<p style="text-align: center; color: #666;">No category data available.</p>';
+    } else {
+        sortedCategories.forEach(category => {
+            const stats = categoryStats[category];
+            const percentage = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
+            const performanceClass = getPerformanceClass(percentage);
+
+            html += `
+                <div class="category-item">
+                    <div class="category-header">
+                        <span class="category-name">${category}</span>
+                        <span class="category-score ${performanceClass}">${percentage}%</span>
+                    </div>
+                    <div class="category-details">
+                        ${stats.correct} correct, ${stats.incorrect} incorrect, ${stats.unanswered} unanswered
+                        (${stats.total} total)
+                    </div>
+                    <div class="category-bar">
+                        <div class="category-bar-fill ${performanceClass}" style="width: ${percentage}%"></div>
+                    </div>
+                </div>
+            `;
+        });
+    }
+
+    breakdownContent.innerHTML = html;
+
+    // Show modal
+    document.getElementById('breakdown-modal').style.display = 'flex';
+
+    // Track in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'category_breakdown_viewed', {
+            'exam_type': currentExam,
+            'test_name': currentTest,
+            'event_category': 'engagement'
+        });
+    }
+}
+
+function closeBreakdownModal() {
+    document.getElementById('breakdown-modal').style.display = 'none';
+}
+
+// Historical Performance Tracking
+function saveTestResultToHistory() {
+    const categoryStats = calculateCategoryBreakdown();
+
+    // Calculate overall stats
+    const totalQuestions = currentQuestions.length;
+
+    // Count correct answers by iterating through questions
+    let correctCount = 0;
+    currentQuestions.forEach(question => {
+        const selections = getUserSelections(question.id);
+        if (selections.length > 0 && areAnswersCorrect(question, selections)) {
+            correctCount++;
+        }
+    });
+
+    const percentage = totalQuestions > 0 ? Math.round((correctCount / totalQuestions) * 100) : 0;
+
+    // Collect incorrect questions with details
+    const incorrectQuestions = [];
+    currentQuestions.forEach(question => {
+        const selections = getUserSelections(question.id);
+        const isAnswered = selections.length > 0;
+        const isCorrect = isAnswered && areAnswersCorrect(question, selections);
+
+        if (isAnswered && !isCorrect) {
+            incorrectQuestions.push({
+                id: question.id,
+                question: question.question,
+                category: question.category || 'Uncategorized',
+                correctAnswer: question.correctAnswer,
+                userAnswer: selections.join(', '),
+                options: question.options,
+                instruction: question.instruction,
+                image: question.image
+            });
+        }
+    });
+
+    const testResult = {
+        timestamp: Date.now(),
+        date: new Date().toISOString(),
+        examType: currentExam,
+        testName: questionDatabase[currentExam][currentTest].title || currentTest,
+        testKey: currentTest,
+        totalQuestions: totalQuestions,
+        correctCount: correctCount,
+        percentage: percentage,
+        categoryBreakdown: {},
+        incorrectQuestions: incorrectQuestions
+    };
+
+    // Add category breakdown with percentages
+    Object.keys(categoryStats).forEach(category => {
+        const stats = categoryStats[category];
+        const catPercentage = stats.total > 0 ? Math.round((stats.correct / stats.total) * 100) : 0;
+        testResult.categoryBreakdown[category] = {
+            total: stats.total,
+            correct: stats.correct,
+            incorrect: stats.incorrect,
+            unanswered: stats.unanswered,
+            percentage: catPercentage
+        };
+    });
+
+    // Get existing history
+    let history = [];
+    try {
+        const stored = localStorage.getItem(HISTORY_STORAGE_KEY);
+        if (stored) {
+            history = JSON.parse(stored);
+        }
+    } catch (error) {
+        console.error('Failed to load test history:', error);
+    }
+
+    // Add new result
+    history.push(testResult);
+
+    // Keep only last 100 test results to avoid storage limits
+    if (history.length > 100) {
+        history = history.slice(-100);
+    }
+
+    // Save back to localStorage
+    try {
+        localStorage.setItem(HISTORY_STORAGE_KEY, JSON.stringify(history));
+        console.log('Test result saved to history');
+    } catch (error) {
+        console.error('Failed to save test history:', error);
+    }
+}
+
+function getTestHistory(examType = null) {
+    try {
+        const stored = localStorage.getItem(HISTORY_STORAGE_KEY);
+        if (!stored) {
+            return [];
+        }
+
+        let history = JSON.parse(stored);
+
+        // Filter by exam type if specified
+        if (examType) {
+            history = history.filter(result => result.examType === examType);
+        }
+
+        // Sort by timestamp (oldest first)
+        history.sort((a, b) => a.timestamp - b.timestamp);
+
+        return history;
+    } catch (error) {
+        console.error('Failed to load test history:', error);
+        return [];
+    }
+}
+
+function clearTestHistory() {
+    if (confirm('Are you sure you want to clear all performance history? This cannot be undone.')) {
+        try {
+            localStorage.removeItem(HISTORY_STORAGE_KEY);
+            alert('Performance history cleared successfully.');
+            // Close trends modal if open
+            const trendsModal = document.getElementById('trends-modal');
+            if (trendsModal) {
+                trendsModal.style.display = 'none';
+            }
+        } catch (error) {
+            console.error('Failed to clear test history:', error);
+            alert('Failed to clear history.');
+        }
+    }
+}
+
+// Performance Trends Visualization
+let currentTrendsData = [];
+let timeRangeStart = 0;
+let timeRangeEnd = 100;
+
+function showPerformanceTrends() {
+    const modal = document.getElementById('trends-modal');
+    modal.style.display = 'flex';
+
+    // Reset filters
+    document.getElementById('trends-exam-filter').value = currentExam || 'all';
+    document.getElementById('time-slider').value = 100;
+    timeRangeStart = 0;
+    timeRangeEnd = 100;
+
+    updateTrendsView();
+
+    // Track in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'trends_viewed', {
+            'exam_type': currentExam,
+            'event_category': 'engagement'
+        });
+    }
+}
+
+function closeTrendsModal() {
+    document.getElementById('trends-modal').style.display = 'none';
+}
+
+function updateTimeRange(value) {
+    timeRangeEnd = parseInt(value);
+    updateTrendsView();
+}
+
+function updateTrendsView() {
+    const examFilter = document.getElementById('trends-exam-filter').value;
+    const examType = examFilter === 'all' ? null : examFilter;
+
+    // Get filtered history
+    let history = getTestHistory(examType);
+
+    if (history.length === 0) {
+        displayNoDataMessage();
+        return;
+    }
+
+    // Apply time range filter
+    const totalTests = history.length;
+    const startIndex = Math.floor((timeRangeStart / 100) * totalTests);
+    const endIndex = Math.ceil((timeRangeEnd / 100) * totalTests);
+    history = history.slice(startIndex, endIndex);
+
+    currentTrendsData = history;
+
+    // Update time range label
+    if (history.length > 0) {
+        const startDate = new Date(history[0].timestamp).toLocaleDateString();
+        const endDate = new Date(history[history.length - 1].timestamp).toLocaleDateString();
+        document.getElementById('time-range-label').textContent =
+            history.length === totalTests ? 'All Time' : `${startDate} - ${endDate}`;
+        document.getElementById('time-start').textContent = startDate;
+        document.getElementById('time-end').textContent = endDate;
+    }
+
+    renderTrendsSummary(history);
+    renderHeatMap(history);
+    renderInsights(history);
+}
+
+function renderTrendsSummary(history) {
+    const summaryDiv = document.getElementById('trends-summary');
+
+    if (history.length === 0) {
+        summaryDiv.innerHTML = '';
+        return;
+    }
+
+    const avgScore = Math.round(
+        history.reduce((sum, test) => sum + test.percentage, 0) / history.length
+    );
+
+    const totalTests = history.length;
+    const totalQuestions = history.reduce((sum, test) => sum + test.totalQuestions, 0);
+
+    let html = `
+        <h4>Summary</h4>
+        <div class="trends-summary-stats">
+            <div class="trend-stat">
+                <span class="trend-stat-value">${totalTests}</span>
+                <span class="trend-stat-label">Tests Taken</span>
+            </div>
+            <div class="trend-stat">
+                <span class="trend-stat-value">${avgScore}%</span>
+                <span class="trend-stat-label">Average Score</span>
+            </div>
+            <div class="trend-stat">
+                <span class="trend-stat-value">${totalQuestions}</span>
+                <span class="trend-stat-label">Total Questions</span>
+            </div>
+        </div>
+    `;
+
+    summaryDiv.innerHTML = html;
+}
+
+function renderHeatMap(history) {
+    const heatmapDiv = document.getElementById('trends-heatmap');
+
+    if (history.length === 0) {
+        heatmapDiv.innerHTML = '';
+        return;
+    }
+
+    // Collect all categories across all tests
+    const allCategories = new Set();
+    history.forEach(test => {
+        Object.keys(test.categoryBreakdown).forEach(cat => allCategories.add(cat));
+    });
+
+    const categories = Array.from(allCategories).sort();
+
+    // Limit to recent tests for better visualization (max 10)
+    const recentHistory = history.slice(-10);
+
+    let html = `
+        <div class="heatmap-header">
+            <h4>Category Performance Heat Map</h4>
+            <div class="heatmap-legend">
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #FF5722;"></div>
+                    <span>Poor (&lt;40%)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #FFC107;"></div>
+                    <span>Average (40-59%)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #8BC34A;"></div>
+                    <span>Good (60-79%)</span>
+                </div>
+                <div class="legend-item">
+                    <div class="legend-color" style="background: #4CAF50;"></div>
+                    <span>Excellent (80%+)</span>
+                </div>
+            </div>
+        </div>
+        <div class="heatmap-grid">
+    `;
+
+    // Add date labels row
+    html += '<div class="heatmap-row"><div class="heatmap-category-label">Category / Date</div>';
+    recentHistory.forEach(test => {
+        const date = new Date(test.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        html += `<div class="heatmap-date-label">${date}</div>`;
+    });
+    html += '</div>';
+
+    // Add rows for each category
+    categories.forEach(category => {
+        html += `<div class="heatmap-row">`;
+        html += `<div class="heatmap-category-label">${category}</div>`;
+
+        recentHistory.forEach(test => {
+            const catData = test.categoryBreakdown[category];
+            if (catData) {
+                const percentage = catData.percentage;
+                const performanceClass = getPerformanceClass(percentage);
+                const bgColor = getHeatmapColor(percentage);
+                html += `
+                    <div class="heatmap-cell" style="background: ${bgColor};"
+                         title="${category}: ${percentage}% (${catData.correct}/${catData.total})">
+                        <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 2px;">${percentage}%</div>
+                        <div style="font-size: 0.7em; opacity: 0.85; font-weight: 500;">(${catData.correct}/${catData.total})</div>
+                    </div>
+                `;
+            } else {
+                html += '<div class="heatmap-cell empty">-</div>';
+            }
+        });
+
+        html += '</div>';
+    });
+
+    html += '</div>';
+    heatmapDiv.innerHTML = html;
+}
+
+function getHeatmapColor(percentage) {
+    if (percentage >= 80) return '#4CAF50';
+    if (percentage >= 60) return '#8BC34A';
+    if (percentage >= 40) return '#FFC107';
+    return '#FF5722';
+}
+
+function displayNoDataMessage() {
+    const summaryDiv = document.getElementById('trends-summary');
+    const heatmapDiv = document.getElementById('trends-heatmap');
+    const insightsDiv = document.getElementById('trends-insights');
+
+    const message = `
+        <div class="no-data-message">
+            <h4>No Performance Data Yet</h4>
+            <p>Complete some tests to start tracking your performance trends!</p>
+        </div>
+    `;
+
+    summaryDiv.innerHTML = '';
+    heatmapDiv.innerHTML = message;
+    insightsDiv.innerHTML = '';
+}
+
+function renderInsights(history) {
+    const insightsDiv = document.getElementById('trends-insights');
+
+    if (history.length < 2) {
+        insightsDiv.innerHTML = '<div class="no-data-message"><p>Complete more tests to see trend insights.</p></div>';
+        return;
+    }
+
+    const insights = analyzeTrends(history);
+
+    let html = '<h4>📊 Insights & Recommendations</h4>';
+
+    // Overall trend
+    if (insights.overallTrend) {
+        html += `<div class="insight-item ${insights.overallTrend.type}">
+            <span class="insight-icon">${insights.overallTrend.icon}</span>
+            <strong>${insights.overallTrend.title}</strong>: ${insights.overallTrend.message}
+        </div>`;
+    }
+
+    // Category trends
+    insights.categoryTrends.forEach(trend => {
+        html += `<div class="insight-item ${trend.type}">
+            <span class="insight-icon">${trend.icon}</span>
+            <strong>${trend.category}</strong>: ${trend.message}
+        </div>`;
+    });
+
+    // Recommendations
+    if (insights.recommendations.length > 0) {
+        html += '<h4 style="margin-top: 20px;">💡 Focus Areas</h4>';
+        insights.recommendations.forEach(rec => {
+            html += `<div class="insight-item">
+                <span class="insight-icon">🎯</span>
+                ${rec}
+            </div>`;
+        });
+    }
+
+    insightsDiv.innerHTML = html;
+}
+
+// Mistakes Review Functions
+function getAllIncorrectQuestions(examFilter = null) {
+    const history = getTestHistory(examFilter);
+    const mistakes = [];
+
+    history.forEach(test => {
+        if (test.incorrectQuestions && test.incorrectQuestions.length > 0) {
+            test.incorrectQuestions.forEach(q => {
+                mistakes.push({
+                    ...q,
+                    testName: test.testName,
+                    examType: test.examType,
+                    date: test.date,
+                    timestamp: test.timestamp
+                });
+            });
+        }
+    });
+
+    return mistakes;
+}
+
+function showMistakesReview() {
+    const modal = document.getElementById('mistakes-modal');
+    modal.style.display = 'flex';
+
+    // Reset filters
+    document.getElementById('mistakes-exam-filter').value = 'all';
+    updateMistakesView();
+
+    // Track in Google Analytics
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'mistakes_review_opened', {
+            'event_category': 'engagement'
+        });
+    }
+}
+
+function closeMistakesModal() {
+    document.getElementById('mistakes-modal').style.display = 'none';
+}
+
+function updateMistakesView() {
+    const examFilter = document.getElementById('mistakes-exam-filter').value;
+    const categoryFilter = document.getElementById('mistakes-category-filter').value;
+
+    const allMistakes = getAllIncorrectQuestions(examFilter === 'all' ? null : examFilter);
+
+    // Update category filter options
+    const categories = new Set(allMistakes.map(m => m.category));
+    const categorySelect = document.getElementById('mistakes-category-filter');
+    const currentCategoryValue = categorySelect.value;
+
+    categorySelect.innerHTML = '<option value="all">All Categories</option>';
+    Array.from(categories).sort().forEach(cat => {
+        categorySelect.innerHTML += `<option value="${cat}">${cat}</option>`;
+    });
+
+    // Restore selection if it still exists
+    if (currentCategoryValue && categories.has(currentCategoryValue)) {
+        categorySelect.value = currentCategoryValue;
+    }
+
+    // Filter by category
+    let filteredMistakes = allMistakes;
+    if (categoryFilter && categoryFilter !== 'all') {
+        filteredMistakes = allMistakes.filter(m => m.category === categoryFilter);
+    }
+
+    // Update stats
+    const statsDiv = document.getElementById('mistakes-stats');
+    statsDiv.innerHTML = `
+        <span class="mistakes-stats-value">${filteredMistakes.length}</span>
+        <span class="mistakes-stats-label">Mistakes to Review</span>
+    `;
+
+    // Render mistakes
+    renderMistakes(filteredMistakes);
+}
+
+function renderMistakes(mistakes) {
+    const contentDiv = document.getElementById('mistakes-content');
+
+    if (mistakes.length === 0) {
+        contentDiv.innerHTML = `
+            <div class="no-mistakes-message">
+                <div class="no-mistakes-icon">🎉</div>
+                <h4>No Mistakes Found!</h4>
+                <p>You haven't made any mistakes in the selected filters, or you haven't taken any tests yet.</p>
+            </div>
+        `;
+        return;
+    }
+
+    // Sort by most recent first
+    mistakes.sort((a, b) => b.timestamp - a.timestamp);
+
+    let html = '';
+    mistakes.forEach((mistake, index) => {
+        const date = new Date(mistake.date).toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        });
+
+        const examName = mistake.examType.split('-').map(word =>
+            word.charAt(0).toUpperCase() + word.slice(1)
+        ).join(' ');
+
+        html += `
+            <div class="mistake-item" onclick="showQuestionDetail(${index})" style="cursor: pointer;">
+                <div class="mistake-header">
+                    <div class="mistake-meta">
+                        <span class="mistake-badge subject">${examName}</span>
+                        <span class="mistake-badge category">${mistake.category}</span>
+                        <span class="mistake-badge date">${date}</span>
+                    </div>
+                </div>
+
+                <div class="mistake-question">
+                    ${mistake.instruction ? `<em>${mistake.instruction}</em><br><br>` : ''}
+                    ${mistake.question}
+                </div>
+
+                <div class="mistake-answers">
+                    <div class="mistake-answer-row incorrect">
+                        <span class="mistake-answer-label">❌ Your Answer:</span>
+                        <span class="mistake-answer-value">${mistake.userAnswer}</span>
+                    </div>
+                    <div class="mistake-answer-row correct">
+                        <span class="mistake-answer-label">✅ Correct Answer:</span>
+                        <span class="mistake-answer-value">${mistake.correctAnswer}</span>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 10px; color: #667eea; font-size: 0.9em;">
+                    Click to view full question
+                </div>
+            </div>
+        `;
+    });
+
+    contentDiv.innerHTML = html;
+}
+
+let currentMistakesForDetail = [];
+
+function showQuestionDetail(mistakeIndex) {
+    const examFilter = document.getElementById('mistakes-exam-filter').value;
+    const categoryFilter = document.getElementById('mistakes-category-filter').value;
+
+    let allMistakes = getAllIncorrectQuestions(examFilter === 'all' ? null : examFilter);
+
+    // Apply category filter
+    if (categoryFilter && categoryFilter !== 'all') {
+        allMistakes = allMistakes.filter(m => m.category === categoryFilter);
+    }
+
+    allMistakes.sort((a, b) => b.timestamp - a.timestamp);
+    currentMistakesForDetail = allMistakes;
+
+    const mistake = allMistakes[mistakeIndex];
+    if (!mistake) return;
+
+    const contentDiv = document.getElementById('question-detail-content');
+
+    const date = new Date(mistake.date).toLocaleDateString('en-US', {
+        month: 'short',
+        day: 'numeric',
+        year: 'numeric'
+    });
+
+    const examName = mistake.examType.split('-').map(word =>
+        word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+
+    // Parse user answer (might be comma-separated for multi-select)
+    const userAnswers = mistake.userAnswer.split(', ').map(a => a.trim());
+
+    let html = `
+        <div class="question-detail-header">
+            <span class="mistake-badge subject">${examName}</span>
+            <span class="mistake-badge category">${mistake.category}</span>
+            <span class="mistake-badge date">${date}</span>
+        </div>
+    `;
+
+    if (mistake.instruction) {
+        html += `<div class="question-detail-instruction">${mistake.instruction}</div>`;
+    }
+
+    if (mistake.image) {
+        html += `
+            <div class="question-detail-image">
+                <img src="${mistake.image}" alt="Question diagram">
+            </div>
+        `;
+    }
+
+    html += `<div class="question-detail-text">${mistake.question}</div>`;
+
+    html += '<div class="question-detail-options">';
+
+    mistake.options.forEach(option => {
+        const isCorrect = option.letter === mistake.correctAnswer;
+        const isUserAnswer = userAnswers.includes(option.letter);
+
+        let optionClass = '';
+        if (isCorrect) {
+            optionClass = 'correct';
+        } else if (isUserAnswer) {
+            optionClass = 'user-incorrect';
+        }
+
+        html += `
+            <div class="question-detail-option ${optionClass}">
+                <div class="question-detail-option-letter">${option.letter}</div>
+                <div class="question-detail-option-text">${option.text}</div>
+            </div>
+        `;
+    });
+
+    html += '</div>';
+
+    // Add labels
+    html += `
+        <div style="margin-top: 20px;">
+            <div class="question-detail-label incorrect">
+                ❌ Your answer: ${mistake.userAnswer}
+            </div>
+            <div class="question-detail-label correct">
+                ✅ Correct answer: ${mistake.correctAnswer}
+            </div>
+        </div>
+    `;
+
+    contentDiv.innerHTML = html;
+
+    document.getElementById('question-detail-modal').style.display = 'flex';
+}
+
+function closeQuestionDetailModal() {
+    document.getElementById('question-detail-modal').style.display = 'none';
+}
+
+function analyzeTrends(history) {
+    const insights = {
+        overallTrend: null,
+        categoryTrends: [],
+        recommendations: []
+    };
+
+    // Analyze overall score trend
+    const recentTests = history.slice(-5);
+    const olderTests = history.slice(0, Math.min(5, history.length - 5));
+
+    if (olderTests.length > 0 && recentTests.length > 0) {
+        const oldAvg = olderTests.reduce((sum, t) => sum + t.percentage, 0) / olderTests.length;
+        const recentAvg = recentTests.reduce((sum, t) => sum + t.percentage, 0) / recentTests.length;
+        const change = recentAvg - oldAvg;
+
+        if (change > 5) {
+            insights.overallTrend = {
+                type: 'improving',
+                icon: '📈',
+                title: 'Overall Performance Improving',
+                message: `Your average score has improved by ${Math.round(change)}% recently. Keep up the great work!`
+            };
+        } else if (change < -5) {
+            insights.overallTrend = {
+                type: 'declining',
+                icon: '📉',
+                title: 'Overall Performance Declining',
+                message: `Your average score has decreased by ${Math.round(Math.abs(change))}% recently. Consider reviewing fundamentals.`
+            };
+        } else {
+            insights.overallTrend = {
+                type: 'stable',
+                icon: '➡️',
+                title: 'Stable Performance',
+                message: 'Your performance has been consistent. Focus on challenging categories to improve further.'
+            };
+        }
+    }
+
+    // Analyze category trends
+    const categoryStats = {};
+
+    history.forEach(test => {
+        Object.entries(test.categoryBreakdown).forEach(([category, data]) => {
+            if (!categoryStats[category]) {
+                categoryStats[category] = [];
+            }
+            categoryStats[category].push(data.percentage);
+        });
+    });
+
+    Object.entries(categoryStats).forEach(([category, scores]) => {
+        if (scores.length < 2) return;
+
+        const recentScores = scores.slice(-3);
+        const olderScores = scores.slice(0, Math.max(1, scores.length - 3));
+
+        const oldAvg = olderScores.reduce((a, b) => a + b, 0) / olderScores.length;
+        const recentAvg = recentScores.reduce((a, b) => a + b, 0) / recentScores.length;
+        const change = recentAvg - oldAvg;
+
+        if (Math.abs(change) > 10) {
+            if (change > 0) {
+                insights.categoryTrends.push({
+                    category,
+                    type: 'improving',
+                    icon: '✅',
+                    message: `Improved by ${Math.round(change)}% - great progress!`
+                });
+            } else {
+                insights.categoryTrends.push({
+                    category,
+                    type: 'declining',
+                    icon: '⚠️',
+                    message: `Declined by ${Math.round(Math.abs(change))}% - needs attention`
+                });
+            }
+        }
+    });
+
+    // Generate recommendations based on weak categories
+    const allScores = {};
+    history.forEach(test => {
+        Object.entries(test.categoryBreakdown).forEach(([category, data]) => {
+            if (!allScores[category]) {
+                allScores[category] = [];
+            }
+            allScores[category].push(data.percentage);
+        });
+    });
+
+    const weakCategories = Object.entries(allScores)
+        .map(([category, scores]) => ({
+            category,
+            avgScore: scores.reduce((a, b) => a + b, 0) / scores.length
+        }))
+        .filter(item => item.avgScore < 60)
+        .sort((a, b) => a.avgScore - b.avgScore)
+        .slice(0, 3);
+
+    weakCategories.forEach(item => {
+        insights.recommendations.push(
+            `Focus on <strong>${item.category}</strong> (current avg: ${Math.round(item.avgScore)}%)`
+        );
+    });
+
+    return insights;
 }

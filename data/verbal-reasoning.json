@@ -28,7 +28,8 @@
             "text": "l"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Letter Movement"
       },
       {
         "id": 2,
@@ -56,7 +57,8 @@
             "text": "r"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Letter Movement"
       },
       {
         "id": 3,
@@ -84,7 +86,8 @@
             "text": "d"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Movement"
       },
       {
         "id": 4,
@@ -112,7 +115,8 @@
             "text": "p"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Movement"
       },
       {
         "id": 5,
@@ -140,7 +144,8 @@
             "text": "r"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Movement"
       },
       {
         "id": 6,
@@ -168,7 +173,8 @@
             "text": "n"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Movement"
       },
       {
         "id": 7,
@@ -196,7 +202,8 @@
             "text": "r"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Movement"
       },
       {
         "id": 8,
@@ -224,7 +231,8 @@
             "text": "n"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Letter Completion"
       },
       {
         "id": 9,
@@ -252,7 +260,8 @@
             "text": "s"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Completion"
       },
       {
         "id": 10,
@@ -280,7 +289,8 @@
             "text": "k"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Letter Completion"
       },
       {
         "id": 11,
@@ -308,7 +318,8 @@
             "text": "e"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Completion"
       },
       {
         "id": 12,
@@ -336,7 +347,8 @@
             "text": "k"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Completion"
       },
       {
         "id": 13,
@@ -364,7 +376,8 @@
             "text": "n"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Letter Completion"
       },
       {
         "id": 14,
@@ -392,7 +405,8 @@
             "text": "d"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Completion"
       },
       {
         "id": 15,
@@ -420,7 +434,8 @@
             "text": "mop"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Word Relationships"
       },
       {
         "id": 16,
@@ -448,7 +463,8 @@
             "text": "tab"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Word Relationships"
       },
       {
         "id": 17,
@@ -476,7 +492,8 @@
             "text": "lap"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Word Relationships"
       },
       {
         "id": 18,
@@ -504,7 +521,8 @@
             "text": "swim"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Word Relationships"
       },
       {
         "id": 19,
@@ -532,7 +550,8 @@
             "text": "ewe"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Word Relationships"
       },
       {
         "id": 20,
@@ -560,7 +579,8 @@
             "text": "nest"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Word Relationships"
       },
       {
         "id": 21,
@@ -588,7 +608,8 @@
             "text": "wad"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Word Relationships"
       },
       {
         "id": 22,
@@ -616,7 +637,8 @@
             "text": "31"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Number Series"
       },
       {
         "id": 23,
@@ -644,7 +666,8 @@
             "text": "28"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Number Series"
       },
       {
         "id": 24,
@@ -672,7 +695,8 @@
             "text": "11"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Number Series"
       },
       {
         "id": 25,
@@ -700,7 +724,8 @@
             "text": "51"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Number Series"
       },
       {
         "id": 26,
@@ -728,7 +753,8 @@
             "text": "34"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Number Series"
       },
       {
         "id": 27,
@@ -756,7 +782,8 @@
             "text": "99"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Number Series"
       },
       {
         "id": 28,
@@ -784,7 +811,8 @@
             "text": "112"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Number Series"
       },
       {
         "id": 29,
@@ -812,7 +840,8 @@
             "text": "2"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Logic & Comprehension"
       },
       {
         "id": 30,
@@ -844,7 +873,8 @@
             "text": "aim"
           }
         ],
-        "correctAnswer": "C,Y"
+        "correctAnswer": "C,Y",
+        "category": "Antonyms"
       },
       {
         "id": 31,
@@ -876,7 +906,8 @@
             "text": "expense"
           }
         ],
-        "correctAnswer": "A,Y"
+        "correctAnswer": "A,Y",
+        "category": "Antonyms"
       },
       {
         "id": 32,
@@ -908,7 +939,8 @@
             "text": "fresh"
           }
         ],
-        "correctAnswer": "C,X"
+        "correctAnswer": "C,X",
+        "category": "Antonyms"
       },
       {
         "id": 33,
@@ -940,7 +972,8 @@
             "text": "shut"
           }
         ],
-        "correctAnswer": "B,Y"
+        "correctAnswer": "B,Y",
+        "category": "Antonyms"
       },
       {
         "id": 34,
@@ -972,7 +1005,8 @@
             "text": "seldom"
           }
         ],
-        "correctAnswer": "C,Y"
+        "correctAnswer": "C,Y",
+        "category": "Antonyms"
       },
       {
         "id": 35,
@@ -1004,7 +1038,8 @@
             "text": "flexible"
           }
         ],
-        "correctAnswer": "C,Z"
+        "correctAnswer": "C,Z",
+        "category": "Antonyms"
       },
       {
         "id": 36,
@@ -1036,7 +1071,8 @@
             "text": "rough"
           }
         ],
-        "correctAnswer": "A,Y"
+        "correctAnswer": "A,Y",
+        "category": "Antonyms"
       },
       {
         "id": 37,
@@ -1068,7 +1104,8 @@
             "text": "glass"
           }
         ],
-        "correctAnswer": "B,Y"
+        "correctAnswer": "B,Y",
+        "category": "Antonyms"
       },
       {
         "id": 38,
@@ -1096,7 +1133,8 @@
             "text": "at once."
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Words"
       },
       {
         "id": 39,
@@ -1124,7 +1162,8 @@
             "text": "in the"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Words"
       },
       {
         "id": 40,
@@ -1152,7 +1191,8 @@
             "text": "colourful gardens."
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Words"
       },
       {
         "id": 41,
@@ -1180,7 +1220,8 @@
             "text": "another rope."
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Hidden Words"
       },
       {
         "id": 42,
@@ -1208,7 +1249,8 @@
             "text": "the cage."
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Words"
       },
       {
         "id": 43,
@@ -1236,7 +1278,8 @@
             "text": "inside the"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Hidden Words"
       },
       {
         "id": 44,
@@ -1264,7 +1307,8 @@
             "text": "area systematically."
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Hidden Words"
       },
       {
         "id": 45,
@@ -1292,7 +1336,8 @@
             "text": "YM"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Series"
       },
       {
         "id": 46,
@@ -1320,7 +1365,8 @@
             "text": "OB"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Series"
       },
       {
         "id": 47,
@@ -1348,7 +1394,8 @@
             "text": "JA"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Series"
       },
       {
         "id": 48,
@@ -1376,7 +1423,8 @@
             "text": "UX"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Letter Series"
       },
       {
         "id": 49,
@@ -1404,7 +1452,8 @@
             "text": "EU"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Letter Series"
       },
       {
         "id": 50,
@@ -1432,7 +1481,8 @@
             "text": "QW"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Series"
       },
       {
         "id": 51,
@@ -1460,7 +1510,8 @@
             "text": "SD"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Series"
       },
       {
         "id": 52,
@@ -1488,7 +1539,8 @@
             "text": "BAT"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Letters"
       },
       {
         "id": 53,
@@ -1516,7 +1568,8 @@
             "text": "LAD"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Letters"
       },
       {
         "id": 54,
@@ -1544,7 +1597,8 @@
             "text": "RIP"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Letters"
       },
       {
         "id": 55,
@@ -1572,7 +1626,8 @@
             "text": "OWE"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Hidden Letters"
       },
       {
         "id": 56,
@@ -1600,7 +1655,8 @@
             "text": "RAT"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Letters"
       },
       {
         "id": 57,
@@ -1628,7 +1684,8 @@
             "text": "POT"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Letters"
       },
       {
         "id": 58,
@@ -1656,7 +1713,8 @@
             "text": "TRY"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Letters"
       },
       {
         "id": 59,
@@ -1684,7 +1742,8 @@
             "text": "LET"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Letters"
       },
       {
         "id": 60,
@@ -1716,7 +1775,8 @@
             "text": "noise"
           }
         ],
-        "correctAnswer": "C,X"
+        "correctAnswer": "C,X",
+        "category": "Sentence Completion"
       },
       {
         "id": 61,
@@ -1748,7 +1808,8 @@
             "text": "water"
           }
         ],
-        "correctAnswer": "A,Y"
+        "correctAnswer": "A,Y",
+        "category": "Sentence Completion"
       },
       {
         "id": 62,
@@ -1780,7 +1841,8 @@
             "text": "pilot"
           }
         ],
-        "correctAnswer": "A,Z"
+        "correctAnswer": "A,Z",
+        "category": "Sentence Completion"
       },
       {
         "id": 63,
@@ -1812,7 +1874,8 @@
             "text": "screw"
           }
         ],
-        "correctAnswer": "A,X"
+        "correctAnswer": "A,X",
+        "category": "Sentence Completion"
       },
       {
         "id": 64,
@@ -1844,7 +1907,8 @@
             "text": "legs"
           }
         ],
-        "correctAnswer": "B,Z"
+        "correctAnswer": "B,Z",
+        "category": "Sentence Completion"
       },
       {
         "id": 65,
@@ -1876,7 +1940,8 @@
             "text": "cat"
           }
         ],
-        "correctAnswer": "A,Y"
+        "correctAnswer": "A,Y",
+        "category": "Sentence Completion"
       },
       {
         "id": 66,
@@ -1908,7 +1973,8 @@
             "text": "near"
           }
         ],
-        "correctAnswer": "B,X"
+        "correctAnswer": "B,X",
+        "category": "Sentence Completion"
       },
       {
         "id": 67,
@@ -1936,7 +2002,8 @@
             "text": "All films finish before 11 pm."
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Logic & Comprehension"
       },
       {
         "id": 68,
@@ -1964,7 +2031,8 @@
             "text": "loan"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Other"
       },
       {
         "id": 69,
@@ -1992,7 +2060,8 @@
             "text": "call"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 70,
@@ -2020,7 +2089,8 @@
             "text": "same"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 71,
@@ -2048,7 +2118,8 @@
             "text": "coin"
           }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 72,
@@ -2076,7 +2147,8 @@
             "text": "spring"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 73,
@@ -2104,7 +2176,8 @@
             "text": "passage"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 74,
@@ -2132,7 +2205,8 @@
             "text": "conceive"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Other"
       },
       {
         "id": 75,
@@ -2161,7 +2235,8 @@
             "text": "5426"
           }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 76,
@@ -2190,7 +2265,8 @@
             "text": "4678"
           }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 77,
@@ -2219,7 +2295,8 @@
             "text": "TABS"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Other"
       },
       {
         "id": 78,
@@ -2248,7 +2325,8 @@
             "text": "5632"
           }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Other"
       },
       {
         "id": 79,
@@ -2277,7 +2355,8 @@
             "text": "PENT"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Other"
       },
       {
         "id": 80,
@@ -2306,7 +2385,8 @@
             "text": "3851"
           }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Other"
       }
     ]
   },
@@ -2318,886 +2398,2072 @@
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on the answer sheet.",
         "question": "I wear SALS in the summer.",
         "options": [
-          { "letter": "A", "text": "LAP" },
-          { "letter": "B", "text": "AND" },
-          { "letter": "C", "text": "CAN" },
-          { "letter": "D", "text": "OLD" },
-          { "letter": "E", "text": "TAR" }
+          {
+            "letter": "A",
+            "text": "LAP"
+          },
+          {
+            "letter": "B",
+            "text": "AND"
+          },
+          {
+            "letter": "C",
+            "text": "CAN"
+          },
+          {
+            "letter": "D",
+            "text": "OLD"
+          },
+          {
+            "letter": "E",
+            "text": "TAR"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Letters"
       },
       {
         "id": 2,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on the answer sheet.",
         "question": "I'm going to the BING alley for my birthday.",
         "options": [
-          { "letter": "A", "text": "LIT" },
-          { "letter": "B", "text": "AIM" },
-          { "letter": "C", "text": "ONE" },
-          { "letter": "D", "text": "OWL" },
-          { "letter": "E", "text": "INK" }
+          {
+            "letter": "A",
+            "text": "LIT"
+          },
+          {
+            "letter": "B",
+            "text": "AIM"
+          },
+          {
+            "letter": "C",
+            "text": "ONE"
+          },
+          {
+            "letter": "D",
+            "text": "OWL"
+          },
+          {
+            "letter": "E",
+            "text": "INK"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Hidden Letters"
       },
       {
         "id": 3,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on the answer sheet.",
         "question": "An EXPERIT was carried out.",
         "options": [
-          { "letter": "A", "text": "MEN" },
-          { "letter": "B", "text": "CAT" },
-          { "letter": "C", "text": "PEN" },
-          { "letter": "D", "text": "EAR" },
-          { "letter": "E", "text": "ANT" }
+          {
+            "letter": "A",
+            "text": "MEN"
+          },
+          {
+            "letter": "B",
+            "text": "CAT"
+          },
+          {
+            "letter": "C",
+            "text": "PEN"
+          },
+          {
+            "letter": "D",
+            "text": "EAR"
+          },
+          {
+            "letter": "E",
+            "text": "ANT"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Letters"
       },
       {
         "id": 4,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on the answer sheet.",
         "question": "The hat was FLING on the water.",
         "options": [
-          { "letter": "A", "text": "OFF" },
-          { "letter": "B", "text": "OAT" },
-          { "letter": "C", "text": "ATE" },
-          { "letter": "D", "text": "AID" },
-          { "letter": "E", "text": "END" }
+          {
+            "letter": "A",
+            "text": "OFF"
+          },
+          {
+            "letter": "B",
+            "text": "OAT"
+          },
+          {
+            "letter": "C",
+            "text": "ATE"
+          },
+          {
+            "letter": "D",
+            "text": "AID"
+          },
+          {
+            "letter": "E",
+            "text": "END"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Letters"
       },
       {
         "id": 5,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on the answer sheet.",
         "question": "The boy was taught how to WTLE.",
         "options": [
-          { "letter": "A", "text": "HAS" },
-          { "letter": "B", "text": "ILL" },
-          { "letter": "C", "text": "HIS" },
-          { "letter": "D", "text": "OIL" },
-          { "letter": "E", "text": "EEL" }
+          {
+            "letter": "A",
+            "text": "HAS"
+          },
+          {
+            "letter": "B",
+            "text": "ILL"
+          },
+          {
+            "letter": "C",
+            "text": "HIS"
+          },
+          {
+            "letter": "D",
+            "text": "OIL"
+          },
+          {
+            "letter": "E",
+            "text": "EEL"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Letters"
       },
       {
         "id": 6,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on the answer sheet.",
         "question": "A GUATEE came with the television.",
         "options": [
-          { "letter": "A", "text": "RAN" },
-          { "letter": "B", "text": "SAT" },
-          { "letter": "C", "text": "NOT" },
-          { "letter": "D", "text": "OUR" },
-          { "letter": "E", "text": "OWE" }
+          {
+            "letter": "A",
+            "text": "RAN"
+          },
+          {
+            "letter": "B",
+            "text": "SAT"
+          },
+          {
+            "letter": "C",
+            "text": "NOT"
+          },
+          {
+            "letter": "D",
+            "text": "OUR"
+          },
+          {
+            "letter": "E",
+            "text": "OWE"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Hidden Letters"
       },
       {
         "id": 7,
         "instruction": "In these sentences, the word in capitals has had three letters next to each other taken out. These three letters will make one correctly-spelt word without changing their order. The sentence that you make must make sense. Mark the correct three-letter word on the answer sheet.",
         "question": "The comedian IMITD people.",
         "options": [
-          { "letter": "A", "text": "ALL" },
-          { "letter": "B", "text": "FOR" },
-          { "letter": "C", "text": "ATE" },
-          { "letter": "D", "text": "ILL" },
-          { "letter": "E", "text": "AND" }
+          {
+            "letter": "A",
+            "text": "ALL"
+          },
+          {
+            "letter": "B",
+            "text": "FOR"
+          },
+          {
+            "letter": "C",
+            "text": "ATE"
+          },
+          {
+            "letter": "D",
+            "text": "ILL"
+          },
+          {
+            "letter": "E",
+            "text": "AND"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Letters"
       },
       {
         "id": 8,
         "instruction": "In these questions, find two words, one from each group, that are closest in meaning. Mark both words on the answer sheet.",
         "question": "(can grease pan) (fry oil slip)",
         "options": [
-          { "letter": "A", "text": "can" },
-          { "letter": "B", "text": "grease" },
-          { "letter": "C", "text": "pan" },
-          { "letter": "X", "text": "fry" },
-          { "letter": "Y", "text": "oil" },
-          { "letter": "Z", "text": "slip" }
+          {
+            "letter": "A",
+            "text": "can"
+          },
+          {
+            "letter": "B",
+            "text": "grease"
+          },
+          {
+            "letter": "C",
+            "text": "pan"
+          },
+          {
+            "letter": "X",
+            "text": "fry"
+          },
+          {
+            "letter": "Y",
+            "text": "oil"
+          },
+          {
+            "letter": "Z",
+            "text": "slip"
+          }
         ],
-        "correctAnswers": ["B", "Y"]
+        "correctAnswers": [
+          "B",
+          "Y"
+        ],
+        "category": "Synonyms"
       },
       {
         "id": 9,
         "instruction": "In these questions, find two words, one from each group, that are closest in meaning. Mark both words on the answer sheet.",
         "question": "(calm rest laugh) (tired peaceful happy)",
         "options": [
-          { "letter": "A", "text": "calm" },
-          { "letter": "B", "text": "rest" },
-          { "letter": "C", "text": "laugh" },
-          { "letter": "X", "text": "tired" },
-          { "letter": "Y", "text": "peaceful" },
-          { "letter": "Z", "text": "happy" }
+          {
+            "letter": "A",
+            "text": "calm"
+          },
+          {
+            "letter": "B",
+            "text": "rest"
+          },
+          {
+            "letter": "C",
+            "text": "laugh"
+          },
+          {
+            "letter": "X",
+            "text": "tired"
+          },
+          {
+            "letter": "Y",
+            "text": "peaceful"
+          },
+          {
+            "letter": "Z",
+            "text": "happy"
+          }
         ],
-        "correctAnswers": ["A", "Y"]
+        "correctAnswers": [
+          "A",
+          "Y"
+        ],
+        "category": "Synonyms"
       },
       {
         "id": 10,
         "instruction": "In these questions, find two words, one from each group, that are closest in meaning. Mark both words on the answer sheet.",
         "question": "(increase quick accelerate) (race speed rapid)",
         "options": [
-          { "letter": "A", "text": "increase" },
-          { "letter": "B", "text": "quick" },
-          { "letter": "C", "text": "accelerate" },
-          { "letter": "X", "text": "race" },
-          { "letter": "Y", "text": "speed" },
-          { "letter": "Z", "text": "rapid" }
+          {
+            "letter": "A",
+            "text": "increase"
+          },
+          {
+            "letter": "B",
+            "text": "quick"
+          },
+          {
+            "letter": "C",
+            "text": "accelerate"
+          },
+          {
+            "letter": "X",
+            "text": "race"
+          },
+          {
+            "letter": "Y",
+            "text": "speed"
+          },
+          {
+            "letter": "Z",
+            "text": "rapid"
+          }
         ],
-        "correctAnswers": ["B", "Z"]
+        "correctAnswers": [
+          "B",
+          "Z"
+        ],
+        "category": "Synonyms"
       },
       {
         "id": 11,
         "instruction": "In these questions, find two words, one from each group, that are closest in meaning. Mark both words on the answer sheet.",
         "question": "(teach result occur) (outcome incident learn)",
         "options": [
-          { "letter": "A", "text": "teach" },
-          { "letter": "B", "text": "result" },
-          { "letter": "C", "text": "occur" },
-          { "letter": "X", "text": "outcome" },
-          { "letter": "Y", "text": "incident" },
-          { "letter": "Z", "text": "learn" }
+          {
+            "letter": "A",
+            "text": "teach"
+          },
+          {
+            "letter": "B",
+            "text": "result"
+          },
+          {
+            "letter": "C",
+            "text": "occur"
+          },
+          {
+            "letter": "X",
+            "text": "outcome"
+          },
+          {
+            "letter": "Y",
+            "text": "incident"
+          },
+          {
+            "letter": "Z",
+            "text": "learn"
+          }
         ],
-        "correctAnswers": ["B", "X"]
+        "correctAnswers": [
+          "B",
+          "X"
+        ],
+        "category": "Synonyms"
       },
       {
         "id": 12,
         "instruction": "In these questions, find two words, one from each group, that are closest in meaning. Mark both words on the answer sheet.",
         "question": "(sufficient vital valid) (essential certain specific)",
         "options": [
-          { "letter": "A", "text": "sufficient" },
-          { "letter": "B", "text": "vital" },
-          { "letter": "C", "text": "valid" },
-          { "letter": "X", "text": "essential" },
-          { "letter": "Y", "text": "certain" },
-          { "letter": "Z", "text": "specific" }
+          {
+            "letter": "A",
+            "text": "sufficient"
+          },
+          {
+            "letter": "B",
+            "text": "vital"
+          },
+          {
+            "letter": "C",
+            "text": "valid"
+          },
+          {
+            "letter": "X",
+            "text": "essential"
+          },
+          {
+            "letter": "Y",
+            "text": "certain"
+          },
+          {
+            "letter": "Z",
+            "text": "specific"
+          }
         ],
-        "correctAnswers": ["B", "X"]
+        "correctAnswers": [
+          "B",
+          "X"
+        ],
+        "category": "Synonyms"
       },
       {
         "id": 13,
         "instruction": "In these questions, find two words, one from each group, that are closest in meaning. Mark both words on the answer sheet.",
         "question": "(error correct erase) (amend tick read)",
         "options": [
-          { "letter": "A", "text": "error" },
-          { "letter": "B", "text": "correct" },
-          { "letter": "C", "text": "erase" },
-          { "letter": "X", "text": "amend" },
-          { "letter": "Y", "text": "tick" },
-          { "letter": "Z", "text": "read" }
+          {
+            "letter": "A",
+            "text": "error"
+          },
+          {
+            "letter": "B",
+            "text": "correct"
+          },
+          {
+            "letter": "C",
+            "text": "erase"
+          },
+          {
+            "letter": "X",
+            "text": "amend"
+          },
+          {
+            "letter": "Y",
+            "text": "tick"
+          },
+          {
+            "letter": "Z",
+            "text": "read"
+          }
         ],
-        "correctAnswers": ["B", "X"]
+        "correctAnswers": [
+          "B",
+          "X"
+        ],
+        "category": "Synonyms"
       },
       {
         "id": 14,
         "instruction": "In these questions, find two words, one from each group, that are closest in meaning. Mark both words on the answer sheet.",
         "question": "(purpose improve agree) (pursue intention decision)",
         "options": [
-          { "letter": "A", "text": "purpose" },
-          { "letter": "B", "text": "improve" },
-          { "letter": "C", "text": "agree" },
-          { "letter": "X", "text": "pursue" },
-          { "letter": "Y", "text": "intention" },
-          { "letter": "Z", "text": "decision" }
+          {
+            "letter": "A",
+            "text": "purpose"
+          },
+          {
+            "letter": "B",
+            "text": "improve"
+          },
+          {
+            "letter": "C",
+            "text": "agree"
+          },
+          {
+            "letter": "X",
+            "text": "pursue"
+          },
+          {
+            "letter": "Y",
+            "text": "intention"
+          },
+          {
+            "letter": "Z",
+            "text": "decision"
+          }
         ],
-        "correctAnswers": ["A", "Y"]
+        "correctAnswers": [
+          "A",
+          "Y"
+        ],
+        "category": "Synonyms"
       },
       {
         "id": 15,
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word and mark this answer on your answer sheet.",
         "question": "The bold monkey sat on my shoulder.",
         "options": [
-          { "letter": "A", "text": "The bold" },
-          { "letter": "B", "text": "bold monkey" },
-          { "letter": "C", "text": "monkey sat" },
-          { "letter": "D", "text": "sat on" },
-          { "letter": "E", "text": "on my" }
+          {
+            "letter": "A",
+            "text": "The bold"
+          },
+          {
+            "letter": "B",
+            "text": "bold monkey"
+          },
+          {
+            "letter": "C",
+            "text": "monkey sat"
+          },
+          {
+            "letter": "D",
+            "text": "sat on"
+          },
+          {
+            "letter": "E",
+            "text": "on my"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Words"
       },
       {
         "id": 16,
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word and mark this answer on your answer sheet.",
         "question": "It is wonderful living in the country.",
         "options": [
-          { "letter": "A", "text": "It is" },
-          { "letter": "B", "text": "is wonderful" },
-          { "letter": "C", "text": "wonderful living" },
-          { "letter": "D", "text": "living in" },
-          { "letter": "E", "text": "in the" }
+          {
+            "letter": "A",
+            "text": "It is"
+          },
+          {
+            "letter": "B",
+            "text": "is wonderful"
+          },
+          {
+            "letter": "C",
+            "text": "wonderful living"
+          },
+          {
+            "letter": "D",
+            "text": "living in"
+          },
+          {
+            "letter": "E",
+            "text": "in the"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Words"
       },
       {
         "id": 17,
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word and mark this answer on your answer sheet.",
         "question": "The sky was clear after days of rain.",
         "options": [
-          { "letter": "A", "text": "The sky" },
-          { "letter": "B", "text": "sky was" },
-          { "letter": "C", "text": "was clear" },
-          { "letter": "D", "text": "clear after" },
-          { "letter": "E", "text": "after days" }
+          {
+            "letter": "A",
+            "text": "The sky"
+          },
+          {
+            "letter": "B",
+            "text": "sky was"
+          },
+          {
+            "letter": "C",
+            "text": "was clear"
+          },
+          {
+            "letter": "D",
+            "text": "clear after"
+          },
+          {
+            "letter": "E",
+            "text": "after days"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Hidden Words"
       },
       {
         "id": 18,
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word and mark this answer on your answer sheet.",
         "question": "Does the paper come with envelopes?",
         "options": [
-          { "letter": "A", "text": "Does the" },
-          { "letter": "B", "text": "the paper" },
-          { "letter": "C", "text": "paper come" },
-          { "letter": "D", "text": "come with" },
-          { "letter": "E", "text": "with envelopes?" }
+          {
+            "letter": "A",
+            "text": "Does the"
+          },
+          {
+            "letter": "B",
+            "text": "the paper"
+          },
+          {
+            "letter": "C",
+            "text": "paper come"
+          },
+          {
+            "letter": "D",
+            "text": "come with"
+          },
+          {
+            "letter": "E",
+            "text": "with envelopes?"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Hidden Words"
       },
       {
         "id": 19,
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word and mark this answer on your answer sheet.",
         "question": "The angry woman yelled at the driver.",
         "options": [
-          { "letter": "A", "text": "The angry" },
-          { "letter": "B", "text": "angry woman" },
-          { "letter": "C", "text": "woman yelled" },
-          { "letter": "D", "text": "yelled at" },
-          { "letter": "E", "text": "at the" }
+          {
+            "letter": "A",
+            "text": "The angry"
+          },
+          {
+            "letter": "B",
+            "text": "angry woman"
+          },
+          {
+            "letter": "C",
+            "text": "woman yelled"
+          },
+          {
+            "letter": "D",
+            "text": "yelled at"
+          },
+          {
+            "letter": "E",
+            "text": "at the"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Hidden Words"
       },
       {
         "id": 20,
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word and mark this answer on your answer sheet.",
         "question": "I emptied it for you last night.",
         "options": [
-          { "letter": "A", "text": "I emptied" },
-          { "letter": "B", "text": "emptied it" },
-          { "letter": "C", "text": "it for" },
-          { "letter": "D", "text": "for you" },
-          { "letter": "E", "text": "you last" }
+          {
+            "letter": "A",
+            "text": "I emptied"
+          },
+          {
+            "letter": "B",
+            "text": "emptied it"
+          },
+          {
+            "letter": "C",
+            "text": "it for"
+          },
+          {
+            "letter": "D",
+            "text": "for you"
+          },
+          {
+            "letter": "E",
+            "text": "you last"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Words"
       },
       {
         "id": 21,
         "instruction": "In these sentences, a word of four letters is hidden at the end of one word and the beginning of the next word. Find the pair of words that contains the hidden word and mark this answer on your answer sheet.",
         "question": "She ran to catch the bus.",
         "options": [
-          { "letter": "A", "text": "She ran" },
-          { "letter": "B", "text": "ran to" },
-          { "letter": "C", "text": "to catch" },
-          { "letter": "D", "text": "catch the" },
-          { "letter": "E", "text": "the bus." }
+          {
+            "letter": "A",
+            "text": "She ran"
+          },
+          {
+            "letter": "B",
+            "text": "ran to"
+          },
+          {
+            "letter": "C",
+            "text": "to catch"
+          },
+          {
+            "letter": "D",
+            "text": "catch the"
+          },
+          {
+            "letter": "E",
+            "text": "the bus."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Hidden Words"
       },
       {
         "id": 22,
         "instruction": "Read the following information, then find the correct answer to the question and mark it on the answer sheet.",
         "question": "In a block of flats, Natalie lives two floors below Michelle and one floor above Christopher. Yousuf lives one floor above Natalie. Matthew lives one floor below Michelle. Who lives on the same floor?",
         "options": [
-          { "letter": "A", "text": "Yousuf and Natalie." },
-          { "letter": "B", "text": "Yousuf and Matthew." },
-          { "letter": "C", "text": "Matthew and Michelle." },
-          { "letter": "D", "text": "Christopher and Matthew." },
-          { "letter": "E", "text": "Natalie and Michelle." }
+          {
+            "letter": "A",
+            "text": "Yousuf and Natalie."
+          },
+          {
+            "letter": "B",
+            "text": "Yousuf and Matthew."
+          },
+          {
+            "letter": "C",
+            "text": "Matthew and Michelle."
+          },
+          {
+            "letter": "D",
+            "text": "Christopher and Matthew."
+          },
+          {
+            "letter": "E",
+            "text": "Natalie and Michelle."
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Logic & Comprehension"
       },
       {
         "id": 23,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
         "question": "fle [ ? ] ish   slo [ ? ] aste",
         "options": [
-          { "letter": "A", "text": "p" },
-          { "letter": "B", "text": "w" },
-          { "letter": "C", "text": "d" },
-          { "letter": "D", "text": "t" },
-          { "letter": "E", "text": "f" }
+          {
+            "letter": "A",
+            "text": "p"
+          },
+          {
+            "letter": "B",
+            "text": "w"
+          },
+          {
+            "letter": "C",
+            "text": "d"
+          },
+          {
+            "letter": "D",
+            "text": "t"
+          },
+          {
+            "letter": "E",
+            "text": "f"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Completion"
       },
       {
         "id": 24,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
         "question": "quot [ ? ] im   te [ ? ] cre",
         "options": [
-          { "letter": "A", "text": "w" },
-          { "letter": "B", "text": "e" },
-          { "letter": "C", "text": "a" },
-          { "letter": "D", "text": "n" },
-          { "letter": "E", "text": "d" }
+          {
+            "letter": "A",
+            "text": "w"
+          },
+          {
+            "letter": "B",
+            "text": "e"
+          },
+          {
+            "letter": "C",
+            "text": "a"
+          },
+          {
+            "letter": "D",
+            "text": "n"
+          },
+          {
+            "letter": "E",
+            "text": "d"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Letter Completion"
       },
       {
         "id": 25,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
         "question": "inc [ ? ] eat   mes [ ? ] ide",
         "options": [
-          { "letter": "A", "text": "b" },
-          { "letter": "B", "text": "s" },
-          { "letter": "C", "text": "t" },
-          { "letter": "D", "text": "h" },
-          { "letter": "E", "text": "b" }
+          {
+            "letter": "A",
+            "text": "b"
+          },
+          {
+            "letter": "B",
+            "text": "s"
+          },
+          {
+            "letter": "C",
+            "text": "t"
+          },
+          {
+            "letter": "D",
+            "text": "h"
+          },
+          {
+            "letter": "E",
+            "text": "b"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Completion"
       },
       {
         "id": 26,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
         "question": "sou [ ? ] unch   bel [ ? ] ight",
         "options": [
-          { "letter": "A", "text": "r" },
-          { "letter": "B", "text": "l" },
-          { "letter": "C", "text": "p" },
-          { "letter": "D", "text": "m" },
-          { "letter": "E", "text": "t" }
+          {
+            "letter": "A",
+            "text": "r"
+          },
+          {
+            "letter": "B",
+            "text": "l"
+          },
+          {
+            "letter": "C",
+            "text": "p"
+          },
+          {
+            "letter": "D",
+            "text": "m"
+          },
+          {
+            "letter": "E",
+            "text": "t"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Completion"
       },
       {
         "id": 27,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
         "question": "scar [ ? ] ound   sel [ ? ] at",
         "options": [
-          { "letter": "A", "text": "r" },
-          { "letter": "B", "text": "b" },
-          { "letter": "C", "text": "m" },
-          { "letter": "D", "text": "s" },
-          { "letter": "E", "text": "f" }
+          {
+            "letter": "A",
+            "text": "r"
+          },
+          {
+            "letter": "B",
+            "text": "b"
+          },
+          {
+            "letter": "C",
+            "text": "m"
+          },
+          {
+            "letter": "D",
+            "text": "s"
+          },
+          {
+            "letter": "E",
+            "text": "f"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Letter Completion"
       },
       {
         "id": 28,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
         "question": "bar [ ? ] een   bea [ ? ] eep",
         "options": [
-          { "letter": "A", "text": "d" },
-          { "letter": "B", "text": "t" },
-          { "letter": "C", "text": "p" },
-          { "letter": "D", "text": "k" },
-          { "letter": "E", "text": "m" }
+          {
+            "letter": "A",
+            "text": "d"
+          },
+          {
+            "letter": "B",
+            "text": "t"
+          },
+          {
+            "letter": "C",
+            "text": "p"
+          },
+          {
+            "letter": "D",
+            "text": "k"
+          },
+          {
+            "letter": "E",
+            "text": "m"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Letter Completion"
       },
       {
         "id": 29,
         "instruction": "In these questions, the same letter must fit into both sets of brackets, to complete the word in front of the brackets and begin the word after the brackets. Find this letter and mark it on the answer sheet.",
         "question": "ma [ ? ] ear   ha [ ? ] olk",
         "options": [
-          { "letter": "A", "text": "y" },
-          { "letter": "B", "text": "n" },
-          { "letter": "C", "text": "t" },
-          { "letter": "D", "text": "f" },
-          { "letter": "E", "text": "d" }
+          {
+            "letter": "A",
+            "text": "y"
+          },
+          {
+            "letter": "B",
+            "text": "n"
+          },
+          {
+            "letter": "C",
+            "text": "t"
+          },
+          {
+            "letter": "D",
+            "text": "f"
+          },
+          {
+            "letter": "E",
+            "text": "d"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Completion"
       },
       {
         "id": 30,
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group and mark it on the answer sheet.",
         "question": "(search [near] lotion)   (camera [ ? ] strong)",
         "options": [
-          { "letter": "A", "text": "neat" },
-          { "letter": "B", "text": "rate" },
-          { "letter": "C", "text": "game" },
-          { "letter": "D", "text": "near" },
-          { "letter": "E", "text": "gate" }
+          {
+            "letter": "A",
+            "text": "neat"
+          },
+          {
+            "letter": "B",
+            "text": "rate"
+          },
+          {
+            "letter": "C",
+            "text": "game"
+          },
+          {
+            "letter": "D",
+            "text": "near"
+          },
+          {
+            "letter": "E",
+            "text": "gate"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Word Relationships"
       },
       {
         "id": 31,
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group and mark it on the answer sheet.",
         "question": "(pin [pit] lit)   (run [ ? ] may)",
         "options": [
-          { "letter": "A", "text": "ray" },
-          { "letter": "B", "text": "rum" },
-          { "letter": "C", "text": "nay" },
-          { "letter": "D", "text": "ram" },
-          { "letter": "E", "text": "pay" }
+          {
+            "letter": "A",
+            "text": "ray"
+          },
+          {
+            "letter": "B",
+            "text": "rum"
+          },
+          {
+            "letter": "C",
+            "text": "nay"
+          },
+          {
+            "letter": "D",
+            "text": "ram"
+          },
+          {
+            "letter": "E",
+            "text": "pay"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Word Relationships"
       },
       {
         "id": 32,
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group and mark it on the answer sheet.",
         "question": "(grand [art] dealt)   (barge [ ? ] clear)",
         "options": [
-          { "letter": "A", "text": "bar" },
-          { "letter": "B", "text": "bag" },
-          { "letter": "C", "text": "rag" },
-          { "letter": "D", "text": "car" },
-          { "letter": "E", "text": "ear" }
+          {
+            "letter": "A",
+            "text": "bar"
+          },
+          {
+            "letter": "B",
+            "text": "bag"
+          },
+          {
+            "letter": "C",
+            "text": "rag"
+          },
+          {
+            "letter": "D",
+            "text": "car"
+          },
+          {
+            "letter": "E",
+            "text": "ear"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Word Relationships"
       },
       {
         "id": 33,
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group and mark it on the answer sheet.",
         "question": "(latch [heat] shake)   (index [ ? ] above)",
         "options": [
-          { "letter": "A", "text": "bind" },
-          { "letter": "B", "text": "bend" },
-          { "letter": "C", "text": "bean" },
-          { "letter": "D", "text": "bond" },
-          { "letter": "E", "text": "bead" }
+          {
+            "letter": "A",
+            "text": "bind"
+          },
+          {
+            "letter": "B",
+            "text": "bend"
+          },
+          {
+            "letter": "C",
+            "text": "bean"
+          },
+          {
+            "letter": "D",
+            "text": "bond"
+          },
+          {
+            "letter": "E",
+            "text": "bead"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Word Relationships"
       },
       {
         "id": 34,
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group and mark it on the answer sheet.",
         "question": "(taught [tent] design)   (reacts [ ? ] stigma)",
         "options": [
-          { "letter": "A", "text": "stem" },
-          { "letter": "B", "text": "stir" },
-          { "letter": "C", "text": "ream" },
-          { "letter": "D", "text": "star" },
-          { "letter": "E", "text": "rear" }
+          {
+            "letter": "A",
+            "text": "stem"
+          },
+          {
+            "letter": "B",
+            "text": "stir"
+          },
+          {
+            "letter": "C",
+            "text": "ream"
+          },
+          {
+            "letter": "D",
+            "text": "star"
+          },
+          {
+            "letter": "E",
+            "text": "rear"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Word Relationships"
       },
       {
         "id": 35,
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group and mark it on the answer sheet.",
         "question": "(picture [tire] scratch)   (deliver [ ? ] changed)",
         "options": [
-          { "letter": "A", "text": "gain" },
-          { "letter": "B", "text": "hard" },
-          { "letter": "C", "text": "gear" },
-          { "letter": "D", "text": "hear" },
-          { "letter": "E", "text": "hand" }
+          {
+            "letter": "A",
+            "text": "gain"
+          },
+          {
+            "letter": "B",
+            "text": "hard"
+          },
+          {
+            "letter": "C",
+            "text": "gear"
+          },
+          {
+            "letter": "D",
+            "text": "hear"
+          },
+          {
+            "letter": "E",
+            "text": "hand"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Word Relationships"
       },
       {
         "id": 36,
         "instruction": "In these questions, the three words in the second group should go together in the same way as the three in the first group. Find the word that is missing in the second group and mark it on the answer sheet.",
         "question": "(horizon [zoom] diamond)   (partner [ ? ] leather)",
         "options": [
-          { "letter": "A", "text": "neat" },
-          { "letter": "B", "text": "pear" },
-          { "letter": "C", "text": "hear" },
-          { "letter": "D", "text": "heat" },
-          { "letter": "E", "text": "near" }
+          {
+            "letter": "A",
+            "text": "neat"
+          },
+          {
+            "letter": "B",
+            "text": "pear"
+          },
+          {
+            "letter": "C",
+            "text": "hear"
+          },
+          {
+            "letter": "D",
+            "text": "heat"
+          },
+          {
+            "letter": "E",
+            "text": "near"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Word Relationships"
       },
       {
         "id": 37,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "pile   heap   high   heavy   stack",
         "options": [
-          { "letter": "A", "text": "pile" },
-          { "letter": "B", "text": "heap" },
-          { "letter": "C", "text": "high" },
-          { "letter": "D", "text": "heavy" },
-          { "letter": "E", "text": "stack" }
+          {
+            "letter": "A",
+            "text": "pile"
+          },
+          {
+            "letter": "B",
+            "text": "heap"
+          },
+          {
+            "letter": "C",
+            "text": "high"
+          },
+          {
+            "letter": "D",
+            "text": "heavy"
+          },
+          {
+            "letter": "E",
+            "text": "stack"
+          }
         ],
-        "correctAnswers": ["C", "D"]
+        "correctAnswers": [
+          "C",
+          "D"
+        ],
+        "category": "Other"
       },
       {
         "id": 38,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "slim   lean   tilt   thin   hill",
         "options": [
-          { "letter": "A", "text": "slim" },
-          { "letter": "B", "text": "lean" },
-          { "letter": "C", "text": "tilt" },
-          { "letter": "D", "text": "thin" },
-          { "letter": "E", "text": "hill" }
+          {
+            "letter": "A",
+            "text": "slim"
+          },
+          {
+            "letter": "B",
+            "text": "lean"
+          },
+          {
+            "letter": "C",
+            "text": "tilt"
+          },
+          {
+            "letter": "D",
+            "text": "thin"
+          },
+          {
+            "letter": "E",
+            "text": "hill"
+          }
         ],
-        "correctAnswers": ["C", "E"]
+        "correctAnswers": [
+          "C",
+          "E"
+        ],
+        "category": "Other"
       },
       {
         "id": 39,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "possess   get   own   have   buy",
         "options": [
-          { "letter": "A", "text": "possess" },
-          { "letter": "B", "text": "get" },
-          { "letter": "C", "text": "own" },
-          { "letter": "D", "text": "have" },
-          { "letter": "E", "text": "buy" }
+          {
+            "letter": "A",
+            "text": "possess"
+          },
+          {
+            "letter": "B",
+            "text": "get"
+          },
+          {
+            "letter": "C",
+            "text": "own"
+          },
+          {
+            "letter": "D",
+            "text": "have"
+          },
+          {
+            "letter": "E",
+            "text": "buy"
+          }
         ],
-        "correctAnswers": ["B", "E"]
+        "correctAnswers": [
+          "B",
+          "E"
+        ],
+        "category": "Other"
       },
       {
         "id": 40,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "pollute   remove   take   destroy   seize",
         "options": [
-          { "letter": "A", "text": "pollute" },
-          { "letter": "B", "text": "remove" },
-          { "letter": "C", "text": "take" },
-          { "letter": "D", "text": "destroy" },
-          { "letter": "E", "text": "seize" }
+          {
+            "letter": "A",
+            "text": "pollute"
+          },
+          {
+            "letter": "B",
+            "text": "remove"
+          },
+          {
+            "letter": "C",
+            "text": "take"
+          },
+          {
+            "letter": "D",
+            "text": "destroy"
+          },
+          {
+            "letter": "E",
+            "text": "seize"
+          }
         ],
-        "correctAnswers": ["A", "D"]
+        "correctAnswers": [
+          "A",
+          "D"
+        ],
+        "category": "Other"
       },
       {
         "id": 41,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "grow   time   develop   exist   mature",
         "options": [
-          { "letter": "A", "text": "grow" },
-          { "letter": "B", "text": "time" },
-          { "letter": "C", "text": "develop" },
-          { "letter": "D", "text": "exist" },
-          { "letter": "E", "text": "mature" }
+          {
+            "letter": "A",
+            "text": "grow"
+          },
+          {
+            "letter": "B",
+            "text": "time"
+          },
+          {
+            "letter": "C",
+            "text": "develop"
+          },
+          {
+            "letter": "D",
+            "text": "exist"
+          },
+          {
+            "letter": "E",
+            "text": "mature"
+          }
         ],
-        "correctAnswers": ["B", "D"]
+        "correctAnswers": [
+          "B",
+          "D"
+        ],
+        "category": "Other"
       },
       {
         "id": 42,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "clear   conclude   finish   terminate   prevent",
         "options": [
-          { "letter": "A", "text": "clear" },
-          { "letter": "B", "text": "conclude" },
-          { "letter": "C", "text": "finish" },
-          { "letter": "D", "text": "terminate" },
-          { "letter": "E", "text": "prevent" }
+          {
+            "letter": "A",
+            "text": "clear"
+          },
+          {
+            "letter": "B",
+            "text": "conclude"
+          },
+          {
+            "letter": "C",
+            "text": "finish"
+          },
+          {
+            "letter": "D",
+            "text": "terminate"
+          },
+          {
+            "letter": "E",
+            "text": "prevent"
+          }
         ],
-        "correctAnswers": ["A", "E"]
+        "correctAnswers": [
+          "A",
+          "E"
+        ],
+        "category": "Other"
       },
       {
         "id": 43,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "distribute   spread   arrange   disperse   organise",
         "options": [
-          { "letter": "A", "text": "distribute" },
-          { "letter": "B", "text": "spread" },
-          { "letter": "C", "text": "arrange" },
-          { "letter": "D", "text": "disperse" },
-          { "letter": "E", "text": "organise" }
+          {
+            "letter": "A",
+            "text": "distribute"
+          },
+          {
+            "letter": "B",
+            "text": "spread"
+          },
+          {
+            "letter": "C",
+            "text": "arrange"
+          },
+          {
+            "letter": "D",
+            "text": "disperse"
+          },
+          {
+            "letter": "E",
+            "text": "organise"
+          }
         ],
-        "correctAnswers": ["C", "E"]
+        "correctAnswers": [
+          "C",
+          "E"
+        ],
+        "category": "Other"
       },
       {
         "id": 44,
         "instruction": "In these questions, three of the five words are related in some way. Find the two words that do not go with these three and mark them both on the answer sheet.",
         "question": "acquire   sustain   maintain   gain   obtain",
         "options": [
-          { "letter": "A", "text": "acquire" },
-          { "letter": "B", "text": "sustain" },
-          { "letter": "C", "text": "maintain" },
-          { "letter": "D", "text": "gain" },
-          { "letter": "E", "text": "obtain" }
+          {
+            "letter": "A",
+            "text": "acquire"
+          },
+          {
+            "letter": "B",
+            "text": "sustain"
+          },
+          {
+            "letter": "C",
+            "text": "maintain"
+          },
+          {
+            "letter": "D",
+            "text": "gain"
+          },
+          {
+            "letter": "E",
+            "text": "obtain"
+          }
         ],
-        "correctAnswers": ["B", "C"]
+        "correctAnswers": [
+          "B",
+          "C"
+        ],
+        "category": "Other"
       },
       {
         "id": 45,
         "instruction": "In these questions, letters stand for numbers. Work out the answer to each sum, then find its letter and mark it on the answer sheet.",
         "question": "If A = 2, B = 3, C = 4, D = 5, E = 6, what is the answer to this sum written as a letter?\n\nB × D – E – D = [?]",
         "options": [
-          { "letter": "A", "text": "A" },
-          { "letter": "B", "text": "B" },
-          { "letter": "C", "text": "C" },
-          { "letter": "D", "text": "D" },
-          { "letter": "E", "text": "E" }
+          {
+            "letter": "A",
+            "text": "A"
+          },
+          {
+            "letter": "B",
+            "text": "B"
+          },
+          {
+            "letter": "C",
+            "text": "C"
+          },
+          {
+            "letter": "D",
+            "text": "D"
+          },
+          {
+            "letter": "E",
+            "text": "E"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 46,
         "instruction": "In these questions, letters stand for numbers. Work out the answer to each sum, then find its letter and mark it on the answer sheet.",
         "question": "If A = 2, B = 5, C = 15, D = 23, E = 27, what is the answer to this sum written as a letter?\n\nA × C – B + A = [?]",
         "options": [
-          { "letter": "A", "text": "A" },
-          { "letter": "B", "text": "B" },
-          { "letter": "C", "text": "C" },
-          { "letter": "D", "text": "D" },
-          { "letter": "E", "text": "E" }
+          {
+            "letter": "A",
+            "text": "A"
+          },
+          {
+            "letter": "B",
+            "text": "B"
+          },
+          {
+            "letter": "C",
+            "text": "C"
+          },
+          {
+            "letter": "D",
+            "text": "D"
+          },
+          {
+            "letter": "E",
+            "text": "E"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 47,
         "instruction": "In these questions, letters stand for numbers. Work out the answer to each sum, then find its letter and mark it on the answer sheet.",
         "question": "If A = 1, B = 3, C = 5, D = 15, E = 20, what is the answer to this sum written as a letter?\n\nB × E ÷ D + A = [?]",
         "options": [
-          { "letter": "A", "text": "A" },
-          { "letter": "B", "text": "B" },
-          { "letter": "C", "text": "C" },
-          { "letter": "D", "text": "D" },
-          { "letter": "E", "text": "E" }
+          {
+            "letter": "A",
+            "text": "A"
+          },
+          {
+            "letter": "B",
+            "text": "B"
+          },
+          {
+            "letter": "C",
+            "text": "C"
+          },
+          {
+            "letter": "D",
+            "text": "D"
+          },
+          {
+            "letter": "E",
+            "text": "E"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 48,
         "instruction": "In these questions, letters stand for numbers. Work out the answer to each sum, then find its letter and mark it on the answer sheet.",
         "question": "If A = 3, B = 5, C = 8, D = 9, E = 15, what is the answer to this sum written as a letter?\n\nD × B ÷ E + B = [?]",
         "options": [
-          { "letter": "A", "text": "A" },
-          { "letter": "B", "text": "B" },
-          { "letter": "C", "text": "C" },
-          { "letter": "D", "text": "D" },
-          { "letter": "E", "text": "E" }
+          {
+            "letter": "A",
+            "text": "A"
+          },
+          {
+            "letter": "B",
+            "text": "B"
+          },
+          {
+            "letter": "C",
+            "text": "C"
+          },
+          {
+            "letter": "D",
+            "text": "D"
+          },
+          {
+            "letter": "E",
+            "text": "E"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 49,
         "instruction": "In these questions, letters stand for numbers. Work out the answer to each sum, then find its letter and mark it on the answer sheet.",
         "question": "If A = 6, B = 9, C = 12, D = 27, E = 45, what is the answer to this sum written as a letter?\n\nD ÷ B × C – B = [?]",
         "options": [
-          { "letter": "A", "text": "A" },
-          { "letter": "B", "text": "B" },
-          { "letter": "C", "text": "C" },
-          { "letter": "D", "text": "D" },
-          { "letter": "E", "text": "E" }
+          {
+            "letter": "A",
+            "text": "A"
+          },
+          {
+            "letter": "B",
+            "text": "B"
+          },
+          {
+            "letter": "C",
+            "text": "C"
+          },
+          {
+            "letter": "D",
+            "text": "D"
+          },
+          {
+            "letter": "E",
+            "text": "E"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 50,
         "instruction": "In these questions, letters stand for numbers. Work out the answer to each sum, then find its letter and mark it on the answer sheet.",
         "question": "If A = 3, B = 4, C = 5, D = 6, E = 8, what is the answer to this sum written as a letter?\n\nD × E ÷ B – B = [?]",
         "options": [
-          { "letter": "A", "text": "A" },
-          { "letter": "B", "text": "B" },
-          { "letter": "C", "text": "C" },
-          { "letter": "D", "text": "D" },
-          { "letter": "E", "text": "E" }
+          {
+            "letter": "A",
+            "text": "A"
+          },
+          {
+            "letter": "B",
+            "text": "B"
+          },
+          {
+            "letter": "C",
+            "text": "C"
+          },
+          {
+            "letter": "D",
+            "text": "D"
+          },
+          {
+            "letter": "E",
+            "text": "E"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 51,
         "instruction": "In these questions, letters stand for numbers. Work out the answer to each sum, then find its letter and mark it on the answer sheet.",
         "question": "If A = 3, B = 6, C = 14, D = 28, E = 90, what is the answer to this sum written as a letter?\n\nA × D ÷ B = [?]",
         "options": [
-          { "letter": "A", "text": "A" },
-          { "letter": "B", "text": "B" },
-          { "letter": "C", "text": "C" },
-          { "letter": "D", "text": "D" },
-          { "letter": "E", "text": "E" }
+          {
+            "letter": "A",
+            "text": "A"
+          },
+          {
+            "letter": "B",
+            "text": "B"
+          },
+          {
+            "letter": "C",
+            "text": "C"
+          },
+          {
+            "letter": "D",
+            "text": "D"
+          },
+          {
+            "letter": "E",
+            "text": "E"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 52,
         "instruction": "Read the following information, then find the correct answer to the question and mark it on the answer sheet.",
         "question": "A cat has 5 kittens. 2 are brown and 2 are grey. All black and grey kittens have green eyes. White kittens have blue eyes. If these statements are true, only one of the sentences below must be true. Which one?",
         "options": [
-          { "letter": "A", "text": "None of the kittens are black." },
-          { "letter": "B", "text": "None of the kittens have blue eyes." },
-          { "letter": "C", "text": "The grey kittens have blue eyes." },
-          { "letter": "D", "text": "All of the kittens are male." },
-          { "letter": "E", "text": "At least 2 of the kittens have green eyes." }
+          {
+            "letter": "A",
+            "text": "None of the kittens are black."
+          },
+          {
+            "letter": "B",
+            "text": "None of the kittens have blue eyes."
+          },
+          {
+            "letter": "C",
+            "text": "The grey kittens have blue eyes."
+          },
+          {
+            "letter": "D",
+            "text": "All of the kittens are male."
+          },
+          {
+            "letter": "E",
+            "text": "At least 2 of the kittens have green eyes."
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Logic & Comprehension"
       },
       {
         "id": 53,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(far sea at) (son are den)",
         "options": [
-          { "letter": "A", "text": "far" },
-          { "letter": "B", "text": "sea" },
-          { "letter": "C", "text": "at" },
-          { "letter": "X", "text": "son" },
-          { "letter": "Y", "text": "are" },
-          { "letter": "Z", "text": "den" }
+          {
+            "letter": "A",
+            "text": "far"
+          },
+          {
+            "letter": "B",
+            "text": "sea"
+          },
+          {
+            "letter": "C",
+            "text": "at"
+          },
+          {
+            "letter": "X",
+            "text": "son"
+          },
+          {
+            "letter": "Y",
+            "text": "are"
+          },
+          {
+            "letter": "Z",
+            "text": "den"
+          }
         ],
-        "correctAnswers": ["B", "X"]
+        "correctAnswers": [
+          "B",
+          "X"
+        ],
+        "category": "Other"
       },
       {
         "id": 54,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(be can fin) (ward less at)",
         "options": [
-          { "letter": "A", "text": "be" },
-          { "letter": "B", "text": "can" },
-          { "letter": "C", "text": "fin" },
-          { "letter": "X", "text": "ward" },
-          { "letter": "Y", "text": "less" },
-          { "letter": "Z", "text": "at" }
+          {
+            "letter": "A",
+            "text": "be"
+          },
+          {
+            "letter": "B",
+            "text": "can"
+          },
+          {
+            "letter": "C",
+            "text": "fin"
+          },
+          {
+            "letter": "X",
+            "text": "ward"
+          },
+          {
+            "letter": "Y",
+            "text": "less"
+          },
+          {
+            "letter": "Z",
+            "text": "at"
+          }
         ],
-        "correctAnswers": ["A", "Z"]
+        "correctAnswers": [
+          "A",
+          "Z"
+        ],
+        "category": "Other"
       },
       {
         "id": 55,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(cot off adapt) (turn able tune)",
         "options": [
-          { "letter": "A", "text": "cot" },
-          { "letter": "B", "text": "off" },
-          { "letter": "C", "text": "adapt" },
-          { "letter": "X", "text": "turn" },
-          { "letter": "Y", "text": "able" },
-          { "letter": "Z", "text": "tune" }
+          {
+            "letter": "A",
+            "text": "cot"
+          },
+          {
+            "letter": "B",
+            "text": "off"
+          },
+          {
+            "letter": "C",
+            "text": "adapt"
+          },
+          {
+            "letter": "X",
+            "text": "turn"
+          },
+          {
+            "letter": "Y",
+            "text": "able"
+          },
+          {
+            "letter": "Z",
+            "text": "tune"
+          }
         ],
-        "correctAnswers": ["C", "Y"]
+        "correctAnswers": [
+          "C",
+          "Y"
+        ],
+        "category": "Other"
       },
       {
         "id": 56,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(pen cot ham) (ton gain by)",
         "options": [
-          { "letter": "A", "text": "pen" },
-          { "letter": "B", "text": "cot" },
-          { "letter": "C", "text": "ham" },
-          { "letter": "X", "text": "ton" },
-          { "letter": "Y", "text": "gain" },
-          { "letter": "Z", "text": "by" }
+          {
+            "letter": "A",
+            "text": "pen"
+          },
+          {
+            "letter": "B",
+            "text": "cot"
+          },
+          {
+            "letter": "C",
+            "text": "ham"
+          },
+          {
+            "letter": "X",
+            "text": "ton"
+          },
+          {
+            "letter": "Y",
+            "text": "gain"
+          },
+          {
+            "letter": "Z",
+            "text": "by"
+          }
         ],
-        "correctAnswers": ["B", "X"]
+        "correctAnswers": [
+          "B",
+          "X"
+        ],
+        "category": "Other"
       },
       {
         "id": 57,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(ear in us) (ant bin age)",
         "options": [
-          { "letter": "A", "text": "ear" },
-          { "letter": "B", "text": "in" },
-          { "letter": "C", "text": "us" },
-          { "letter": "X", "text": "ant" },
-          { "letter": "Y", "text": "bin" },
-          { "letter": "Z", "text": "age" }
+          {
+            "letter": "A",
+            "text": "ear"
+          },
+          {
+            "letter": "B",
+            "text": "in"
+          },
+          {
+            "letter": "C",
+            "text": "us"
+          },
+          {
+            "letter": "X",
+            "text": "ant"
+          },
+          {
+            "letter": "Y",
+            "text": "bin"
+          },
+          {
+            "letter": "Z",
+            "text": "age"
+          }
         ],
-        "correctAnswers": ["C", "Z"]
+        "correctAnswers": [
+          "C",
+          "Z"
+        ],
+        "category": "Other"
       },
       {
         "id": 58,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(set the he) (red nut me)",
         "options": [
-          { "letter": "A", "text": "set" },
-          { "letter": "B", "text": "the" },
-          { "letter": "C", "text": "he" },
-          { "letter": "X", "text": "red" },
-          { "letter": "Y", "text": "nut" },
-          { "letter": "Z", "text": "me" }
+          {
+            "letter": "A",
+            "text": "set"
+          },
+          {
+            "letter": "B",
+            "text": "the"
+          },
+          {
+            "letter": "C",
+            "text": "he"
+          },
+          {
+            "letter": "X",
+            "text": "red"
+          },
+          {
+            "letter": "Y",
+            "text": "nut"
+          },
+          {
+            "letter": "Z",
+            "text": "me"
+          }
         ],
-        "correctAnswers": ["B", "Z"]
+        "correctAnswers": [
+          "B",
+          "Z"
+        ],
+        "category": "Other"
       },
       {
         "id": 59,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(bat up rest) (ant rain fill)",
         "options": [
-          { "letter": "A", "text": "bat" },
-          { "letter": "B", "text": "up" },
-          { "letter": "C", "text": "rest" },
-          { "letter": "X", "text": "ant" },
-          { "letter": "Y", "text": "rain" },
-          { "letter": "Z", "text": "fill" }
+          {
+            "letter": "A",
+            "text": "bat"
+          },
+          {
+            "letter": "B",
+            "text": "up"
+          },
+          {
+            "letter": "C",
+            "text": "rest"
+          },
+          {
+            "letter": "X",
+            "text": "ant"
+          },
+          {
+            "letter": "Y",
+            "text": "rain"
+          },
+          {
+            "letter": "Z",
+            "text": "fill"
+          }
         ],
-        "correctAnswers": ["C", "Y"]
+        "correctAnswers": [
+          "C",
+          "Y"
+        ],
+        "category": "Other"
       },
       {
         "id": 60,
         "instruction": "In these questions, find two words, one from each group, that together make one correctly spelt word, without changing the order of the letters. The word from the first group always comes first. Mark both words on the answer sheet.",
         "question": "(tea grin set) (ring pet dish)",
         "options": [
-          { "letter": "A", "text": "tea" },
-          { "letter": "B", "text": "grin" },
-          { "letter": "C", "text": "set" },
-          { "letter": "X", "text": "ring" },
-          { "letter": "Y", "text": "pet" },
-          { "letter": "Z", "text": "dish" }
+          {
+            "letter": "A",
+            "text": "tea"
+          },
+          {
+            "letter": "B",
+            "text": "grin"
+          },
+          {
+            "letter": "C",
+            "text": "set"
+          },
+          {
+            "letter": "X",
+            "text": "ring"
+          },
+          {
+            "letter": "Y",
+            "text": "pet"
+          },
+          {
+            "letter": "Z",
+            "text": "dish"
+          }
         ],
-        "correctAnswers": ["A", "X"]
+        "correctAnswers": [
+          "A",
+          "X"
+        ],
+        "category": "Other"
       },
       {
         "id": 61,
         "instruction": "In each question, find the number that will complete the sum correctly and mark it on the answer sheet.",
         "question": "9 × 2 ÷ 3 = 7 × 2 – [?]",
         "options": [
-          { "letter": "A", "text": "8" },
-          { "letter": "B", "text": "6" },
-          { "letter": "C", "text": "4" },
-          { "letter": "D", "text": "2" },
-          { "letter": "E", "text": "10" }
+          {
+            "letter": "A",
+            "text": "8"
+          },
+          {
+            "letter": "B",
+            "text": "6"
+          },
+          {
+            "letter": "C",
+            "text": "4"
+          },
+          {
+            "letter": "D",
+            "text": "2"
+          },
+          {
+            "letter": "E",
+            "text": "10"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Other"
       },
       {
         "id": 62,
         "instruction": "In each question, find the number that will complete the sum correctly and mark it on the answer sheet.",
         "question": "59 + 27 – 13 = 7 × 8 + [?]",
         "options": [
-          { "letter": "A", "text": "16" },
-          { "letter": "B", "text": "15" },
-          { "letter": "C", "text": "19" },
-          { "letter": "D", "text": "17" },
-          { "letter": "E", "text": "18" }
+          {
+            "letter": "A",
+            "text": "16"
+          },
+          {
+            "letter": "B",
+            "text": "15"
+          },
+          {
+            "letter": "C",
+            "text": "19"
+          },
+          {
+            "letter": "D",
+            "text": "17"
+          },
+          {
+            "letter": "E",
+            "text": "18"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 63,
         "instruction": "In each question, find the number that will complete the sum correctly and mark it on the answer sheet.",
         "question": "19 × 5 = 100 ÷ 2 + [?]",
         "options": [
-          { "letter": "A", "text": "30" },
-          { "letter": "B", "text": "50" },
-          { "letter": "C", "text": "40" },
-          { "letter": "D", "text": "35" },
-          { "letter": "E", "text": "45" }
+          {
+            "letter": "A",
+            "text": "30"
+          },
+          {
+            "letter": "B",
+            "text": "50"
+          },
+          {
+            "letter": "C",
+            "text": "40"
+          },
+          {
+            "letter": "D",
+            "text": "35"
+          },
+          {
+            "letter": "E",
+            "text": "45"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 64,
         "instruction": "In each question, find the number that will complete the sum correctly and mark it on the answer sheet.",
         "question": "81 ÷ 27 + 36 = 6 × 7 – [?]",
         "options": [
-          { "letter": "A", "text": "4" },
-          { "letter": "B", "text": "7" },
-          { "letter": "C", "text": "3" },
-          { "letter": "D", "text": "5" },
-          { "letter": "E", "text": "2" }
+          {
+            "letter": "A",
+            "text": "4"
+          },
+          {
+            "letter": "B",
+            "text": "7"
+          },
+          {
+            "letter": "C",
+            "text": "3"
+          },
+          {
+            "letter": "D",
+            "text": "5"
+          },
+          {
+            "letter": "E",
+            "text": "2"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 65,
         "instruction": "In each question, find the number that will complete the sum correctly and mark it on the answer sheet.",
         "question": "125 ÷ 5 = 8 × 9 – [?]",
         "options": [
-          { "letter": "A", "text": "45" },
-          { "letter": "B", "text": "50" },
-          { "letter": "C", "text": "32" },
-          { "letter": "D", "text": "47" },
-          { "letter": "E", "text": "37" }
+          {
+            "letter": "A",
+            "text": "45"
+          },
+          {
+            "letter": "B",
+            "text": "50"
+          },
+          {
+            "letter": "C",
+            "text": "32"
+          },
+          {
+            "letter": "D",
+            "text": "47"
+          },
+          {
+            "letter": "E",
+            "text": "37"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 66,
         "instruction": "In each question, find the number that will complete the sum correctly and mark it on the answer sheet.",
         "question": "6 × 13 – 15 = 18 + 72 – [?]",
         "options": [
-          { "letter": "A", "text": "23" },
-          { "letter": "B", "text": "25" },
-          { "letter": "C", "text": "29" },
-          { "letter": "D", "text": "31" },
-          { "letter": "E", "text": "27" }
+          {
+            "letter": "A",
+            "text": "23"
+          },
+          {
+            "letter": "B",
+            "text": "25"
+          },
+          {
+            "letter": "C",
+            "text": "29"
+          },
+          {
+            "letter": "D",
+            "text": "31"
+          },
+          {
+            "letter": "E",
+            "text": "27"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 67,
         "instruction": "In each question, find the number that will complete the sum correctly and mark it on the answer sheet.",
         "question": "144 ÷ 6 + 3 = 72 ÷ 8 + [?]",
         "options": [
-          { "letter": "A", "text": "18" },
-          { "letter": "B", "text": "14" },
-          { "letter": "C", "text": "16" },
-          { "letter": "D", "text": "12" },
-          { "letter": "E", "text": "10" }
+          {
+            "letter": "A",
+            "text": "18"
+          },
+          {
+            "letter": "B",
+            "text": "14"
+          },
+          {
+            "letter": "C",
+            "text": "16"
+          },
+          {
+            "letter": "D",
+            "text": "12"
+          },
+          {
+            "letter": "E",
+            "text": "10"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Other"
       },
       {
         "id": 68,
@@ -3205,13 +4471,29 @@
         "question": "NAIL   FIND   LATE   FIST\n\n3752   5674   4689",
         "image": "images/verbal_reasoning2_q68_diagram.png",
         "options": [
-          { "letter": "A", "text": "3752" },
-          { "letter": "B", "text": "5674" },
-          { "letter": "C", "text": "4689" },
-          { "letter": "D", "text": "3759" },
-          { "letter": "E", "text": "5632" }
+          {
+            "letter": "A",
+            "text": "3752"
+          },
+          {
+            "letter": "B",
+            "text": "5674"
+          },
+          {
+            "letter": "C",
+            "text": "4689"
+          },
+          {
+            "letter": "D",
+            "text": "3759"
+          },
+          {
+            "letter": "E",
+            "text": "5632"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Other"
       },
       {
         "id": 69,
@@ -3219,13 +4501,29 @@
         "question": "NAIL   FIND   LATE   FIST\n\n3752   5674   4689",
         "image": "images/verbal_reasoning2_q68_diagram.png",
         "options": [
-          { "letter": "A", "text": "DEAL" },
-          { "letter": "B", "text": "LIFE" },
-          { "letter": "C", "text": "DEAF" },
-          { "letter": "D", "text": "LEAF" },
-          { "letter": "E", "text": "LEAD" }
+          {
+            "letter": "A",
+            "text": "DEAL"
+          },
+          {
+            "letter": "B",
+            "text": "LIFE"
+          },
+          {
+            "letter": "C",
+            "text": "DEAF"
+          },
+          {
+            "letter": "D",
+            "text": "LEAF"
+          },
+          {
+            "letter": "E",
+            "text": "LEAD"
+          }
         ],
-        "correctAnswer": "D"
+        "correctAnswer": "D",
+        "category": "Other"
       },
       {
         "id": 70,
@@ -3233,13 +4531,29 @@
         "question": "NAIL   FIND   LATE   FIST\n\n3752   5674   4689",
         "image": "images/verbal_reasoning2_q68_diagram.png",
         "options": [
-          { "letter": "A", "text": "53758" },
-          { "letter": "B", "text": "34762" },
-          { "letter": "C", "text": "34769" },
-          { "letter": "D", "text": "53762" },
-          { "letter": "E", "text": "34758" }
+          {
+            "letter": "A",
+            "text": "53758"
+          },
+          {
+            "letter": "B",
+            "text": "34762"
+          },
+          {
+            "letter": "C",
+            "text": "34769"
+          },
+          {
+            "letter": "D",
+            "text": "53762"
+          },
+          {
+            "letter": "E",
+            "text": "34758"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 71,
@@ -3247,13 +4561,29 @@
         "question": "TIME   HEAT   MELT   SAIL\n\n4726   5163   3251",
         "image": "images/verbal_reasoning2_q71_diagram.png",
         "options": [
-          { "letter": "A", "text": "4726" },
-          { "letter": "B", "text": "5163" },
-          { "letter": "C", "text": "4752" },
-          { "letter": "D", "text": "3726" },
-          { "letter": "E", "text": "3752" }
+          {
+            "letter": "A",
+            "text": "4726"
+          },
+          {
+            "letter": "B",
+            "text": "5163"
+          },
+          {
+            "letter": "C",
+            "text": "4752"
+          },
+          {
+            "letter": "D",
+            "text": "3726"
+          },
+          {
+            "letter": "E",
+            "text": "3752"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Other"
       },
       {
         "id": 72,
@@ -3261,13 +4591,29 @@
         "question": "TIME   HEAT   MELT   SAIL\n\n4726   5163   3251",
         "image": "images/verbal_reasoning2_q71_diagram.png",
         "options": [
-          { "letter": "A", "text": "MEATS" },
-          { "letter": "B", "text": "LEAKS" },
-          { "letter": "C", "text": "LEAST" },
-          { "letter": "D", "text": "LASTS" },
-          { "letter": "E", "text": "STEAL" }
+          {
+            "letter": "A",
+            "text": "MEATS"
+          },
+          {
+            "letter": "B",
+            "text": "LEAKS"
+          },
+          {
+            "letter": "C",
+            "text": "LEAST"
+          },
+          {
+            "letter": "D",
+            "text": "LASTS"
+          },
+          {
+            "letter": "E",
+            "text": "STEAL"
+          }
         ],
-        "correctAnswer": "C"
+        "correctAnswer": "C",
+        "category": "Other"
       },
       {
         "id": 73,
@@ -3275,104 +4621,232 @@
         "question": "TIME   HEAT   MELT   SAIL\n\n4726   5163   3251",
         "image": "images/verbal_reasoning2_q71_diagram.png",
         "options": [
-          { "letter": "A", "text": "41725" },
-          { "letter": "B", "text": "43875" },
-          { "letter": "C", "text": "34875" },
-          { "letter": "D", "text": "42176" },
-          { "letter": "E", "text": "43175" }
+          {
+            "letter": "A",
+            "text": "41725"
+          },
+          {
+            "letter": "B",
+            "text": "43875"
+          },
+          {
+            "letter": "C",
+            "text": "34875"
+          },
+          {
+            "letter": "D",
+            "text": "42176"
+          },
+          {
+            "letter": "E",
+            "text": "43175"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Other"
       },
       {
         "id": 74,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
         "question": "JL   ML   PL   SL   VL   [?]",
         "options": [
-          { "letter": "A", "text": "ZL" },
-          { "letter": "B", "text": "YL" },
-          { "letter": "C", "text": "VL" },
-          { "letter": "D", "text": "XL" },
-          { "letter": "E", "text": "UL" }
+          {
+            "letter": "A",
+            "text": "ZL"
+          },
+          {
+            "letter": "B",
+            "text": "YL"
+          },
+          {
+            "letter": "C",
+            "text": "VL"
+          },
+          {
+            "letter": "D",
+            "text": "XL"
+          },
+          {
+            "letter": "E",
+            "text": "UL"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Series"
       },
       {
         "id": 75,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
         "question": "BE   CJ   EN   HQ   LS   [?]",
         "options": [
-          { "letter": "A", "text": "QS" },
-          { "letter": "B", "text": "QT" },
-          { "letter": "C", "text": "MS" },
-          { "letter": "D", "text": "ST" },
-          { "letter": "E", "text": "MT" }
+          {
+            "letter": "A",
+            "text": "QS"
+          },
+          {
+            "letter": "B",
+            "text": "QT"
+          },
+          {
+            "letter": "C",
+            "text": "MS"
+          },
+          {
+            "letter": "D",
+            "text": "ST"
+          },
+          {
+            "letter": "E",
+            "text": "MT"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Series"
       },
       {
         "id": 76,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
         "question": "KD   XP   NG   VN   QJ   TL   TM   RJ   [?]",
         "options": [
-          { "letter": "A", "text": "WP" },
-          { "letter": "B", "text": "VM" },
-          { "letter": "C", "text": "PH" },
-          { "letter": "D", "text": "RK" },
-          { "letter": "E", "text": "VO" }
+          {
+            "letter": "A",
+            "text": "WP"
+          },
+          {
+            "letter": "B",
+            "text": "VM"
+          },
+          {
+            "letter": "C",
+            "text": "PH"
+          },
+          {
+            "letter": "D",
+            "text": "RK"
+          },
+          {
+            "letter": "E",
+            "text": "VO"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Series"
       },
       {
         "id": 77,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
         "question": "FL   EK   GM   DJ   HN   [?]",
         "options": [
-          { "letter": "A", "text": "MI" },
-          { "letter": "B", "text": "DJ" },
-          { "letter": "C", "text": "CJ" },
-          { "letter": "D", "text": "MS" },
-          { "letter": "E", "text": "CI" }
+          {
+            "letter": "A",
+            "text": "MI"
+          },
+          {
+            "letter": "B",
+            "text": "DJ"
+          },
+          {
+            "letter": "C",
+            "text": "CJ"
+          },
+          {
+            "letter": "D",
+            "text": "MS"
+          },
+          {
+            "letter": "E",
+            "text": "CI"
+          }
         ],
-        "correctAnswer": "E"
+        "correctAnswer": "E",
+        "category": "Letter Series"
       },
       {
         "id": 78,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
         "question": "WX   ZA   DE   IJ   [?]",
         "options": [
-          { "letter": "A", "text": "QR" },
-          { "letter": "B", "text": "OP" },
-          { "letter": "C", "text": "NO" },
-          { "letter": "D", "text": "PQ" },
-          { "letter": "E", "text": "MN" }
+          {
+            "letter": "A",
+            "text": "QR"
+          },
+          {
+            "letter": "B",
+            "text": "OP"
+          },
+          {
+            "letter": "C",
+            "text": "NO"
+          },
+          {
+            "letter": "D",
+            "text": "PQ"
+          },
+          {
+            "letter": "E",
+            "text": "MN"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Series"
       },
       {
         "id": 79,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
         "question": "BX   BY   CA   ED   HH   [?]",
         "options": [
-          { "letter": "A", "text": "MM" },
-          { "letter": "B", "text": "LM" },
-          { "letter": "C", "text": "ML" },
-          { "letter": "D", "text": "LN" },
-          { "letter": "E", "text": "LL" }
+          {
+            "letter": "A",
+            "text": "MM"
+          },
+          {
+            "letter": "B",
+            "text": "LM"
+          },
+          {
+            "letter": "C",
+            "text": "ML"
+          },
+          {
+            "letter": "D",
+            "text": "LN"
+          },
+          {
+            "letter": "E",
+            "text": "LL"
+          }
         ],
-        "correctAnswer": "B"
+        "correctAnswer": "B",
+        "category": "Letter Series"
       },
       {
         "id": 80,
         "instruction": "The alphabet is here to help you with these questions. Find the next pair of letters in the series and mark it on the answer sheet.",
         "question": "XZ   ZY   YA   AZ   ZB   [?]",
         "options": [
-          { "letter": "A", "text": "BA" },
-          { "letter": "B", "text": "YD" },
-          { "letter": "C", "text": "CA" },
-          { "letter": "D", "text": "YA" },
-          { "letter": "E", "text": "BD" }
+          {
+            "letter": "A",
+            "text": "BA"
+          },
+          {
+            "letter": "B",
+            "text": "YD"
+          },
+          {
+            "letter": "C",
+            "text": "CA"
+          },
+          {
+            "letter": "D",
+            "text": "YA"
+          },
+          {
+            "letter": "E",
+            "text": "BD"
+          }
         ],
-        "correctAnswer": "A"
+        "correctAnswer": "A",
+        "category": "Letter Series"
       }
     ]
   },
