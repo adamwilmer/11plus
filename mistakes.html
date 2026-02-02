@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions to Revisit</title>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-D3WEQL5WH3"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-D3WEQL5WH3');
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="mistakes-page" data-page="mistakes">
+    <div class="container mistakes-container">
+        <header>
+            <h1>Questions to Revisit</h1>
+        </header>
+
+        <div class="mistakes-body">
+            <a class="back-button" href="index.html">← Back to Tests</a>
+
+            <div class="mistakes-controls">
+                <div class="exam-filter">
+                    <label>Subject:</label>
+                    <select id="mistakes-exam-filter" onchange="updateMistakesView()">
+                        <option value="all">All Subjects</option>
+                        <option value="maths">Maths</option>
+                        <option value="english">English</option>
+                        <option value="verbal-reasoning">Verbal Reasoning</option>
+                        <option value="non-verbal-reasoning">Non-Verbal Reasoning</option>
+                        <option value="verbal-skills">Verbal Skills</option>
+                    </select>
+                </div>
+
+                <div class="exam-filter">
+                    <label>Category:</label>
+                    <select id="mistakes-category-filter" onchange="updateMistakesView()">
+                        <option value="all">All Categories</option>
+                    </select>
+                </div>
+
+                <div class="mistakes-stats" id="mistakes-stats"></div>
+            </div>
+
+            <div id="mistakes-content" class="mistakes-content"></div>
+
+            <div class="mistakes-actions">
+                <button class="nav-button" onclick="scrollToTop()">Back to Top</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="question-detail-modal" class="modal" style="display: none;">
+        <div class="modal-content question-detail-modal">
+            <button class="modal-close" onclick="closeQuestionDetailModal()">×</button>
+            <h3>Question Details</h3>
+            <div id="question-detail-content"></div>
+        </div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

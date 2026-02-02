@@ -15,6 +15,10 @@ let testStartTime = null;
 let testEndTime = null;
 let currentPassageHtml = '';
 let focusedOptionIndex = -1;
+let testAbandonedEventFired = false;
+let lastTrackedScreenId = null;
+let lastTrackedQuestionIndex = null;
+let lastTrackedQuestionTestKey = null;
 
 const examTimerDefaults = {
     'maths': 50,
@@ -111,6 +115,15 @@ function showResumeModal(savedProgress) {
     messageElement.innerHTML = `You have an unfinished test in progress:<br><strong>${examTitle} - ${testTitle}</strong><br>Question ${savedProgress.currentQuestionIndex + 1} of ${savedProgress.currentQuestions.length}`;
 
     // Set up button handlers
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'resume_modal_shown', {
+            'exam_type': savedProgress.currentExam,
+            'test_name': testData.title || savedProgress.currentTest,
+            'question_index': savedProgress.currentQuestionIndex,
+            'event_category': 'engagement'
+        });
+    }
+
     resumeButton.onclick = () => {
         modal.style.display = 'none';
         resumeTest(savedProgress);
@@ -119,6 +132,14 @@ function showResumeModal(savedProgress) {
     startFreshButton.onclick = () => {
         modal.style.display = 'none';
         clearTestProgress();
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'resume_discarded', {
+                'exam_type': savedProgress.currentExam,
+                'test_name': testData.title || savedProgress.currentTest,
+                'question_index': savedProgress.currentQuestionIndex,
+                'event_category': 'engagement'
+            });
+        }
     };
 
     // Show the modal
@@ -136,6 +157,10 @@ function resumeTest(savedProgress) {
     timerTargetMs = savedProgress.timerTargetMs || 0;
     testStartTime = savedProgress.testStartTime || Date.now();
     reviewMode = false;
+    testEndTime = null;
+    testAbandonedEventFired = false;
+    lastTrackedQuestionIndex = null;
+    lastTrackedQuestionTestKey = null;
 
     const testData = questionDatabase[currentExam][currentTest];
 
@@ -194,6 +219,81 @@ function resumeTest(savedProgress) {
             'event_label': `${currentExam}_${currentTest}`
         });
     }
+}
+
+function getScreenPath(screenId) {
+    if (screenId === 'exam-selector') return '/';
+    if (screenId === 'test-selector') return '/tests/select';
+    if (screenId === 'test-screen') return '/tests/run';
+    if (screenId === 'results-screen') return '/tests/results';
+    return `/${screenId || 'unknown'}`;
+}
+
+function trackScreenView(screenId) {
+    if (typeof gtag === 'undefined') {
+        return;
+    }
+    if (screenId === lastTrackedScreenId) {
+        return;
+    }
+    lastTrackedScreenId = screenId;
+    const testData = currentExam && currentTest && questionDatabase[currentExam]
+        ? questionDatabase[currentExam][currentTest]
+        : null;
+    gtag('event', 'page_view', {
+        'page_title': screenId || 'unknown',
+        'page_path': getScreenPath(screenId),
+        'page_location': `${window.location.origin}${getScreenPath(screenId)}`,
+        'exam_type': currentExam || null,
+        'test_name': testData ? (testData.title || currentTest) : null
+    });
+}
+
+function trackQuestionView(question) {
+    if (typeof gtag === 'undefined') {
+        return;
+    }
+    if (!question || !currentTest) {
+        return;
+    }
+    if (lastTrackedQuestionIndex === currentQuestionIndex && lastTrackedQuestionTestKey === currentTest) {
+        return;
+    }
+    lastTrackedQuestionIndex = currentQuestionIndex;
+    lastTrackedQuestionTestKey = currentTest;
+    const testData = questionDatabase[currentExam] && questionDatabase[currentExam][currentTest];
+    gtag('event', 'question_viewed', {
+        'exam_type': currentExam,
+        'test_name': testData ? (testData.title || currentTest) : currentTest,
+        'question_id': question.id,
+        'question_index': currentQuestionIndex,
+        'total_questions': getCurrentQuestions().length,
+        'review_mode': reviewMode,
+        'event_category': 'engagement'
+    });
+}
+
+function trackTestAbandoned(reason) {
+    if (typeof gtag === 'undefined') {
+        return;
+    }
+    if (testAbandonedEventFired || reviewMode || !currentTest || !testStartTime || testEndTime) {
+        return;
+    }
+    const questions = getCurrentQuestions();
+    const answeredCount = questions.filter(question => isQuestionAnswered(question)).length;
+    const testData = questionDatabase[currentExam] && questionDatabase[currentExam][currentTest];
+    testAbandonedEventFired = true;
+    gtag('event', 'test_abandoned', {
+        'exam_type': currentExam,
+        'test_name': testData ? (testData.title || currentTest) : currentTest,
+        'question_index': currentQuestionIndex,
+        'answered_count': answeredCount,
+        'total_questions': questions.length,
+        'timer_enabled': timerEnabled,
+        'reason': reason || 'unknown',
+        'event_category': 'engagement'
+    });
 }
 
 function getCurrentQuestions() {
@@ -438,6 +538,21 @@ document.addEventListener('DOMContentLoaded', async () => {
     const urlParams = new URLSearchParams(window.location.search);
     debugMode = urlParams.get('debug') === 'true';
 
+    if (isPerformancePage()) {
+        setupEventListeners();
+        initPerformancePage();
+        return;
+    }
+    if (isMistakesPage()) {
+        setupEventListeners();
+        initMistakesPage();
+        return;
+    }
+
+    window.addEventListener('beforeunload', () => {
+        trackTestAbandoned('unload');
+    });
+
     // Show loading state
     const appContainer = document.querySelector('.app-container');
     if (appContainer) {
@@ -461,6 +576,43 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     }
 });
+
+function isPerformancePage() {
+    return document.body && document.body.dataset.page === 'performance';
+}
+
+function isMistakesPage() {
+    return document.body && document.body.dataset.page === 'mistakes';
+}
+
+function initPerformancePage() {
+    const examFilter = document.getElementById('trends-exam-filter');
+    if (!examFilter) {
+        return;
+    }
+
+    applyTrendsPreferences('all');
+    setupTrendsHeatmapClick();
+
+    updateTrendsView();
+    setupTrendsHeatmapClick();
+}
+
+function initMistakesPage() {
+    const examFilter = document.getElementById('mistakes-exam-filter');
+    if (!examFilter) {
+        return;
+    }
+
+    applyMistakesFiltersFromQuery();
+    updateMistakesView();
+
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'mistakes_review_opened', {
+            'event_category': 'engagement'
+        });
+    }
+}
 
 function setupEventListeners() {
     // Exam selector buttons
@@ -549,13 +701,19 @@ function updateOptionFocus() {
 }
 
 function showScreen(screenId) {
+    const previousScreen = document.querySelector('.screen.active');
     document.querySelectorAll('.screen').forEach(screen => {
         screen.classList.remove('active');
     });
     document.getElementById(screenId).classList.add('active');
+    const previousScreenId = previousScreen ? previousScreen.id : null;
+    if (previousScreenId === 'test-screen' && screenId !== 'test-screen') {
+        trackTestAbandoned('navigation');
+    }
     if (screenId !== 'test-screen') {
         stopTimerCountdown();
     }
+    trackScreenView(screenId);
 }
 
 function selectExam(examType) {
@@ -703,6 +861,9 @@ function startTest(testKey) {
     currentQuestionIndex = 0;
     userAnswers = {};
     reviewMode = false;
+    testAbandonedEventFired = false;
+    lastTrackedQuestionIndex = null;
+    lastTrackedQuestionTestKey = null;
 
     const testData = questionDatabase[currentExam][currentTest];
     const fullQuestionSet = testData.questions || [];
@@ -1032,6 +1193,8 @@ function displayQuestion() {
         updateDebugNavSelection();
         scrollDebugNavToCurrent();
     }
+
+    trackQuestionView(question);
 }
 
 function getOptionGroup(letter) {
@@ -1117,6 +1280,21 @@ function selectOption(questionId, letter) {
         showDebugPanel();
     }
     saveTestProgress(); // Save progress after answer selection
+
+    if (typeof gtag !== 'undefined') {
+        const testData = questionDatabase[currentExam] && questionDatabase[currentExam][currentTest];
+        gtag('event', 'option_selected', {
+            'exam_type': currentExam,
+            'test_name': testData ? (testData.title || currentTest) : currentTest,
+            'question_id': questionId,
+            'question_index': currentQuestionIndex,
+            'option_letter': letter,
+            'selection_count': selections.length,
+            'required_selections': requiredSelections,
+            'multi_select': requiredSelections > 1,
+            'event_category': 'engagement'
+        });
+    }
 }
 
 function previousQuestion() {
@@ -1152,6 +1330,7 @@ function submitTest() {
     }
 
     testEndTime = Date.now();
+    testAbandonedEventFired = true;
     stopTimerCountdown();
     clearTestProgress(); // Clear saved progress after test completion
 
@@ -1497,16 +1676,18 @@ function clearTestHistory() {
 let currentTrendsData = [];
 let timeRangeStart = 0;
 let timeRangeEnd = 100;
+let currentTimeAggregation = 'week';
+const TRENDS_PREFS_KEY = 'elevenPlusTrendsPrefs';
 
 function showPerformanceTrends() {
     const modal = document.getElementById('trends-modal');
+    if (!modal) {
+        window.location.href = 'performance.html';
+        return;
+    }
     modal.style.display = 'flex';
 
-    // Reset filters
-    document.getElementById('trends-exam-filter').value = currentExam || 'all';
-    document.getElementById('time-slider').value = 100;
-    timeRangeStart = 0;
-    timeRangeEnd = 100;
+    applyTrendsPreferences(currentExam);
 
     updateTrendsView();
 
@@ -1520,17 +1701,28 @@ function showPerformanceTrends() {
 }
 
 function closeTrendsModal() {
-    document.getElementById('trends-modal').style.display = 'none';
+    const modal = document.getElementById('trends-modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
 }
 
 function updateTimeRange(value) {
     timeRangeEnd = parseInt(value);
+    saveTrendsPreferences();
+    updateTrendsView();
+}
+
+function updateTimeAggregation(value) {
+    currentTimeAggregation = value;
+    saveTrendsPreferences();
     updateTrendsView();
 }
 
 function updateTrendsView() {
     const examFilter = document.getElementById('trends-exam-filter').value;
     const examType = examFilter === 'all' ? null : examFilter;
+    saveTrendsPreferences();
 
     // Get filtered history
     let history = getTestHistory(examType);
@@ -1540,27 +1732,196 @@ function updateTrendsView() {
         return;
     }
 
-    // Apply time range filter
-    const totalTests = history.length;
-    const startIndex = Math.floor((timeRangeStart / 100) * totalTests);
-    const endIndex = Math.ceil((timeRangeEnd / 100) * totalTests);
-    history = history.slice(startIndex, endIndex);
+    const buckets = buildTimeBuckets(history, currentTimeAggregation);
+    if (buckets.length === 0) {
+        displayNoDataMessage();
+        return;
+    }
 
-    currentTrendsData = history;
+    // Apply time range filter by buckets
+    const totalBuckets = buckets.length;
+    const startIndex = Math.floor((timeRangeStart / 100) * totalBuckets);
+    const endIndex = Math.ceil((timeRangeEnd / 100) * totalBuckets);
+    const visibleBuckets = buckets.slice(startIndex, endIndex);
+    const filteredHistory = visibleBuckets.flatMap(bucket => bucket.tests);
+
+    if (filteredHistory.length === 0) {
+        displayNoDataMessage();
+        return;
+    }
+
+    currentTrendsData = filteredHistory;
 
     // Update time range label
-    if (history.length > 0) {
-        const startDate = new Date(history[0].timestamp).toLocaleDateString();
-        const endDate = new Date(history[history.length - 1].timestamp).toLocaleDateString();
-        document.getElementById('time-range-label').textContent =
-            history.length === totalTests ? 'All Time' : `${startDate} - ${endDate}`;
+    if (visibleBuckets.length > 0) {
+        const startDate = new Date(visibleBuckets[0].startTs).toLocaleDateString();
+        const endDate = new Date(visibleBuckets[visibleBuckets.length - 1].endTs).toLocaleDateString();
+        const aggregationLabel = formatAggregationLabel(currentTimeAggregation);
+        const rangeLabel = visibleBuckets.length === totalBuckets ? 'All Time' : `${startDate} - ${endDate}`;
+        document.getElementById('time-range-label').textContent = `${rangeLabel} - ${aggregationLabel}`;
         document.getElementById('time-start').textContent = startDate;
         document.getElementById('time-end').textContent = endDate;
     }
 
-    renderTrendsSummary(history);
-    renderHeatMap(history);
-    renderInsights(history);
+    renderTrendsSummary(filteredHistory);
+    renderHeatMap(visibleBuckets, currentTimeAggregation, examFilter);
+    renderInsights(filteredHistory);
+
+    const reviewLink = document.getElementById('trends-review-mistakes');
+    if (reviewLink) {
+        reviewLink.href = buildMistakesUrl(examFilter, null);
+    }
+}
+
+function loadTrendsPreferences() {
+    try {
+        const stored = localStorage.getItem(TRENDS_PREFS_KEY);
+        if (!stored) {
+            return null;
+        }
+        return JSON.parse(stored);
+    } catch (error) {
+        console.error('Failed to load trends preferences:', error);
+        return null;
+    }
+}
+
+function saveTrendsPreferences() {
+    const examFilter = document.getElementById('trends-exam-filter');
+    const aggregation = document.getElementById('time-aggregation');
+    const slider = document.getElementById('time-slider');
+
+    if (!examFilter || !aggregation || !slider) {
+        return;
+    }
+
+    const prefs = {
+        examFilter: examFilter.value,
+        aggregation: aggregation.value,
+        timeRangeEnd: parseInt(slider.value)
+    };
+
+    try {
+        localStorage.setItem(TRENDS_PREFS_KEY, JSON.stringify(prefs));
+    } catch (error) {
+        console.error('Failed to save trends preferences:', error);
+    }
+}
+
+function applyTrendsPreferences(fallbackExam) {
+    const examFilter = document.getElementById('trends-exam-filter');
+    const aggregation = document.getElementById('time-aggregation');
+    const slider = document.getElementById('time-slider');
+
+    if (!examFilter || !aggregation || !slider) {
+        return;
+    }
+
+    const prefs = loadTrendsPreferences();
+    const examValue = (prefs && prefs.examFilter) ? prefs.examFilter : (fallbackExam || 'all');
+    const aggregationValue = (prefs && prefs.aggregation) ? prefs.aggregation : currentTimeAggregation;
+    const rangeValue = (prefs && Number.isFinite(prefs.timeRangeEnd)) ? prefs.timeRangeEnd : 100;
+
+    examFilter.value = examValue;
+    aggregation.value = aggregationValue;
+    slider.value = rangeValue;
+    timeRangeStart = 0;
+    timeRangeEnd = rangeValue;
+    currentTimeAggregation = aggregationValue;
+}
+
+function buildTimeBuckets(history, aggregation) {
+    const buckets = new Map();
+
+    history.forEach(test => {
+        const start = getBucketStart(new Date(test.timestamp), aggregation);
+        const key = start.getTime();
+
+        if (!buckets.has(key)) {
+            const end = getBucketEnd(start, aggregation);
+            buckets.set(key, {
+                startTs: start.getTime(),
+                endTs: end.getTime(),
+                label: formatBucketLabel(start, end, aggregation),
+                tests: []
+            });
+        }
+
+        buckets.get(key).tests.push(test);
+    });
+
+    return Array.from(buckets.values()).sort((a, b) => a.startTs - b.startTs);
+}
+
+function getBucketStart(date, aggregation) {
+    const start = new Date(date);
+    start.setHours(0, 0, 0, 0);
+
+    if (aggregation === 'week') {
+        const day = start.getDay();
+        const diff = (day + 6) % 7;
+        start.setDate(start.getDate() - diff);
+    } else if (aggregation === 'month') {
+        start.setDate(1);
+    }
+
+    return start;
+}
+
+function getBucketEnd(start, aggregation) {
+    const end = new Date(start);
+
+    if (aggregation === 'week') {
+        end.setDate(end.getDate() + 6);
+    } else if (aggregation === 'month') {
+        end.setMonth(end.getMonth() + 1);
+        end.setDate(0);
+    }
+
+    end.setHours(23, 59, 59, 999);
+    return end;
+}
+
+function formatBucketLabel(start, end, aggregation) {
+    if (aggregation === 'month') {
+        return start.toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    }
+
+    if (aggregation === 'week') {
+        const startLabel = start.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        const endLabel = end.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+        return `${startLabel}-${endLabel}`;
+    }
+
+    return start.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+}
+
+function formatAggregationLabel(aggregation) {
+    if (aggregation === 'day') return 'Day';
+    if (aggregation === 'week') return 'Week';
+    if (aggregation === 'month') return 'Month';
+    return 'Date';
+}
+
+function aggregateCategoryBreakdown(tests) {
+    const totals = {};
+
+    tests.forEach(test => {
+        Object.entries(test.categoryBreakdown).forEach(([category, stats]) => {
+            if (!totals[category]) {
+                totals[category] = { correct: 0, total: 0 };
+            }
+
+            totals[category].correct += stats.correct;
+            totals[category].total += stats.total;
+        });
+    });
+
+    Object.values(totals).forEach(stats => {
+        stats.percentage = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
+    });
+
+    return totals;
 }
 
 function renderTrendsSummary(history) {
@@ -1576,7 +1937,16 @@ function renderTrendsSummary(history) {
     );
 
     const totalTests = history.length;
-    const totalQuestions = history.reduce((sum, test) => sum + test.totalQuestions, 0);
+    const totalQuestions = history.reduce((sum, test) => sum + (test.totalQuestions || 0), 0);
+    const totalCorrect = history.reduce((sum, test) => sum + (test.correctCount || 0), 0);
+    const totalIncorrect = Math.max(0, totalQuestions - totalCorrect);
+    const lastUpdated = history[history.length - 1]?.timestamp
+        ? new Date(history[history.length - 1].timestamp).toLocaleDateString('en-US', {
+            month: 'short',
+            day: 'numeric',
+            year: 'numeric'
+        })
+        : 'N/A';
 
     let html = `
         <h4>Summary</h4>
@@ -1593,30 +1963,49 @@ function renderTrendsSummary(history) {
                 <span class="trend-stat-value">${totalQuestions}</span>
                 <span class="trend-stat-label">Total Questions</span>
             </div>
+            <div class="trend-stat">
+                <span class="trend-stat-value">${totalCorrect}</span>
+                <span class="trend-stat-label">Total Correct</span>
+            </div>
+            <div class="trend-stat">
+                <span class="trend-stat-value">${totalIncorrect}</span>
+                <span class="trend-stat-label">Total Incorrect</span>
+            </div>
+            <div class="trend-stat">
+                <span class="trend-stat-value">${lastUpdated}</span>
+                <span class="trend-stat-label">Last Updated</span>
+            </div>
         </div>
     `;
 
     summaryDiv.innerHTML = html;
 }
 
-function renderHeatMap(history) {
+function renderHeatMap(buckets, aggregation, examFilter) {
     const heatmapDiv = document.getElementById('trends-heatmap');
 
-    if (history.length === 0) {
+    if (buckets.length === 0) {
         heatmapDiv.innerHTML = '';
         return;
     }
 
-    // Collect all categories across all tests
+    const summarizedBuckets = buckets.map(bucket => ({
+        ...bucket,
+        breakdown: aggregateCategoryBreakdown(bucket.tests)
+    }));
+
+    // Collect all categories across all buckets
     const allCategories = new Set();
-    history.forEach(test => {
-        Object.keys(test.categoryBreakdown).forEach(cat => allCategories.add(cat));
+    summarizedBuckets.forEach(bucket => {
+        Object.keys(bucket.breakdown).forEach(cat => allCategories.add(cat));
     });
 
     const categories = Array.from(allCategories).sort();
 
-    // Limit to recent tests for better visualization (max 10)
-    const recentHistory = history.slice(-10);
+    // Limit to recent buckets for better visualization (max 10)
+    const recentBuckets = summarizedBuckets.slice(-10);
+    const columnLabel = formatAggregationLabel(aggregation);
+    const subjectValue = examFilter || 'all';
 
     let html = `
         <div class="heatmap-header">
@@ -1644,10 +2033,9 @@ function renderHeatMap(history) {
     `;
 
     // Add date labels row
-    html += '<div class="heatmap-row"><div class="heatmap-category-label">Category / Date</div>';
-    recentHistory.forEach(test => {
-        const date = new Date(test.timestamp).toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-        html += `<div class="heatmap-date-label">${date}</div>`;
+    html += `<div class="heatmap-row"><div class="heatmap-category-label">Category / ${columnLabel}</div>`;
+    recentBuckets.forEach(bucket => {
+        html += `<div class="heatmap-date-label">${bucket.label}</div>`;
     });
     html += '</div>';
 
@@ -1656,15 +2044,16 @@ function renderHeatMap(history) {
         html += `<div class="heatmap-row">`;
         html += `<div class="heatmap-category-label">${category}</div>`;
 
-        recentHistory.forEach(test => {
-            const catData = test.categoryBreakdown[category];
+        recentBuckets.forEach(bucket => {
+            const catData = bucket.breakdown[category];
             if (catData) {
                 const percentage = catData.percentage;
                 const performanceClass = getPerformanceClass(percentage);
                 const bgColor = getHeatmapColor(percentage);
                 html += `
-                    <div class="heatmap-cell" style="background: ${bgColor};"
-                         title="${category}: ${percentage}% (${catData.correct}/${catData.total})">
+                    <div class="heatmap-cell actionable" style="background: ${bgColor};"
+                         data-category="${category}" data-subject="${subjectValue}"
+                         title="${bucket.label} • ${category}: ${percentage}% (${catData.correct}/${catData.total})">
                         <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 2px;">${percentage}%</div>
                         <div style="font-size: 0.7em; opacity: 0.85; font-weight: 500;">(${catData.correct}/${catData.total})</div>
                     </div>
@@ -1686,6 +2075,44 @@ function getHeatmapColor(percentage) {
     if (percentage >= 60) return '#8BC34A';
     if (percentage >= 40) return '#FFC107';
     return '#FF5722';
+}
+
+let trendsHeatmapClickBound = false;
+
+function setupTrendsHeatmapClick() {
+    const heatmapDiv = document.getElementById('trends-heatmap');
+    if (!heatmapDiv || trendsHeatmapClickBound) {
+        return;
+    }
+
+    trendsHeatmapClickBound = true;
+    heatmapDiv.addEventListener('click', (event) => {
+        const cell = event.target.closest('.heatmap-cell.actionable');
+        if (!cell) {
+            return;
+        }
+
+        const subject = cell.dataset.subject || 'all';
+        const category = cell.dataset.category || null;
+        navigateToMistakes(subject, category);
+    });
+}
+
+function buildMistakesUrl(subject, category) {
+    const params = new URLSearchParams();
+    if (subject && subject !== 'all') {
+        params.set('subject', subject);
+    }
+    if (category && category !== 'all') {
+        params.set('category', category);
+    }
+
+    const query = params.toString();
+    return query ? `mistakes.html?${query}` : 'mistakes.html';
+}
+
+function navigateToMistakes(subject, category) {
+    window.location.href = buildMistakesUrl(subject, category);
 }
 
 function displayNoDataMessage() {
@@ -1771,6 +2198,10 @@ function getAllIncorrectQuestions(examFilter = null) {
 
 function showMistakesReview() {
     const modal = document.getElementById('mistakes-modal');
+    if (!modal) {
+        navigateToMistakes(currentExam || 'all', null);
+        return;
+    }
     modal.style.display = 'flex';
 
     // Reset filters
@@ -1786,12 +2217,30 @@ function showMistakesReview() {
 }
 
 function closeMistakesModal() {
-    document.getElementById('mistakes-modal').style.display = 'none';
+    const modal = document.getElementById('mistakes-modal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+function applyMistakesFiltersFromQuery() {
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get('subject');
+    const category = params.get('category');
+
+    const examSelect = document.getElementById('mistakes-exam-filter');
+    const categorySelect = document.getElementById('mistakes-category-filter');
+
+    if (examSelect && subject) {
+        examSelect.value = subject;
+    }
+    if (categorySelect && category) {
+        categorySelect.dataset.pendingValue = category;
+    }
 }
 
 function updateMistakesView() {
     const examFilter = document.getElementById('mistakes-exam-filter').value;
-    const categoryFilter = document.getElementById('mistakes-category-filter').value;
 
     const allMistakes = getAllIncorrectQuestions(examFilter === 'all' ? null : examFilter);
 
@@ -1805,10 +2254,15 @@ function updateMistakesView() {
         categorySelect.innerHTML += `<option value="${cat}">${cat}</option>`;
     });
 
-    // Restore selection if it still exists
-    if (currentCategoryValue && categories.has(currentCategoryValue)) {
+    const pendingCategory = categorySelect.dataset.pendingValue;
+    if (pendingCategory && categories.has(pendingCategory)) {
+        categorySelect.value = pendingCategory;
+        delete categorySelect.dataset.pendingValue;
+    } else if (currentCategoryValue && categories.has(currentCategoryValue)) {
         categorySelect.value = currentCategoryValue;
     }
+
+    const categoryFilter = categorySelect.value;
 
     // Filter by category
     let filteredMistakes = allMistakes;
@@ -1820,22 +2274,22 @@ function updateMistakesView() {
     const statsDiv = document.getElementById('mistakes-stats');
     statsDiv.innerHTML = `
         <span class="mistakes-stats-value">${filteredMistakes.length}</span>
-        <span class="mistakes-stats-label">Mistakes to Review</span>
+        <span class="mistakes-stats-label">Questions to Revisit</span>
     `;
 
     // Render mistakes
-    renderMistakes(filteredMistakes);
+    renderMistakes(filteredMistakes, examFilter, categoryFilter);
 }
 
-function renderMistakes(mistakes) {
+function renderMistakes(mistakes, examFilter, categoryFilter) {
     const contentDiv = document.getElementById('mistakes-content');
 
     if (mistakes.length === 0) {
         contentDiv.innerHTML = `
             <div class="no-mistakes-message">
                 <div class="no-mistakes-icon">🎉</div>
-                <h4>No Mistakes Found!</h4>
-                <p>You haven't made any mistakes in the selected filters, or you haven't taken any tests yet.</p>
+                <h4>No Questions to Revisit!</h4>
+                <p>There are no questions to revisit for these filters yet.</p>
             </div>
         `;
         return;
@@ -1843,48 +2297,104 @@ function renderMistakes(mistakes) {
 
     // Sort by most recent first
     mistakes.sort((a, b) => b.timestamp - a.timestamp);
+    currentMistakesForDetail = mistakes;
+
+    const grouped = new Map();
+    mistakes.forEach((mistake, index) => {
+        const subjectKey = mistake.examType || 'unknown';
+        if (!grouped.has(subjectKey)) {
+            grouped.set(subjectKey, new Map());
+        }
+        const categoryKey = mistake.category || 'Uncategorized';
+        const subjectMap = grouped.get(subjectKey);
+        if (!subjectMap.has(categoryKey)) {
+            subjectMap.set(categoryKey, []);
+        }
+        subjectMap.get(categoryKey).push({ mistake, index });
+    });
+
+    const subjects = Array.from(grouped.keys()).sort();
+    const openAllSubjects = examFilter && examFilter !== 'all';
+    const openAllCategories = categoryFilter && categoryFilter !== 'all';
 
     let html = '';
-    mistakes.forEach((mistake, index) => {
-        const date = new Date(mistake.date).toLocaleDateString('en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric'
-        });
-
-        const examName = mistake.examType.split('-').map(word =>
-            word.charAt(0).toUpperCase() + word.slice(1)
-        ).join(' ');
+    subjects.forEach((subjectKey, subjectIndex) => {
+        const subjectMap = grouped.get(subjectKey);
+        const subjectCount = Array.from(subjectMap.values()).reduce((sum, items) => sum + items.length, 0);
+        const subjectName = formatExamName(subjectKey);
+        const subjectOpen = openAllSubjects || subjectIndex === 0;
 
         html += `
-            <div class="mistake-item" onclick="showQuestionDetail(${index})" style="cursor: pointer;">
-                <div class="mistake-header">
-                    <div class="mistake-meta">
-                        <span class="mistake-badge subject">${examName}</span>
-                        <span class="mistake-badge category">${mistake.category}</span>
-                        <span class="mistake-badge date">${date}</span>
-                    </div>
-                </div>
+            <details class="mistakes-group" ${subjectOpen ? 'open' : ''}>
+                <summary class="mistakes-group-summary">
+                    <span class="mistakes-group-title">${subjectName}</span>
+                    <span class="mistakes-group-count">${subjectCount} mistake${subjectCount === 1 ? '' : 's'}</span>
+                </summary>
+                <div class="mistakes-group-content">
+        `;
 
-                <div class="mistake-question">
-                    ${mistake.instruction ? `<em>${mistake.instruction}</em><br><br>` : ''}
-                    ${mistake.question}
-                </div>
+        const categories = Array.from(subjectMap.keys()).sort();
+        categories.forEach((categoryKey) => {
+            const items = subjectMap.get(categoryKey);
+            const categoryOpen = openAllCategories || categoryKey === categoryFilter;
 
-                <div class="mistake-answers">
-                    <div class="mistake-answer-row incorrect">
-                        <span class="mistake-answer-label">❌ Your Answer:</span>
-                        <span class="mistake-answer-value">${mistake.userAnswer}</span>
-                    </div>
-                    <div class="mistake-answer-row correct">
-                        <span class="mistake-answer-label">✅ Correct Answer:</span>
-                        <span class="mistake-answer-value">${mistake.correctAnswer}</span>
-                    </div>
+            html += `
+                    <details class="mistakes-category" ${categoryOpen ? 'open' : ''}>
+                        <summary class="mistakes-category-summary">
+                            <span class="mistakes-category-title">${categoryKey}</span>
+                            <span class="mistakes-category-count">${items.length}</span>
+                        </summary>
+                        <div class="mistakes-category-content">
+            `;
+
+            items.forEach(({ mistake, index }) => {
+                const date = new Date(mistake.date).toLocaleDateString('en-US', {
+                    month: 'short',
+                    day: 'numeric',
+                    year: 'numeric'
+                });
+
+                html += `
+                            <div class="mistake-item" onclick="showQuestionDetail(${index})" style="cursor: pointer;">
+                                <div class="mistake-header">
+                                    <div class="mistake-meta">
+                                        <span class="mistake-badge subject">${subjectName}</span>
+                                        <span class="mistake-badge category">${mistake.category}</span>
+                                        <span class="mistake-badge date">${date}</span>
+                                    </div>
+                                </div>
+
+                                <div class="mistake-question">
+                                    ${mistake.instruction ? `<em>${mistake.instruction}</em><br><br>` : ''}
+                                    ${mistake.question}
+                                </div>
+
+                                <div class="mistake-answers">
+                                    <div class="mistake-answer-row incorrect">
+                                        <span class="mistake-answer-label">❌ Your Answer:</span>
+                                        <span class="mistake-answer-value">${mistake.userAnswer}</span>
+                                    </div>
+                                    <div class="mistake-answer-row correct">
+                                        <span class="mistake-answer-label">✅ Correct Answer:</span>
+                                        <span class="mistake-answer-value">${mistake.correctAnswer}</span>
+                                    </div>
+                                </div>
+                                <div style="text-align: center; margin-top: 10px; color: #667eea; font-size: 0.9em;">
+                                    Click to view full question
+                                </div>
+                            </div>
+                `;
+            });
+
+            html += `
+                        </div>
+                    </details>
+            `;
+        });
+
+        html += `
                 </div>
-                <div style="text-align: center; margin-top: 10px; color: #667eea; font-size: 0.9em;">
-                    Click to view full question
-                </div>
-            </div>
+            </details>
         `;
     });
 
@@ -1893,21 +2403,15 @@ function renderMistakes(mistakes) {
 
 let currentMistakesForDetail = [];
 
+function formatExamName(examType) {
+    if (!examType) return 'Unknown';
+    return examType.split('-').map(word =>
+        word.charAt(0).toUpperCase() + word.slice(1)
+    ).join(' ');
+}
+
 function showQuestionDetail(mistakeIndex) {
-    const examFilter = document.getElementById('mistakes-exam-filter').value;
-    const categoryFilter = document.getElementById('mistakes-category-filter').value;
-
-    let allMistakes = getAllIncorrectQuestions(examFilter === 'all' ? null : examFilter);
-
-    // Apply category filter
-    if (categoryFilter && categoryFilter !== 'all') {
-        allMistakes = allMistakes.filter(m => m.category === categoryFilter);
-    }
-
-    allMistakes.sort((a, b) => b.timestamp - a.timestamp);
-    currentMistakesForDetail = allMistakes;
-
-    const mistake = allMistakes[mistakeIndex];
+    const mistake = currentMistakesForDetail[mistakeIndex];
     if (!mistake) return;
 
     const contentDiv = document.getElementById('question-detail-content');
@@ -1989,6 +2493,10 @@ function showQuestionDetail(mistakeIndex) {
 
 function closeQuestionDetailModal() {
     document.getElementById('question-detail-modal').style.display = 'none';
+}
+
+function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function analyzeTrends(history) {
