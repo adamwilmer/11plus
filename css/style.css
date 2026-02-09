@@ -566,6 +566,18 @@ h2 {
     line-height: 1.6;
 }
 
+/* Question time indicator in review mode */
+.question-time-indicator {
+    background: #e0e7ff;
+    border-left: 4px solid #667eea;
+    padding: 10px 15px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-size: 0.95em;
+    font-weight: 500;
+    color: #4338ca;
+}
+
 .question-image {
     margin: 0 0 20px 0;
     text-align: center;
@@ -677,6 +689,45 @@ h2 {
 
 .timer-display.timer-negative #timer-value {
     color: #e53935;
+}
+
+/* Timer Warning Levels */
+.timer-display.timer-normal {
+    color: #10b981;
+}
+
+.timer-display.timer-normal #timer-value {
+    color: #10b981;
+}
+
+.timer-display.timer-warning {
+    color: #f59e0b;
+}
+
+.timer-display.timer-warning #timer-value {
+    color: #f59e0b;
+}
+
+.timer-display.timer-critical {
+    color: #ef4444;
+    animation: pulse 1s infinite;
+}
+
+.timer-display.timer-critical #timer-value {
+    color: #ef4444;
+}
+
+.timer-display.timer-expired {
+    color: #dc2626;
+}
+
+.timer-display.timer-expired #timer-value {
+    color: #dc2626;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
 }
 
 .time-summary {
@@ -873,6 +924,127 @@ h2 {
     display: flex;
     gap: 15px;
     margin-top: 30px;
+}
+
+/* Time Summary Enhancements */
+.time-summary-container {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #e0e0e0;
+}
+
+.time-summary-main {
+    font-size: 1em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.time-summary-efficiency {
+    font-size: 0.9em;
+    color: #666;
+}
+
+.time-early {
+    color: #10b981;
+}
+
+.time-ontime {
+    color: #3b82f6;
+}
+
+.time-late {
+    color: #f59e0b;
+}
+
+.time-expired {
+    color: #ef4444;
+}
+
+/* Time Insights and Performance Comparison */
+.time-insights,
+.performance-comparison {
+    background: #f9fafb;
+    border-radius: 12px;
+    padding: 20px;
+    margin: 25px 0;
+}
+
+.time-insights h3,
+.performance-comparison h3 {
+    font-size: 1.3em;
+    margin-bottom: 15px;
+    color: #667eea;
+}
+
+.insight-warning {
+    background: #fef3c7;
+    border-left: 4px solid #f59e0b;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 6px;
+    font-weight: 500;
+}
+
+.insight-section {
+    margin: 15px 0;
+}
+
+.insight-section ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 8px;
+}
+
+.insight-section li {
+    padding: 6px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.insight-section li:last-child {
+    border-bottom: none;
+}
+
+.comparison-grid {
+    display: grid;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.comparison-item {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border: 2px solid #e5e7eb;
+}
+
+.comparison-item.improvement {
+    border-color: #10b981;
+    background: #f0fdf4;
+}
+
+.comparison-item.decline {
+    border-color: #ef4444;
+    background: #fef2f2;
+}
+
+.comparison-label {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.comparison-value {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: #333;
+}
+
+.comparison-value .delta {
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #666;
+    margin-left: 8px;
 }
 
 /* Resume Modal */
@@ -1535,6 +1707,26 @@ h2 {
     opacity: 0.9;
 }
 
+.trend-stat.improving {
+    background: #f0fdf4;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.trend-stat.improving .trend-stat-value {
+    color: #10b981;
+}
+
+.trend-stat.declining {
+    background: #fef2f2;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+.trend-stat.declining .trend-stat-value {
+    color: #ef4444;
+}
+
 .trends-heatmap {
     margin-bottom: 25px;
 }
@@ -1792,5 +1984,24 @@ h2 {
 
     .results-actions {
         flex-direction: column;
+    }
+
+    .time-insights,
+    .performance-comparison {
+        padding: 15px;
+        margin: 20px 0;
+    }
+
+    .comparison-grid {
+        gap: 10px;
+    }
+
+    .comparison-value {
+        font-size: 1em;
+    }
+
+    .question-time-indicator {
+        font-size: 0.9em;
+        padding: 8px 12px;
     }
 }

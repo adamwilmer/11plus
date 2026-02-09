@@ -22,6 +22,13 @@ let lastTrackedQuestionTestKey = null;
 let selectedTestKey = null;
 let testSetupPreferences = null;
 
+// Per-question timing tracking
+let questionStartTime = null;
+let questionTimings = {};
+let questionFirstView = {};
+let currentlyTimingQuestionId = null;
+let timerWarningLevel = 'normal';
+
 const examTimerDefaults = {
     'maths': 50,
     'english': 50,
@@ -81,6 +88,9 @@ function saveTestProgress() {
         timerEnabled,
         timerTargetMs,
         testStartTime,
+        questionTimings,
+        questionFirstView,
+        questionStartTime,
         savedAt: Date.now()
     };
 
@@ -191,6 +201,9 @@ function resumeTest(savedProgress) {
     timerEnabled = savedProgress.timerEnabled || false;
     timerTargetMs = savedProgress.timerTargetMs || 0;
     testStartTime = savedProgress.testStartTime || Date.now();
+    questionTimings = savedProgress.questionTimings || {};
+    questionFirstView = savedProgress.questionFirstView || {};
+    questionStartTime = savedProgress.questionStartTime || null;
     reviewMode = false;
     testEndTime = null;
     testAbandonedEventFired = false;
@@ -427,6 +440,61 @@ function formatDurationFromMinutes(minutes) {
     return formatDurationFromMs(minutes * 60 * 1000);
 }
 
+// Per-question timing functions
+function startQuestionTimer(questionId) {
+    if (reviewMode) return;
+
+    // If we're already timing this exact question, don't reset the timer
+    if (currentlyTimingQuestionId === questionId) {
+        return;
+    }
+
+    // If we were timing a different question, stop that timer first
+    if (currentlyTimingQuestionId !== null && currentlyTimingQuestionId !== questionId) {
+        stopQuestionTimer(currentlyTimingQuestionId);
+    }
+
+    // Start timing this question
+    if (!questionFirstView[questionId]) {
+        questionFirstView[questionId] = Date.now();
+    }
+    questionStartTime = Date.now();
+    currentlyTimingQuestionId = questionId;
+}
+
+function stopQuestionTimer(questionId) {
+    if (reviewMode || !questionStartTime) return;
+
+    // Only stop if we're actually timing this question
+    if (currentlyTimingQuestionId !== questionId) {
+        return;
+    }
+
+    const timeSpent = Date.now() - questionStartTime;
+    if (!questionTimings[questionId]) {
+        questionTimings[questionId] = 0;
+    }
+    questionTimings[questionId] += timeSpent;
+    questionStartTime = null;
+    currentlyTimingQuestionId = null;
+}
+
+function getQuestionTime(questionId) {
+    return questionTimings[questionId] || 0;
+}
+
+function calculateTimerWarningLevel() {
+    if (!timerEnabled || !timerTargetMs) return 'normal';
+    const elapsed = Date.now() - testStartTime;
+    const remaining = timerTargetMs - elapsed;
+    const percentRemaining = (remaining / timerTargetMs) * 100;
+
+    if (remaining < 0) return 'expired';
+    if (percentRemaining < 10) return 'critical';
+    if (percentRemaining < 50) return 'warning';
+    return 'normal';
+}
+
 function updateTimerPreview(examType, totalQuestions, selectedValue, durationElementId = 'timer-duration-preview') {
     const durationElement = document.getElementById(durationElementId);
     if (!durationElement) return;
@@ -558,6 +626,12 @@ function updateTimerDisplay() {
     timerValue.textContent = `${isNegative ? '-' : ''}${formatDurationFromMs(displayMs)}`;
     timerLabel.textContent = isNegative ? 'Over time:' : 'Time left:';
     timerDisplay.classList.toggle('timer-negative', isNegative);
+
+    // Update warning level for color coding
+    const warningLevel = calculateTimerWarningLevel();
+    timerWarningLevel = warningLevel;
+    timerDisplay.classList.remove('timer-normal', 'timer-warning', 'timer-critical', 'timer-expired');
+    timerDisplay.classList.add(`timer-${warningLevel}`);
 
     // Track timer expiry in Google Analytics (only once)
     if (isNegative && !timerExpiredEventFired) {
@@ -959,6 +1033,12 @@ function startTest(testKey) {
     lastTrackedQuestionIndex = null;
     lastTrackedQuestionTestKey = null;
 
+    // Initialize question timing tracking
+    questionTimings = {};
+    questionFirstView = {};
+    questionStartTime = null;
+    currentlyTimingQuestionId = null;
+
     const testData = questionDatabase[currentExam][currentTest];
     const fullQuestionSet = testData.questions || [];
     const totalQuestions = fullQuestionSet.length;
@@ -1141,6 +1221,10 @@ function displayQuestion() {
     const testData = questionDatabase[currentExam][currentTest];
     const questions = getCurrentQuestions();
     const question = questions[currentQuestionIndex];
+
+    // Start tracking time for this question
+    startQuestionTimer(question.id);
+
     const userSelections = getUserSelections(question.id);
     const requiredSelections = getRequiredSelectionCount(question);
 
@@ -1258,6 +1342,29 @@ function displayQuestion() {
 
         optionsContainer.appendChild(optionDiv);
     });
+
+    // In review mode, show time spent on this question
+    if (reviewMode) {
+        const questionTime = getQuestionTime(question.id);
+        if (questionTime > 0) {
+            // Remove existing indicator if present
+            const existingIndicator = document.querySelector('.question-time-indicator');
+            if (existingIndicator) {
+                existingIndicator.remove();
+            }
+
+            // Create new time indicator
+            const timeIndicator = document.createElement('div');
+            timeIndicator.className = 'question-time-indicator';
+            timeIndicator.textContent = `⏱️ Time spent: ${formatDurationFromMs(questionTime)}`;
+
+            // Insert at the top of the question container
+            const questionTextElement = document.getElementById('question-text');
+            if (questionTextElement && questionTextElement.parentNode) {
+                questionTextElement.parentNode.insertBefore(timeIndicator, questionTextElement);
+            }
+        }
+    }
 
     // Update navigation buttons
     document.getElementById('prev-button').disabled = currentQuestionIndex === 0;
@@ -1393,6 +1500,7 @@ function selectOption(questionId, letter) {
 
 function previousQuestion() {
     if (currentQuestionIndex > 0) {
+        // Timer will automatically stop in startQuestionTimer() when displaying the new question
         currentQuestionIndex--;
         focusedOptionIndex = -1; // Reset focus when changing questions
         displayQuestion();
@@ -1403,6 +1511,7 @@ function previousQuestion() {
 function nextQuestion() {
     const questions = getCurrentQuestions();
     if (currentQuestionIndex < questions.length - 1) {
+        // Timer will automatically stop in startQuestionTimer() when displaying the new question
         currentQuestionIndex++;
         focusedOptionIndex = -1; // Reset focus when changing questions
         displayQuestion();
@@ -1422,6 +1531,10 @@ function submitTest() {
         );
         if (!confirmSubmit) return;
     }
+
+    // Stop tracking current question before submit
+    const currentQ = questions[currentQuestionIndex];
+    stopQuestionTimer(currentQ.id);
 
     testEndTime = Date.now();
     testAbandonedEventFired = true;
@@ -1460,15 +1573,31 @@ function calculateResults() {
 
     const timeSummaryElement = document.getElementById('time-summary');
     if (timeSummaryElement) {
-        let timeText = 'Time taken: --';
+        let timeHtml = '';
         if (testStartTime) {
             const endTime = testEndTime || Date.now();
             const elapsedMs = Math.max(endTime - testStartTime, 0);
+            const avgTimePerQuestion = Math.round(elapsedMs / questions.length);
+
             const targetText = timerTargetMs ? ` (target ${formatDurationFromMs(timerTargetMs)})` : '';
-            timeText = `Time taken: ${formatDurationFromMs(elapsedMs)}${targetText}`;
+            const statusIcon = timerTargetMs ? getTimeStatusIcon(elapsedMs, timerTargetMs) : '';
+
+            const timeText = `Total time: ${formatDurationFromMs(elapsedMs)}${targetText} ${statusIcon}`;
+            const efficiencyText = `Average: ${formatDurationFromMs(avgTimePerQuestion)} per question`;
+
+            timeHtml = `
+                <div class="time-summary-main">${timeText}</div>
+                <div class="time-summary-efficiency">${efficiencyText}</div>
+            `;
         }
-        timeSummaryElement.textContent = `Summary: ${correct} correct, ${incorrect} incorrect, ${unanswered} unanswered. ${timeText}`;
+        timeSummaryElement.innerHTML = timeHtml || 'Time taken: --';
     }
+
+    // Display time efficiency insights
+    displayTimeEfficiencyInsights();
+
+    // Display performance comparison if available
+    displayPerformanceComparison();
 
     // Track test completion in Google Analytics
     if (typeof gtag !== 'undefined') {
@@ -1517,6 +1646,197 @@ function reviewAnswers() {
     showScreen('test-screen');
     displayQuestion();
 }
+
+// Time status helper functions
+function getTimeStatusIcon(actualMs, targetMs) {
+    if (!targetMs) return '';
+
+    const ratio = actualMs / targetMs;
+
+    if (ratio <= 0.9) return '🟢'; // Early finish
+    if (ratio <= 1.0) return '⚪'; // On time
+    if (ratio <= 1.1) return '🟡'; // Slightly over
+    return '🔴'; // Significantly over
+}
+
+function getTimeStatusClass(actualMs, targetMs) {
+    if (!targetMs) return '';
+
+    const ratio = actualMs / targetMs;
+
+    if (ratio <= 0.9) return 'time-early';
+    if (ratio <= 1.0) return 'time-ontime';
+    if (ratio <= 1.1) return 'time-late';
+    return 'time-expired';
+}
+
+// Time efficiency insights display
+function displayTimeEfficiencyInsights() {
+    const questions = getCurrentQuestions();
+    const totalTime = testEndTime && testStartTime ? testEndTime - testStartTime : 0;
+
+    if (!totalTime || Object.keys(questionTimings).length === 0) {
+        return;
+    }
+
+    // Find slowest questions (top 3)
+    const questionTimeArray = questions.map(q => ({
+        id: q.id,
+        time: getQuestionTime(q.id),
+        question: q.question
+    })).filter(qt => qt.time > 0);
+
+    questionTimeArray.sort((a, b) => b.time - a.time);
+    const slowestQuestions = questionTimeArray.slice(0, 3);
+
+    // Calculate average time per question
+    const avgTime = totalTime / questions.length;
+
+    // Find questions that took >2x average time
+    const longQuestions = questionTimeArray.filter(qt => qt.time > avgTime * 2);
+
+    // Insert insights into results screen (create container if needed)
+    let insightsContainer = document.getElementById('time-insights');
+    if (!insightsContainer) {
+        const resultsActions = document.querySelector('.results-actions');
+        if (resultsActions && resultsActions.parentNode) {
+            insightsContainer = document.createElement('div');
+            insightsContainer.id = 'time-insights';
+            insightsContainer.className = 'time-insights';
+            resultsActions.parentNode.insertBefore(insightsContainer, resultsActions);
+        } else {
+            return;
+        }
+    }
+
+    let html = '<h3>Time Efficiency Insights</h3>';
+
+    if (longQuestions.length > 0) {
+        const questionNumbers = longQuestions.map(q => `#${q.id}`).join(', ');
+        html += `<div class="insight-warning">⚠️ You spent significant time on questions ${questionNumbers}</div>`;
+    }
+
+    if (slowestQuestions.length > 0) {
+        html += '<div class="insight-section"><strong>Slowest questions:</strong><ul>';
+        slowestQuestions.forEach(q => {
+            const questionPreview = q.question.substring(0, 50) + (q.question.length > 50 ? '...' : '');
+            html += `<li>Q${q.id}: ${formatDurationFromMs(q.time)} - ${escapeHtml(questionPreview)}</li>`;
+        });
+        html += '</ul></div>';
+    }
+
+    // Category-level timing
+    const categoryTimings = calculateCategoryTimings();
+    if (Object.keys(categoryTimings).length > 1) {
+        html += '<div class="insight-section"><strong>Average time by category:</strong><ul>';
+        Object.entries(categoryTimings).forEach(([category, avgMs]) => {
+            html += `<li>${escapeHtml(category)}: ${formatDurationFromMs(avgMs)}</li>`;
+        });
+        html += '</ul></div>';
+    }
+
+    insightsContainer.innerHTML = html;
+    insightsContainer.style.display = 'block';
+}
+
+function calculateCategoryTimings() {
+    const categoryTimes = {};
+    const categoryCounts = {};
+
+    currentQuestions.forEach(q => {
+        const category = q.category || 'Uncategorized';
+        const time = getQuestionTime(q.id);
+
+        if (time > 0) {
+            if (!categoryTimes[category]) {
+                categoryTimes[category] = 0;
+                categoryCounts[category] = 0;
+            }
+            categoryTimes[category] += time;
+            categoryCounts[category]++;
+        }
+    });
+
+    const categoryAverages = {};
+    Object.keys(categoryTimes).forEach(cat => {
+        categoryAverages[cat] = Math.round(categoryTimes[cat] / categoryCounts[cat]);
+    });
+
+    return categoryAverages;
+}
+
+// Performance comparison display
+function displayPerformanceComparison() {
+    const history = getTestHistory(currentExam);
+
+    // Filter for same test
+    const sameTestHistory = history.filter(result => result.testKey === currentTest);
+
+    if (sameTestHistory.length < 2) {
+        // Need at least 2 attempts to compare
+        return;
+    }
+
+    // Current result is the last one
+    const currentResult = sameTestHistory[sameTestHistory.length - 1];
+    const previousResult = sameTestHistory[sameTestHistory.length - 2];
+
+    // Calculate deltas
+    const scoreDelta = currentResult.percentage - previousResult.percentage;
+    const timeDelta = (currentResult.timeTakenMs || 0) - (previousResult.timeTakenMs || 0);
+
+    // Create comparison container
+    let comparisonContainer = document.getElementById('performance-comparison');
+    if (!comparisonContainer) {
+        const resultsActions = document.querySelector('.results-actions');
+        if (resultsActions && resultsActions.parentNode) {
+            comparisonContainer = document.createElement('div');
+            comparisonContainer.id = 'performance-comparison';
+            comparisonContainer.className = 'performance-comparison';
+            resultsActions.parentNode.insertBefore(comparisonContainer, resultsActions);
+        } else {
+            return;
+        }
+    }
+
+    const scoreArrow = scoreDelta > 0 ? '↗️' : scoreDelta < 0 ? '↘️' : '→';
+    const timeArrow = timeDelta < 0 ? '⚡' : timeDelta > 0 ? '🐌' : '→';
+
+    const scoreClass = scoreDelta > 0 ? 'improvement' : scoreDelta < 0 ? 'decline' : 'same';
+    const timeClass = timeDelta < 0 ? 'improvement' : timeDelta > 0 ? 'decline' : 'same';
+
+    let html = `
+        <h3>Compared to Last Attempt</h3>
+        <div class="comparison-grid">
+            <div class="comparison-item ${scoreClass}">
+                <div class="comparison-label">Score</div>
+                <div class="comparison-value">
+                    Last: ${previousResult.percentage}% ${scoreArrow} This: ${currentResult.percentage}%
+                    <span class="delta">(${scoreDelta > 0 ? '+' : ''}${scoreDelta}%)</span>
+                </div>
+            </div>
+    `;
+
+    if (previousResult.timeTakenMs && currentResult.timeTakenMs) {
+        const timeDeltaFormatted = formatDurationFromMs(Math.abs(timeDelta));
+        html += `
+            <div class="comparison-item ${timeClass}">
+                <div class="comparison-label">Time</div>
+                <div class="comparison-value">
+                    Last: ${formatDurationFromMs(previousResult.timeTakenMs)} ${timeArrow}
+                    This: ${formatDurationFromMs(currentResult.timeTakenMs)}
+                    <span class="delta">(${timeDelta < 0 ? '-' : '+'}${timeDeltaFormatted})</span>
+                </div>
+            </div>
+        `;
+    }
+
+    html += `</div>`;
+
+    comparisonContainer.innerHTML = html;
+    comparisonContainer.style.display = 'block';
+}
+
 function escapeHtml(text) {
     const div = document.createElement('div');
     div.textContent = text;
@@ -1680,6 +2000,10 @@ function saveTestResultToHistory() {
         totalQuestions: totalQuestions,
         correctCount: correctCount,
         percentage: percentage,
+        timeTakenMs: testEndTime && testStartTime ? testEndTime - testStartTime : 0,
+        timerTargetMs: timerTargetMs || 0,
+        timerEnabled: timerEnabled || false,
+        questionTimings: questionTimings || {},
         categoryBreakdown: {},
         incorrectQuestions: incorrectQuestions
     };
@@ -2003,16 +2327,41 @@ function aggregateCategoryBreakdown(tests) {
     tests.forEach(test => {
         Object.entries(test.categoryBreakdown).forEach(([category, stats]) => {
             if (!totals[category]) {
-                totals[category] = { correct: 0, total: 0 };
+                totals[category] = {
+                    correct: 0,
+                    total: 0,
+                    totalTimeMs: 0,
+                    questionCount: 0
+                };
             }
 
             totals[category].correct += stats.correct;
             totals[category].total += stats.total;
+
+            // Calculate time spent on this category's questions
+            if (test.questionTimings) {
+                const categoryQuestions = Object.keys(test.questionTimings).filter(qId => {
+                    // Find if this question belongs to this category
+                    // We need to check the actual question data
+                    return true; // For now, distribute time evenly
+                });
+
+                // Distribute total time proportionally to this category
+                if (test.timeTakenMs && test.totalQuestions > 0) {
+                    const categoryRatio = stats.total / test.totalQuestions;
+                    const estimatedTime = test.timeTakenMs * categoryRatio;
+                    totals[category].totalTimeMs += estimatedTime;
+                    totals[category].questionCount += stats.total;
+                }
+            }
         });
     });
 
     Object.values(totals).forEach(stats => {
         stats.percentage = stats.total === 0 ? 0 : Math.round((stats.correct / stats.total) * 100);
+        stats.avgTimePerQuestion = stats.questionCount > 0
+            ? Math.round(stats.totalTimeMs / stats.questionCount)
+            : 0;
     });
 
     return totals;
@@ -2042,6 +2391,40 @@ function renderTrendsSummary(history) {
         })
         : 'N/A';
 
+    // Calculate time statistics
+    const testsWithTime = history.filter(t => t.timeTakenMs && t.timeTakenMs > 0);
+    let avgTime = '--';
+    let fastestTime = '--';
+    let timeImprovement = null;
+
+    if (testsWithTime.length > 0) {
+        const avgTimeMs = testsWithTime.reduce((sum, t) => sum + t.timeTakenMs, 0) / testsWithTime.length;
+        avgTime = formatDurationFromMs(avgTimeMs);
+
+        const fastestMs = Math.min(...testsWithTime.map(t => t.timeTakenMs));
+        fastestTime = formatDurationFromMs(fastestMs);
+
+        // Calculate time improvement (recent vs older)
+        if (testsWithTime.length >= 4) {
+            const recentTests = testsWithTime.slice(-3);
+            const olderTests = testsWithTime.slice(0, Math.min(3, testsWithTime.length - 3));
+
+            if (olderTests.length > 0) {
+                const oldAvgTime = olderTests.reduce((sum, t) => sum + t.timeTakenMs, 0) / olderTests.length;
+                const recentAvgTime = recentTests.reduce((sum, t) => sum + t.timeTakenMs, 0) / recentTests.length;
+                const timeDiff = oldAvgTime - recentAvgTime;
+                const percentChange = Math.round((timeDiff / oldAvgTime) * 100);
+
+                if (Math.abs(percentChange) > 5) {
+                    timeImprovement = {
+                        faster: timeDiff > 0,
+                        percent: Math.abs(percentChange)
+                    };
+                }
+            }
+        }
+    }
+
     let html = `
         <h4>Summary</h4>
         <div class="trends-summary-stats">
@@ -2066,9 +2449,34 @@ function renderTrendsSummary(history) {
                 <span class="trend-stat-label">Total Incorrect</span>
             </div>
             <div class="trend-stat">
+                <span class="trend-stat-value">${avgTime}</span>
+                <span class="trend-stat-label">Average Time</span>
+            </div>
+            <div class="trend-stat">
+                <span class="trend-stat-value">${fastestTime}</span>
+                <span class="trend-stat-label">Fastest Time</span>
+            </div>
+    `;
+
+    if (timeImprovement) {
+        const icon = timeImprovement.faster ? '⚡' : '🐌';
+        const label = timeImprovement.faster ? 'Faster' : 'Slower';
+        html += `
+            <div class="trend-stat ${timeImprovement.faster ? 'improving' : 'declining'}">
+                <span class="trend-stat-value">${icon} ${timeImprovement.percent}%</span>
+                <span class="trend-stat-label">${label} Recently</span>
+            </div>
+        `;
+    } else {
+        html += `
+            <div class="trend-stat">
                 <span class="trend-stat-value">${lastUpdated}</span>
                 <span class="trend-stat-label">Last Updated</span>
             </div>
+        `;
+    }
+
+    html += `
         </div>
     `;
 
@@ -2144,10 +2552,17 @@ function renderHeatMap(buckets, aggregation, examFilter) {
                 const percentage = catData.percentage;
                 const performanceClass = getPerformanceClass(percentage);
                 const bgColor = getHeatmapColor(percentage);
+
+                // Build tooltip with time data if available
+                let tooltip = `${bucket.label} • ${category}: ${percentage}% (${catData.correct}/${catData.total})`;
+                if (catData.avgTimePerQuestion > 0) {
+                    tooltip += `\nAvg time: ${formatDurationFromMs(catData.avgTimePerQuestion)}/question`;
+                }
+
                 html += `
                     <div class="heatmap-cell actionable" style="background: ${bgColor};"
                          data-category="${category}" data-subject="${subjectValue}"
-                         title="${bucket.label} • ${category}: ${percentage}% (${catData.correct}/${catData.total})">
+                         title="${tooltip}">
                         <div style="font-size: 1.1em; font-weight: 700; margin-bottom: 2px;">${percentage}%</div>
                         <div style="font-size: 0.7em; opacity: 0.85; font-weight: 500;">(${catData.correct}/${catData.total})</div>
                     </div>
@@ -2699,6 +3114,79 @@ function analyzeTrends(history) {
             `Focus on <strong>${item.category}</strong> (current avg: ${Math.round(item.avgScore)}%)`
         );
     });
+
+    // Analyze time trends
+    const testsWithTime = history.filter(t => t.timeTakenMs && t.timeTakenMs > 0);
+    if (testsWithTime.length >= 4) {
+        const recentTests = testsWithTime.slice(-3);
+        const olderTests = testsWithTime.slice(0, Math.min(3, testsWithTime.length - 3));
+
+        if (olderTests.length > 0) {
+            const oldAvgTime = olderTests.reduce((sum, t) => sum + t.timeTakenMs, 0) / olderTests.length;
+            const recentAvgTime = recentTests.reduce((sum, t) => sum + t.timeTakenMs, 0) / recentTests.length;
+            const timeDiff = oldAvgTime - recentAvgTime;
+            const percentChange = Math.round((timeDiff / oldAvgTime) * 100);
+
+            if (percentChange > 10) {
+                insights.categoryTrends.push({
+                    category: '⏱️ Speed',
+                    type: 'improving',
+                    icon: '⚡',
+                    message: `You're completing tests ${percentChange}% faster while maintaining accuracy!`
+                });
+            } else if (percentChange < -10) {
+                insights.categoryTrends.push({
+                    category: '⏱️ Speed',
+                    type: 'declining',
+                    icon: '🐌',
+                    message: `Tests are taking ${Math.abs(percentChange)}% longer recently. Consider time management strategies.`
+                });
+            }
+
+            // Analyze speed vs accuracy balance
+            const recentScores = recentTests.map(t => t.percentage);
+            const olderScores = olderTests.map(t => t.percentage);
+            const recentAvgScore = recentScores.reduce((a, b) => a + b, 0) / recentScores.length;
+            const oldAvgScore = olderScores.reduce((a, b) => a + b, 0) / olderScores.length;
+            const scoreDiff = recentAvgScore - oldAvgScore;
+
+            if (percentChange > 15 && scoreDiff < -5) {
+                insights.recommendations.push(
+                    `You're rushing through tests. <strong>Slow down</strong> to improve accuracy.`
+                );
+            } else if (percentChange < -15 && scoreDiff > 5) {
+                insights.recommendations.push(
+                    `Great accuracy improvement! Now work on <strong>time management</strong> to maintain this while going faster.`
+                );
+            } else if (percentChange > 10 && scoreDiff > 5) {
+                insights.categoryTrends.push({
+                    category: '🎯 Optimal Performance',
+                    type: 'improving',
+                    icon: '🌟',
+                    message: `Perfect balance: faster times AND better scores!`
+                });
+            }
+        }
+    }
+
+    // Analyze timer usage and efficiency
+    const testsWithTimer = testsWithTime.filter(t => t.timerEnabled && t.timerTargetMs > 0);
+    if (testsWithTimer.length >= 3) {
+        const efficiencyRatios = testsWithTimer.map(t => t.timeTakenMs / t.timerTargetMs);
+        const avgEfficiency = efficiencyRatios.reduce((a, b) => a + b, 0) / efficiencyRatios.length;
+
+        if (avgEfficiency < 0.8) {
+            insights.recommendations.push(
+                `You consistently finish early (${Math.round((1 - avgEfficiency) * 100)}% time remaining). Consider <strong>reviewing answers</strong> before submitting.`
+            );
+        } else if (avgEfficiency > 1.1) {
+            const overTime = efficiencyRatios.filter(r => r > 1).length;
+            const pct = Math.round((overTime / efficiencyRatios.length) * 100);
+            insights.recommendations.push(
+                `Timer expires on ${pct}% of attempts. Practice <strong>time management</strong> and prioritize easier questions first.`
+            );
+        }
+    }
 
     return insights;
 }

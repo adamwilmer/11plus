@@ -94,7 +94,7 @@
                             <div id="progress-fill" class="progress-fill"></div>
                         </div>
                     </div>
-                    <div id="timer-display" class="timer-display" style="display: none;">
+                    <div id="timer-display" class="timer-display timer-normal" style="display: none;">
                         <span id="timer-label">Time left:</span>
                         <span id="timer-value">00:00</span>
                     </div>
@@ -138,9 +138,18 @@
                     <p><strong id="correct-count">0</strong> correct</p>
                     <p><strong id="incorrect-count">0</strong> incorrect</p>
                     <p><strong id="unanswered-count">0</strong> unanswered</p>
-                    <p class="time-summary" id="time-summary">Summary: --</p>
+                    <div class="time-summary-container">
+                        <div id="time-summary" class="time-summary"></div>
+                    </div>
                 </div>
             </div>
+
+            <!-- Performance comparison container (dynamically populated) -->
+            <div id="performance-comparison" class="performance-comparison" style="display: none;"></div>
+
+            <!-- Time insights container (dynamically populated) -->
+            <div id="time-insights" class="time-insights" style="display: none;"></div>
+
             <div class="results-actions">
                 <button class="nav-button" onclick="reviewAnswers()">Review Answers</button>
                 <button class="nav-button primary" onclick="showScreen('exam-selector')">Back to Home</button>
