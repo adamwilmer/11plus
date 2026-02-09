@@ -19,6 +19,8 @@ let testAbandonedEventFired = false;
 let lastTrackedScreenId = null;
 let lastTrackedQuestionIndex = null;
 let lastTrackedQuestionTestKey = null;
+let selectedTestKey = null;
+let testSetupPreferences = null;
 
 const examTimerDefaults = {
     'maths': 50,
@@ -31,6 +33,39 @@ const examTimerDefaults = {
 // Test progress persistence
 const STORAGE_KEY = 'elevenPlusTestProgress';
 const HISTORY_STORAGE_KEY = 'elevenPlusTestHistory';
+const TEST_SETUP_STORAGE_KEY = 'elevenPlusTestSetup';
+const DEFAULT_TEST_SETUP = {
+    questionCount: 'all',
+    timerEnabled: false
+};
+
+function loadTestSetupPreferences() {
+    try {
+        const stored = localStorage.getItem(TEST_SETUP_STORAGE_KEY);
+        if (!stored) {
+            return { ...DEFAULT_TEST_SETUP };
+        }
+        const parsed = JSON.parse(stored);
+        return {
+            ...DEFAULT_TEST_SETUP,
+            ...parsed
+        };
+    } catch (error) {
+        console.error('Failed to load test setup preferences:', error);
+        return { ...DEFAULT_TEST_SETUP };
+    }
+}
+
+function saveTestSetupPreferences() {
+    if (!testSetupPreferences) {
+        return;
+    }
+    try {
+        localStorage.setItem(TEST_SETUP_STORAGE_KEY, JSON.stringify(testSetupPreferences));
+    } catch (error) {
+        console.error('Failed to save test setup preferences:', error);
+    }
+}
 
 function saveTestProgress() {
     if (!currentExam || !currentTest || reviewMode) {
@@ -392,12 +427,12 @@ function formatDurationFromMinutes(minutes) {
     return formatDurationFromMs(minutes * 60 * 1000);
 }
 
-function updateTimerPreview(examType, testKey, totalQuestions, selectedValue) {
-    const durationElement = document.getElementById(`timer-duration-${testKey}`);
+function updateTimerPreview(examType, totalQuestions, selectedValue, durationElementId = 'timer-duration-preview') {
+    const durationElement = document.getElementById(durationElementId);
     if (!durationElement) return;
     const baseMinutes = getBaseTimerMinutes(examType);
     if (!baseMinutes || !totalQuestions) {
-        durationElement.textContent = 'N/A';
+        durationElement.textContent = '--';
         return;
     }
     const selectedCount = selectedValue === 'all'
@@ -406,6 +441,74 @@ function updateTimerPreview(examType, testKey, totalQuestions, selectedValue) {
     const ratio = selectedCount / totalQuestions;
     const computedMinutes = baseMinutes * ratio;
     durationElement.textContent = formatDurationFromMinutes(computedMinutes);
+}
+
+function updateQuestionCountOptions(totalQuestions) {
+    const select = document.getElementById('question-count-select');
+    if (!select) return;
+    const preferredValue = testSetupPreferences ? testSetupPreferences.questionCount : 'all';
+
+    select.innerHTML = '';
+    const allOption = document.createElement('option');
+    allOption.value = 'all';
+    allOption.textContent = totalQuestions ? `All (${totalQuestions})` : 'All';
+    select.appendChild(allOption);
+
+    [5, 10, 15, 20, 25].forEach(count => {
+        if (!totalQuestions || count < totalQuestions) {
+            const option = document.createElement('option');
+            option.value = count;
+            option.textContent = count;
+            select.appendChild(option);
+        }
+    });
+
+    const hasPreferred = Array.from(select.options).some(option => option.value === preferredValue);
+    if (hasPreferred) {
+        select.value = preferredValue;
+    } else {
+        select.value = 'all';
+        if (testSetupPreferences) {
+            testSetupPreferences.questionCount = 'all';
+            saveTestSetupPreferences();
+        }
+    }
+
+}
+
+function updateSharedTimerPreview() {
+    if (!currentExam || !selectedTestKey || !questionDatabase[currentExam]) {
+        updateTimerPreview(currentExam, 0, 'all');
+        return;
+    }
+    const testData = questionDatabase[currentExam][selectedTestKey];
+    const totalQuestions = testData && testData.questions ? testData.questions.length : 0;
+    const select = document.getElementById('question-count-select');
+    const selectedValue = select ? select.value : 'all';
+    updateTimerPreview(currentExam, totalQuestions, selectedValue);
+}
+
+function updateSelectedTestUI() {
+    const startButton = document.getElementById('start-selected-test');
+    const cards = document.querySelectorAll('.test-card.selectable');
+    cards.forEach(card => {
+        card.classList.toggle('selected', card.dataset.testKey === selectedTestKey);
+    });
+
+    if (startButton) {
+        startButton.disabled = !selectedTestKey;
+    }
+}
+
+function setSelectedTest(testKey) {
+    selectedTestKey = testKey;
+    const testData = currentExam && questionDatabase[currentExam]
+        ? questionDatabase[currentExam][selectedTestKey]
+        : null;
+    const totalQuestions = testData && testData.questions ? testData.questions.length : 0;
+    updateQuestionCountOptions(totalQuestions);
+    updateSelectedTestUI();
+    updateSharedTimerPreview();
 }
 
 function clearActiveTimer() {
@@ -537,6 +640,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Check for debug mode
     const urlParams = new URLSearchParams(window.location.search);
     debugMode = urlParams.get('debug') === 'true';
+    testSetupPreferences = loadTestSetupPreferences();
 
     if (isPerformancePage()) {
         setupEventListeners();
@@ -622,6 +726,50 @@ function setupEventListeners() {
             selectExam(examType);
         });
     });
+
+    const questionCountSelect = document.getElementById('question-count-select');
+    const timerToggle = document.getElementById('timer-toggle-shared');
+    const startButton = document.getElementById('start-selected-test');
+
+    if (questionCountSelect) {
+        questionCountSelect.addEventListener('change', () => {
+            if (testSetupPreferences) {
+                testSetupPreferences.questionCount = questionCountSelect.value;
+                saveTestSetupPreferences();
+            }
+            updateSharedTimerPreview();
+        });
+    }
+
+    if (timerToggle) {
+        timerToggle.addEventListener('change', (e) => {
+            if (testSetupPreferences) {
+                testSetupPreferences.timerEnabled = e.target.checked;
+                saveTestSetupPreferences();
+            }
+            if (typeof gtag !== 'undefined') {
+                const testData = currentExam && selectedTestKey && questionDatabase[currentExam]
+                    ? questionDatabase[currentExam][selectedTestKey]
+                    : null;
+                gtag('event', 'timer_toggled', {
+                    'exam_type': currentExam,
+                    'test_name': testData ? (testData.title || selectedTestKey) : null,
+                    'timer_enabled': e.target.checked,
+                    'event_category': 'engagement',
+                    'event_label': currentExam && selectedTestKey ? `${currentExam}_${selectedTestKey}` : currentExam
+                });
+            }
+        });
+    }
+
+    if (startButton) {
+        startButton.addEventListener('click', () => {
+            if (!selectedTestKey) {
+                return;
+            }
+            startTest(selectedTestKey);
+        });
+    }
 
     // Global keyboard handler for test screen
     document.addEventListener('keydown', (e) => {
@@ -718,6 +866,7 @@ function showScreen(screenId) {
 
 function selectExam(examType) {
     currentExam = examType;
+    selectedTestKey = null;
     const examData = questionDatabase[examType];
 
     // Track exam selection in Google Analytics
@@ -749,110 +898,55 @@ function selectExam(examType) {
         if (test.questions && test.questions.length > 0) {
             // Create test card container
             const testCard = document.createElement('div');
-            testCard.className = 'test-card';
-            const baseTimerMinutes = getBaseTimerMinutes(examType);
+            testCard.className = 'test-card selectable';
+            testCard.dataset.testKey = testKey;
 
             // Test title and question count
             const testInfo = document.createElement('div');
             testInfo.className = 'test-info';
             testInfo.innerHTML = `
                 <div class="test-title">${test.title}</div>
-                <div class="test-question-count">${test.questions.length} questions</div>
+                <div class="test-question-count">• ${test.questions.length} questions</div>
             `;
             testCard.appendChild(testInfo);
 
-            // Question count selector
-            const selectorContainer = document.createElement('div');
-            selectorContainer.className = 'test-controls';
-
-            const selectLabel = document.createElement('label');
-            selectLabel.textContent = 'Number of questions: ';
-            selectLabel.style.fontSize = '0.9em';
-            selectLabel.style.marginRight = '10px';
-
-            const select = document.createElement('select');
-            select.id = `question-count-${testKey}`;
-            select.className = 'question-count-selector';
-
-            // Add options
-            const allOption = document.createElement('option');
-            allOption.value = 'all';
-            allOption.textContent = `All (${test.questions.length})`;
-            select.appendChild(allOption);
-
-            [5, 10, 15, 20, 25].forEach(count => {
-                if (count < test.questions.length) {
-                    const option = document.createElement('option');
-                    option.value = count;
-                    option.textContent = count;
-                    select.appendChild(option);
-                }
-            });
-
-            select.addEventListener('change', () => {
-                updateTimerPreview(examType, testKey, test.questions.length, select.value);
-            });
-
-            selectorContainer.appendChild(selectLabel);
-            selectorContainer.appendChild(select);
-            testCard.appendChild(selectorContainer);
-
-            const timerControls = document.createElement('div');
-            timerControls.className = 'timer-controls';
-            const timerLabel = document.createElement('label');
-            timerLabel.className = 'timer-toggle';
-
-            const timerCheckbox = document.createElement('input');
-            timerCheckbox.type = 'checkbox';
-            timerCheckbox.id = `timer-toggle-${testKey}`;
-            timerCheckbox.disabled = baseTimerMinutes === 0;
-
-            // Track timer toggle in Google Analytics
-            timerCheckbox.addEventListener('change', (e) => {
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'timer_toggled', {
-                        'exam_type': examType,
-                        'test_name': test.title || testKey,
-                        'timer_enabled': e.target.checked,
-                        'event_category': 'engagement',
-                        'event_label': `${examType}_${testKey}`
-                    });
-                }
-            });
-
-            timerLabel.appendChild(timerCheckbox);
-
-            const timerText = document.createElement('span');
-            if (baseTimerMinutes > 0) {
-                const durationSpan = document.createElement('span');
-                durationSpan.id = `timer-duration-${testKey}`;
-                durationSpan.className = 'timer-duration-value';
-                durationSpan.textContent = formatDurationFromMinutes(baseTimerMinutes);
-                timerText.appendChild(document.createTextNode('Enable timer ('));
-                timerText.appendChild(durationSpan);
-                timerText.appendChild(document.createTextNode(')'));
-            } else {
-                timerText.textContent = 'Timer unavailable';
-            }
-
-            timerLabel.appendChild(timerText);
-            timerControls.appendChild(timerLabel);
-            testCard.appendChild(timerControls);
-
-            // Start test button
-            const startButton = document.createElement('button');
-            startButton.className = 'start-test-button';
-            startButton.textContent = 'Start Test';
-            startButton.onclick = () => startTest(testKey);
-            testCard.appendChild(startButton);
-
             testList.appendChild(testCard);
-
-            updateTimerPreview(examType, testKey, test.questions.length, select.value);
+            testCard.addEventListener('click', () => setSelectedTest(testKey));
+            testCard.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    setSelectedTest(testKey);
+                }
+            });
+            testCard.tabIndex = 0;
+            testCard.setAttribute('role', 'button');
         }
     });
 
+    initTestSetupForExam(examType);
     showScreen('test-selector');
+}
+
+function initTestSetupForExam(examType) {
+    const timerToggle = document.getElementById('timer-toggle-shared');
+    const timerText = document.getElementById('timer-toggle-text');
+    const baseTimerMinutes = getBaseTimerMinutes(examType);
+
+    if (timerToggle && timerText) {
+        if (baseTimerMinutes > 0) {
+            timerToggle.disabled = false;
+            timerToggle.checked = !!(testSetupPreferences && testSetupPreferences.timerEnabled);
+            timerText.innerHTML = 'Enable timer (<span id="timer-duration-preview" class="timer-duration-value">--</span>)';
+        } else {
+            timerToggle.checked = false;
+            timerToggle.disabled = true;
+            timerText.textContent = 'Timer unavailable';
+        }
+    }
+
+    updateQuestionCountOptions(null);
+    updateSelectedTestUI();
+    updateSharedTimerPreview();
 }
 
 function startTest(testKey) {
@@ -875,7 +969,7 @@ function startTest(testKey) {
     }
 
     // Check if user selected a specific number of questions
-    const questionCountSelect = document.getElementById(`question-count-${testKey}`);
+    const questionCountSelect = document.getElementById('question-count-select');
     const questionCount = questionCountSelect ? questionCountSelect.value : 'all';
 
     let selectedQuestions = [...fullQuestionSet];
@@ -934,7 +1028,7 @@ function startTest(testKey) {
     timerExpiredEventFired = false;
 
     const baseTimerMinutes = getBaseTimerMinutes(currentExam);
-    const timerToggle = document.getElementById(`timer-toggle-${testKey}`);
+    const timerToggle = document.getElementById('timer-toggle-shared');
     if (timerToggle && timerToggle.checked && baseTimerMinutes > 0 && totalQuestions > 0) {
         const ratio = selectedQuestionCount / totalQuestions;
         timerTargetMs = Math.round(baseTimerMinutes * 60 * 1000 * ratio);

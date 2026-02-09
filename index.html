@@ -62,7 +62,26 @@
         <div id="test-selector" class="screen">
             <button class="back-button" onclick="showScreen('exam-selector')">← Back</button>
             <h2 id="exam-title">Maths Tests</h2>
-            <div id="test-list" class="test-list"></div>
+            <div class="test-setup">
+                <div class="test-setup-section">
+                    <h3 class="test-setup-title">Select a test</h3>
+                    <div id="test-list" class="test-list"></div>
+                </div>
+                <div class="test-setup-section">
+                    <h3 class="test-setup-title">Configure test</h3>
+                    <div class="test-setup-controls">
+                        <label for="question-count-select">Number of questions:</label>
+                        <select id="question-count-select" class="question-count-selector"></select>
+                        <label class="timer-toggle" id="timer-toggle-label">
+                            <input type="checkbox" id="timer-toggle-shared">
+                            <span id="timer-toggle-text">Enable timer (<span id="timer-duration-preview" class="timer-duration-value">--</span>)</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="test-setup-actions">
+                    <button id="start-selected-test" class="start-test-button" disabled>Start Test</button>
+                </div>
+            </div>
         </div>
 
         <div id="test-screen" class="screen">
@@ -124,9 +143,6 @@
             </div>
             <div class="results-actions">
                 <button class="nav-button" onclick="reviewAnswers()">Review Answers</button>
-                <button class="nav-button" onclick="showCategoryBreakdown()">Category Breakdown</button>
-                <a class="nav-button" href="performance.html">Performance Trends</a>
-                <a class="nav-button" href="mistakes.html">Questions to Revisit</a>
                 <button class="nav-button primary" onclick="showScreen('exam-selector')">Back to Home</button>
             </div>
         </div>
